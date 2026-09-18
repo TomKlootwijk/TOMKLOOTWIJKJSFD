@@ -1,0 +1,4697 @@
+{
+  "status": "PASS",
+  "program": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\examples\\bounded_space_31bit.tsdf",
+  "program_sha256": "3c45a51ba02e32f7e75b6fdf630871f62df5ffcc76f56ea4a1a1ab4012f1a963",
+  "executable": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\build-cuda128\\Release\\tom_cuda.exe",
+  "executable_sha256": "a00a3c0968fb3f3acd49bd65d8040ba541788805a170a769a254a3b61eeb1201",
+  "source": {
+    "pdf_name": "TOM_V0_7_Formalization.pdf",
+    "pdf_sha256": "97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc",
+    "package_name": "TOM_V0_7_Package.zip",
+    "package_sha256": "23b23a01fb3a8e8502ac5c44f541d4af672acced3c73f979b24643f24ea54396",
+    "contract_member": "TOM_V0_7/formalization/TOM_V0_7.json",
+    "contract_sha256": "cf3ef6707555bb61b13112763526841284b4cdb5b7dbc2933ff5e7040b5bbf2c",
+    "core_expression": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+  },
+  "profile": {
+    "name": "bounded certificate interpretation",
+    "widths": {
+      "time_bits": 3,
+      "retention_bits": 3,
+      "direct_bits": 4,
+      "witness_bits": 5
+    },
+    "input_bits": 31,
+    "unique_candidate_count": 2147483648,
+    "candidate_encoding": "Input groups take disjoint low-to-high bits of the zero-based lane index; all inputs are retained unchanged by each tick.",
+    "input_layout": [
+      {
+        "name": "previous_time",
+        "bits": 3,
+        "counter_start": 0,
+        "signed": false
+      },
+      {
+        "name": "current_time",
+        "bits": 3,
+        "counter_start": 3,
+        "signed": false
+      },
+      {
+        "name": "elapsed",
+        "bits": 3,
+        "counter_start": 6,
+        "signed": false
+      },
+      {
+        "name": "latest_dependency",
+        "bits": 3,
+        "counter_start": 9,
+        "signed": false
+      },
+      {
+        "name": "retained_before",
+        "bits": 3,
+        "counter_start": 12,
+        "signed": false
+      },
+      {
+        "name": "retained_after",
+        "bits": 3,
+        "counter_start": 15,
+        "signed": false
+      },
+      {
+        "name": "direct",
+        "bits": 4,
+        "counter_start": 18,
+        "signed": true
+      },
+      {
+        "name": "echo",
+        "bits": 4,
+        "counter_start": 22,
+        "signed": true
+      },
+      {
+        "name": "left_definition_witness",
+        "bits": 3,
+        "counter_start": 26,
+        "signed": false
+      },
+      {
+        "name": "right_definition_witness",
+        "bits": 2,
+        "counter_start": 29,
+        "signed": false
+      }
+    ],
+    "analytic_full_domain_counts": {
+      "total_candidates": 2147483648,
+      "forward": 939524096,
+      "elapsed_preserved": 117440512,
+      "future_independent": 1207959552,
+      "retention_preserved": 905969664,
+      "temporal_retention_admissible": 37158912,
+      "Arch_neutral": 1199570944,
+      "distinct_witnesses": 1879048192,
+      "temporal_and_arch_neutral": 20756736,
+      "temporal_and_distinct": 32514048,
+      "temporal_arch_and_distinct": 18162144
+    },
+    "working_bytes_per_case_numerator": 160,
+    "working_bytes_per_case_denominator": 8,
+    "full_domain_working_bytes": 42949672960,
+    "source_mapping": [
+      {
+        "pages": [
+          6,
+          7
+        ],
+        "clause": "TC1",
+        "realization": "latest_dependency <= current_time; availability stamps are supplied witnesses, not authenticated provenance"
+      },
+      {
+        "pages": [
+          6,
+          8
+        ],
+        "clause": "TC2 / inverse-Occam",
+        "realization": "retained_before is a subset of retained_after; every input and both distinct-definition witnesses remain visible; membership masks do not certify arbitrary historical content"
+      },
+      {
+        "pages": [
+          6
+        ],
+        "clause": "TC3",
+        "realization": "sign changes affect only the optional reading; they never reverse the runner epoch"
+      },
+      {
+        "pages": [
+          6,
+          7
+        ],
+        "clause": "TC4",
+        "realization": "all lane inputs remain old-state reads; outputs publish to a separate next snapshot; no native continuation law is selected"
+      },
+      {
+        "pages": [
+          6
+        ],
+        "clause": "TC5",
+        "realization": "current_time > previous_time and exact unsigned elapsed difference; bounded numeric readings are declared external units"
+      },
+      {
+        "pages": [
+          10
+        ],
+        "clause": "optional Arch reading",
+        "realization": "exact signed-integer residual and zero predicate; arbitrary echo is NOT asserted equal to ln(1/phi)*direct"
+      },
+      {
+        "pages": [
+          3,
+          5,
+          8,
+          14,
+          18
+        ],
+        "clause": "native roles and binding",
+        "realization": "the exact source expression and entire editorial contract are retained in metadata; their unassigned operators are not replaced by the certificate arithmetic"
+      }
+    ],
+    "open_laws": [
+      "jitter behavior",
+      "when a continuation becomes actual",
+      "intrinsic pinion transformation",
+      "physical observation protocol",
+      "recoverable unbounded-history codec",
+      "thermodynamic entropy interpretation"
+    ],
+    "interpretation_limits": [
+      "Finite bounded certificate exploration, not a unique native evolution or empirical physics claim.",
+      "Arch neutrality is an optional filter, separate from temporal/retention acceptance.",
+      "Different witness integers are supplied definition labels; they do not establish a universal definition-equivalence decision procedure.",
+      "Preservation idempotence is retained as a source law; this certificate circuit does not implement a general native rewrite calculus.",
+      "A prefix contains distinct candidates but is not exhaustive unless every declared candidate index is covered exactly once."
+    ]
+  },
+  "command": [
+    "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\build-cuda128\\Release\\tom_cuda.exe",
+    "--program",
+    "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\examples\\bounded_space_31bit.tsdf",
+    "--backend",
+    "shared",
+    "--evaluator",
+    "lowered",
+    "--block",
+    "256",
+    "--blocks-per-sm",
+    "24",
+    "--shard-words",
+    "262144",
+    "--ticks",
+    "64",
+    "--warmup",
+    "2",
+    "--verify",
+    "--vram-percent",
+    "99",
+    "--count-state",
+    "31",
+    "--count-state",
+    "32",
+    "--count-state",
+    "33",
+    "--count-state",
+    "34",
+    "--count-state",
+    "35",
+    "--count-state",
+    "36",
+    "--count-state",
+    "37",
+    "--count-state",
+    "38",
+    "--count-state",
+    "39",
+    "--count-state",
+    "40"
+  ],
+  "runs": [
+    {
+      "runner": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 0,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "lowered",
+        "block_threads": 256,
+        "lanes": 572194368,
+        "ticks": 64,
+        "epoch": 64,
+        "shards": 69,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 4416,
+        "warmup_compute_launches": 138,
+        "shard_words_cap": 262144,
+        "automatic_shard_words": 5711392,
+        "effective_shard_words": 262144,
+        "blocks_per_sm": 24,
+        "kernel_resources": {
+          "registers_per_thread": 34,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 19136,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 5,
+          "theoretical_active_warps_per_sm": 40,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 19136,
+        "working_bytes": 11443887360,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 0,
+        "elapsed_host_ns": 2484331400,
+        "sample_digest": 6950082452879914003,
+        "sample_lanes": 2048,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 69,
+          "words_verified": 8832,
+          "lanes_verified": 282624,
+          "all_lane_words_verified": false
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 64,
+                "digest": 6950082452879914003,
+                "verified": true
+              },
+              {
+                "first_word": 262080,
+                "words": 64,
+                "digest": 18028421680010183891,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 262144,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 262144,
+                "words": 64,
+                "digest": 13758323620353218515,
+                "verified": true
+              },
+              {
+                "first_word": 524224,
+                "words": 64,
+                "digest": 4529759314007511699,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 524288,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 524288,
+                "words": 64,
+                "digest": 1964409693406975955,
+                "verified": true
+              },
+              {
+                "first_word": 786368,
+                "words": 64,
+                "digest": 1988517318928208531,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "first_word": 786432,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 786432,
+                "words": 64,
+                "digest": 5444649856138098067,
+                "verified": true
+              },
+              {
+                "first_word": 1048512,
+                "words": 64,
+                "digest": 9894888109667814483,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "first_word": 1048576,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1048576,
+                "words": 64,
+                "digest": 17269714281863944147,
+                "verified": true
+              },
+              {
+                "first_word": 1310656,
+                "words": 64,
+                "digest": 6863302307290812722,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "first_word": 1310720,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1310720,
+                "words": 64,
+                "digest": 8826793737256465811,
+                "verified": true
+              },
+              {
+                "first_word": 1572800,
+                "words": 64,
+                "digest": 7076771868585598706,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "first_word": 1572864,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1572864,
+                "words": 64,
+                "digest": 10074151491607901587,
+                "verified": true
+              },
+              {
+                "first_word": 1834944,
+                "words": 64,
+                "digest": 15483892884618338034,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "first_word": 1835008,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1835008,
+                "words": 64,
+                "digest": 16341145670436110675,
+                "verified": true
+              },
+              {
+                "first_word": 2097088,
+                "words": 64,
+                "digest": 14605544625184975026,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "first_word": 2097152,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2097152,
+                "words": 64,
+                "digest": 863298047373857107,
+                "verified": true
+              },
+              {
+                "first_word": 2359232,
+                "words": 64,
+                "digest": 11805186171422636931,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "first_word": 2359296,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2359296,
+                "words": 64,
+                "digest": 486350441576092947,
+                "verified": true
+              },
+              {
+                "first_word": 2621376,
+                "words": 64,
+                "digest": 16106025158249589571,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "first_word": 2621440,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2621440,
+                "words": 64,
+                "digest": 4633611443524310291,
+                "verified": true
+              },
+              {
+                "first_word": 2883520,
+                "words": 64,
+                "digest": 5517388980823583555,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "first_word": 2883584,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2883584,
+                "words": 64,
+                "digest": 14958718514767546579,
+                "verified": true
+              },
+              {
+                "first_word": 3145664,
+                "words": 64,
+                "digest": 5718531897296286979,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "first_word": 3145728,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3145728,
+                "words": 64,
+                "digest": 5015366236135216403,
+                "verified": true
+              },
+              {
+                "first_word": 3407808,
+                "words": 64,
+                "digest": 17583614655327652627,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "first_word": 3407872,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3407872,
+                "words": 64,
+                "digest": 6472924704345393363,
+                "verified": true
+              },
+              {
+                "first_word": 3669952,
+                "words": 64,
+                "digest": 13956118258826976979,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "first_word": 3670016,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3670016,
+                "words": 64,
+                "digest": 14560800823448029395,
+                "verified": true
+              },
+              {
+                "first_word": 3932096,
+                "words": 64,
+                "digest": 4568165436515409619,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "first_word": 3932160,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3932160,
+                "words": 64,
+                "digest": 3922169218545192083,
+                "verified": true
+              },
+              {
+                "first_word": 4194240,
+                "words": 64,
+                "digest": 15002889621303264915,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "first_word": 4194304,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4194304,
+                "words": 64,
+                "digest": 3008645560450027859,
+                "verified": true
+              },
+              {
+                "first_word": 4456384,
+                "words": 64,
+                "digest": 807815466849811331,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "first_word": 4456448,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4456448,
+                "words": 64,
+                "digest": 982211670018594067,
+                "verified": true
+              },
+              {
+                "first_word": 4718528,
+                "words": 64,
+                "digest": 12064896096986786627,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "first_word": 4718592,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4718592,
+                "words": 64,
+                "digest": 16944566936498590995,
+                "verified": true
+              },
+              {
+                "first_word": 4980672,
+                "words": 64,
+                "digest": 1613177300590603075,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "first_word": 4980736,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4980736,
+                "words": 64,
+                "digest": 797535174901074131,
+                "verified": true
+              },
+              {
+                "first_word": 5242816,
+                "words": 64,
+                "digest": 17135774676887680259,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "first_word": 5242880,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 5242880,
+                "words": 64,
+                "digest": 6211132700613809427,
+                "verified": true
+              },
+              {
+                "first_word": 5504960,
+                "words": 64,
+                "digest": 3641625066027649811,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 21,
+            "first_word": 5505024,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 5505024,
+                "words": 64,
+                "digest": 3272413477592221907,
+                "verified": true
+              },
+              {
+                "first_word": 5767104,
+                "words": 64,
+                "digest": 8437488478240366291,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 22,
+            "first_word": 5767168,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 5767168,
+                "words": 64,
+                "digest": 9097251650307360979,
+                "verified": true
+              },
+              {
+                "first_word": 6029248,
+                "words": 64,
+                "digest": 6920363523432521427,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 23,
+            "first_word": 6029312,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6029312,
+                "words": 64,
+                "digest": 4455563377093364883,
+                "verified": true
+              },
+              {
+                "first_word": 6291392,
+                "words": 64,
+                "digest": 8313996097894958739,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 24,
+            "first_word": 6291456,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6291456,
+                "words": 64,
+                "digest": 7791994054573315347,
+                "verified": true
+              },
+              {
+                "first_word": 6553536,
+                "words": 64,
+                "digest": 4414683627160185667,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 25,
+            "first_word": 6553600,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6553600,
+                "words": 64,
+                "digest": 3160542471552239827,
+                "verified": true
+              },
+              {
+                "first_word": 6815680,
+                "words": 64,
+                "digest": 11898716364967163139,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 26,
+            "first_word": 6815744,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6815744,
+                "words": 64,
+                "digest": 3165141359199013075,
+                "verified": true
+              },
+              {
+                "first_word": 7077824,
+                "words": 64,
+                "digest": 902175838758171907,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 27,
+            "first_word": 7077888,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7077888,
+                "words": 64,
+                "digest": 15034790352291761299,
+                "verified": true
+              },
+              {
+                "first_word": 7339968,
+                "words": 64,
+                "digest": 11783952966244778179,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 28,
+            "first_word": 7340032,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7340032,
+                "words": 64,
+                "digest": 10366211035540523219,
+                "verified": true
+              },
+              {
+                "first_word": 7602112,
+                "words": 64,
+                "digest": 8389395531857305299,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 29,
+            "first_word": 7602176,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7602176,
+                "words": 64,
+                "digest": 5031143215148584083,
+                "verified": true
+              },
+              {
+                "first_word": 7864256,
+                "words": 64,
+                "digest": 17696357768200701587,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 30,
+            "first_word": 7864320,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7864320,
+                "words": 64,
+                "digest": 7786893459037916307,
+                "verified": true
+              },
+              {
+                "first_word": 8126400,
+                "words": 64,
+                "digest": 7966490435447817875,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 31,
+            "first_word": 8126464,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 8126464,
+                "words": 64,
+                "digest": 1014988736373889107,
+                "verified": true
+              },
+              {
+                "first_word": 8388544,
+                "words": 64,
+                "digest": 180756026871095379,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 37,
+            "first_word": 9699328,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 9699328,
+                "words": 64,
+                "digest": 101886686965270739,
+                "verified": true
+              },
+              {
+                "first_word": 9961408,
+                "words": 64,
+                "digest": 13063726905914826451,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 38,
+            "first_word": 9961472,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 9961472,
+                "words": 64,
+                "digest": 6461515010109884627,
+                "verified": true
+              },
+              {
+                "first_word": 10223552,
+                "words": 64,
+                "digest": 6009671362177294035,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 39,
+            "first_word": 10223616,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 10223616,
+                "words": 64,
+                "digest": 5145027409825893523,
+                "verified": true
+              },
+              {
+                "first_word": 10485696,
+                "words": 64,
+                "digest": 15541679494413125267,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 40,
+            "first_word": 10485760,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 10485760,
+                "words": 64,
+                "digest": 5503316664564094227,
+                "verified": true
+              },
+              {
+                "first_word": 10747840,
+                "words": 64,
+                "digest": 13574166419543026499,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 41,
+            "first_word": 10747904,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 10747904,
+                "words": 64,
+                "digest": 425674912577112275,
+                "verified": true
+              },
+              {
+                "first_word": 11009984,
+                "words": 64,
+                "digest": 10658716599472551171,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 42,
+            "first_word": 11010048,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11010048,
+                "words": 64,
+                "digest": 1913916054181021907,
+                "verified": true
+              },
+              {
+                "first_word": 11272128,
+                "words": 64,
+                "digest": 524968611086284035,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 43,
+            "first_word": 11272192,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11272192,
+                "words": 64,
+                "digest": 4594335116939775123,
+                "verified": true
+              },
+              {
+                "first_word": 11534272,
+                "words": 64,
+                "digest": 12669043415070310595,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 44,
+            "first_word": 11534336,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11534336,
+                "words": 64,
+                "digest": 4262528392809859283,
+                "verified": true
+              },
+              {
+                "first_word": 11796416,
+                "words": 64,
+                "digest": 11689314224758644435,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 45,
+            "first_word": 11796480,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11796480,
+                "words": 64,
+                "digest": 12844876947322604691,
+                "verified": true
+              },
+              {
+                "first_word": 12058560,
+                "words": 64,
+                "digest": 4581562457212454547,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 46,
+            "first_word": 12058624,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12058624,
+                "words": 64,
+                "digest": 9223673800219217043,
+                "verified": true
+              },
+              {
+                "first_word": 12320704,
+                "words": 64,
+                "digest": 8080288885551154835,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 47,
+            "first_word": 12320768,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12320768,
+                "words": 64,
+                "digest": 6168082210015205459,
+                "verified": true
+              },
+              {
+                "first_word": 12582848,
+                "words": 64,
+                "digest": 5853357072624771155,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 48,
+            "first_word": 12582912,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12582912,
+                "words": 64,
+                "digest": 12476707346293249299,
+                "verified": true
+              },
+              {
+                "first_word": 12844992,
+                "words": 64,
+                "digest": 15000425215902231363,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 49,
+            "first_word": 12845056,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12845056,
+                "words": 64,
+                "digest": 15227518982369085651,
+                "verified": true
+              },
+              {
+                "first_word": 13107136,
+                "words": 64,
+                "digest": 18379950162803373315,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 50,
+            "first_word": 13107200,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13107200,
+                "words": 64,
+                "digest": 15085513161571485907,
+                "verified": true
+              },
+              {
+                "first_word": 13369280,
+                "words": 64,
+                "digest": 831808468129510659,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 51,
+            "first_word": 13369344,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13369344,
+                "words": 64,
+                "digest": 2903425553602481299,
+                "verified": true
+              },
+              {
+                "first_word": 13631424,
+                "words": 64,
+                "digest": 1618301898842357955,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 52,
+            "first_word": 13631488,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13631488,
+                "words": 64,
+                "digest": 3384685173935769811,
+                "verified": true
+              },
+              {
+                "first_word": 13893568,
+                "words": 64,
+                "digest": 1835511285147311827,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 53,
+            "first_word": 13893632,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13893632,
+                "words": 64,
+                "digest": 3621362926811925651,
+                "verified": true
+              },
+              {
+                "first_word": 14155712,
+                "words": 64,
+                "digest": 14841532546878031507,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 54,
+            "first_word": 14155776,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14155776,
+                "words": 64,
+                "digest": 10741331592840416403,
+                "verified": true
+              },
+              {
+                "first_word": 14417856,
+                "words": 64,
+                "digest": 4127657149631334035,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 55,
+            "first_word": 14417920,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14417920,
+                "words": 64,
+                "digest": 18391159077004449875,
+                "verified": true
+              },
+              {
+                "first_word": 14680000,
+                "words": 64,
+                "digest": 578330510596251731,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 56,
+            "first_word": 14680064,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14680064,
+                "words": 64,
+                "digest": 18063895637967063251,
+                "verified": true
+              },
+              {
+                "first_word": 14942144,
+                "words": 64,
+                "digest": 13456192014786229507,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 57,
+            "first_word": 14942208,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14942208,
+                "words": 64,
+                "digest": 6805111829521435795,
+                "verified": true
+              },
+              {
+                "first_word": 15204288,
+                "words": 64,
+                "digest": 10164272407092084931,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 58,
+            "first_word": 15204352,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15204352,
+                "words": 64,
+                "digest": 11634344927766334611,
+                "verified": true
+              },
+              {
+                "first_word": 15466432,
+                "words": 64,
+                "digest": 9393896469931065539,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 59,
+            "first_word": 15466496,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15466496,
+                "words": 64,
+                "digest": 8106506222889293907,
+                "verified": true
+              },
+              {
+                "first_word": 15728576,
+                "words": 64,
+                "digest": 16134115810231132803,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 60,
+            "first_word": 15728640,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15728640,
+                "words": 64,
+                "digest": 18009148412861451411,
+                "verified": true
+              },
+              {
+                "first_word": 15990720,
+                "words": 64,
+                "digest": 1461902657180862099,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 61,
+            "first_word": 15990784,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15990784,
+                "words": 64,
+                "digest": 5444848843920480339,
+                "verified": true
+              },
+              {
+                "first_word": 16252864,
+                "words": 64,
+                "digest": 598007233253908563,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 62,
+            "first_word": 16252928,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 16252928,
+                "words": 64,
+                "digest": 4170477933430429779,
+                "verified": true
+              },
+              {
+                "first_word": 16515008,
+                "words": 64,
+                "digest": 2222406151685726291,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 63,
+            "first_word": 16515072,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 16515072,
+                "words": 64,
+                "digest": 7283209460606918675,
+                "verified": true
+              },
+              {
+                "first_word": 16777152,
+                "words": 64,
+                "digest": 11329283302255657491,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 64,
+            "first_word": 16777216,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 16777216,
+                "words": 64,
+                "digest": 3858602730359525715,
+                "verified": true
+              },
+              {
+                "first_word": 17039296,
+                "words": 64,
+                "digest": 379521048487705475,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 65,
+            "first_word": 17039360,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 17039360,
+                "words": 64,
+                "digest": 13962825943902197011,
+                "verified": true
+              },
+              {
+                "first_word": 17301440,
+                "words": 64,
+                "digest": 8750168192671247171,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 66,
+            "first_word": 17301504,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 17301504,
+                "words": 64,
+                "digest": 17500517848400549139,
+                "verified": true
+              },
+              {
+                "first_word": 17563584,
+                "words": 64,
+                "digest": 15463820895610317635,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 67,
+            "first_word": 17563648,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 17563648,
+                "words": 64,
+                "digest": 10598541896784021715,
+                "verified": true
+              },
+              {
+                "first_word": 17825728,
+                "words": 64,
+                "digest": 6070469262537831683,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 68,
+            "first_word": 17825792,
+            "words": 55282,
+            "launch_blocks": 216,
+            "samples": [
+              {
+                "first_word": 17825792,
+                "words": 64,
+                "digest": 4768218833113879827,
+                "verified": true
+              },
+              {
+                "first_word": 17881010,
+                "words": 64,
+                "digest": 4812428381507918468,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 64,
+        "shard_summaries_omitted": 5,
+        "state_counts": [
+          {
+            "slot": 31,
+            "ones": 250335036,
+            "zeros": 321859332,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 32,
+            "ones": 31291876,
+            "zeros": 540902492,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 33,
+            "ones": 321859528,
+            "zeros": 250334840,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 34,
+            "ones": 241373184,
+            "zeros": 330821184,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 35,
+            "ones": 9900072,
+            "zeros": 562294296,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 36,
+            "ones": 322371136,
+            "zeros": 249823232,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 37,
+            "ones": 505085504,
+            "zeros": 67108864,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 38,
+            "ones": 5577264,
+            "zeros": 566617104,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 39,
+            "ones": 8738856,
+            "zeros": 563455512,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 40,
+            "ones": 4928616,
+            "zeros": 567265752,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 6552900,
+        "state_count_launches": 690,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": null,
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 8388608,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "process_wall_ns": 5634147300,
+      "exact_mask_totals": {
+        "forward": {
+          "expected": 250335036,
+          "actual": 250335036
+        },
+        "elapsed_preserved": {
+          "expected": 31291876,
+          "actual": 31291876
+        },
+        "future_independent": {
+          "expected": 321859528,
+          "actual": 321859528
+        },
+        "retention_preserved": {
+          "expected": 241373184,
+          "actual": 241373184
+        },
+        "temporal_retention_admissible": {
+          "expected": 9900072,
+          "actual": 9900072
+        },
+        "Arch_neutral": {
+          "expected": 322371136,
+          "actual": 322371136
+        },
+        "distinct_witnesses": {
+          "expected": 505085504,
+          "actual": 505085504
+        },
+        "temporal_and_arch_neutral": {
+          "expected": 5577264,
+          "actual": 5577264
+        },
+        "temporal_and_distinct": {
+          "expected": 8738856,
+          "actual": 8738856
+        },
+        "temporal_arch_and_distinct": {
+          "expected": 4928616,
+          "actual": 4928616
+        }
+      },
+      "complete_admission_bitmap_verification": null,
+      "complete_declared_domain": false,
+      "distinct_candidates": 572194368,
+      "telemetry_file": "verification\\formalization_20260918\\capacity_99_telemetry_0.csv",
+      "telemetry_scope": "all process phases including initialization, computation and verification",
+      "telemetry_samples": 27,
+      "telemetry_peak": {
+        "memory.used": 11430.0,
+        "memory.free": 11712.0,
+        "utilization.gpu": 100.0,
+        "utilization.memory": 57.0,
+        "clocks.sm": 2415.0,
+        "clocks.mem": 14001.0,
+        "temperature.gpu": 75.0,
+        "power.draw": 156.93
+      }
+    },
+    {
+      "runner": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 0,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "lowered",
+        "block_threads": 256,
+        "lanes": 572194368,
+        "ticks": 64,
+        "epoch": 64,
+        "shards": 69,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 4416,
+        "warmup_compute_launches": 138,
+        "shard_words_cap": 262144,
+        "automatic_shard_words": 5711392,
+        "effective_shard_words": 262144,
+        "blocks_per_sm": 24,
+        "kernel_resources": {
+          "registers_per_thread": 34,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 19136,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 5,
+          "theoretical_active_warps_per_sm": 40,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 19136,
+        "working_bytes": 11443887360,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 0,
+        "elapsed_host_ns": 2477736200,
+        "sample_digest": 6950082452879914003,
+        "sample_lanes": 2048,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 69,
+          "words_verified": 8832,
+          "lanes_verified": 282624,
+          "all_lane_words_verified": false
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 64,
+                "digest": 6950082452879914003,
+                "verified": true
+              },
+              {
+                "first_word": 262080,
+                "words": 64,
+                "digest": 18028421680010183891,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 262144,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 262144,
+                "words": 64,
+                "digest": 13758323620353218515,
+                "verified": true
+              },
+              {
+                "first_word": 524224,
+                "words": 64,
+                "digest": 4529759314007511699,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 524288,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 524288,
+                "words": 64,
+                "digest": 1964409693406975955,
+                "verified": true
+              },
+              {
+                "first_word": 786368,
+                "words": 64,
+                "digest": 1988517318928208531,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "first_word": 786432,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 786432,
+                "words": 64,
+                "digest": 5444649856138098067,
+                "verified": true
+              },
+              {
+                "first_word": 1048512,
+                "words": 64,
+                "digest": 9894888109667814483,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "first_word": 1048576,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1048576,
+                "words": 64,
+                "digest": 17269714281863944147,
+                "verified": true
+              },
+              {
+                "first_word": 1310656,
+                "words": 64,
+                "digest": 6863302307290812722,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "first_word": 1310720,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1310720,
+                "words": 64,
+                "digest": 8826793737256465811,
+                "verified": true
+              },
+              {
+                "first_word": 1572800,
+                "words": 64,
+                "digest": 7076771868585598706,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "first_word": 1572864,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1572864,
+                "words": 64,
+                "digest": 10074151491607901587,
+                "verified": true
+              },
+              {
+                "first_word": 1834944,
+                "words": 64,
+                "digest": 15483892884618338034,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "first_word": 1835008,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1835008,
+                "words": 64,
+                "digest": 16341145670436110675,
+                "verified": true
+              },
+              {
+                "first_word": 2097088,
+                "words": 64,
+                "digest": 14605544625184975026,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "first_word": 2097152,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2097152,
+                "words": 64,
+                "digest": 863298047373857107,
+                "verified": true
+              },
+              {
+                "first_word": 2359232,
+                "words": 64,
+                "digest": 11805186171422636931,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "first_word": 2359296,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2359296,
+                "words": 64,
+                "digest": 486350441576092947,
+                "verified": true
+              },
+              {
+                "first_word": 2621376,
+                "words": 64,
+                "digest": 16106025158249589571,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "first_word": 2621440,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2621440,
+                "words": 64,
+                "digest": 4633611443524310291,
+                "verified": true
+              },
+              {
+                "first_word": 2883520,
+                "words": 64,
+                "digest": 5517388980823583555,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "first_word": 2883584,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2883584,
+                "words": 64,
+                "digest": 14958718514767546579,
+                "verified": true
+              },
+              {
+                "first_word": 3145664,
+                "words": 64,
+                "digest": 5718531897296286979,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "first_word": 3145728,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3145728,
+                "words": 64,
+                "digest": 5015366236135216403,
+                "verified": true
+              },
+              {
+                "first_word": 3407808,
+                "words": 64,
+                "digest": 17583614655327652627,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "first_word": 3407872,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3407872,
+                "words": 64,
+                "digest": 6472924704345393363,
+                "verified": true
+              },
+              {
+                "first_word": 3669952,
+                "words": 64,
+                "digest": 13956118258826976979,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "first_word": 3670016,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3670016,
+                "words": 64,
+                "digest": 14560800823448029395,
+                "verified": true
+              },
+              {
+                "first_word": 3932096,
+                "words": 64,
+                "digest": 4568165436515409619,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "first_word": 3932160,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3932160,
+                "words": 64,
+                "digest": 3922169218545192083,
+                "verified": true
+              },
+              {
+                "first_word": 4194240,
+                "words": 64,
+                "digest": 15002889621303264915,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "first_word": 4194304,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4194304,
+                "words": 64,
+                "digest": 3008645560450027859,
+                "verified": true
+              },
+              {
+                "first_word": 4456384,
+                "words": 64,
+                "digest": 807815466849811331,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "first_word": 4456448,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4456448,
+                "words": 64,
+                "digest": 982211670018594067,
+                "verified": true
+              },
+              {
+                "first_word": 4718528,
+                "words": 64,
+                "digest": 12064896096986786627,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "first_word": 4718592,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4718592,
+                "words": 64,
+                "digest": 16944566936498590995,
+                "verified": true
+              },
+              {
+                "first_word": 4980672,
+                "words": 64,
+                "digest": 1613177300590603075,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "first_word": 4980736,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4980736,
+                "words": 64,
+                "digest": 797535174901074131,
+                "verified": true
+              },
+              {
+                "first_word": 5242816,
+                "words": 64,
+                "digest": 17135774676887680259,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "first_word": 5242880,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 5242880,
+                "words": 64,
+                "digest": 6211132700613809427,
+                "verified": true
+              },
+              {
+                "first_word": 5504960,
+                "words": 64,
+                "digest": 3641625066027649811,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 21,
+            "first_word": 5505024,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 5505024,
+                "words": 64,
+                "digest": 3272413477592221907,
+                "verified": true
+              },
+              {
+                "first_word": 5767104,
+                "words": 64,
+                "digest": 8437488478240366291,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 22,
+            "first_word": 5767168,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 5767168,
+                "words": 64,
+                "digest": 9097251650307360979,
+                "verified": true
+              },
+              {
+                "first_word": 6029248,
+                "words": 64,
+                "digest": 6920363523432521427,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 23,
+            "first_word": 6029312,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6029312,
+                "words": 64,
+                "digest": 4455563377093364883,
+                "verified": true
+              },
+              {
+                "first_word": 6291392,
+                "words": 64,
+                "digest": 8313996097894958739,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 24,
+            "first_word": 6291456,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6291456,
+                "words": 64,
+                "digest": 7791994054573315347,
+                "verified": true
+              },
+              {
+                "first_word": 6553536,
+                "words": 64,
+                "digest": 4414683627160185667,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 25,
+            "first_word": 6553600,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6553600,
+                "words": 64,
+                "digest": 3160542471552239827,
+                "verified": true
+              },
+              {
+                "first_word": 6815680,
+                "words": 64,
+                "digest": 11898716364967163139,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 26,
+            "first_word": 6815744,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6815744,
+                "words": 64,
+                "digest": 3165141359199013075,
+                "verified": true
+              },
+              {
+                "first_word": 7077824,
+                "words": 64,
+                "digest": 902175838758171907,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 27,
+            "first_word": 7077888,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7077888,
+                "words": 64,
+                "digest": 15034790352291761299,
+                "verified": true
+              },
+              {
+                "first_word": 7339968,
+                "words": 64,
+                "digest": 11783952966244778179,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 28,
+            "first_word": 7340032,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7340032,
+                "words": 64,
+                "digest": 10366211035540523219,
+                "verified": true
+              },
+              {
+                "first_word": 7602112,
+                "words": 64,
+                "digest": 8389395531857305299,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 29,
+            "first_word": 7602176,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7602176,
+                "words": 64,
+                "digest": 5031143215148584083,
+                "verified": true
+              },
+              {
+                "first_word": 7864256,
+                "words": 64,
+                "digest": 17696357768200701587,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 30,
+            "first_word": 7864320,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7864320,
+                "words": 64,
+                "digest": 7786893459037916307,
+                "verified": true
+              },
+              {
+                "first_word": 8126400,
+                "words": 64,
+                "digest": 7966490435447817875,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 31,
+            "first_word": 8126464,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 8126464,
+                "words": 64,
+                "digest": 1014988736373889107,
+                "verified": true
+              },
+              {
+                "first_word": 8388544,
+                "words": 64,
+                "digest": 180756026871095379,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 37,
+            "first_word": 9699328,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 9699328,
+                "words": 64,
+                "digest": 101886686965270739,
+                "verified": true
+              },
+              {
+                "first_word": 9961408,
+                "words": 64,
+                "digest": 13063726905914826451,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 38,
+            "first_word": 9961472,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 9961472,
+                "words": 64,
+                "digest": 6461515010109884627,
+                "verified": true
+              },
+              {
+                "first_word": 10223552,
+                "words": 64,
+                "digest": 6009671362177294035,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 39,
+            "first_word": 10223616,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 10223616,
+                "words": 64,
+                "digest": 5145027409825893523,
+                "verified": true
+              },
+              {
+                "first_word": 10485696,
+                "words": 64,
+                "digest": 15541679494413125267,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 40,
+            "first_word": 10485760,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 10485760,
+                "words": 64,
+                "digest": 5503316664564094227,
+                "verified": true
+              },
+              {
+                "first_word": 10747840,
+                "words": 64,
+                "digest": 13574166419543026499,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 41,
+            "first_word": 10747904,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 10747904,
+                "words": 64,
+                "digest": 425674912577112275,
+                "verified": true
+              },
+              {
+                "first_word": 11009984,
+                "words": 64,
+                "digest": 10658716599472551171,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 42,
+            "first_word": 11010048,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11010048,
+                "words": 64,
+                "digest": 1913916054181021907,
+                "verified": true
+              },
+              {
+                "first_word": 11272128,
+                "words": 64,
+                "digest": 524968611086284035,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 43,
+            "first_word": 11272192,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11272192,
+                "words": 64,
+                "digest": 4594335116939775123,
+                "verified": true
+              },
+              {
+                "first_word": 11534272,
+                "words": 64,
+                "digest": 12669043415070310595,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 44,
+            "first_word": 11534336,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11534336,
+                "words": 64,
+                "digest": 4262528392809859283,
+                "verified": true
+              },
+              {
+                "first_word": 11796416,
+                "words": 64,
+                "digest": 11689314224758644435,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 45,
+            "first_word": 11796480,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11796480,
+                "words": 64,
+                "digest": 12844876947322604691,
+                "verified": true
+              },
+              {
+                "first_word": 12058560,
+                "words": 64,
+                "digest": 4581562457212454547,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 46,
+            "first_word": 12058624,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12058624,
+                "words": 64,
+                "digest": 9223673800219217043,
+                "verified": true
+              },
+              {
+                "first_word": 12320704,
+                "words": 64,
+                "digest": 8080288885551154835,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 47,
+            "first_word": 12320768,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12320768,
+                "words": 64,
+                "digest": 6168082210015205459,
+                "verified": true
+              },
+              {
+                "first_word": 12582848,
+                "words": 64,
+                "digest": 5853357072624771155,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 48,
+            "first_word": 12582912,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12582912,
+                "words": 64,
+                "digest": 12476707346293249299,
+                "verified": true
+              },
+              {
+                "first_word": 12844992,
+                "words": 64,
+                "digest": 15000425215902231363,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 49,
+            "first_word": 12845056,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12845056,
+                "words": 64,
+                "digest": 15227518982369085651,
+                "verified": true
+              },
+              {
+                "first_word": 13107136,
+                "words": 64,
+                "digest": 18379950162803373315,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 50,
+            "first_word": 13107200,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13107200,
+                "words": 64,
+                "digest": 15085513161571485907,
+                "verified": true
+              },
+              {
+                "first_word": 13369280,
+                "words": 64,
+                "digest": 831808468129510659,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 51,
+            "first_word": 13369344,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13369344,
+                "words": 64,
+                "digest": 2903425553602481299,
+                "verified": true
+              },
+              {
+                "first_word": 13631424,
+                "words": 64,
+                "digest": 1618301898842357955,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 52,
+            "first_word": 13631488,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13631488,
+                "words": 64,
+                "digest": 3384685173935769811,
+                "verified": true
+              },
+              {
+                "first_word": 13893568,
+                "words": 64,
+                "digest": 1835511285147311827,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 53,
+            "first_word": 13893632,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13893632,
+                "words": 64,
+                "digest": 3621362926811925651,
+                "verified": true
+              },
+              {
+                "first_word": 14155712,
+                "words": 64,
+                "digest": 14841532546878031507,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 54,
+            "first_word": 14155776,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14155776,
+                "words": 64,
+                "digest": 10741331592840416403,
+                "verified": true
+              },
+              {
+                "first_word": 14417856,
+                "words": 64,
+                "digest": 4127657149631334035,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 55,
+            "first_word": 14417920,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14417920,
+                "words": 64,
+                "digest": 18391159077004449875,
+                "verified": true
+              },
+              {
+                "first_word": 14680000,
+                "words": 64,
+                "digest": 578330510596251731,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 56,
+            "first_word": 14680064,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14680064,
+                "words": 64,
+                "digest": 18063895637967063251,
+                "verified": true
+              },
+              {
+                "first_word": 14942144,
+                "words": 64,
+                "digest": 13456192014786229507,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 57,
+            "first_word": 14942208,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14942208,
+                "words": 64,
+                "digest": 6805111829521435795,
+                "verified": true
+              },
+              {
+                "first_word": 15204288,
+                "words": 64,
+                "digest": 10164272407092084931,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 58,
+            "first_word": 15204352,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15204352,
+                "words": 64,
+                "digest": 11634344927766334611,
+                "verified": true
+              },
+              {
+                "first_word": 15466432,
+                "words": 64,
+                "digest": 9393896469931065539,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 59,
+            "first_word": 15466496,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15466496,
+                "words": 64,
+                "digest": 8106506222889293907,
+                "verified": true
+              },
+              {
+                "first_word": 15728576,
+                "words": 64,
+                "digest": 16134115810231132803,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 60,
+            "first_word": 15728640,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15728640,
+                "words": 64,
+                "digest": 18009148412861451411,
+                "verified": true
+              },
+              {
+                "first_word": 15990720,
+                "words": 64,
+                "digest": 1461902657180862099,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 61,
+            "first_word": 15990784,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15990784,
+                "words": 64,
+                "digest": 5444848843920480339,
+                "verified": true
+              },
+              {
+                "first_word": 16252864,
+                "words": 64,
+                "digest": 598007233253908563,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 62,
+            "first_word": 16252928,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 16252928,
+                "words": 64,
+                "digest": 4170477933430429779,
+                "verified": true
+              },
+              {
+                "first_word": 16515008,
+                "words": 64,
+                "digest": 2222406151685726291,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 63,
+            "first_word": 16515072,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 16515072,
+                "words": 64,
+                "digest": 7283209460606918675,
+                "verified": true
+              },
+              {
+                "first_word": 16777152,
+                "words": 64,
+                "digest": 11329283302255657491,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 64,
+            "first_word": 16777216,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 16777216,
+                "words": 64,
+                "digest": 3858602730359525715,
+                "verified": true
+              },
+              {
+                "first_word": 17039296,
+                "words": 64,
+                "digest": 379521048487705475,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 65,
+            "first_word": 17039360,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 17039360,
+                "words": 64,
+                "digest": 13962825943902197011,
+                "verified": true
+              },
+              {
+                "first_word": 17301440,
+                "words": 64,
+                "digest": 8750168192671247171,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 66,
+            "first_word": 17301504,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 17301504,
+                "words": 64,
+                "digest": 17500517848400549139,
+                "verified": true
+              },
+              {
+                "first_word": 17563584,
+                "words": 64,
+                "digest": 15463820895610317635,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 67,
+            "first_word": 17563648,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 17563648,
+                "words": 64,
+                "digest": 10598541896784021715,
+                "verified": true
+              },
+              {
+                "first_word": 17825728,
+                "words": 64,
+                "digest": 6070469262537831683,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 68,
+            "first_word": 17825792,
+            "words": 55282,
+            "launch_blocks": 216,
+            "samples": [
+              {
+                "first_word": 17825792,
+                "words": 64,
+                "digest": 4768218833113879827,
+                "verified": true
+              },
+              {
+                "first_word": 17881010,
+                "words": 64,
+                "digest": 4812428381507918468,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 64,
+        "shard_summaries_omitted": 5,
+        "state_counts": [
+          {
+            "slot": 31,
+            "ones": 250335036,
+            "zeros": 321859332,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 32,
+            "ones": 31291876,
+            "zeros": 540902492,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 33,
+            "ones": 321859528,
+            "zeros": 250334840,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 34,
+            "ones": 241373184,
+            "zeros": 330821184,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 35,
+            "ones": 9900072,
+            "zeros": 562294296,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 36,
+            "ones": 322371136,
+            "zeros": 249823232,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 37,
+            "ones": 505085504,
+            "zeros": 67108864,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 38,
+            "ones": 5577264,
+            "zeros": 566617104,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 39,
+            "ones": 8738856,
+            "zeros": 563455512,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 40,
+            "ones": 4928616,
+            "zeros": 567265752,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 6117600,
+        "state_count_launches": 690,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": null,
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 8388608,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "process_wall_ns": 5469373400,
+      "exact_mask_totals": {
+        "forward": {
+          "expected": 250335036,
+          "actual": 250335036
+        },
+        "elapsed_preserved": {
+          "expected": 31291876,
+          "actual": 31291876
+        },
+        "future_independent": {
+          "expected": 321859528,
+          "actual": 321859528
+        },
+        "retention_preserved": {
+          "expected": 241373184,
+          "actual": 241373184
+        },
+        "temporal_retention_admissible": {
+          "expected": 9900072,
+          "actual": 9900072
+        },
+        "Arch_neutral": {
+          "expected": 322371136,
+          "actual": 322371136
+        },
+        "distinct_witnesses": {
+          "expected": 505085504,
+          "actual": 505085504
+        },
+        "temporal_and_arch_neutral": {
+          "expected": 5577264,
+          "actual": 5577264
+        },
+        "temporal_and_distinct": {
+          "expected": 8738856,
+          "actual": 8738856
+        },
+        "temporal_arch_and_distinct": {
+          "expected": 4928616,
+          "actual": 4928616
+        }
+      },
+      "complete_admission_bitmap_verification": null,
+      "complete_declared_domain": false,
+      "distinct_candidates": 572194368,
+      "telemetry_file": "verification\\formalization_20260918\\capacity_99_telemetry_1.csv",
+      "telemetry_scope": "all process phases including initialization, computation and verification",
+      "telemetry_samples": 26,
+      "telemetry_peak": {
+        "memory.used": 11430.0,
+        "memory.free": 11720.0,
+        "utilization.gpu": 100.0,
+        "utilization.memory": 57.0,
+        "clocks.sm": 2452.0,
+        "clocks.mem": 14001.0,
+        "temperature.gpu": 76.0,
+        "power.draw": 169.81
+      }
+    },
+    {
+      "runner": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 0,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "lowered",
+        "block_threads": 256,
+        "lanes": 572194368,
+        "ticks": 64,
+        "epoch": 64,
+        "shards": 69,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 4416,
+        "warmup_compute_launches": 138,
+        "shard_words_cap": 262144,
+        "automatic_shard_words": 5711392,
+        "effective_shard_words": 262144,
+        "blocks_per_sm": 24,
+        "kernel_resources": {
+          "registers_per_thread": 34,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 19136,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 5,
+          "theoretical_active_warps_per_sm": 40,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 19136,
+        "working_bytes": 11443887360,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 0,
+        "elapsed_host_ns": 2482746300,
+        "sample_digest": 6950082452879914003,
+        "sample_lanes": 2048,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 69,
+          "words_verified": 8832,
+          "lanes_verified": 282624,
+          "all_lane_words_verified": false
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 64,
+                "digest": 6950082452879914003,
+                "verified": true
+              },
+              {
+                "first_word": 262080,
+                "words": 64,
+                "digest": 18028421680010183891,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 262144,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 262144,
+                "words": 64,
+                "digest": 13758323620353218515,
+                "verified": true
+              },
+              {
+                "first_word": 524224,
+                "words": 64,
+                "digest": 4529759314007511699,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 524288,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 524288,
+                "words": 64,
+                "digest": 1964409693406975955,
+                "verified": true
+              },
+              {
+                "first_word": 786368,
+                "words": 64,
+                "digest": 1988517318928208531,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "first_word": 786432,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 786432,
+                "words": 64,
+                "digest": 5444649856138098067,
+                "verified": true
+              },
+              {
+                "first_word": 1048512,
+                "words": 64,
+                "digest": 9894888109667814483,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "first_word": 1048576,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1048576,
+                "words": 64,
+                "digest": 17269714281863944147,
+                "verified": true
+              },
+              {
+                "first_word": 1310656,
+                "words": 64,
+                "digest": 6863302307290812722,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "first_word": 1310720,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1310720,
+                "words": 64,
+                "digest": 8826793737256465811,
+                "verified": true
+              },
+              {
+                "first_word": 1572800,
+                "words": 64,
+                "digest": 7076771868585598706,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "first_word": 1572864,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1572864,
+                "words": 64,
+                "digest": 10074151491607901587,
+                "verified": true
+              },
+              {
+                "first_word": 1834944,
+                "words": 64,
+                "digest": 15483892884618338034,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "first_word": 1835008,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 1835008,
+                "words": 64,
+                "digest": 16341145670436110675,
+                "verified": true
+              },
+              {
+                "first_word": 2097088,
+                "words": 64,
+                "digest": 14605544625184975026,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "first_word": 2097152,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2097152,
+                "words": 64,
+                "digest": 863298047373857107,
+                "verified": true
+              },
+              {
+                "first_word": 2359232,
+                "words": 64,
+                "digest": 11805186171422636931,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "first_word": 2359296,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2359296,
+                "words": 64,
+                "digest": 486350441576092947,
+                "verified": true
+              },
+              {
+                "first_word": 2621376,
+                "words": 64,
+                "digest": 16106025158249589571,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "first_word": 2621440,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2621440,
+                "words": 64,
+                "digest": 4633611443524310291,
+                "verified": true
+              },
+              {
+                "first_word": 2883520,
+                "words": 64,
+                "digest": 5517388980823583555,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "first_word": 2883584,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 2883584,
+                "words": 64,
+                "digest": 14958718514767546579,
+                "verified": true
+              },
+              {
+                "first_word": 3145664,
+                "words": 64,
+                "digest": 5718531897296286979,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "first_word": 3145728,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3145728,
+                "words": 64,
+                "digest": 5015366236135216403,
+                "verified": true
+              },
+              {
+                "first_word": 3407808,
+                "words": 64,
+                "digest": 17583614655327652627,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "first_word": 3407872,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3407872,
+                "words": 64,
+                "digest": 6472924704345393363,
+                "verified": true
+              },
+              {
+                "first_word": 3669952,
+                "words": 64,
+                "digest": 13956118258826976979,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "first_word": 3670016,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3670016,
+                "words": 64,
+                "digest": 14560800823448029395,
+                "verified": true
+              },
+              {
+                "first_word": 3932096,
+                "words": 64,
+                "digest": 4568165436515409619,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "first_word": 3932160,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 3932160,
+                "words": 64,
+                "digest": 3922169218545192083,
+                "verified": true
+              },
+              {
+                "first_word": 4194240,
+                "words": 64,
+                "digest": 15002889621303264915,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "first_word": 4194304,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4194304,
+                "words": 64,
+                "digest": 3008645560450027859,
+                "verified": true
+              },
+              {
+                "first_word": 4456384,
+                "words": 64,
+                "digest": 807815466849811331,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "first_word": 4456448,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4456448,
+                "words": 64,
+                "digest": 982211670018594067,
+                "verified": true
+              },
+              {
+                "first_word": 4718528,
+                "words": 64,
+                "digest": 12064896096986786627,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "first_word": 4718592,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4718592,
+                "words": 64,
+                "digest": 16944566936498590995,
+                "verified": true
+              },
+              {
+                "first_word": 4980672,
+                "words": 64,
+                "digest": 1613177300590603075,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "first_word": 4980736,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 4980736,
+                "words": 64,
+                "digest": 797535174901074131,
+                "verified": true
+              },
+              {
+                "first_word": 5242816,
+                "words": 64,
+                "digest": 17135774676887680259,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "first_word": 5242880,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 5242880,
+                "words": 64,
+                "digest": 6211132700613809427,
+                "verified": true
+              },
+              {
+                "first_word": 5504960,
+                "words": 64,
+                "digest": 3641625066027649811,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 21,
+            "first_word": 5505024,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 5505024,
+                "words": 64,
+                "digest": 3272413477592221907,
+                "verified": true
+              },
+              {
+                "first_word": 5767104,
+                "words": 64,
+                "digest": 8437488478240366291,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 22,
+            "first_word": 5767168,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 5767168,
+                "words": 64,
+                "digest": 9097251650307360979,
+                "verified": true
+              },
+              {
+                "first_word": 6029248,
+                "words": 64,
+                "digest": 6920363523432521427,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 23,
+            "first_word": 6029312,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6029312,
+                "words": 64,
+                "digest": 4455563377093364883,
+                "verified": true
+              },
+              {
+                "first_word": 6291392,
+                "words": 64,
+                "digest": 8313996097894958739,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 24,
+            "first_word": 6291456,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6291456,
+                "words": 64,
+                "digest": 7791994054573315347,
+                "verified": true
+              },
+              {
+                "first_word": 6553536,
+                "words": 64,
+                "digest": 4414683627160185667,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 25,
+            "first_word": 6553600,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6553600,
+                "words": 64,
+                "digest": 3160542471552239827,
+                "verified": true
+              },
+              {
+                "first_word": 6815680,
+                "words": 64,
+                "digest": 11898716364967163139,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 26,
+            "first_word": 6815744,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 6815744,
+                "words": 64,
+                "digest": 3165141359199013075,
+                "verified": true
+              },
+              {
+                "first_word": 7077824,
+                "words": 64,
+                "digest": 902175838758171907,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 27,
+            "first_word": 7077888,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7077888,
+                "words": 64,
+                "digest": 15034790352291761299,
+                "verified": true
+              },
+              {
+                "first_word": 7339968,
+                "words": 64,
+                "digest": 11783952966244778179,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 28,
+            "first_word": 7340032,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7340032,
+                "words": 64,
+                "digest": 10366211035540523219,
+                "verified": true
+              },
+              {
+                "first_word": 7602112,
+                "words": 64,
+                "digest": 8389395531857305299,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 29,
+            "first_word": 7602176,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7602176,
+                "words": 64,
+                "digest": 5031143215148584083,
+                "verified": true
+              },
+              {
+                "first_word": 7864256,
+                "words": 64,
+                "digest": 17696357768200701587,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 30,
+            "first_word": 7864320,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 7864320,
+                "words": 64,
+                "digest": 7786893459037916307,
+                "verified": true
+              },
+              {
+                "first_word": 8126400,
+                "words": 64,
+                "digest": 7966490435447817875,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 31,
+            "first_word": 8126464,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 8126464,
+                "words": 64,
+                "digest": 1014988736373889107,
+                "verified": true
+              },
+              {
+                "first_word": 8388544,
+                "words": 64,
+                "digest": 180756026871095379,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 37,
+            "first_word": 9699328,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 9699328,
+                "words": 64,
+                "digest": 101886686965270739,
+                "verified": true
+              },
+              {
+                "first_word": 9961408,
+                "words": 64,
+                "digest": 13063726905914826451,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 38,
+            "first_word": 9961472,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 9961472,
+                "words": 64,
+                "digest": 6461515010109884627,
+                "verified": true
+              },
+              {
+                "first_word": 10223552,
+                "words": 64,
+                "digest": 6009671362177294035,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 39,
+            "first_word": 10223616,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 10223616,
+                "words": 64,
+                "digest": 5145027409825893523,
+                "verified": true
+              },
+              {
+                "first_word": 10485696,
+                "words": 64,
+                "digest": 15541679494413125267,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 40,
+            "first_word": 10485760,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 10485760,
+                "words": 64,
+                "digest": 5503316664564094227,
+                "verified": true
+              },
+              {
+                "first_word": 10747840,
+                "words": 64,
+                "digest": 13574166419543026499,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 41,
+            "first_word": 10747904,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 10747904,
+                "words": 64,
+                "digest": 425674912577112275,
+                "verified": true
+              },
+              {
+                "first_word": 11009984,
+                "words": 64,
+                "digest": 10658716599472551171,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 42,
+            "first_word": 11010048,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11010048,
+                "words": 64,
+                "digest": 1913916054181021907,
+                "verified": true
+              },
+              {
+                "first_word": 11272128,
+                "words": 64,
+                "digest": 524968611086284035,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 43,
+            "first_word": 11272192,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11272192,
+                "words": 64,
+                "digest": 4594335116939775123,
+                "verified": true
+              },
+              {
+                "first_word": 11534272,
+                "words": 64,
+                "digest": 12669043415070310595,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 44,
+            "first_word": 11534336,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11534336,
+                "words": 64,
+                "digest": 4262528392809859283,
+                "verified": true
+              },
+              {
+                "first_word": 11796416,
+                "words": 64,
+                "digest": 11689314224758644435,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 45,
+            "first_word": 11796480,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 11796480,
+                "words": 64,
+                "digest": 12844876947322604691,
+                "verified": true
+              },
+              {
+                "first_word": 12058560,
+                "words": 64,
+                "digest": 4581562457212454547,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 46,
+            "first_word": 12058624,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12058624,
+                "words": 64,
+                "digest": 9223673800219217043,
+                "verified": true
+              },
+              {
+                "first_word": 12320704,
+                "words": 64,
+                "digest": 8080288885551154835,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 47,
+            "first_word": 12320768,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12320768,
+                "words": 64,
+                "digest": 6168082210015205459,
+                "verified": true
+              },
+              {
+                "first_word": 12582848,
+                "words": 64,
+                "digest": 5853357072624771155,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 48,
+            "first_word": 12582912,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12582912,
+                "words": 64,
+                "digest": 12476707346293249299,
+                "verified": true
+              },
+              {
+                "first_word": 12844992,
+                "words": 64,
+                "digest": 15000425215902231363,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 49,
+            "first_word": 12845056,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 12845056,
+                "words": 64,
+                "digest": 15227518982369085651,
+                "verified": true
+              },
+              {
+                "first_word": 13107136,
+                "words": 64,
+                "digest": 18379950162803373315,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 50,
+            "first_word": 13107200,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13107200,
+                "words": 64,
+                "digest": 15085513161571485907,
+                "verified": true
+              },
+              {
+                "first_word": 13369280,
+                "words": 64,
+                "digest": 831808468129510659,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 51,
+            "first_word": 13369344,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13369344,
+                "words": 64,
+                "digest": 2903425553602481299,
+                "verified": true
+              },
+              {
+                "first_word": 13631424,
+                "words": 64,
+                "digest": 1618301898842357955,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 52,
+            "first_word": 13631488,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13631488,
+                "words": 64,
+                "digest": 3384685173935769811,
+                "verified": true
+              },
+              {
+                "first_word": 13893568,
+                "words": 64,
+                "digest": 1835511285147311827,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 53,
+            "first_word": 13893632,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 13893632,
+                "words": 64,
+                "digest": 3621362926811925651,
+                "verified": true
+              },
+              {
+                "first_word": 14155712,
+                "words": 64,
+                "digest": 14841532546878031507,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 54,
+            "first_word": 14155776,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14155776,
+                "words": 64,
+                "digest": 10741331592840416403,
+                "verified": true
+              },
+              {
+                "first_word": 14417856,
+                "words": 64,
+                "digest": 4127657149631334035,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 55,
+            "first_word": 14417920,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14417920,
+                "words": 64,
+                "digest": 18391159077004449875,
+                "verified": true
+              },
+              {
+                "first_word": 14680000,
+                "words": 64,
+                "digest": 578330510596251731,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 56,
+            "first_word": 14680064,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14680064,
+                "words": 64,
+                "digest": 18063895637967063251,
+                "verified": true
+              },
+              {
+                "first_word": 14942144,
+                "words": 64,
+                "digest": 13456192014786229507,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 57,
+            "first_word": 14942208,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 14942208,
+                "words": 64,
+                "digest": 6805111829521435795,
+                "verified": true
+              },
+              {
+                "first_word": 15204288,
+                "words": 64,
+                "digest": 10164272407092084931,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 58,
+            "first_word": 15204352,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15204352,
+                "words": 64,
+                "digest": 11634344927766334611,
+                "verified": true
+              },
+              {
+                "first_word": 15466432,
+                "words": 64,
+                "digest": 9393896469931065539,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 59,
+            "first_word": 15466496,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15466496,
+                "words": 64,
+                "digest": 8106506222889293907,
+                "verified": true
+              },
+              {
+                "first_word": 15728576,
+                "words": 64,
+                "digest": 16134115810231132803,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 60,
+            "first_word": 15728640,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15728640,
+                "words": 64,
+                "digest": 18009148412861451411,
+                "verified": true
+              },
+              {
+                "first_word": 15990720,
+                "words": 64,
+                "digest": 1461902657180862099,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 61,
+            "first_word": 15990784,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 15990784,
+                "words": 64,
+                "digest": 5444848843920480339,
+                "verified": true
+              },
+              {
+                "first_word": 16252864,
+                "words": 64,
+                "digest": 598007233253908563,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 62,
+            "first_word": 16252928,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 16252928,
+                "words": 64,
+                "digest": 4170477933430429779,
+                "verified": true
+              },
+              {
+                "first_word": 16515008,
+                "words": 64,
+                "digest": 2222406151685726291,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 63,
+            "first_word": 16515072,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 16515072,
+                "words": 64,
+                "digest": 7283209460606918675,
+                "verified": true
+              },
+              {
+                "first_word": 16777152,
+                "words": 64,
+                "digest": 11329283302255657491,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 64,
+            "first_word": 16777216,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 16777216,
+                "words": 64,
+                "digest": 3858602730359525715,
+                "verified": true
+              },
+              {
+                "first_word": 17039296,
+                "words": 64,
+                "digest": 379521048487705475,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 65,
+            "first_word": 17039360,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 17039360,
+                "words": 64,
+                "digest": 13962825943902197011,
+                "verified": true
+              },
+              {
+                "first_word": 17301440,
+                "words": 64,
+                "digest": 8750168192671247171,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 66,
+            "first_word": 17301504,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 17301504,
+                "words": 64,
+                "digest": 17500517848400549139,
+                "verified": true
+              },
+              {
+                "first_word": 17563584,
+                "words": 64,
+                "digest": 15463820895610317635,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 67,
+            "first_word": 17563648,
+            "words": 262144,
+            "launch_blocks": 1024,
+            "samples": [
+              {
+                "first_word": 17563648,
+                "words": 64,
+                "digest": 10598541896784021715,
+                "verified": true
+              },
+              {
+                "first_word": 17825728,
+                "words": 64,
+                "digest": 6070469262537831683,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 68,
+            "first_word": 17825792,
+            "words": 55282,
+            "launch_blocks": 216,
+            "samples": [
+              {
+                "first_word": 17825792,
+                "words": 64,
+                "digest": 4768218833113879827,
+                "verified": true
+              },
+              {
+                "first_word": 17881010,
+                "words": 64,
+                "digest": 4812428381507918468,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 64,
+        "shard_summaries_omitted": 5,
+        "state_counts": [
+          {
+            "slot": 31,
+            "ones": 250335036,
+            "zeros": 321859332,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 32,
+            "ones": 31291876,
+            "zeros": 540902492,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 33,
+            "ones": 321859528,
+            "zeros": 250334840,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 34,
+            "ones": 241373184,
+            "zeros": 330821184,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 35,
+            "ones": 9900072,
+            "zeros": 562294296,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 36,
+            "ones": 322371136,
+            "zeros": 249823232,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 37,
+            "ones": 505085504,
+            "zeros": 67108864,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 38,
+            "ones": 5577264,
+            "zeros": 566617104,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 39,
+            "ones": 8738856,
+            "zeros": 563455512,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 40,
+            "ones": 4928616,
+            "zeros": 567265752,
+            "lanes": 572194368,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 6130200,
+        "state_count_launches": 690,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": null,
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 8388608,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "process_wall_ns": 5170731800,
+      "exact_mask_totals": {
+        "forward": {
+          "expected": 250335036,
+          "actual": 250335036
+        },
+        "elapsed_preserved": {
+          "expected": 31291876,
+          "actual": 31291876
+        },
+        "future_independent": {
+          "expected": 321859528,
+          "actual": 321859528
+        },
+        "retention_preserved": {
+          "expected": 241373184,
+          "actual": 241373184
+        },
+        "temporal_retention_admissible": {
+          "expected": 9900072,
+          "actual": 9900072
+        },
+        "Arch_neutral": {
+          "expected": 322371136,
+          "actual": 322371136
+        },
+        "distinct_witnesses": {
+          "expected": 505085504,
+          "actual": 505085504
+        },
+        "temporal_and_arch_neutral": {
+          "expected": 5577264,
+          "actual": 5577264
+        },
+        "temporal_and_distinct": {
+          "expected": 8738856,
+          "actual": 8738856
+        },
+        "temporal_arch_and_distinct": {
+          "expected": 4928616,
+          "actual": 4928616
+        }
+      },
+      "complete_admission_bitmap_verification": null,
+      "complete_declared_domain": false,
+      "distinct_candidates": 572194368,
+      "telemetry_file": "verification\\formalization_20260918\\capacity_99_telemetry_2.csv",
+      "telemetry_scope": "all process phases including initialization, computation and verification",
+      "telemetry_samples": 25,
+      "telemetry_peak": {
+        "memory.used": 11430.0,
+        "memory.free": 11712.0,
+        "utilization.gpu": 100.0,
+        "utilization.memory": 58.0,
+        "clocks.sm": 2460.0,
+        "clocks.mem": 14001.0,
+        "temperature.gpu": 75.0,
+        "power.draw": 140.95
+      }
+    }
+  ],
+  "scope": "Exact bounded certificate predicates and distinct counter candidates. No assigned native jitter/pinion dynamics. Samples check complete states at every shard edge; integer population counts check each selected plane over every lane against an independent exact prefix oracle.",
+  "min_compute_ns": 2477736200,
+  "median_compute_ns": 2482746300,
+  "max_compute_ns": 2484331400
+}

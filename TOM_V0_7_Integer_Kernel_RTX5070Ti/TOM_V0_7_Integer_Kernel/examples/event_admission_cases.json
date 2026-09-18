@@ -1,0 +1,308 @@
+{
+  "description": "Eight independent streams, three submitted events per stream.",
+  "fact_legend": {
+    "0": "record received",
+    "1": "schema checked",
+    "2": "payload processed",
+    "3": "result recorded",
+    "4": "receipt recorded"
+  },
+  "streams": [
+    {
+      "name": "append",
+      "purpose": "Three valid appends extend the accepted state.",
+      "initial": {
+        "last_sequence": 40,
+        "last_time": 100,
+        "retained_facts": 3
+      },
+      "events": [
+        {
+          "event_sequence": 41,
+          "event_time": 105,
+          "claimed_elapsed": 5,
+          "latest_dependency": 100,
+          "proposed_facts": 7
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 110,
+          "claimed_elapsed": 5,
+          "latest_dependency": 105,
+          "proposed_facts": 15
+        },
+        {
+          "event_sequence": 43,
+          "event_time": 115,
+          "claimed_elapsed": 5,
+          "latest_dependency": 110,
+          "proposed_facts": 31
+        }
+      ],
+      "expected_acceptance": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "replay",
+      "purpose": "Duplicate sequence is rejected; a later fresh event succeeds.",
+      "initial": {
+        "last_sequence": 40,
+        "last_time": 100,
+        "retained_facts": 3
+      },
+      "events": [
+        {
+          "event_sequence": 41,
+          "event_time": 105,
+          "claimed_elapsed": 5,
+          "latest_dependency": 100,
+          "proposed_facts": 7
+        },
+        {
+          "event_sequence": 41,
+          "event_time": 110,
+          "claimed_elapsed": 5,
+          "latest_dependency": 105,
+          "proposed_facts": 15
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 110,
+          "claimed_elapsed": 5,
+          "latest_dependency": 105,
+          "proposed_facts": 15
+        }
+      ],
+      "expected_acceptance": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "backward_time",
+      "purpose": "A regressed timestamp and wrapped elapsed claim are rejected.",
+      "initial": {
+        "last_sequence": 40,
+        "last_time": 100,
+        "retained_facts": 3
+      },
+      "events": [
+        {
+          "event_sequence": 41,
+          "event_time": 105,
+          "claimed_elapsed": 5,
+          "latest_dependency": 100,
+          "proposed_facts": 7
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 104,
+          "claimed_elapsed": 65535,
+          "latest_dependency": 100,
+          "proposed_facts": 15
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 110,
+          "claimed_elapsed": 5,
+          "latest_dependency": 105,
+          "proposed_facts": 15
+        }
+      ],
+      "expected_acceptance": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "wrong_elapsed",
+      "purpose": "An incorrect elapsed claim fails despite a forward timestamp.",
+      "initial": {
+        "last_sequence": 40,
+        "last_time": 100,
+        "retained_facts": 3
+      },
+      "events": [
+        {
+          "event_sequence": 41,
+          "event_time": 105,
+          "claimed_elapsed": 5,
+          "latest_dependency": 100,
+          "proposed_facts": 7
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 110,
+          "claimed_elapsed": 4,
+          "latest_dependency": 105,
+          "proposed_facts": 15
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 110,
+          "claimed_elapsed": 5,
+          "latest_dependency": 105,
+          "proposed_facts": 15
+        }
+      ],
+      "expected_acceptance": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "future_dependency",
+      "purpose": "A dependency timestamp beyond this event is rejected.",
+      "initial": {
+        "last_sequence": 40,
+        "last_time": 100,
+        "retained_facts": 3
+      },
+      "events": [
+        {
+          "event_sequence": 41,
+          "event_time": 105,
+          "claimed_elapsed": 5,
+          "latest_dependency": 100,
+          "proposed_facts": 7
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 110,
+          "claimed_elapsed": 5,
+          "latest_dependency": 111,
+          "proposed_facts": 15
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 110,
+          "claimed_elapsed": 5,
+          "latest_dependency": 105,
+          "proposed_facts": 15
+        }
+      ],
+      "expected_acceptance": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "fact_erasure",
+      "purpose": "A candidate cannot clear an already retained fact bit.",
+      "initial": {
+        "last_sequence": 40,
+        "last_time": 100,
+        "retained_facts": 3
+      },
+      "events": [
+        {
+          "event_sequence": 41,
+          "event_time": 105,
+          "claimed_elapsed": 5,
+          "latest_dependency": 100,
+          "proposed_facts": 7
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 110,
+          "claimed_elapsed": 5,
+          "latest_dependency": 105,
+          "proposed_facts": 3
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 110,
+          "claimed_elapsed": 5,
+          "latest_dependency": 105,
+          "proposed_facts": 15
+        }
+      ],
+      "expected_acceptance": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "combined_recovery",
+      "purpose": "All five checks fail, then valid recovery uses unchanged state.",
+      "initial": {
+        "last_sequence": 40,
+        "last_time": 100,
+        "retained_facts": 3
+      },
+      "events": [
+        {
+          "event_sequence": 41,
+          "event_time": 105,
+          "claimed_elapsed": 5,
+          "latest_dependency": 100,
+          "proposed_facts": 7
+        },
+        {
+          "event_sequence": 40,
+          "event_time": 104,
+          "claimed_elapsed": 65535,
+          "latest_dependency": 106,
+          "proposed_facts": 1
+        },
+        {
+          "event_sequence": 42,
+          "event_time": 110,
+          "claimed_elapsed": 5,
+          "latest_dependency": 105,
+          "proposed_facts": 15
+        }
+      ],
+      "expected_acceptance": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "uint16_boundary",
+      "purpose": "65535 is valid; implicit rollover to zero is rejected.",
+      "initial": {
+        "last_sequence": 65533,
+        "last_time": 65533,
+        "retained_facts": 3
+      },
+      "events": [
+        {
+          "event_sequence": 65534,
+          "event_time": 65534,
+          "claimed_elapsed": 1,
+          "latest_dependency": 65533,
+          "proposed_facts": 7
+        },
+        {
+          "event_sequence": 65535,
+          "event_time": 65535,
+          "claimed_elapsed": 1,
+          "latest_dependency": 65534,
+          "proposed_facts": 15
+        },
+        {
+          "event_sequence": 0,
+          "event_time": 0,
+          "claimed_elapsed": 1,
+          "latest_dependency": 0,
+          "proposed_facts": 31
+        }
+      ],
+      "expected_acceptance": [
+        1,
+        1,
+        0
+      ]
+    }
+  ]
+}

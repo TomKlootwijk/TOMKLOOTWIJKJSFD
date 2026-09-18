@@ -1,0 +1,16 @@
+{
+  "source_status": "PASS",
+  "ptx_compile": "UNAVAILABLE: nvcc not installed",
+  "ptx_float_audit": "NOT_RUN",
+  "files": {
+    "include/tom/core.hpp": {
+      "sha256": "bbbac783292259be79f032b4e119be68260c27205eca535b49ade8727f454114",
+      "floating_type_tokens": []
+    },
+    "cuda/main.cu": {
+      "sha256": "8bc9d038218236c44254a2b1aeea69259bfd5843e8dcb6988a86f7fc25ebfbc4",
+      "floating_type_tokens": []
+    }
+  },
+  "scope": "Authored computation paths only; source inspection is not substituted for compiled PTX/SASS evidence or an on-device test."
+}

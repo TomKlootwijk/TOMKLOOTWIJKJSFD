@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "binary_sha256": "b761ba159020aac24ba84d68dd0e0418db7fb29c2d6effb5f9576e391c7c8c30",
+  "workloads": {
+    "release_capacity": {
+      "cases": 2474208,
+      "working_bytes": 11559499776,
+      "case_words": 432,
+      "result_words": 736,
+      "accepted_cases": 2474208,
+      "not_committed_cases": 0,
+      "source_tom_cases": 2474208,
+      "inverse_occam_rewrites": 8659728,
+      "alias_rewrites": 1237104,
+      "resolved_requests": 0,
+      "unresolved_requests": 0,
+      "median_compute_ms_per_pass": 126.63395,
+      "cases_per_second": 19538267.5814819,
+      "median_process_seconds": 2.8813964,
+      "working_GiB": 10.765623092651367,
+      "cuda_free_after_bytes": [
+        0,
+        0,
+        0
+      ],
+      "final_output_words_compared_per_run": 1821017088,
+      "final_output_mismatched_words": [
+        0,
+        0,
+        0
+      ],
+      "samples": 3,
+      "timed_passes_per_sample": 16
+    },
+    "release_mixed_capacity": {
+      "cases": 1851297,
+      "working_bytes": 11559498468,
+      "case_words": 576,
+      "result_words": 985,
+      "accepted_cases": 231413,
+      "not_committed_cases": 1619884,
+      "source_tom_cases": 1851297,
+      "inverse_occam_rewrites": 6479536,
+      "alias_rewrites": 925648,
+      "resolved_requests": 231413,
+      "unresolved_requests": 2082708,
+      "median_compute_ms_per_pass": 128.12574375,
+      "cases_per_second": 14449063.442021972,
+      "median_process_seconds": 2.8385867,
+      "working_GiB": 10.76562187448144,
+      "cuda_free_after_bytes": [
+        0,
+        0,
+        0
+      ],
+      "final_output_words_compared_per_run": 1823527545,
+      "final_output_mismatched_words": [
+        0,
+        0,
+        0
+      ],
+      "samples": 3,
+      "timed_passes_per_sample": 16
+    }
+  },
+  "validation": {
+    "ctest_suites_passed": 6,
+    "gpu_resume_scenarios": 12,
+    "gpu_demo_steps": 5,
+    "gpu_demo_words_compared": 2980,
+    "conformance": {
+      "source_full": {
+        "cases": 1,
+        "words_per_result": 331,
+        "total_words_compared": 331,
+        "all_words_equal": true
+      },
+      "native_cases": {
+        "cases": 4127,
+        "words_per_result": 808,
+        "total_words_compared": 3334616,
+        "all_words_equal": true
+      },
+      "native_valid": {
+        "cases": 4127,
+        "words_per_result": 808,
+        "total_words_compared": 3334616,
+        "all_words_equal": true
+      },
+      "native_deep": {
+        "cases": 1,
+        "words_per_result": 23994,
+        "total_words_compared": 23994,
+        "all_words_equal": true
+      },
+      "native_mixed_templates": {
+        "cases": 8,
+        "words_per_result": 985,
+        "total_words_compared": 7880,
+        "all_words_equal": true
+      },
+      "deliberately_wrong_oracle": {
+        "expected_exit_code": 1,
+        "observed_exit_code": 1,
+        "mismatched_words": 33,
+        "rejected": true
+      },
+      "status": "PASS"
+    },
+    "source_review": "No additional unimplemented assigned structural law found within the documented finite representation."
+  },
+  "representative_mixed_profile": {
+    "cases": 32768,
+    "scope": "Separate profiled shard; not the full-memory run",
+    "SM_percent_of_peak": 3.28,
+    "DRAM_percent_of_peak": 25.99,
+    "active_warp_occupancy_percent": 46.53
+  },
+  "limits": [
+    "Eight declared structural templates per capacity workload with distinct retained-history IDs; not exhaustive TOM possibility space.",
+    "No unique dynamics assigned by the source.",
+    "Available CUDA allocation budget filled; maximum compute throughput not established.",
+    "Only each run final output is compared independently; timed passes reevaluate the same inputs."
+  ]
+}

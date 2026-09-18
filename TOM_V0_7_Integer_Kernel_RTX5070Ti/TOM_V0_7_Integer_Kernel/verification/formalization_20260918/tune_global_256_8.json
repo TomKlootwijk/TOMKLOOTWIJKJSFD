@@ -1,0 +1,908 @@
+{
+  "status": "PASS",
+  "program": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\examples\\bounded_space_29bit.tsdf",
+  "program_sha256": "f4742e37db39fdf31c5af001b9b8ad9d78d44109b45edddcc2f76b58207496c9",
+  "executable": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\build-cuda128\\Release\\tom_cuda.exe",
+  "executable_sha256": "2940be3743e209dcba90ff3b0ee00442dcf56a4aa3381ece572cdf1bc8d892d2",
+  "source": {
+    "pdf_name": "TOM_V0_7_Formalization.pdf",
+    "pdf_sha256": "97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc",
+    "package_name": "TOM_V0_7_Package.zip",
+    "package_sha256": "23b23a01fb3a8e8502ac5c44f541d4af672acced3c73f979b24643f24ea54396",
+    "contract_member": "TOM_V0_7/formalization/TOM_V0_7.json",
+    "contract_sha256": "cf3ef6707555bb61b13112763526841284b4cdb5b7dbc2933ff5e7040b5bbf2c",
+    "core_expression": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+  },
+  "profile": {
+    "name": "bounded certificate interpretation",
+    "widths": {
+      "time_bits": 3,
+      "retention_bits": 3,
+      "direct_bits": 4,
+      "witness_bits": 3
+    },
+    "input_bits": 29,
+    "unique_candidate_count": 536870912,
+    "candidate_encoding": "Input groups take disjoint low-to-high bits of the zero-based lane index; all inputs are retained unchanged by each tick.",
+    "input_layout": [
+      {
+        "name": "previous_time",
+        "bits": 3,
+        "counter_start": 0,
+        "signed": false
+      },
+      {
+        "name": "current_time",
+        "bits": 3,
+        "counter_start": 3,
+        "signed": false
+      },
+      {
+        "name": "elapsed",
+        "bits": 3,
+        "counter_start": 6,
+        "signed": false
+      },
+      {
+        "name": "latest_dependency",
+        "bits": 3,
+        "counter_start": 9,
+        "signed": false
+      },
+      {
+        "name": "retained_before",
+        "bits": 3,
+        "counter_start": 12,
+        "signed": false
+      },
+      {
+        "name": "retained_after",
+        "bits": 3,
+        "counter_start": 15,
+        "signed": false
+      },
+      {
+        "name": "direct",
+        "bits": 4,
+        "counter_start": 18,
+        "signed": true
+      },
+      {
+        "name": "echo",
+        "bits": 4,
+        "counter_start": 22,
+        "signed": true
+      },
+      {
+        "name": "left_definition_witness",
+        "bits": 2,
+        "counter_start": 26,
+        "signed": false
+      },
+      {
+        "name": "right_definition_witness",
+        "bits": 1,
+        "counter_start": 28,
+        "signed": false
+      }
+    ],
+    "analytic_full_domain_counts": {
+      "total_candidates": 536870912,
+      "forward": 234881024,
+      "elapsed_preserved": 29360128,
+      "future_independent": 301989888,
+      "retention_preserved": 226492416,
+      "temporal_retention_admissible": 9289728,
+      "Arch_neutral": 299892736,
+      "distinct_witnesses": 402653184,
+      "temporal_and_arch_neutral": 5189184,
+      "temporal_and_distinct": 6967296,
+      "temporal_arch_and_distinct": 3891888
+    },
+    "working_bytes_per_case_numerator": 154,
+    "working_bytes_per_case_denominator": 8,
+    "full_domain_working_bytes": 10334765056,
+    "source_mapping": [
+      {
+        "pages": [
+          6,
+          7
+        ],
+        "clause": "TC1",
+        "realization": "latest_dependency <= current_time; availability stamps are supplied witnesses, not authenticated provenance"
+      },
+      {
+        "pages": [
+          6,
+          8
+        ],
+        "clause": "TC2 / inverse-Occam",
+        "realization": "retained_before is a subset of retained_after; every input and both distinct-definition witnesses remain visible; membership masks do not certify arbitrary historical content"
+      },
+      {
+        "pages": [
+          6
+        ],
+        "clause": "TC3",
+        "realization": "sign changes affect only the optional reading; they never reverse the runner epoch"
+      },
+      {
+        "pages": [
+          6,
+          7
+        ],
+        "clause": "TC4",
+        "realization": "all lane inputs remain old-state reads; outputs publish to a separate next snapshot; no native continuation law is selected"
+      },
+      {
+        "pages": [
+          6
+        ],
+        "clause": "TC5",
+        "realization": "current_time > previous_time and exact unsigned elapsed difference; bounded numeric readings are declared external units"
+      },
+      {
+        "pages": [
+          10
+        ],
+        "clause": "optional Arch reading",
+        "realization": "exact signed-integer residual and zero predicate; arbitrary echo is NOT asserted equal to ln(1/phi)*direct"
+      },
+      {
+        "pages": [
+          3,
+          5,
+          8,
+          14,
+          18
+        ],
+        "clause": "native roles and binding",
+        "realization": "the exact source expression and entire editorial contract are retained in metadata; their unassigned operators are not replaced by the certificate arithmetic"
+      }
+    ],
+    "open_laws": [
+      "jitter behavior",
+      "when a continuation becomes actual",
+      "intrinsic pinion transformation",
+      "physical observation protocol",
+      "recoverable unbounded-history codec",
+      "thermodynamic entropy interpretation"
+    ],
+    "interpretation_limits": [
+      "Finite bounded certificate exploration, not a unique native evolution or empirical physics claim.",
+      "Arch neutrality is an optional filter, separate from temporal/retention acceptance.",
+      "Different witness integers are supplied definition labels; they do not establish a universal definition-equivalence decision procedure.",
+      "Preservation idempotence is retained as a source law; this certificate circuit does not implement a general native rewrite calculus.",
+      "A prefix contains distinct candidates but is not exhaustive unless every declared candidate index is covered exactly once."
+    ]
+  },
+  "command": [
+    "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\build-cuda128\\Release\\tom_cuda.exe",
+    "--program",
+    "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\examples\\bounded_space_29bit.tsdf",
+    "--backend",
+    "global",
+    "--evaluator",
+    "lowered",
+    "--block",
+    "256",
+    "--blocks-per-sm",
+    "8",
+    "--shard-words",
+    "262144",
+    "--ticks",
+    "64",
+    "--warmup",
+    "2",
+    "--verify",
+    "--lanes",
+    "8388608",
+    "--count-state",
+    "29",
+    "--count-state",
+    "30",
+    "--count-state",
+    "31",
+    "--count-state",
+    "32",
+    "--count-state",
+    "33",
+    "--count-state",
+    "34",
+    "--count-state",
+    "35",
+    "--count-state",
+    "36",
+    "--count-state",
+    "37",
+    "--count-state",
+    "38"
+  ],
+  "runs": [
+    {
+      "runner": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11395923968,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "lowered",
+        "block_threads": 256,
+        "lanes": 8388608,
+        "ticks": 64,
+        "epoch": 64,
+        "shards": 1,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 64,
+        "warmup_compute_launches": 2,
+        "shard_words_cap": 262144,
+        "automatic_shard_words": 67108863,
+        "effective_shard_words": 262144,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 6,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 18816,
+        "working_bytes": 161480704,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11395923968,
+        "elapsed_host_ns": 60349800,
+        "sample_digest": 9215541654023568915,
+        "sample_lanes": 2048,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 1,
+          "words_verified": 128,
+          "lanes_verified": 4096,
+          "all_lane_words_verified": false
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 262144,
+            "launch_blocks": 368,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 64,
+                "digest": 9215541654023568915,
+                "verified": true
+              },
+              {
+                "first_word": 262080,
+                "words": 64,
+                "digest": 11198560084837058259,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 1,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 29,
+            "ones": 3670016,
+            "zeros": 4718592,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 30,
+            "ones": 458752,
+            "zeros": 7929856,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 31,
+            "ones": 4718592,
+            "zeros": 3670016,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 32,
+            "ones": 3538944,
+            "zeros": 4849664,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 33,
+            "ones": 145152,
+            "zeros": 8243456,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 34,
+            "ones": 6553600,
+            "zeros": 1835008,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 35,
+            "ones": 0,
+            "zeros": 8388608,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 36,
+            "ones": 113400,
+            "zeros": 8275208,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 37,
+            "ones": 0,
+            "zeros": 8388608,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 38,
+            "ones": 0,
+            "zeros": 8388608,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 415000,
+        "state_count_launches": 10,
+        "state_counts_in_compute_timing": false,
+        "exported_first_shard_lanes": 8388608,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "process_wall_ns": 251198600,
+      "exact_mask_totals": {
+        "forward": {
+          "expected": 3670016,
+          "actual": 3670016
+        },
+        "elapsed_preserved": {
+          "expected": 458752,
+          "actual": 458752
+        },
+        "future_independent": {
+          "expected": 4718592,
+          "actual": 4718592
+        },
+        "retention_preserved": {
+          "expected": 3538944,
+          "actual": 3538944
+        },
+        "temporal_retention_admissible": {
+          "expected": 145152,
+          "actual": 145152
+        },
+        "Arch_neutral": {
+          "expected": 6553600,
+          "actual": 6553600
+        },
+        "distinct_witnesses": {
+          "expected": 0,
+          "actual": 0
+        },
+        "temporal_and_arch_neutral": {
+          "expected": 113400,
+          "actual": 113400
+        },
+        "temporal_and_distinct": {
+          "expected": 0,
+          "actual": 0
+        },
+        "temporal_arch_and_distinct": {
+          "expected": 0,
+          "actual": 0
+        }
+      },
+      "complete_declared_domain": false,
+      "distinct_candidates": 8388608,
+      "telemetry_file": "verification\\formalization_20260918\\tune_global_256_8_telemetry_0.csv",
+      "telemetry_scope": "all process phases including initialization, computation and verification",
+      "telemetry_samples": 1,
+      "telemetry_peak": {
+        "memory.used": 233.0,
+        "memory.free": 11712.0,
+        "utilization.gpu": 0.0,
+        "utilization.memory": 0.0,
+        "clocks.sm": 1875.0,
+        "clocks.mem": 14001.0,
+        "temperature.gpu": 58.0,
+        "power.draw": 21.93
+      }
+    },
+    {
+      "runner": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11395923968,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "lowered",
+        "block_threads": 256,
+        "lanes": 8388608,
+        "ticks": 64,
+        "epoch": 64,
+        "shards": 1,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 64,
+        "warmup_compute_launches": 2,
+        "shard_words_cap": 262144,
+        "automatic_shard_words": 67108863,
+        "effective_shard_words": 262144,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 6,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 18816,
+        "working_bytes": 161480704,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11395923968,
+        "elapsed_host_ns": 60245800,
+        "sample_digest": 9215541654023568915,
+        "sample_lanes": 2048,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 1,
+          "words_verified": 128,
+          "lanes_verified": 4096,
+          "all_lane_words_verified": false
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 262144,
+            "launch_blocks": 368,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 64,
+                "digest": 9215541654023568915,
+                "verified": true
+              },
+              {
+                "first_word": 262080,
+                "words": 64,
+                "digest": 11198560084837058259,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 1,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 29,
+            "ones": 3670016,
+            "zeros": 4718592,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 30,
+            "ones": 458752,
+            "zeros": 7929856,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 31,
+            "ones": 4718592,
+            "zeros": 3670016,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 32,
+            "ones": 3538944,
+            "zeros": 4849664,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 33,
+            "ones": 145152,
+            "zeros": 8243456,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 34,
+            "ones": 6553600,
+            "zeros": 1835008,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 35,
+            "ones": 0,
+            "zeros": 8388608,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 36,
+            "ones": 113400,
+            "zeros": 8275208,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 37,
+            "ones": 0,
+            "zeros": 8388608,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 38,
+            "ones": 0,
+            "zeros": 8388608,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 371600,
+        "state_count_launches": 10,
+        "state_counts_in_compute_timing": false,
+        "exported_first_shard_lanes": 8388608,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "process_wall_ns": 249828500,
+      "exact_mask_totals": {
+        "forward": {
+          "expected": 3670016,
+          "actual": 3670016
+        },
+        "elapsed_preserved": {
+          "expected": 458752,
+          "actual": 458752
+        },
+        "future_independent": {
+          "expected": 4718592,
+          "actual": 4718592
+        },
+        "retention_preserved": {
+          "expected": 3538944,
+          "actual": 3538944
+        },
+        "temporal_retention_admissible": {
+          "expected": 145152,
+          "actual": 145152
+        },
+        "Arch_neutral": {
+          "expected": 6553600,
+          "actual": 6553600
+        },
+        "distinct_witnesses": {
+          "expected": 0,
+          "actual": 0
+        },
+        "temporal_and_arch_neutral": {
+          "expected": 113400,
+          "actual": 113400
+        },
+        "temporal_and_distinct": {
+          "expected": 0,
+          "actual": 0
+        },
+        "temporal_arch_and_distinct": {
+          "expected": 0,
+          "actual": 0
+        }
+      },
+      "complete_declared_domain": false,
+      "distinct_candidates": 8388608,
+      "telemetry_file": "verification\\formalization_20260918\\tune_global_256_8_telemetry_1.csv",
+      "telemetry_scope": "all process phases including initialization, computation and verification",
+      "telemetry_samples": 1,
+      "telemetry_peak": {
+        "memory.used": 233.0,
+        "memory.free": 11712.0,
+        "utilization.gpu": 0.0,
+        "utilization.memory": 0.0,
+        "clocks.sm": 1875.0,
+        "clocks.mem": 14001.0,
+        "temperature.gpu": 58.0,
+        "power.draw": 21.93
+      }
+    },
+    {
+      "runner": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11395923968,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "lowered",
+        "block_threads": 256,
+        "lanes": 8388608,
+        "ticks": 64,
+        "epoch": 64,
+        "shards": 1,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 64,
+        "warmup_compute_launches": 2,
+        "shard_words_cap": 262144,
+        "automatic_shard_words": 67108863,
+        "effective_shard_words": 262144,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 6,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 18816,
+        "working_bytes": 161480704,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11395923968,
+        "elapsed_host_ns": 60600200,
+        "sample_digest": 9215541654023568915,
+        "sample_lanes": 2048,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 1,
+          "words_verified": 128,
+          "lanes_verified": 4096,
+          "all_lane_words_verified": false
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 262144,
+            "launch_blocks": 368,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 64,
+                "digest": 9215541654023568915,
+                "verified": true
+              },
+              {
+                "first_word": 262080,
+                "words": 64,
+                "digest": 11198560084837058259,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 1,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 29,
+            "ones": 3670016,
+            "zeros": 4718592,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 30,
+            "ones": 458752,
+            "zeros": 7929856,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 31,
+            "ones": 4718592,
+            "zeros": 3670016,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 32,
+            "ones": 3538944,
+            "zeros": 4849664,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 33,
+            "ones": 145152,
+            "zeros": 8243456,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 34,
+            "ones": 6553600,
+            "zeros": 1835008,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 35,
+            "ones": 0,
+            "zeros": 8388608,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 36,
+            "ones": 113400,
+            "zeros": 8275208,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 37,
+            "ones": 0,
+            "zeros": 8388608,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          },
+          {
+            "slot": 38,
+            "ones": 0,
+            "zeros": 8388608,
+            "lanes": 8388608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 271100,
+        "state_count_launches": 10,
+        "state_counts_in_compute_timing": false,
+        "exported_first_shard_lanes": 8388608,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "process_wall_ns": 284952300,
+      "exact_mask_totals": {
+        "forward": {
+          "expected": 3670016,
+          "actual": 3670016
+        },
+        "elapsed_preserved": {
+          "expected": 458752,
+          "actual": 458752
+        },
+        "future_independent": {
+          "expected": 4718592,
+          "actual": 4718592
+        },
+        "retention_preserved": {
+          "expected": 3538944,
+          "actual": 3538944
+        },
+        "temporal_retention_admissible": {
+          "expected": 145152,
+          "actual": 145152
+        },
+        "Arch_neutral": {
+          "expected": 6553600,
+          "actual": 6553600
+        },
+        "distinct_witnesses": {
+          "expected": 0,
+          "actual": 0
+        },
+        "temporal_and_arch_neutral": {
+          "expected": 113400,
+          "actual": 113400
+        },
+        "temporal_and_distinct": {
+          "expected": 0,
+          "actual": 0
+        },
+        "temporal_arch_and_distinct": {
+          "expected": 0,
+          "actual": 0
+        }
+      },
+      "complete_declared_domain": false,
+      "distinct_candidates": 8388608,
+      "telemetry_file": "verification\\formalization_20260918\\tune_global_256_8_telemetry_2.csv",
+      "telemetry_scope": "all process phases including initialization, computation and verification",
+      "telemetry_samples": 2,
+      "telemetry_peak": {
+        "memory.used": 225.0,
+        "memory.free": 11720.0,
+        "utilization.gpu": 51.0,
+        "utilization.memory": 16.0,
+        "clocks.sm": 1912.0,
+        "clocks.mem": 14001.0,
+        "temperature.gpu": 66.0,
+        "power.draw": 141.96
+      }
+    }
+  ],
+  "scope": "Exact bounded certificate predicates and distinct counter candidates. No assigned native jitter/pinion dynamics. Samples check complete states at every shard edge; integer population counts check each selected plane over every lane against an independent exact prefix oracle.",
+  "min_compute_ns": 60245800,
+  "median_compute_ns": 60349800,
+  "max_compute_ns": 60600200
+}

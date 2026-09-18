@@ -1,0 +1,8 @@
+[
+  {"previous_time":10,"current_time":15,"elapsed":5,"latest_dependency":12,"retained_before":3,"retained_after":7,"direct":8,"echo":-4,"left_definition_witness":11,"right_definition_witness":17},
+  {"previous_time":10,"current_time":15,"elapsed":5,"latest_dependency":16,"retained_before":3,"retained_after":7,"direct":8,"echo":-4,"left_definition_witness":11,"right_definition_witness":17},
+  {"previous_time":10,"current_time":9,"elapsed":65535,"latest_dependency":9,"retained_before":3,"retained_after":7,"direct":8,"echo":-4,"left_definition_witness":11,"right_definition_witness":17},
+  {"previous_time":10,"current_time":15,"elapsed":0,"latest_dependency":12,"retained_before":3,"retained_after":7,"direct":8,"echo":-4,"left_definition_witness":11,"right_definition_witness":17},
+  {"previous_time":10,"current_time":15,"elapsed":5,"latest_dependency":12,"retained_before":3,"retained_after":1,"direct":8,"echo":-4,"left_definition_witness":11,"right_definition_witness":17},
+  {"previous_time":10,"current_time":15,"elapsed":5,"latest_dependency":12,"retained_before":3,"retained_after":7,"direct":8,"echo":4,"left_definition_witness":11,"right_definition_witness":17}
+]

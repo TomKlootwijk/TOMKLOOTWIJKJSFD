@@ -1,0 +1,87 @@
+{
+  "name": "TOM",
+  "version": "V0.7",
+  "name_expansion": null,
+  "attribution": {
+    "author": "Tom Klootwijk",
+    "identifier_as_supplied": "NL200678942",
+    "date_as_supplied": "10-07-1990",
+    "role": "authorship metadata, not a metric invariant, physical origin, key or temporal epoch"
+  },
+  "release_kind": "formal definition and source-formula audit; no execution kernel is asserted",
+  "governing_source": {
+    "pages": 37,
+    "priority": "latest explicit author corrections take priority over earlier proposed models and exported responses",
+    "controlling_pages": [14, 21, 23, 26, 28, 31, 32, 34]
+  },
+  "intrinsic_commitments": {
+    "everything_admitted_is_SDF": true,
+    "SDF_role": "source-native structural definition; no conventional metric-distance promise without a declared external interpretation",
+    "pinion_symbol": "phi",
+    "pinion_display": "φ",
+    "time": "one forward precedence, not a spatial coordinate, graph or numeric clock forced into the core",
+    "uncheated_time": true,
+    "no_external_Psi_envelope": true,
+    "no_fixed_intrinsic_nesting_depth": true,
+    "no_observation_based_definition_erasure": true,
+    "coordinate_arena_required": false,
+    "external_metric_required": false,
+    "operator_nodes_or_edges_required": false,
+    "cardinality_observable_required": false,
+    "renderer_required": false,
+    "hardware_runtime_required": false
+  },
+  "vocabulary": {
+    "T": "temporal precedence SDF",
+    "J": "temporal jitter SDF: variation subordinate to forward precedence, not an assigned probability law",
+    "phi": "lowercase pinion SDF",
+    "InvLog": "inverse-log SDF operator, with its numerical reading kept separate",
+    "C": "causality SDF: admits only present/past dependence and preserves completed commitments",
+    "E": "source-named entropy SDF: log-inverse causal echo, not a thermodynamic entropy assertion",
+    "Arch": "Arch U without U SDF: direct/inverse articulation, with a named optional scalar reading",
+    "InverseOccam": "sheet-preservation SDF: no deletion of defining distinctions merely because a reading agrees",
+    "Klein": "retained historical self-mirroring name; no intrinsic bottle embedding or topology theorem imposed",
+    "Matryoshka": "retained nesting name; no finite shell count, physical stellar radius or energy claim imposed",
+    "TOM": "the complete precedence-qualified SDF articulation"
+  },
+  "core_expression": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence",
+  "notation": {
+    "brackets": "binding and grammatical scope, not an address, node, set of locations, vector or finite-state array",
+    "semicolons": "distinct binding roles, not spatial components",
+    "structural_identity": "definition-preserving equivalence established by an explicitly declared law",
+    "reading_equality": "agreement of one interpretation; it does not automatically imply structural identity",
+    "text_length": "property of this document only; no claim of literal mathematical zero cardinality"
+  },
+  "temporal_contracts": [
+    "TC1: use only completed or present admissible input; no future information in a present claim",
+    "TC2: extensions do not change already completed observations or commitments",
+    "TC3: structural mirroring or sign inversion does not reverse temporal precedence",
+    "TC4: recurrence refers to its own definition only through a declared later continuation",
+    "TC5: nesting, scale and precedence labels do not make positive elapsed duration zero"
+  ],
+  "new_laws": [
+    "All admitted compound definitions remain SDF-qualified; this is a closure convention, not a metric proof.",
+    "InverseOccam[InverseOccam[e]] is definitionally equivalent to InverseOccam[e]; preservation is idempotent.",
+    "Arch[e;f] retains the defining roles e and f even when a selected reading gives zero.",
+    "Causal continuation is forward-only; a structural inverse is never automatically a temporal inverse.",
+    "Unbounded nesting has no fixed intrinsic cutoff; it does not imply a finite device stores an actual infinity."
+  ],
+  "inherited_aliases": {
+    "A": "T, retained only as the previous context's temporal alias; lowercase a,b are used in scalar diagnostics"
+  },
+  "optional_scalar_reading": {
+    "status": "diagnostic of the exported formulas, not TOM's coordinate-free intrinsic ontology",
+    "pinion_number": "varphi = (1 + sqrt(5))/2",
+    "coefficient": "k = ln(1/varphi) = -ln(varphi) < 0",
+    "echo": "e = k*c",
+    "arch": "arch(a,b) = abs(a) + abs(b) - abs(a-b)",
+    "derived_zero_condition": "arch(a,b)=0 iff a*b<=0 for finite real a,b",
+    "derived_log_echo_identity": "arch(c,k*c)=0 for every finite real c whenever k<0",
+    "does_not_select_jitter": true,
+    "does_not_prove_causality_or_entropy": true,
+    "does_not_erase_structure": true
+  },
+  "physical_status": "proposed formal commitments and checked formula consequences, not an established law of nature",
+  "novelty_status": "this authored combination and version are identified; historical novelty is not certified",
+  "implementation_boundary": "v6 sparse nodes, binary arrays, graph routing and GPU kernels remain external finite applications, not the definition of TOM V0.7"
+}

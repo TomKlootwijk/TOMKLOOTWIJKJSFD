@@ -1,0 +1,20 @@
+{
+  "source": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\native_templates_expected.tor",
+  "source_sha256": "2938b9036792c7e697550ae0c9c5eaf44cb41ab8794560aa211db2973f101ce1",
+  "fixture": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\native_templates_expected_bad_normalized_opcode.tor",
+  "fixture_sha256": "ece0b7216e3ef936b377185812da7f9398bbcee5b5e1eff331f86f56363d637f",
+  "mutation": {
+    "template_index": 0,
+    "word_in_result": 448,
+    "file_byte_offset": 1856,
+    "meaning": "first normalized term opcode",
+    "before": 1,
+    "after": 0
+  },
+  "test_cases": 257,
+  "template_cases": 8,
+  "expected_mismatched_words": 33,
+  "expected_checked_words": 189152,
+  "expected_exit_code": 1,
+  "reason": "The original-input binding, accepted status and lengths remain unchanged, so header/host validation passes. Only the independent all-word GPU verifier should reject this one-word alteration repeated in template-zero cases."
+}

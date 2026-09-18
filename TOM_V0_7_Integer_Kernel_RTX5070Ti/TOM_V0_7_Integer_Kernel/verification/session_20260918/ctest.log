@@ -1,0 +1,39 @@
+Start testing: Sep 18 19:00 W. Europe Daylight Time
+----------------------------------------------------------
+1/2 Testing: tom_integer_core
+1/2 Test: tom_integer_core
+Command: "C:/TOMKLOOTWIJKJSFD/TOM_V0_7_Integer_Kernel_RTX5070Ti/TOM_V0_7_Integer_Kernel/build-cuda128/Release/tom_core_tests.exe"
+Directory: C:/TOMKLOOTWIJKJSFD/TOM_V0_7_Integer_Kernel_RTX5070Ti/TOM_V0_7_Integer_Kernel/build-cuda128
+"tom_integer_core" start time: Sep 18 19:00 W. Europe Daylight Time
+Output:
+----------------------------------------------------------
+{"status":"PASS","all_ternary_table_lane_assertions":8192,"dynamic_word_cases":4096,"field_microprogram_vs_lowered_cases":4096,"edited_microprogram_cases":4096,"gpu_execution":false}
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"tom_integer_core" end time: Sep 18 19:00 W. Europe Daylight Time
+"tom_integer_core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: tom_compiler
+2/2 Test: tom_compiler
+Command: "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0/python3.13.exe" "C:/TOMKLOOTWIJKJSFD/TOM_V0_7_Integer_Kernel_RTX5070Ti/TOM_V0_7_Integer_Kernel/tests/compiler_tests.py"
+Directory: C:/TOMKLOOTWIJKJSFD/TOM_V0_7_Integer_Kernel_RTX5070Ti/TOM_V0_7_Integer_Kernel/build-cuda128
+"tom_compiler" start time: Sep 18 19:00 W. Europe Daylight Time
+Output:
+----------------------------------------------------------
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.092s
+
+OK
+<end of output>
+Test time =   0.46 sec
+----------------------------------------------------------
+Test Passed.
+"tom_compiler" end time: Sep 18 19:00 W. Europe Daylight Time
+"tom_compiler" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 18 19:00 W. Europe Daylight Time

@@ -1,0 +1,8 @@
+{
+"name":"TOM","version":"0.7-K1","gpu_executed":true,"device":{"device":0,"name":"NVIDIA GeForce RTX 5070 Ti Laptop GPU","compute_major":12,"compute_minor":0,"free_bytes":11481907200,"total_bytes":12820480000,"shared_default_bytes":49152,"shared_optin_bytes":101376,"linear_texture_max_elements":268435456,"l2_bytes":37748736,"sm_count":46,"runtime_version":12080,"driver_api_version":13010},
+"backend":"global","evaluator":"field","block_threads":128,"lanes":128,"ticks":3,"epoch":3,"shards":1,
+"warmup_ticks":3,"compute_executed":true,"compute_launches":3,"warmup_compute_launches":3,
+"definition_bytes":32064,"working_bytes":6224,"free_before_bytes":11484004352,"free_after_bytes":11481907200,
+"elapsed_host_ns":55904400,"sample_digest":13075174114901096727,"sample_lanes":128,"sample_verified":true,
+"exported_first_shard_lanes":128,"trace_io_in_timing":false,"setup_in_timing":false,"source_physics_validated":false
+}

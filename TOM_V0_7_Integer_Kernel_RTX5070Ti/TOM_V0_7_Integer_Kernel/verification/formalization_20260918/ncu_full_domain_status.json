@@ -1,0 +1,5 @@
+{
+  "status": "ABORTED",
+  "scope": "full-resident Nsight kernel-replay attempt",
+  "reason": "Profiler replication of near-full VRAM caused host-memory pressure; no performance counters returned. Normal unprofiled capacity runs succeeded. Profile representative shard separately."
+}

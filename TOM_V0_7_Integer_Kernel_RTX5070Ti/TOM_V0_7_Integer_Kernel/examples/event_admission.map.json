@@ -1,0 +1,3979 @@
+{
+  "name": "Stateful event admission: finite ordering and fact-retention policy",
+  "version": "0.7-K1",
+  "author": "Tom Klootwijk",
+  "identifier": "NL200678942",
+  "date_supplied": "10-07-1990",
+  "names": {
+    "KERNEL": 0,
+    "T": 1,
+    "A": 1,
+    "TOM": 2,
+    "phi": 3,
+    "jitter": 4,
+    "inverse_log_phi": 5,
+    "ArchU": 6,
+    "causality": 7,
+    "entropy": 8,
+    "InverseOccam": 9,
+    "sheet": 10,
+    "double_UU": 11,
+    "Klein": 12,
+    "Matryoshka": 13,
+    "ZERO": 14,
+    "ONE": 15,
+    "proposal_present": 16,
+    "last_sequence.0": 17,
+    "last_sequence.1": 18,
+    "last_sequence.2": 19,
+    "last_sequence.3": 20,
+    "last_sequence.4": 21,
+    "last_sequence.5": 22,
+    "last_sequence.6": 23,
+    "last_sequence.7": 24,
+    "last_sequence.8": 25,
+    "last_sequence.9": 26,
+    "last_sequence.10": 27,
+    "last_sequence.11": 28,
+    "last_sequence.12": 29,
+    "last_sequence.13": 30,
+    "last_sequence.14": 31,
+    "last_sequence.15": 32,
+    "last_time.0": 33,
+    "last_time.1": 34,
+    "last_time.2": 35,
+    "last_time.3": 36,
+    "last_time.4": 37,
+    "last_time.5": 38,
+    "last_time.6": 39,
+    "last_time.7": 40,
+    "last_time.8": 41,
+    "last_time.9": 42,
+    "last_time.10": 43,
+    "last_time.11": 44,
+    "last_time.12": 45,
+    "last_time.13": 46,
+    "last_time.14": 47,
+    "last_time.15": 48,
+    "retained_facts.0": 49,
+    "retained_facts.1": 50,
+    "retained_facts.2": 51,
+    "retained_facts.3": 52,
+    "retained_facts.4": 53,
+    "retained_facts.5": 54,
+    "retained_facts.6": 55,
+    "retained_facts.7": 56,
+    "event_sequence.0": 57,
+    "event_sequence.1": 58,
+    "event_sequence.2": 59,
+    "event_sequence.3": 60,
+    "event_sequence.4": 61,
+    "event_sequence.5": 62,
+    "event_sequence.6": 63,
+    "event_sequence.7": 64,
+    "event_sequence.8": 65,
+    "event_sequence.9": 66,
+    "event_sequence.10": 67,
+    "event_sequence.11": 68,
+    "event_sequence.12": 69,
+    "event_sequence.13": 70,
+    "event_sequence.14": 71,
+    "event_sequence.15": 72,
+    "event_time.0": 73,
+    "event_time.1": 74,
+    "event_time.2": 75,
+    "event_time.3": 76,
+    "event_time.4": 77,
+    "event_time.5": 78,
+    "event_time.6": 79,
+    "event_time.7": 80,
+    "event_time.8": 81,
+    "event_time.9": 82,
+    "event_time.10": 83,
+    "event_time.11": 84,
+    "event_time.12": 85,
+    "event_time.13": 86,
+    "event_time.14": 87,
+    "event_time.15": 88,
+    "claimed_elapsed.0": 89,
+    "claimed_elapsed.1": 90,
+    "claimed_elapsed.2": 91,
+    "claimed_elapsed.3": 92,
+    "claimed_elapsed.4": 93,
+    "claimed_elapsed.5": 94,
+    "claimed_elapsed.6": 95,
+    "claimed_elapsed.7": 96,
+    "claimed_elapsed.8": 97,
+    "claimed_elapsed.9": 98,
+    "claimed_elapsed.10": 99,
+    "claimed_elapsed.11": 100,
+    "claimed_elapsed.12": 101,
+    "claimed_elapsed.13": 102,
+    "claimed_elapsed.14": 103,
+    "claimed_elapsed.15": 104,
+    "latest_dependency.0": 105,
+    "latest_dependency.1": 106,
+    "latest_dependency.2": 107,
+    "latest_dependency.3": 108,
+    "latest_dependency.4": 109,
+    "latest_dependency.5": 110,
+    "latest_dependency.6": 111,
+    "latest_dependency.7": 112,
+    "latest_dependency.8": 113,
+    "latest_dependency.9": 114,
+    "latest_dependency.10": 115,
+    "latest_dependency.11": 116,
+    "latest_dependency.12": 117,
+    "latest_dependency.13": 118,
+    "latest_dependency.14": 119,
+    "latest_dependency.15": 120,
+    "proposed_facts.0": 121,
+    "proposed_facts.1": 122,
+    "proposed_facts.2": 123,
+    "proposed_facts.3": 124,
+    "proposed_facts.4": 125,
+    "proposed_facts.5": 126,
+    "proposed_facts.6": 127,
+    "proposed_facts.7": 128,
+    "sequence_forward": 129,
+    "time_forward": 130,
+    "elapsed_exact": 131,
+    "dependency_not_future": 132,
+    "facts_retained": 133,
+    "accepted": 134,
+    "NOT": 135,
+    "AND": 136,
+    "OR": 137,
+    "XOR": 138,
+    "EQ": 139,
+    "MUX": 140,
+    "SUM3": 141,
+    "MAJ3": 142,
+    "$v0": 143,
+    "$v1": 144,
+    "$v2": 145,
+    "$v3": 146,
+    "$v4": 147,
+    "$v5": 148,
+    "$v6": 149,
+    "$v7": 150,
+    "$v8": 151,
+    "$v9": 152,
+    "$v10": 153,
+    "$v11": 154,
+    "$v12": 155,
+    "$v13": 156,
+    "$v14": 157,
+    "$v15": 158,
+    "$v16": 159,
+    "$v17": 160,
+    "$v18": 161,
+    "$v19": 162,
+    "$v20": 163,
+    "$v21": 164,
+    "$v22": 165,
+    "$v23": 166,
+    "$v24": 167,
+    "$v25": 168,
+    "$v26": 169,
+    "$v27": 170,
+    "$v28": 171,
+    "$v29": 172,
+    "$v30": 173,
+    "$v31": 174,
+    "$v32": 175,
+    "$v33": 176,
+    "$v34": 177,
+    "$v35": 178,
+    "$v36": 179,
+    "$v37": 180,
+    "$v38": 181,
+    "$v39": 182,
+    "$v40": 183,
+    "$v41": 184,
+    "$v42": 185,
+    "$v43": 186,
+    "$v44": 187,
+    "$v45": 188,
+    "$v46": 189,
+    "$v47": 190,
+    "$v48": 191,
+    "$v49": 192,
+    "$v50": 193,
+    "$v51": 194,
+    "$v52": 195,
+    "$v53": 196,
+    "$v54": 197,
+    "$v55": 198,
+    "$v56": 199,
+    "$v57": 200,
+    "$v58": 201,
+    "$v59": 202,
+    "$v60": 203,
+    "$v61": 204,
+    "$v62": 205,
+    "$v63": 206,
+    "$v64": 207,
+    "$v65": 208,
+    "$v66": 209,
+    "$v67": 210,
+    "$v68": 211,
+    "$v69": 212,
+    "$v70": 213,
+    "$v71": 214,
+    "$v72": 215,
+    "$v73": 216,
+    "$v74": 217,
+    "$v75": 218,
+    "$v76": 219,
+    "$v77": 220,
+    "$v78": 221,
+    "$v79": 222,
+    "$v80": 223,
+    "$v81": 224,
+    "$v82": 225,
+    "$v83": 226,
+    "$v84": 227,
+    "$v85": 228,
+    "$v86": 229,
+    "$v87": 230,
+    "$v88": 231,
+    "$v89": 232,
+    "$v90": 233,
+    "$v91": 234,
+    "$v92": 235,
+    "$v93": 236,
+    "$v94": 237,
+    "$v95": 238,
+    "$v96": 239,
+    "$v97": 240,
+    "$v98": 241,
+    "$v99": 242,
+    "$v100": 243,
+    "$v101": 244,
+    "$v102": 245,
+    "$v103": 246,
+    "$v104": 247,
+    "$v105": 248,
+    "$v106": 249,
+    "$v107": 250,
+    "$v108": 251,
+    "$v109": 252,
+    "$v110": 253,
+    "$v111": 254,
+    "$v112": 255,
+    "$v113": 256,
+    "$v114": 257,
+    "$v115": 258,
+    "$v116": 259,
+    "$v117": 260,
+    "$v118": 261,
+    "$v119": 262,
+    "$v120": 263,
+    "$v121": 264,
+    "$v122": 265,
+    "$v123": 266,
+    "$v124": 267,
+    "$v125": 268,
+    "$v126": 269,
+    "$v127": 270,
+    "$v128": 271,
+    "$v129": 272,
+    "$v130": 273,
+    "$v131": 274,
+    "$v132": 275,
+    "$v133": 276,
+    "$v134": 277,
+    "$v135": 278,
+    "$v136": 279,
+    "$v137": 280,
+    "$v138": 281,
+    "$v139": 282,
+    "$v140": 283,
+    "$v141": 284,
+    "$v142": 285,
+    "$v143": 286,
+    "$v144": 287,
+    "$v145": 288,
+    "$v146": 289,
+    "$v147": 290,
+    "$v148": 291,
+    "$v149": 292,
+    "$v150": 293,
+    "$v151": 294,
+    "$v152": 295,
+    "$v153": 296,
+    "$v154": 297,
+    "$v155": 298,
+    "$v156": 299,
+    "$v157": 300,
+    "$v158": 301,
+    "$v159": 302,
+    "$v160": 303,
+    "$v161": 304,
+    "$v162": 305,
+    "$v163": 306,
+    "$v164": 307,
+    "$v165": 308,
+    "$v166": 309,
+    "$v167": 310,
+    "$v168": 311,
+    "$v169": 312,
+    "$v170": 313,
+    "$v171": 314,
+    "$v172": 315,
+    "$v173": 316,
+    "$v174": 317,
+    "$v175": 318,
+    "$v176": 319,
+    "$v177": 320,
+    "$v178": 321,
+    "$v179": 322,
+    "$v180": 323,
+    "$v181": 324,
+    "$v182": 325,
+    "$v183": 326,
+    "$v184": 327,
+    "$v185": 328,
+    "$v186": 329,
+    "$v187": 330,
+    "$v188": 331,
+    "$v189": 332,
+    "$v190": 333,
+    "$v191": 334,
+    "$v192": 335,
+    "$v193": 336,
+    "$v194": 337,
+    "$v195": 338,
+    "$v196": 339,
+    "$v197": 340,
+    "$v198": 341,
+    "$v199": 342,
+    "$v200": 343,
+    "$v201": 344,
+    "$v202": 345,
+    "$v203": 346,
+    "$v204": 347,
+    "$v205": 348,
+    "$v206": 349,
+    "$v207": 350,
+    "$v208": 351,
+    "$v209": 352,
+    "$v210": 353,
+    "$v211": 354,
+    "$v212": 355,
+    "$v213": 356,
+    "$v214": 357,
+    "$v215": 358,
+    "$v216": 359,
+    "$v217": 360,
+    "$v218": 361,
+    "$v219": 362,
+    "$v220": 363,
+    "$v221": 364,
+    "$v222": 365,
+    "$v223": 366,
+    "$v224": 367,
+    "$v225": 368,
+    "$v226": 369,
+    "$v227": 370,
+    "$v228": 371,
+    "$v229": 372,
+    "$v230": 373,
+    "$v231": 374,
+    "$v232": 375,
+    "$v233": 376,
+    "$v234": 377,
+    "$v235": 378,
+    "$v236": 379,
+    "$v237": 380,
+    "$v238": 381,
+    "$v239": 382,
+    "$v240": 383,
+    "$v241": 384,
+    "$v242": 385,
+    "$v243": 386,
+    "$v244": 387,
+    "$v245": 388,
+    "$v246": 389,
+    "$v247": 390,
+    "$v248": 391,
+    "$v249": 392,
+    "$v250": 393,
+    "$v251": 394,
+    "$v252": 395,
+    "$v253": 396,
+    "$v254": 397,
+    "$v255": 398,
+    "$v256": 399,
+    "$v257": 400,
+    "$v258": 401,
+    "$v259": 402,
+    "$v260": 403,
+    "$v261": 404,
+    "$v262": 405,
+    "$v263": 406,
+    "$v264": 407,
+    "$v265": 408,
+    "$v266": 409,
+    "$v267": 410,
+    "$v268": 411,
+    "$v269": 412,
+    "$v270": 413,
+    "$v271": 414,
+    "$v272": 415,
+    "$v273": 416,
+    "$v274": 417,
+    "$v275": 418,
+    "$v276": 419,
+    "$v277": 420,
+    "$v278": 421,
+    "$v279": 422,
+    "$v280": 423,
+    "$v281": 424,
+    "$v282": 425,
+    "$v283": 426,
+    "$v284": 427,
+    "$v285": 428,
+    "$v286": 429,
+    "$v287": 430,
+    "$v288": 431,
+    "$v289": 432,
+    "$v290": 433,
+    "$v291": 434,
+    "$v292": 435,
+    "$v293": 436,
+    "$v294": 437,
+    "$v295": 438,
+    "$v296": 439,
+    "$v297": 440,
+    "$v298": 441,
+    "$v299": 442,
+    "$v300": 443,
+    "$v301": 444,
+    "$v302": 445,
+    "$v303": 446,
+    "$v304": 447,
+    "$v305": 448,
+    "$v306": 449,
+    "$v307": 450,
+    "$v308": 451,
+    "$v309": 452,
+    "$v310": 453,
+    "$v311": 454,
+    "$v312": 455,
+    "$v313": 456,
+    "$v314": 457,
+    "$v315": 458,
+    "$v316": 459,
+    "$v317": 460,
+    "$v318": 461,
+    "$v319": 462,
+    "$v320": 463,
+    "$v321": 464,
+    "$v322": 465,
+    "$v323": 466,
+    "$v324": 467,
+    "$v325": 468,
+    "$v326": 469,
+    "$v327": 470,
+    "$v328": 471,
+    "$v329": 472,
+    "$v330": 473,
+    "$v331": 474,
+    "$v332": 475,
+    "$v333": 476,
+    "$v334": 477,
+    "$v335": 478,
+    "$v336": 479,
+    "$v337": 480,
+    "$v338": 481,
+    "$v339": 482,
+    "$v340": 483,
+    "$v341": 484,
+    "$v342": 485,
+    "$v343": 486,
+    "$v344": 487,
+    "$v345": 488,
+    "$v346": 489,
+    "$v347": 490,
+    "$v348": 491,
+    "$v349": 492,
+    "$v350": 493,
+    "$v351": 494,
+    "$v352": 495,
+    "$v353": 496,
+    "$v354": 497,
+    "$v355": 498,
+    "$v356": 499,
+    "$v357": 500,
+    "$v358": 501,
+    "$v359": 502,
+    "$v360": 503,
+    "$v361": 504,
+    "$v362": 505,
+    "$v363": 506,
+    "$v364": 507,
+    "$v365": 508,
+    "$v366": 509,
+    "$v367": 510,
+    "$v368": 511,
+    "$v369": 512,
+    "$v370": 513,
+    "$v371": 514,
+    "$v372": 515,
+    "$v373": 516,
+    "$v374": 517,
+    "$v375": 518,
+    "$v376": 519,
+    "$v377": 520,
+    "$v378": 521,
+    "$v379": 522,
+    "$v380": 523,
+    "$v381": 524,
+    "$v382": 525,
+    "$v383": 526,
+    "$v384": 527,
+    "$v385": 528,
+    "$v386": 529,
+    "$v387": 530,
+    "$v388": 531,
+    "$v389": 532,
+    "$v390": 533,
+    "$v391": 534,
+    "$v392": 535,
+    "$v393": 536,
+    "$v394": 537,
+    "$v395": 538
+  },
+  "state_slots": {
+    "proposal_present": 0,
+    "last_sequence.0": 1,
+    "last_sequence.1": 2,
+    "last_sequence.2": 3,
+    "last_sequence.3": 4,
+    "last_sequence.4": 5,
+    "last_sequence.5": 6,
+    "last_sequence.6": 7,
+    "last_sequence.7": 8,
+    "last_sequence.8": 9,
+    "last_sequence.9": 10,
+    "last_sequence.10": 11,
+    "last_sequence.11": 12,
+    "last_sequence.12": 13,
+    "last_sequence.13": 14,
+    "last_sequence.14": 15,
+    "last_sequence.15": 16,
+    "last_time.0": 17,
+    "last_time.1": 18,
+    "last_time.2": 19,
+    "last_time.3": 20,
+    "last_time.4": 21,
+    "last_time.5": 22,
+    "last_time.6": 23,
+    "last_time.7": 24,
+    "last_time.8": 25,
+    "last_time.9": 26,
+    "last_time.10": 27,
+    "last_time.11": 28,
+    "last_time.12": 29,
+    "last_time.13": 30,
+    "last_time.14": 31,
+    "last_time.15": 32,
+    "retained_facts.0": 33,
+    "retained_facts.1": 34,
+    "retained_facts.2": 35,
+    "retained_facts.3": 36,
+    "retained_facts.4": 37,
+    "retained_facts.5": 38,
+    "retained_facts.6": 39,
+    "retained_facts.7": 40,
+    "event_sequence.0": 41,
+    "event_sequence.1": 42,
+    "event_sequence.2": 43,
+    "event_sequence.3": 44,
+    "event_sequence.4": 45,
+    "event_sequence.5": 46,
+    "event_sequence.6": 47,
+    "event_sequence.7": 48,
+    "event_sequence.8": 49,
+    "event_sequence.9": 50,
+    "event_sequence.10": 51,
+    "event_sequence.11": 52,
+    "event_sequence.12": 53,
+    "event_sequence.13": 54,
+    "event_sequence.14": 55,
+    "event_sequence.15": 56,
+    "event_time.0": 57,
+    "event_time.1": 58,
+    "event_time.2": 59,
+    "event_time.3": 60,
+    "event_time.4": 61,
+    "event_time.5": 62,
+    "event_time.6": 63,
+    "event_time.7": 64,
+    "event_time.8": 65,
+    "event_time.9": 66,
+    "event_time.10": 67,
+    "event_time.11": 68,
+    "event_time.12": 69,
+    "event_time.13": 70,
+    "event_time.14": 71,
+    "event_time.15": 72,
+    "claimed_elapsed.0": 73,
+    "claimed_elapsed.1": 74,
+    "claimed_elapsed.2": 75,
+    "claimed_elapsed.3": 76,
+    "claimed_elapsed.4": 77,
+    "claimed_elapsed.5": 78,
+    "claimed_elapsed.6": 79,
+    "claimed_elapsed.7": 80,
+    "claimed_elapsed.8": 81,
+    "claimed_elapsed.9": 82,
+    "claimed_elapsed.10": 83,
+    "claimed_elapsed.11": 84,
+    "claimed_elapsed.12": 85,
+    "claimed_elapsed.13": 86,
+    "claimed_elapsed.14": 87,
+    "claimed_elapsed.15": 88,
+    "latest_dependency.0": 89,
+    "latest_dependency.1": 90,
+    "latest_dependency.2": 91,
+    "latest_dependency.3": 92,
+    "latest_dependency.4": 93,
+    "latest_dependency.5": 94,
+    "latest_dependency.6": 95,
+    "latest_dependency.7": 96,
+    "latest_dependency.8": 97,
+    "latest_dependency.9": 98,
+    "latest_dependency.10": 99,
+    "latest_dependency.11": 100,
+    "latest_dependency.12": 101,
+    "latest_dependency.13": 102,
+    "latest_dependency.14": 103,
+    "latest_dependency.15": 104,
+    "proposed_facts.0": 105,
+    "proposed_facts.1": 106,
+    "proposed_facts.2": 107,
+    "proposed_facts.3": 108,
+    "proposed_facts.4": 109,
+    "proposed_facts.5": 110,
+    "proposed_facts.6": 111,
+    "proposed_facts.7": 112,
+    "sequence_forward": 113,
+    "time_forward": 114,
+    "elapsed_exact": 115,
+    "dependency_not_future": 116,
+    "facts_retained": 117,
+    "accepted": 118
+  },
+  "groups": {
+    "last_sequence": {
+      "bits": [
+        "last_sequence.0",
+        "last_sequence.1",
+        "last_sequence.2",
+        "last_sequence.3",
+        "last_sequence.4",
+        "last_sequence.5",
+        "last_sequence.6",
+        "last_sequence.7",
+        "last_sequence.8",
+        "last_sequence.9",
+        "last_sequence.10",
+        "last_sequence.11",
+        "last_sequence.12",
+        "last_sequence.13",
+        "last_sequence.14",
+        "last_sequence.15"
+      ],
+      "signed": false
+    },
+    "last_time": {
+      "bits": [
+        "last_time.0",
+        "last_time.1",
+        "last_time.2",
+        "last_time.3",
+        "last_time.4",
+        "last_time.5",
+        "last_time.6",
+        "last_time.7",
+        "last_time.8",
+        "last_time.9",
+        "last_time.10",
+        "last_time.11",
+        "last_time.12",
+        "last_time.13",
+        "last_time.14",
+        "last_time.15"
+      ],
+      "signed": false
+    },
+    "retained_facts": {
+      "bits": [
+        "retained_facts.0",
+        "retained_facts.1",
+        "retained_facts.2",
+        "retained_facts.3",
+        "retained_facts.4",
+        "retained_facts.5",
+        "retained_facts.6",
+        "retained_facts.7"
+      ],
+      "signed": false
+    },
+    "event_sequence": {
+      "bits": [
+        "event_sequence.0",
+        "event_sequence.1",
+        "event_sequence.2",
+        "event_sequence.3",
+        "event_sequence.4",
+        "event_sequence.5",
+        "event_sequence.6",
+        "event_sequence.7",
+        "event_sequence.8",
+        "event_sequence.9",
+        "event_sequence.10",
+        "event_sequence.11",
+        "event_sequence.12",
+        "event_sequence.13",
+        "event_sequence.14",
+        "event_sequence.15"
+      ],
+      "signed": false
+    },
+    "event_time": {
+      "bits": [
+        "event_time.0",
+        "event_time.1",
+        "event_time.2",
+        "event_time.3",
+        "event_time.4",
+        "event_time.5",
+        "event_time.6",
+        "event_time.7",
+        "event_time.8",
+        "event_time.9",
+        "event_time.10",
+        "event_time.11",
+        "event_time.12",
+        "event_time.13",
+        "event_time.14",
+        "event_time.15"
+      ],
+      "signed": false
+    },
+    "claimed_elapsed": {
+      "bits": [
+        "claimed_elapsed.0",
+        "claimed_elapsed.1",
+        "claimed_elapsed.2",
+        "claimed_elapsed.3",
+        "claimed_elapsed.4",
+        "claimed_elapsed.5",
+        "claimed_elapsed.6",
+        "claimed_elapsed.7",
+        "claimed_elapsed.8",
+        "claimed_elapsed.9",
+        "claimed_elapsed.10",
+        "claimed_elapsed.11",
+        "claimed_elapsed.12",
+        "claimed_elapsed.13",
+        "claimed_elapsed.14",
+        "claimed_elapsed.15"
+      ],
+      "signed": false
+    },
+    "latest_dependency": {
+      "bits": [
+        "latest_dependency.0",
+        "latest_dependency.1",
+        "latest_dependency.2",
+        "latest_dependency.3",
+        "latest_dependency.4",
+        "latest_dependency.5",
+        "latest_dependency.6",
+        "latest_dependency.7",
+        "latest_dependency.8",
+        "latest_dependency.9",
+        "latest_dependency.10",
+        "latest_dependency.11",
+        "latest_dependency.12",
+        "latest_dependency.13",
+        "latest_dependency.14",
+        "latest_dependency.15"
+      ],
+      "signed": false
+    },
+    "proposed_facts": {
+      "bits": [
+        "proposed_facts.0",
+        "proposed_facts.1",
+        "proposed_facts.2",
+        "proposed_facts.3",
+        "proposed_facts.4",
+        "proposed_facts.5",
+        "proposed_facts.6",
+        "proposed_facts.7"
+      ],
+      "signed": false
+    }
+  },
+  "outputs": [
+    "sequence_forward",
+    "time_forward",
+    "elapsed_exact",
+    "dependency_not_future",
+    "facts_retained",
+    "accepted",
+    "last_sequence",
+    "last_time",
+    "retained_facts"
+  ],
+  "objects": 539,
+  "scheduled_values": 510,
+  "scratch_slots": 135,
+  "unrecycled_slots": 510,
+  "kernel_microcode_words": 28,
+  "kernel_table_word": 3,
+  "native_roles_uninterpreted": [
+    "TOM",
+    "phi",
+    "jitter",
+    "inverse_log_phi",
+    "ArchU",
+    "causality",
+    "entropy",
+    "InverseOccam",
+    "sheet",
+    "double_UU",
+    "Klein",
+    "Matryoshka"
+  ],
+  "scope": "finite validation representation; not intrinsic TOM nodes, dimensions, metric or physical evolution",
+  "source_definition": {
+    "name": "Stateful event admission: finite ordering and fact-retention policy",
+    "state": {
+      "proposal_present": 0,
+      "last_sequence.0": 0,
+      "last_sequence.1": 0,
+      "last_sequence.2": 0,
+      "last_sequence.3": 0,
+      "last_sequence.4": 0,
+      "last_sequence.5": 0,
+      "last_sequence.6": 0,
+      "last_sequence.7": 0,
+      "last_sequence.8": 0,
+      "last_sequence.9": 0,
+      "last_sequence.10": 0,
+      "last_sequence.11": 0,
+      "last_sequence.12": 0,
+      "last_sequence.13": 0,
+      "last_sequence.14": 0,
+      "last_sequence.15": 0,
+      "last_time.0": 0,
+      "last_time.1": 0,
+      "last_time.2": 0,
+      "last_time.3": 0,
+      "last_time.4": 0,
+      "last_time.5": 0,
+      "last_time.6": 0,
+      "last_time.7": 0,
+      "last_time.8": 0,
+      "last_time.9": 0,
+      "last_time.10": 0,
+      "last_time.11": 0,
+      "last_time.12": 0,
+      "last_time.13": 0,
+      "last_time.14": 0,
+      "last_time.15": 0,
+      "retained_facts.0": 0,
+      "retained_facts.1": 0,
+      "retained_facts.2": 0,
+      "retained_facts.3": 0,
+      "retained_facts.4": 0,
+      "retained_facts.5": 0,
+      "retained_facts.6": 0,
+      "retained_facts.7": 0,
+      "event_sequence.0": 0,
+      "event_sequence.1": 0,
+      "event_sequence.2": 0,
+      "event_sequence.3": 0,
+      "event_sequence.4": 0,
+      "event_sequence.5": 0,
+      "event_sequence.6": 0,
+      "event_sequence.7": 0,
+      "event_sequence.8": 0,
+      "event_sequence.9": 0,
+      "event_sequence.10": 0,
+      "event_sequence.11": 0,
+      "event_sequence.12": 0,
+      "event_sequence.13": 0,
+      "event_sequence.14": 0,
+      "event_sequence.15": 0,
+      "event_time.0": 0,
+      "event_time.1": 0,
+      "event_time.2": 0,
+      "event_time.3": 0,
+      "event_time.4": 0,
+      "event_time.5": 0,
+      "event_time.6": 0,
+      "event_time.7": 0,
+      "event_time.8": 0,
+      "event_time.9": 0,
+      "event_time.10": 0,
+      "event_time.11": 0,
+      "event_time.12": 0,
+      "event_time.13": 0,
+      "event_time.14": 0,
+      "event_time.15": 0,
+      "claimed_elapsed.0": 0,
+      "claimed_elapsed.1": 0,
+      "claimed_elapsed.2": 0,
+      "claimed_elapsed.3": 0,
+      "claimed_elapsed.4": 0,
+      "claimed_elapsed.5": 0,
+      "claimed_elapsed.6": 0,
+      "claimed_elapsed.7": 0,
+      "claimed_elapsed.8": 0,
+      "claimed_elapsed.9": 0,
+      "claimed_elapsed.10": 0,
+      "claimed_elapsed.11": 0,
+      "claimed_elapsed.12": 0,
+      "claimed_elapsed.13": 0,
+      "claimed_elapsed.14": 0,
+      "claimed_elapsed.15": 0,
+      "latest_dependency.0": 0,
+      "latest_dependency.1": 0,
+      "latest_dependency.2": 0,
+      "latest_dependency.3": 0,
+      "latest_dependency.4": 0,
+      "latest_dependency.5": 0,
+      "latest_dependency.6": 0,
+      "latest_dependency.7": 0,
+      "latest_dependency.8": 0,
+      "latest_dependency.9": 0,
+      "latest_dependency.10": 0,
+      "latest_dependency.11": 0,
+      "latest_dependency.12": 0,
+      "latest_dependency.13": 0,
+      "latest_dependency.14": 0,
+      "latest_dependency.15": 0,
+      "proposed_facts.0": 0,
+      "proposed_facts.1": 0,
+      "proposed_facts.2": 0,
+      "proposed_facts.3": 0,
+      "proposed_facts.4": 0,
+      "proposed_facts.5": 0,
+      "proposed_facts.6": 0,
+      "proposed_facts.7": 0,
+      "sequence_forward": 0,
+      "time_forward": 0,
+      "elapsed_exact": 0,
+      "dependency_not_future": 0,
+      "facts_retained": 0,
+      "accepted": 0
+    },
+    "rules": {
+      "NOT": 85,
+      "AND": 136,
+      "OR": 238,
+      "XOR": 102,
+      "EQ": 153,
+      "MUX": 202,
+      "SUM3": 150,
+      "MAJ3": 232
+    },
+    "expressions": {
+      "$v0": {
+        "rule": "NOT",
+        "args": [
+          "last_time.0"
+        ]
+      },
+      "$v1": {
+        "rule": "NOT",
+        "args": [
+          "last_time.1"
+        ]
+      },
+      "$v2": {
+        "rule": "NOT",
+        "args": [
+          "last_time.2"
+        ]
+      },
+      "$v3": {
+        "rule": "NOT",
+        "args": [
+          "last_time.3"
+        ]
+      },
+      "$v4": {
+        "rule": "NOT",
+        "args": [
+          "last_time.4"
+        ]
+      },
+      "$v5": {
+        "rule": "NOT",
+        "args": [
+          "last_time.5"
+        ]
+      },
+      "$v6": {
+        "rule": "NOT",
+        "args": [
+          "last_time.6"
+        ]
+      },
+      "$v7": {
+        "rule": "NOT",
+        "args": [
+          "last_time.7"
+        ]
+      },
+      "$v8": {
+        "rule": "NOT",
+        "args": [
+          "last_time.8"
+        ]
+      },
+      "$v9": {
+        "rule": "NOT",
+        "args": [
+          "last_time.9"
+        ]
+      },
+      "$v10": {
+        "rule": "NOT",
+        "args": [
+          "last_time.10"
+        ]
+      },
+      "$v11": {
+        "rule": "NOT",
+        "args": [
+          "last_time.11"
+        ]
+      },
+      "$v12": {
+        "rule": "NOT",
+        "args": [
+          "last_time.12"
+        ]
+      },
+      "$v13": {
+        "rule": "NOT",
+        "args": [
+          "last_time.13"
+        ]
+      },
+      "$v14": {
+        "rule": "NOT",
+        "args": [
+          "last_time.14"
+        ]
+      },
+      "$v15": {
+        "rule": "NOT",
+        "args": [
+          "last_time.15"
+        ]
+      },
+      "$v16": {
+        "rule": "NOT",
+        "args": [
+          "ZERO"
+        ]
+      },
+      "$v17": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.0",
+          "$v0",
+          "ONE"
+        ]
+      },
+      "$v18": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.0",
+          "$v0",
+          "ONE"
+        ]
+      },
+      "$v19": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.1",
+          "$v1",
+          "$v18"
+        ]
+      },
+      "$v20": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.1",
+          "$v1",
+          "$v18"
+        ]
+      },
+      "$v21": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.2",
+          "$v2",
+          "$v20"
+        ]
+      },
+      "$v22": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.2",
+          "$v2",
+          "$v20"
+        ]
+      },
+      "$v23": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.3",
+          "$v3",
+          "$v22"
+        ]
+      },
+      "$v24": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.3",
+          "$v3",
+          "$v22"
+        ]
+      },
+      "$v25": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.4",
+          "$v4",
+          "$v24"
+        ]
+      },
+      "$v26": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.4",
+          "$v4",
+          "$v24"
+        ]
+      },
+      "$v27": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.5",
+          "$v5",
+          "$v26"
+        ]
+      },
+      "$v28": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.5",
+          "$v5",
+          "$v26"
+        ]
+      },
+      "$v29": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.6",
+          "$v6",
+          "$v28"
+        ]
+      },
+      "$v30": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.6",
+          "$v6",
+          "$v28"
+        ]
+      },
+      "$v31": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.7",
+          "$v7",
+          "$v30"
+        ]
+      },
+      "$v32": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.7",
+          "$v7",
+          "$v30"
+        ]
+      },
+      "$v33": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.8",
+          "$v8",
+          "$v32"
+        ]
+      },
+      "$v34": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.8",
+          "$v8",
+          "$v32"
+        ]
+      },
+      "$v35": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.9",
+          "$v9",
+          "$v34"
+        ]
+      },
+      "$v36": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.9",
+          "$v9",
+          "$v34"
+        ]
+      },
+      "$v37": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.10",
+          "$v10",
+          "$v36"
+        ]
+      },
+      "$v38": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.10",
+          "$v10",
+          "$v36"
+        ]
+      },
+      "$v39": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.11",
+          "$v11",
+          "$v38"
+        ]
+      },
+      "$v40": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.11",
+          "$v11",
+          "$v38"
+        ]
+      },
+      "$v41": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.12",
+          "$v12",
+          "$v40"
+        ]
+      },
+      "$v42": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.12",
+          "$v12",
+          "$v40"
+        ]
+      },
+      "$v43": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.13",
+          "$v13",
+          "$v42"
+        ]
+      },
+      "$v44": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.13",
+          "$v13",
+          "$v42"
+        ]
+      },
+      "$v45": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.14",
+          "$v14",
+          "$v44"
+        ]
+      },
+      "$v46": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.14",
+          "$v14",
+          "$v44"
+        ]
+      },
+      "$v47": {
+        "rule": "SUM3",
+        "args": [
+          "event_time.15",
+          "$v15",
+          "$v46"
+        ]
+      },
+      "$v48": {
+        "rule": "MAJ3",
+        "args": [
+          "event_time.15",
+          "$v15",
+          "$v46"
+        ]
+      },
+      "$v49": {
+        "rule": "SUM3",
+        "args": [
+          "ZERO",
+          "$v16",
+          "$v48"
+        ]
+      },
+      "$v50": {
+        "rule": "MAJ3",
+        "args": [
+          "ZERO",
+          "$v16",
+          "$v48"
+        ]
+      },
+      "$v51": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.0"
+        ]
+      },
+      "$v52": {
+        "rule": "AND",
+        "args": [
+          "$v51",
+          "event_sequence.0"
+        ]
+      },
+      "$v53": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.0",
+          "event_sequence.0"
+        ]
+      },
+      "$v54": {
+        "rule": "AND",
+        "args": [
+          "$v53",
+          "ZERO"
+        ]
+      },
+      "$v55": {
+        "rule": "OR",
+        "args": [
+          "$v52",
+          "$v54"
+        ]
+      },
+      "$v56": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.1"
+        ]
+      },
+      "$v57": {
+        "rule": "AND",
+        "args": [
+          "$v56",
+          "event_sequence.1"
+        ]
+      },
+      "$v58": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.1",
+          "event_sequence.1"
+        ]
+      },
+      "$v59": {
+        "rule": "AND",
+        "args": [
+          "$v58",
+          "$v55"
+        ]
+      },
+      "$v60": {
+        "rule": "OR",
+        "args": [
+          "$v57",
+          "$v59"
+        ]
+      },
+      "$v61": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.2"
+        ]
+      },
+      "$v62": {
+        "rule": "AND",
+        "args": [
+          "$v61",
+          "event_sequence.2"
+        ]
+      },
+      "$v63": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.2",
+          "event_sequence.2"
+        ]
+      },
+      "$v64": {
+        "rule": "AND",
+        "args": [
+          "$v63",
+          "$v60"
+        ]
+      },
+      "$v65": {
+        "rule": "OR",
+        "args": [
+          "$v62",
+          "$v64"
+        ]
+      },
+      "$v66": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.3"
+        ]
+      },
+      "$v67": {
+        "rule": "AND",
+        "args": [
+          "$v66",
+          "event_sequence.3"
+        ]
+      },
+      "$v68": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.3",
+          "event_sequence.3"
+        ]
+      },
+      "$v69": {
+        "rule": "AND",
+        "args": [
+          "$v68",
+          "$v65"
+        ]
+      },
+      "$v70": {
+        "rule": "OR",
+        "args": [
+          "$v67",
+          "$v69"
+        ]
+      },
+      "$v71": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.4"
+        ]
+      },
+      "$v72": {
+        "rule": "AND",
+        "args": [
+          "$v71",
+          "event_sequence.4"
+        ]
+      },
+      "$v73": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.4",
+          "event_sequence.4"
+        ]
+      },
+      "$v74": {
+        "rule": "AND",
+        "args": [
+          "$v73",
+          "$v70"
+        ]
+      },
+      "$v75": {
+        "rule": "OR",
+        "args": [
+          "$v72",
+          "$v74"
+        ]
+      },
+      "$v76": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.5"
+        ]
+      },
+      "$v77": {
+        "rule": "AND",
+        "args": [
+          "$v76",
+          "event_sequence.5"
+        ]
+      },
+      "$v78": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.5",
+          "event_sequence.5"
+        ]
+      },
+      "$v79": {
+        "rule": "AND",
+        "args": [
+          "$v78",
+          "$v75"
+        ]
+      },
+      "$v80": {
+        "rule": "OR",
+        "args": [
+          "$v77",
+          "$v79"
+        ]
+      },
+      "$v81": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.6"
+        ]
+      },
+      "$v82": {
+        "rule": "AND",
+        "args": [
+          "$v81",
+          "event_sequence.6"
+        ]
+      },
+      "$v83": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.6",
+          "event_sequence.6"
+        ]
+      },
+      "$v84": {
+        "rule": "AND",
+        "args": [
+          "$v83",
+          "$v80"
+        ]
+      },
+      "$v85": {
+        "rule": "OR",
+        "args": [
+          "$v82",
+          "$v84"
+        ]
+      },
+      "$v86": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.7"
+        ]
+      },
+      "$v87": {
+        "rule": "AND",
+        "args": [
+          "$v86",
+          "event_sequence.7"
+        ]
+      },
+      "$v88": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.7",
+          "event_sequence.7"
+        ]
+      },
+      "$v89": {
+        "rule": "AND",
+        "args": [
+          "$v88",
+          "$v85"
+        ]
+      },
+      "$v90": {
+        "rule": "OR",
+        "args": [
+          "$v87",
+          "$v89"
+        ]
+      },
+      "$v91": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.8"
+        ]
+      },
+      "$v92": {
+        "rule": "AND",
+        "args": [
+          "$v91",
+          "event_sequence.8"
+        ]
+      },
+      "$v93": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.8",
+          "event_sequence.8"
+        ]
+      },
+      "$v94": {
+        "rule": "AND",
+        "args": [
+          "$v93",
+          "$v90"
+        ]
+      },
+      "$v95": {
+        "rule": "OR",
+        "args": [
+          "$v92",
+          "$v94"
+        ]
+      },
+      "$v96": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.9"
+        ]
+      },
+      "$v97": {
+        "rule": "AND",
+        "args": [
+          "$v96",
+          "event_sequence.9"
+        ]
+      },
+      "$v98": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.9",
+          "event_sequence.9"
+        ]
+      },
+      "$v99": {
+        "rule": "AND",
+        "args": [
+          "$v98",
+          "$v95"
+        ]
+      },
+      "$v100": {
+        "rule": "OR",
+        "args": [
+          "$v97",
+          "$v99"
+        ]
+      },
+      "$v101": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.10"
+        ]
+      },
+      "$v102": {
+        "rule": "AND",
+        "args": [
+          "$v101",
+          "event_sequence.10"
+        ]
+      },
+      "$v103": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.10",
+          "event_sequence.10"
+        ]
+      },
+      "$v104": {
+        "rule": "AND",
+        "args": [
+          "$v103",
+          "$v100"
+        ]
+      },
+      "$v105": {
+        "rule": "OR",
+        "args": [
+          "$v102",
+          "$v104"
+        ]
+      },
+      "$v106": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.11"
+        ]
+      },
+      "$v107": {
+        "rule": "AND",
+        "args": [
+          "$v106",
+          "event_sequence.11"
+        ]
+      },
+      "$v108": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.11",
+          "event_sequence.11"
+        ]
+      },
+      "$v109": {
+        "rule": "AND",
+        "args": [
+          "$v108",
+          "$v105"
+        ]
+      },
+      "$v110": {
+        "rule": "OR",
+        "args": [
+          "$v107",
+          "$v109"
+        ]
+      },
+      "$v111": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.12"
+        ]
+      },
+      "$v112": {
+        "rule": "AND",
+        "args": [
+          "$v111",
+          "event_sequence.12"
+        ]
+      },
+      "$v113": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.12",
+          "event_sequence.12"
+        ]
+      },
+      "$v114": {
+        "rule": "AND",
+        "args": [
+          "$v113",
+          "$v110"
+        ]
+      },
+      "$v115": {
+        "rule": "OR",
+        "args": [
+          "$v112",
+          "$v114"
+        ]
+      },
+      "$v116": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.13"
+        ]
+      },
+      "$v117": {
+        "rule": "AND",
+        "args": [
+          "$v116",
+          "event_sequence.13"
+        ]
+      },
+      "$v118": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.13",
+          "event_sequence.13"
+        ]
+      },
+      "$v119": {
+        "rule": "AND",
+        "args": [
+          "$v118",
+          "$v115"
+        ]
+      },
+      "$v120": {
+        "rule": "OR",
+        "args": [
+          "$v117",
+          "$v119"
+        ]
+      },
+      "$v121": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.14"
+        ]
+      },
+      "$v122": {
+        "rule": "AND",
+        "args": [
+          "$v121",
+          "event_sequence.14"
+        ]
+      },
+      "$v123": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.14",
+          "event_sequence.14"
+        ]
+      },
+      "$v124": {
+        "rule": "AND",
+        "args": [
+          "$v123",
+          "$v120"
+        ]
+      },
+      "$v125": {
+        "rule": "OR",
+        "args": [
+          "$v122",
+          "$v124"
+        ]
+      },
+      "$v126": {
+        "rule": "NOT",
+        "args": [
+          "last_sequence.15"
+        ]
+      },
+      "$v127": {
+        "rule": "AND",
+        "args": [
+          "$v126",
+          "event_sequence.15"
+        ]
+      },
+      "$v128": {
+        "rule": "EQ",
+        "args": [
+          "last_sequence.15",
+          "event_sequence.15"
+        ]
+      },
+      "$v129": {
+        "rule": "AND",
+        "args": [
+          "$v128",
+          "$v125"
+        ]
+      },
+      "$v130": {
+        "rule": "OR",
+        "args": [
+          "$v127",
+          "$v129"
+        ]
+      },
+      "$v131": {
+        "rule": "NOT",
+        "args": [
+          "last_time.0"
+        ]
+      },
+      "$v132": {
+        "rule": "AND",
+        "args": [
+          "$v131",
+          "event_time.0"
+        ]
+      },
+      "$v133": {
+        "rule": "EQ",
+        "args": [
+          "last_time.0",
+          "event_time.0"
+        ]
+      },
+      "$v134": {
+        "rule": "AND",
+        "args": [
+          "$v133",
+          "ZERO"
+        ]
+      },
+      "$v135": {
+        "rule": "OR",
+        "args": [
+          "$v132",
+          "$v134"
+        ]
+      },
+      "$v136": {
+        "rule": "NOT",
+        "args": [
+          "last_time.1"
+        ]
+      },
+      "$v137": {
+        "rule": "AND",
+        "args": [
+          "$v136",
+          "event_time.1"
+        ]
+      },
+      "$v138": {
+        "rule": "EQ",
+        "args": [
+          "last_time.1",
+          "event_time.1"
+        ]
+      },
+      "$v139": {
+        "rule": "AND",
+        "args": [
+          "$v138",
+          "$v135"
+        ]
+      },
+      "$v140": {
+        "rule": "OR",
+        "args": [
+          "$v137",
+          "$v139"
+        ]
+      },
+      "$v141": {
+        "rule": "NOT",
+        "args": [
+          "last_time.2"
+        ]
+      },
+      "$v142": {
+        "rule": "AND",
+        "args": [
+          "$v141",
+          "event_time.2"
+        ]
+      },
+      "$v143": {
+        "rule": "EQ",
+        "args": [
+          "last_time.2",
+          "event_time.2"
+        ]
+      },
+      "$v144": {
+        "rule": "AND",
+        "args": [
+          "$v143",
+          "$v140"
+        ]
+      },
+      "$v145": {
+        "rule": "OR",
+        "args": [
+          "$v142",
+          "$v144"
+        ]
+      },
+      "$v146": {
+        "rule": "NOT",
+        "args": [
+          "last_time.3"
+        ]
+      },
+      "$v147": {
+        "rule": "AND",
+        "args": [
+          "$v146",
+          "event_time.3"
+        ]
+      },
+      "$v148": {
+        "rule": "EQ",
+        "args": [
+          "last_time.3",
+          "event_time.3"
+        ]
+      },
+      "$v149": {
+        "rule": "AND",
+        "args": [
+          "$v148",
+          "$v145"
+        ]
+      },
+      "$v150": {
+        "rule": "OR",
+        "args": [
+          "$v147",
+          "$v149"
+        ]
+      },
+      "$v151": {
+        "rule": "NOT",
+        "args": [
+          "last_time.4"
+        ]
+      },
+      "$v152": {
+        "rule": "AND",
+        "args": [
+          "$v151",
+          "event_time.4"
+        ]
+      },
+      "$v153": {
+        "rule": "EQ",
+        "args": [
+          "last_time.4",
+          "event_time.4"
+        ]
+      },
+      "$v154": {
+        "rule": "AND",
+        "args": [
+          "$v153",
+          "$v150"
+        ]
+      },
+      "$v155": {
+        "rule": "OR",
+        "args": [
+          "$v152",
+          "$v154"
+        ]
+      },
+      "$v156": {
+        "rule": "NOT",
+        "args": [
+          "last_time.5"
+        ]
+      },
+      "$v157": {
+        "rule": "AND",
+        "args": [
+          "$v156",
+          "event_time.5"
+        ]
+      },
+      "$v158": {
+        "rule": "EQ",
+        "args": [
+          "last_time.5",
+          "event_time.5"
+        ]
+      },
+      "$v159": {
+        "rule": "AND",
+        "args": [
+          "$v158",
+          "$v155"
+        ]
+      },
+      "$v160": {
+        "rule": "OR",
+        "args": [
+          "$v157",
+          "$v159"
+        ]
+      },
+      "$v161": {
+        "rule": "NOT",
+        "args": [
+          "last_time.6"
+        ]
+      },
+      "$v162": {
+        "rule": "AND",
+        "args": [
+          "$v161",
+          "event_time.6"
+        ]
+      },
+      "$v163": {
+        "rule": "EQ",
+        "args": [
+          "last_time.6",
+          "event_time.6"
+        ]
+      },
+      "$v164": {
+        "rule": "AND",
+        "args": [
+          "$v163",
+          "$v160"
+        ]
+      },
+      "$v165": {
+        "rule": "OR",
+        "args": [
+          "$v162",
+          "$v164"
+        ]
+      },
+      "$v166": {
+        "rule": "NOT",
+        "args": [
+          "last_time.7"
+        ]
+      },
+      "$v167": {
+        "rule": "AND",
+        "args": [
+          "$v166",
+          "event_time.7"
+        ]
+      },
+      "$v168": {
+        "rule": "EQ",
+        "args": [
+          "last_time.7",
+          "event_time.7"
+        ]
+      },
+      "$v169": {
+        "rule": "AND",
+        "args": [
+          "$v168",
+          "$v165"
+        ]
+      },
+      "$v170": {
+        "rule": "OR",
+        "args": [
+          "$v167",
+          "$v169"
+        ]
+      },
+      "$v171": {
+        "rule": "NOT",
+        "args": [
+          "last_time.8"
+        ]
+      },
+      "$v172": {
+        "rule": "AND",
+        "args": [
+          "$v171",
+          "event_time.8"
+        ]
+      },
+      "$v173": {
+        "rule": "EQ",
+        "args": [
+          "last_time.8",
+          "event_time.8"
+        ]
+      },
+      "$v174": {
+        "rule": "AND",
+        "args": [
+          "$v173",
+          "$v170"
+        ]
+      },
+      "$v175": {
+        "rule": "OR",
+        "args": [
+          "$v172",
+          "$v174"
+        ]
+      },
+      "$v176": {
+        "rule": "NOT",
+        "args": [
+          "last_time.9"
+        ]
+      },
+      "$v177": {
+        "rule": "AND",
+        "args": [
+          "$v176",
+          "event_time.9"
+        ]
+      },
+      "$v178": {
+        "rule": "EQ",
+        "args": [
+          "last_time.9",
+          "event_time.9"
+        ]
+      },
+      "$v179": {
+        "rule": "AND",
+        "args": [
+          "$v178",
+          "$v175"
+        ]
+      },
+      "$v180": {
+        "rule": "OR",
+        "args": [
+          "$v177",
+          "$v179"
+        ]
+      },
+      "$v181": {
+        "rule": "NOT",
+        "args": [
+          "last_time.10"
+        ]
+      },
+      "$v182": {
+        "rule": "AND",
+        "args": [
+          "$v181",
+          "event_time.10"
+        ]
+      },
+      "$v183": {
+        "rule": "EQ",
+        "args": [
+          "last_time.10",
+          "event_time.10"
+        ]
+      },
+      "$v184": {
+        "rule": "AND",
+        "args": [
+          "$v183",
+          "$v180"
+        ]
+      },
+      "$v185": {
+        "rule": "OR",
+        "args": [
+          "$v182",
+          "$v184"
+        ]
+      },
+      "$v186": {
+        "rule": "NOT",
+        "args": [
+          "last_time.11"
+        ]
+      },
+      "$v187": {
+        "rule": "AND",
+        "args": [
+          "$v186",
+          "event_time.11"
+        ]
+      },
+      "$v188": {
+        "rule": "EQ",
+        "args": [
+          "last_time.11",
+          "event_time.11"
+        ]
+      },
+      "$v189": {
+        "rule": "AND",
+        "args": [
+          "$v188",
+          "$v185"
+        ]
+      },
+      "$v190": {
+        "rule": "OR",
+        "args": [
+          "$v187",
+          "$v189"
+        ]
+      },
+      "$v191": {
+        "rule": "NOT",
+        "args": [
+          "last_time.12"
+        ]
+      },
+      "$v192": {
+        "rule": "AND",
+        "args": [
+          "$v191",
+          "event_time.12"
+        ]
+      },
+      "$v193": {
+        "rule": "EQ",
+        "args": [
+          "last_time.12",
+          "event_time.12"
+        ]
+      },
+      "$v194": {
+        "rule": "AND",
+        "args": [
+          "$v193",
+          "$v190"
+        ]
+      },
+      "$v195": {
+        "rule": "OR",
+        "args": [
+          "$v192",
+          "$v194"
+        ]
+      },
+      "$v196": {
+        "rule": "NOT",
+        "args": [
+          "last_time.13"
+        ]
+      },
+      "$v197": {
+        "rule": "AND",
+        "args": [
+          "$v196",
+          "event_time.13"
+        ]
+      },
+      "$v198": {
+        "rule": "EQ",
+        "args": [
+          "last_time.13",
+          "event_time.13"
+        ]
+      },
+      "$v199": {
+        "rule": "AND",
+        "args": [
+          "$v198",
+          "$v195"
+        ]
+      },
+      "$v200": {
+        "rule": "OR",
+        "args": [
+          "$v197",
+          "$v199"
+        ]
+      },
+      "$v201": {
+        "rule": "NOT",
+        "args": [
+          "last_time.14"
+        ]
+      },
+      "$v202": {
+        "rule": "AND",
+        "args": [
+          "$v201",
+          "event_time.14"
+        ]
+      },
+      "$v203": {
+        "rule": "EQ",
+        "args": [
+          "last_time.14",
+          "event_time.14"
+        ]
+      },
+      "$v204": {
+        "rule": "AND",
+        "args": [
+          "$v203",
+          "$v200"
+        ]
+      },
+      "$v205": {
+        "rule": "OR",
+        "args": [
+          "$v202",
+          "$v204"
+        ]
+      },
+      "$v206": {
+        "rule": "NOT",
+        "args": [
+          "last_time.15"
+        ]
+      },
+      "$v207": {
+        "rule": "AND",
+        "args": [
+          "$v206",
+          "event_time.15"
+        ]
+      },
+      "$v208": {
+        "rule": "EQ",
+        "args": [
+          "last_time.15",
+          "event_time.15"
+        ]
+      },
+      "$v209": {
+        "rule": "AND",
+        "args": [
+          "$v208",
+          "$v205"
+        ]
+      },
+      "$v210": {
+        "rule": "OR",
+        "args": [
+          "$v207",
+          "$v209"
+        ]
+      },
+      "$v211": {
+        "rule": "EQ",
+        "args": [
+          "$v17",
+          "claimed_elapsed.0"
+        ]
+      },
+      "$v212": {
+        "rule": "EQ",
+        "args": [
+          "$v19",
+          "claimed_elapsed.1"
+        ]
+      },
+      "$v213": {
+        "rule": "EQ",
+        "args": [
+          "$v21",
+          "claimed_elapsed.2"
+        ]
+      },
+      "$v214": {
+        "rule": "EQ",
+        "args": [
+          "$v23",
+          "claimed_elapsed.3"
+        ]
+      },
+      "$v215": {
+        "rule": "EQ",
+        "args": [
+          "$v25",
+          "claimed_elapsed.4"
+        ]
+      },
+      "$v216": {
+        "rule": "EQ",
+        "args": [
+          "$v27",
+          "claimed_elapsed.5"
+        ]
+      },
+      "$v217": {
+        "rule": "EQ",
+        "args": [
+          "$v29",
+          "claimed_elapsed.6"
+        ]
+      },
+      "$v218": {
+        "rule": "EQ",
+        "args": [
+          "$v31",
+          "claimed_elapsed.7"
+        ]
+      },
+      "$v219": {
+        "rule": "EQ",
+        "args": [
+          "$v33",
+          "claimed_elapsed.8"
+        ]
+      },
+      "$v220": {
+        "rule": "EQ",
+        "args": [
+          "$v35",
+          "claimed_elapsed.9"
+        ]
+      },
+      "$v221": {
+        "rule": "EQ",
+        "args": [
+          "$v37",
+          "claimed_elapsed.10"
+        ]
+      },
+      "$v222": {
+        "rule": "EQ",
+        "args": [
+          "$v39",
+          "claimed_elapsed.11"
+        ]
+      },
+      "$v223": {
+        "rule": "EQ",
+        "args": [
+          "$v41",
+          "claimed_elapsed.12"
+        ]
+      },
+      "$v224": {
+        "rule": "EQ",
+        "args": [
+          "$v43",
+          "claimed_elapsed.13"
+        ]
+      },
+      "$v225": {
+        "rule": "EQ",
+        "args": [
+          "$v45",
+          "claimed_elapsed.14"
+        ]
+      },
+      "$v226": {
+        "rule": "EQ",
+        "args": [
+          "$v47",
+          "claimed_elapsed.15"
+        ]
+      },
+      "$v227": {
+        "rule": "EQ",
+        "args": [
+          "$v49",
+          "ZERO"
+        ]
+      },
+      "$v228": {
+        "rule": "AND",
+        "args": [
+          "ONE",
+          "$v211"
+        ]
+      },
+      "$v229": {
+        "rule": "AND",
+        "args": [
+          "$v228",
+          "$v212"
+        ]
+      },
+      "$v230": {
+        "rule": "AND",
+        "args": [
+          "$v229",
+          "$v213"
+        ]
+      },
+      "$v231": {
+        "rule": "AND",
+        "args": [
+          "$v230",
+          "$v214"
+        ]
+      },
+      "$v232": {
+        "rule": "AND",
+        "args": [
+          "$v231",
+          "$v215"
+        ]
+      },
+      "$v233": {
+        "rule": "AND",
+        "args": [
+          "$v232",
+          "$v216"
+        ]
+      },
+      "$v234": {
+        "rule": "AND",
+        "args": [
+          "$v233",
+          "$v217"
+        ]
+      },
+      "$v235": {
+        "rule": "AND",
+        "args": [
+          "$v234",
+          "$v218"
+        ]
+      },
+      "$v236": {
+        "rule": "AND",
+        "args": [
+          "$v235",
+          "$v219"
+        ]
+      },
+      "$v237": {
+        "rule": "AND",
+        "args": [
+          "$v236",
+          "$v220"
+        ]
+      },
+      "$v238": {
+        "rule": "AND",
+        "args": [
+          "$v237",
+          "$v221"
+        ]
+      },
+      "$v239": {
+        "rule": "AND",
+        "args": [
+          "$v238",
+          "$v222"
+        ]
+      },
+      "$v240": {
+        "rule": "AND",
+        "args": [
+          "$v239",
+          "$v223"
+        ]
+      },
+      "$v241": {
+        "rule": "AND",
+        "args": [
+          "$v240",
+          "$v224"
+        ]
+      },
+      "$v242": {
+        "rule": "AND",
+        "args": [
+          "$v241",
+          "$v225"
+        ]
+      },
+      "$v243": {
+        "rule": "AND",
+        "args": [
+          "$v242",
+          "$v226"
+        ]
+      },
+      "$v244": {
+        "rule": "AND",
+        "args": [
+          "$v243",
+          "$v227"
+        ]
+      },
+      "$v245": {
+        "rule": "NOT",
+        "args": [
+          "event_time.0"
+        ]
+      },
+      "$v246": {
+        "rule": "AND",
+        "args": [
+          "$v245",
+          "latest_dependency.0"
+        ]
+      },
+      "$v247": {
+        "rule": "EQ",
+        "args": [
+          "event_time.0",
+          "latest_dependency.0"
+        ]
+      },
+      "$v248": {
+        "rule": "AND",
+        "args": [
+          "$v247",
+          "ZERO"
+        ]
+      },
+      "$v249": {
+        "rule": "OR",
+        "args": [
+          "$v246",
+          "$v248"
+        ]
+      },
+      "$v250": {
+        "rule": "NOT",
+        "args": [
+          "event_time.1"
+        ]
+      },
+      "$v251": {
+        "rule": "AND",
+        "args": [
+          "$v250",
+          "latest_dependency.1"
+        ]
+      },
+      "$v252": {
+        "rule": "EQ",
+        "args": [
+          "event_time.1",
+          "latest_dependency.1"
+        ]
+      },
+      "$v253": {
+        "rule": "AND",
+        "args": [
+          "$v252",
+          "$v249"
+        ]
+      },
+      "$v254": {
+        "rule": "OR",
+        "args": [
+          "$v251",
+          "$v253"
+        ]
+      },
+      "$v255": {
+        "rule": "NOT",
+        "args": [
+          "event_time.2"
+        ]
+      },
+      "$v256": {
+        "rule": "AND",
+        "args": [
+          "$v255",
+          "latest_dependency.2"
+        ]
+      },
+      "$v257": {
+        "rule": "EQ",
+        "args": [
+          "event_time.2",
+          "latest_dependency.2"
+        ]
+      },
+      "$v258": {
+        "rule": "AND",
+        "args": [
+          "$v257",
+          "$v254"
+        ]
+      },
+      "$v259": {
+        "rule": "OR",
+        "args": [
+          "$v256",
+          "$v258"
+        ]
+      },
+      "$v260": {
+        "rule": "NOT",
+        "args": [
+          "event_time.3"
+        ]
+      },
+      "$v261": {
+        "rule": "AND",
+        "args": [
+          "$v260",
+          "latest_dependency.3"
+        ]
+      },
+      "$v262": {
+        "rule": "EQ",
+        "args": [
+          "event_time.3",
+          "latest_dependency.3"
+        ]
+      },
+      "$v263": {
+        "rule": "AND",
+        "args": [
+          "$v262",
+          "$v259"
+        ]
+      },
+      "$v264": {
+        "rule": "OR",
+        "args": [
+          "$v261",
+          "$v263"
+        ]
+      },
+      "$v265": {
+        "rule": "NOT",
+        "args": [
+          "event_time.4"
+        ]
+      },
+      "$v266": {
+        "rule": "AND",
+        "args": [
+          "$v265",
+          "latest_dependency.4"
+        ]
+      },
+      "$v267": {
+        "rule": "EQ",
+        "args": [
+          "event_time.4",
+          "latest_dependency.4"
+        ]
+      },
+      "$v268": {
+        "rule": "AND",
+        "args": [
+          "$v267",
+          "$v264"
+        ]
+      },
+      "$v269": {
+        "rule": "OR",
+        "args": [
+          "$v266",
+          "$v268"
+        ]
+      },
+      "$v270": {
+        "rule": "NOT",
+        "args": [
+          "event_time.5"
+        ]
+      },
+      "$v271": {
+        "rule": "AND",
+        "args": [
+          "$v270",
+          "latest_dependency.5"
+        ]
+      },
+      "$v272": {
+        "rule": "EQ",
+        "args": [
+          "event_time.5",
+          "latest_dependency.5"
+        ]
+      },
+      "$v273": {
+        "rule": "AND",
+        "args": [
+          "$v272",
+          "$v269"
+        ]
+      },
+      "$v274": {
+        "rule": "OR",
+        "args": [
+          "$v271",
+          "$v273"
+        ]
+      },
+      "$v275": {
+        "rule": "NOT",
+        "args": [
+          "event_time.6"
+        ]
+      },
+      "$v276": {
+        "rule": "AND",
+        "args": [
+          "$v275",
+          "latest_dependency.6"
+        ]
+      },
+      "$v277": {
+        "rule": "EQ",
+        "args": [
+          "event_time.6",
+          "latest_dependency.6"
+        ]
+      },
+      "$v278": {
+        "rule": "AND",
+        "args": [
+          "$v277",
+          "$v274"
+        ]
+      },
+      "$v279": {
+        "rule": "OR",
+        "args": [
+          "$v276",
+          "$v278"
+        ]
+      },
+      "$v280": {
+        "rule": "NOT",
+        "args": [
+          "event_time.7"
+        ]
+      },
+      "$v281": {
+        "rule": "AND",
+        "args": [
+          "$v280",
+          "latest_dependency.7"
+        ]
+      },
+      "$v282": {
+        "rule": "EQ",
+        "args": [
+          "event_time.7",
+          "latest_dependency.7"
+        ]
+      },
+      "$v283": {
+        "rule": "AND",
+        "args": [
+          "$v282",
+          "$v279"
+        ]
+      },
+      "$v284": {
+        "rule": "OR",
+        "args": [
+          "$v281",
+          "$v283"
+        ]
+      },
+      "$v285": {
+        "rule": "NOT",
+        "args": [
+          "event_time.8"
+        ]
+      },
+      "$v286": {
+        "rule": "AND",
+        "args": [
+          "$v285",
+          "latest_dependency.8"
+        ]
+      },
+      "$v287": {
+        "rule": "EQ",
+        "args": [
+          "event_time.8",
+          "latest_dependency.8"
+        ]
+      },
+      "$v288": {
+        "rule": "AND",
+        "args": [
+          "$v287",
+          "$v284"
+        ]
+      },
+      "$v289": {
+        "rule": "OR",
+        "args": [
+          "$v286",
+          "$v288"
+        ]
+      },
+      "$v290": {
+        "rule": "NOT",
+        "args": [
+          "event_time.9"
+        ]
+      },
+      "$v291": {
+        "rule": "AND",
+        "args": [
+          "$v290",
+          "latest_dependency.9"
+        ]
+      },
+      "$v292": {
+        "rule": "EQ",
+        "args": [
+          "event_time.9",
+          "latest_dependency.9"
+        ]
+      },
+      "$v293": {
+        "rule": "AND",
+        "args": [
+          "$v292",
+          "$v289"
+        ]
+      },
+      "$v294": {
+        "rule": "OR",
+        "args": [
+          "$v291",
+          "$v293"
+        ]
+      },
+      "$v295": {
+        "rule": "NOT",
+        "args": [
+          "event_time.10"
+        ]
+      },
+      "$v296": {
+        "rule": "AND",
+        "args": [
+          "$v295",
+          "latest_dependency.10"
+        ]
+      },
+      "$v297": {
+        "rule": "EQ",
+        "args": [
+          "event_time.10",
+          "latest_dependency.10"
+        ]
+      },
+      "$v298": {
+        "rule": "AND",
+        "args": [
+          "$v297",
+          "$v294"
+        ]
+      },
+      "$v299": {
+        "rule": "OR",
+        "args": [
+          "$v296",
+          "$v298"
+        ]
+      },
+      "$v300": {
+        "rule": "NOT",
+        "args": [
+          "event_time.11"
+        ]
+      },
+      "$v301": {
+        "rule": "AND",
+        "args": [
+          "$v300",
+          "latest_dependency.11"
+        ]
+      },
+      "$v302": {
+        "rule": "EQ",
+        "args": [
+          "event_time.11",
+          "latest_dependency.11"
+        ]
+      },
+      "$v303": {
+        "rule": "AND",
+        "args": [
+          "$v302",
+          "$v299"
+        ]
+      },
+      "$v304": {
+        "rule": "OR",
+        "args": [
+          "$v301",
+          "$v303"
+        ]
+      },
+      "$v305": {
+        "rule": "NOT",
+        "args": [
+          "event_time.12"
+        ]
+      },
+      "$v306": {
+        "rule": "AND",
+        "args": [
+          "$v305",
+          "latest_dependency.12"
+        ]
+      },
+      "$v307": {
+        "rule": "EQ",
+        "args": [
+          "event_time.12",
+          "latest_dependency.12"
+        ]
+      },
+      "$v308": {
+        "rule": "AND",
+        "args": [
+          "$v307",
+          "$v304"
+        ]
+      },
+      "$v309": {
+        "rule": "OR",
+        "args": [
+          "$v306",
+          "$v308"
+        ]
+      },
+      "$v310": {
+        "rule": "NOT",
+        "args": [
+          "event_time.13"
+        ]
+      },
+      "$v311": {
+        "rule": "AND",
+        "args": [
+          "$v310",
+          "latest_dependency.13"
+        ]
+      },
+      "$v312": {
+        "rule": "EQ",
+        "args": [
+          "event_time.13",
+          "latest_dependency.13"
+        ]
+      },
+      "$v313": {
+        "rule": "AND",
+        "args": [
+          "$v312",
+          "$v309"
+        ]
+      },
+      "$v314": {
+        "rule": "OR",
+        "args": [
+          "$v311",
+          "$v313"
+        ]
+      },
+      "$v315": {
+        "rule": "NOT",
+        "args": [
+          "event_time.14"
+        ]
+      },
+      "$v316": {
+        "rule": "AND",
+        "args": [
+          "$v315",
+          "latest_dependency.14"
+        ]
+      },
+      "$v317": {
+        "rule": "EQ",
+        "args": [
+          "event_time.14",
+          "latest_dependency.14"
+        ]
+      },
+      "$v318": {
+        "rule": "AND",
+        "args": [
+          "$v317",
+          "$v314"
+        ]
+      },
+      "$v319": {
+        "rule": "OR",
+        "args": [
+          "$v316",
+          "$v318"
+        ]
+      },
+      "$v320": {
+        "rule": "NOT",
+        "args": [
+          "event_time.15"
+        ]
+      },
+      "$v321": {
+        "rule": "AND",
+        "args": [
+          "$v320",
+          "latest_dependency.15"
+        ]
+      },
+      "$v322": {
+        "rule": "EQ",
+        "args": [
+          "event_time.15",
+          "latest_dependency.15"
+        ]
+      },
+      "$v323": {
+        "rule": "AND",
+        "args": [
+          "$v322",
+          "$v319"
+        ]
+      },
+      "$v324": {
+        "rule": "OR",
+        "args": [
+          "$v321",
+          "$v323"
+        ]
+      },
+      "$v325": {
+        "rule": "NOT",
+        "args": [
+          "$v324"
+        ]
+      },
+      "$v326": {
+        "rule": "NOT",
+        "args": [
+          "retained_facts.0"
+        ]
+      },
+      "$v327": {
+        "rule": "OR",
+        "args": [
+          "$v326",
+          "proposed_facts.0"
+        ]
+      },
+      "$v328": {
+        "rule": "NOT",
+        "args": [
+          "retained_facts.1"
+        ]
+      },
+      "$v329": {
+        "rule": "OR",
+        "args": [
+          "$v328",
+          "proposed_facts.1"
+        ]
+      },
+      "$v330": {
+        "rule": "NOT",
+        "args": [
+          "retained_facts.2"
+        ]
+      },
+      "$v331": {
+        "rule": "OR",
+        "args": [
+          "$v330",
+          "proposed_facts.2"
+        ]
+      },
+      "$v332": {
+        "rule": "NOT",
+        "args": [
+          "retained_facts.3"
+        ]
+      },
+      "$v333": {
+        "rule": "OR",
+        "args": [
+          "$v332",
+          "proposed_facts.3"
+        ]
+      },
+      "$v334": {
+        "rule": "NOT",
+        "args": [
+          "retained_facts.4"
+        ]
+      },
+      "$v335": {
+        "rule": "OR",
+        "args": [
+          "$v334",
+          "proposed_facts.4"
+        ]
+      },
+      "$v336": {
+        "rule": "NOT",
+        "args": [
+          "retained_facts.5"
+        ]
+      },
+      "$v337": {
+        "rule": "OR",
+        "args": [
+          "$v336",
+          "proposed_facts.5"
+        ]
+      },
+      "$v338": {
+        "rule": "NOT",
+        "args": [
+          "retained_facts.6"
+        ]
+      },
+      "$v339": {
+        "rule": "OR",
+        "args": [
+          "$v338",
+          "proposed_facts.6"
+        ]
+      },
+      "$v340": {
+        "rule": "NOT",
+        "args": [
+          "retained_facts.7"
+        ]
+      },
+      "$v341": {
+        "rule": "OR",
+        "args": [
+          "$v340",
+          "proposed_facts.7"
+        ]
+      },
+      "$v342": {
+        "rule": "AND",
+        "args": [
+          "ONE",
+          "$v327"
+        ]
+      },
+      "$v343": {
+        "rule": "AND",
+        "args": [
+          "$v342",
+          "$v329"
+        ]
+      },
+      "$v344": {
+        "rule": "AND",
+        "args": [
+          "$v343",
+          "$v331"
+        ]
+      },
+      "$v345": {
+        "rule": "AND",
+        "args": [
+          "$v344",
+          "$v333"
+        ]
+      },
+      "$v346": {
+        "rule": "AND",
+        "args": [
+          "$v345",
+          "$v335"
+        ]
+      },
+      "$v347": {
+        "rule": "AND",
+        "args": [
+          "$v346",
+          "$v337"
+        ]
+      },
+      "$v348": {
+        "rule": "AND",
+        "args": [
+          "$v347",
+          "$v339"
+        ]
+      },
+      "$v349": {
+        "rule": "AND",
+        "args": [
+          "$v348",
+          "$v341"
+        ]
+      },
+      "$v350": {
+        "rule": "AND",
+        "args": [
+          "ONE",
+          "proposal_present"
+        ]
+      },
+      "$v351": {
+        "rule": "AND",
+        "args": [
+          "$v350",
+          "$v130"
+        ]
+      },
+      "$v352": {
+        "rule": "AND",
+        "args": [
+          "$v351",
+          "$v210"
+        ]
+      },
+      "$v353": {
+        "rule": "AND",
+        "args": [
+          "$v352",
+          "$v244"
+        ]
+      },
+      "$v354": {
+        "rule": "AND",
+        "args": [
+          "$v353",
+          "$v325"
+        ]
+      },
+      "$v355": {
+        "rule": "AND",
+        "args": [
+          "$v354",
+          "$v349"
+        ]
+      },
+      "$v356": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.0",
+          "event_sequence.0",
+          "$v355"
+        ]
+      },
+      "$v357": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.1",
+          "event_sequence.1",
+          "$v355"
+        ]
+      },
+      "$v358": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.2",
+          "event_sequence.2",
+          "$v355"
+        ]
+      },
+      "$v359": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.3",
+          "event_sequence.3",
+          "$v355"
+        ]
+      },
+      "$v360": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.4",
+          "event_sequence.4",
+          "$v355"
+        ]
+      },
+      "$v361": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.5",
+          "event_sequence.5",
+          "$v355"
+        ]
+      },
+      "$v362": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.6",
+          "event_sequence.6",
+          "$v355"
+        ]
+      },
+      "$v363": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.7",
+          "event_sequence.7",
+          "$v355"
+        ]
+      },
+      "$v364": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.8",
+          "event_sequence.8",
+          "$v355"
+        ]
+      },
+      "$v365": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.9",
+          "event_sequence.9",
+          "$v355"
+        ]
+      },
+      "$v366": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.10",
+          "event_sequence.10",
+          "$v355"
+        ]
+      },
+      "$v367": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.11",
+          "event_sequence.11",
+          "$v355"
+        ]
+      },
+      "$v368": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.12",
+          "event_sequence.12",
+          "$v355"
+        ]
+      },
+      "$v369": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.13",
+          "event_sequence.13",
+          "$v355"
+        ]
+      },
+      "$v370": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.14",
+          "event_sequence.14",
+          "$v355"
+        ]
+      },
+      "$v371": {
+        "rule": "MUX",
+        "args": [
+          "last_sequence.15",
+          "event_sequence.15",
+          "$v355"
+        ]
+      },
+      "$v372": {
+        "rule": "MUX",
+        "args": [
+          "last_time.0",
+          "event_time.0",
+          "$v355"
+        ]
+      },
+      "$v373": {
+        "rule": "MUX",
+        "args": [
+          "last_time.1",
+          "event_time.1",
+          "$v355"
+        ]
+      },
+      "$v374": {
+        "rule": "MUX",
+        "args": [
+          "last_time.2",
+          "event_time.2",
+          "$v355"
+        ]
+      },
+      "$v375": {
+        "rule": "MUX",
+        "args": [
+          "last_time.3",
+          "event_time.3",
+          "$v355"
+        ]
+      },
+      "$v376": {
+        "rule": "MUX",
+        "args": [
+          "last_time.4",
+          "event_time.4",
+          "$v355"
+        ]
+      },
+      "$v377": {
+        "rule": "MUX",
+        "args": [
+          "last_time.5",
+          "event_time.5",
+          "$v355"
+        ]
+      },
+      "$v378": {
+        "rule": "MUX",
+        "args": [
+          "last_time.6",
+          "event_time.6",
+          "$v355"
+        ]
+      },
+      "$v379": {
+        "rule": "MUX",
+        "args": [
+          "last_time.7",
+          "event_time.7",
+          "$v355"
+        ]
+      },
+      "$v380": {
+        "rule": "MUX",
+        "args": [
+          "last_time.8",
+          "event_time.8",
+          "$v355"
+        ]
+      },
+      "$v381": {
+        "rule": "MUX",
+        "args": [
+          "last_time.9",
+          "event_time.9",
+          "$v355"
+        ]
+      },
+      "$v382": {
+        "rule": "MUX",
+        "args": [
+          "last_time.10",
+          "event_time.10",
+          "$v355"
+        ]
+      },
+      "$v383": {
+        "rule": "MUX",
+        "args": [
+          "last_time.11",
+          "event_time.11",
+          "$v355"
+        ]
+      },
+      "$v384": {
+        "rule": "MUX",
+        "args": [
+          "last_time.12",
+          "event_time.12",
+          "$v355"
+        ]
+      },
+      "$v385": {
+        "rule": "MUX",
+        "args": [
+          "last_time.13",
+          "event_time.13",
+          "$v355"
+        ]
+      },
+      "$v386": {
+        "rule": "MUX",
+        "args": [
+          "last_time.14",
+          "event_time.14",
+          "$v355"
+        ]
+      },
+      "$v387": {
+        "rule": "MUX",
+        "args": [
+          "last_time.15",
+          "event_time.15",
+          "$v355"
+        ]
+      },
+      "$v388": {
+        "rule": "MUX",
+        "args": [
+          "retained_facts.0",
+          "proposed_facts.0",
+          "$v355"
+        ]
+      },
+      "$v389": {
+        "rule": "MUX",
+        "args": [
+          "retained_facts.1",
+          "proposed_facts.1",
+          "$v355"
+        ]
+      },
+      "$v390": {
+        "rule": "MUX",
+        "args": [
+          "retained_facts.2",
+          "proposed_facts.2",
+          "$v355"
+        ]
+      },
+      "$v391": {
+        "rule": "MUX",
+        "args": [
+          "retained_facts.3",
+          "proposed_facts.3",
+          "$v355"
+        ]
+      },
+      "$v392": {
+        "rule": "MUX",
+        "args": [
+          "retained_facts.4",
+          "proposed_facts.4",
+          "$v355"
+        ]
+      },
+      "$v393": {
+        "rule": "MUX",
+        "args": [
+          "retained_facts.5",
+          "proposed_facts.5",
+          "$v355"
+        ]
+      },
+      "$v394": {
+        "rule": "MUX",
+        "args": [
+          "retained_facts.6",
+          "proposed_facts.6",
+          "$v355"
+        ]
+      },
+      "$v395": {
+        "rule": "MUX",
+        "args": [
+          "retained_facts.7",
+          "proposed_facts.7",
+          "$v355"
+        ]
+      }
+    },
+    "next": {
+      "sequence_forward": "$v130",
+      "time_forward": "$v210",
+      "elapsed_exact": "$v244",
+      "dependency_not_future": "$v325",
+      "facts_retained": "$v349",
+      "accepted": "$v355",
+      "last_sequence.0": "$v356",
+      "last_sequence.1": "$v357",
+      "last_sequence.2": "$v358",
+      "last_sequence.3": "$v359",
+      "last_sequence.4": "$v360",
+      "last_sequence.5": "$v361",
+      "last_sequence.6": "$v362",
+      "last_sequence.7": "$v363",
+      "last_sequence.8": "$v364",
+      "last_sequence.9": "$v365",
+      "last_sequence.10": "$v366",
+      "last_sequence.11": "$v367",
+      "last_sequence.12": "$v368",
+      "last_sequence.13": "$v369",
+      "last_sequence.14": "$v370",
+      "last_sequence.15": "$v371",
+      "last_time.0": "$v372",
+      "last_time.1": "$v373",
+      "last_time.2": "$v374",
+      "last_time.3": "$v375",
+      "last_time.4": "$v376",
+      "last_time.5": "$v377",
+      "last_time.6": "$v378",
+      "last_time.7": "$v379",
+      "last_time.8": "$v380",
+      "last_time.9": "$v381",
+      "last_time.10": "$v382",
+      "last_time.11": "$v383",
+      "last_time.12": "$v384",
+      "last_time.13": "$v385",
+      "last_time.14": "$v386",
+      "last_time.15": "$v387",
+      "retained_facts.0": "$v388",
+      "retained_facts.1": "$v389",
+      "retained_facts.2": "$v390",
+      "retained_facts.3": "$v391",
+      "retained_facts.4": "$v392",
+      "retained_facts.5": "$v393",
+      "retained_facts.6": "$v394",
+      "retained_facts.7": "$v395",
+      "proposal_present": "ZERO"
+    },
+    "quotes": {},
+    "groups": {
+      "last_sequence": {
+        "bits": [
+          "last_sequence.0",
+          "last_sequence.1",
+          "last_sequence.2",
+          "last_sequence.3",
+          "last_sequence.4",
+          "last_sequence.5",
+          "last_sequence.6",
+          "last_sequence.7",
+          "last_sequence.8",
+          "last_sequence.9",
+          "last_sequence.10",
+          "last_sequence.11",
+          "last_sequence.12",
+          "last_sequence.13",
+          "last_sequence.14",
+          "last_sequence.15"
+        ],
+        "signed": false
+      },
+      "last_time": {
+        "bits": [
+          "last_time.0",
+          "last_time.1",
+          "last_time.2",
+          "last_time.3",
+          "last_time.4",
+          "last_time.5",
+          "last_time.6",
+          "last_time.7",
+          "last_time.8",
+          "last_time.9",
+          "last_time.10",
+          "last_time.11",
+          "last_time.12",
+          "last_time.13",
+          "last_time.14",
+          "last_time.15"
+        ],
+        "signed": false
+      },
+      "retained_facts": {
+        "bits": [
+          "retained_facts.0",
+          "retained_facts.1",
+          "retained_facts.2",
+          "retained_facts.3",
+          "retained_facts.4",
+          "retained_facts.5",
+          "retained_facts.6",
+          "retained_facts.7"
+        ],
+        "signed": false
+      },
+      "event_sequence": {
+        "bits": [
+          "event_sequence.0",
+          "event_sequence.1",
+          "event_sequence.2",
+          "event_sequence.3",
+          "event_sequence.4",
+          "event_sequence.5",
+          "event_sequence.6",
+          "event_sequence.7",
+          "event_sequence.8",
+          "event_sequence.9",
+          "event_sequence.10",
+          "event_sequence.11",
+          "event_sequence.12",
+          "event_sequence.13",
+          "event_sequence.14",
+          "event_sequence.15"
+        ],
+        "signed": false
+      },
+      "event_time": {
+        "bits": [
+          "event_time.0",
+          "event_time.1",
+          "event_time.2",
+          "event_time.3",
+          "event_time.4",
+          "event_time.5",
+          "event_time.6",
+          "event_time.7",
+          "event_time.8",
+          "event_time.9",
+          "event_time.10",
+          "event_time.11",
+          "event_time.12",
+          "event_time.13",
+          "event_time.14",
+          "event_time.15"
+        ],
+        "signed": false
+      },
+      "claimed_elapsed": {
+        "bits": [
+          "claimed_elapsed.0",
+          "claimed_elapsed.1",
+          "claimed_elapsed.2",
+          "claimed_elapsed.3",
+          "claimed_elapsed.4",
+          "claimed_elapsed.5",
+          "claimed_elapsed.6",
+          "claimed_elapsed.7",
+          "claimed_elapsed.8",
+          "claimed_elapsed.9",
+          "claimed_elapsed.10",
+          "claimed_elapsed.11",
+          "claimed_elapsed.12",
+          "claimed_elapsed.13",
+          "claimed_elapsed.14",
+          "claimed_elapsed.15"
+        ],
+        "signed": false
+      },
+      "latest_dependency": {
+        "bits": [
+          "latest_dependency.0",
+          "latest_dependency.1",
+          "latest_dependency.2",
+          "latest_dependency.3",
+          "latest_dependency.4",
+          "latest_dependency.5",
+          "latest_dependency.6",
+          "latest_dependency.7",
+          "latest_dependency.8",
+          "latest_dependency.9",
+          "latest_dependency.10",
+          "latest_dependency.11",
+          "latest_dependency.12",
+          "latest_dependency.13",
+          "latest_dependency.14",
+          "latest_dependency.15"
+        ],
+        "signed": false
+      },
+      "proposed_facts": {
+        "bits": [
+          "proposed_facts.0",
+          "proposed_facts.1",
+          "proposed_facts.2",
+          "proposed_facts.3",
+          "proposed_facts.4",
+          "proposed_facts.5",
+          "proposed_facts.6",
+          "proposed_facts.7"
+        ],
+        "signed": false
+      }
+    },
+    "outputs": [
+      "sequence_forward",
+      "time_forward",
+      "elapsed_exact",
+      "dependency_not_future",
+      "facts_retained",
+      "accepted",
+      "last_sequence",
+      "last_time",
+      "retained_facts"
+    ]
+  }
+}

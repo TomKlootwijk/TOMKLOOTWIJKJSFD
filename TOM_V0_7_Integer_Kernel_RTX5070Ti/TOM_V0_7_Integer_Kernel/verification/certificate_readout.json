@@ -1,0 +1,84 @@
+{
+  "epoch": 1,
+  "interpretation": "finite implementation readings, not intrinsic TOM coordinates",
+  "cases": [
+    {
+      "case_lane": 0,
+      "outputs": {
+        "forward": 1,
+        "elapsed_preserved": 1,
+        "future_independent": 1,
+        "retention_preserved": 1,
+        "Arch_neutral": 1,
+        "distinct_witnesses": 1,
+        "temporal_retention_conformant": 1,
+        "all_reported_checks": 1
+      }
+    },
+    {
+      "case_lane": 1,
+      "outputs": {
+        "forward": 1,
+        "elapsed_preserved": 1,
+        "future_independent": 0,
+        "retention_preserved": 1,
+        "Arch_neutral": 1,
+        "distinct_witnesses": 1,
+        "temporal_retention_conformant": 0,
+        "all_reported_checks": 0
+      }
+    },
+    {
+      "case_lane": 2,
+      "outputs": {
+        "forward": 0,
+        "elapsed_preserved": 0,
+        "future_independent": 1,
+        "retention_preserved": 1,
+        "Arch_neutral": 1,
+        "distinct_witnesses": 1,
+        "temporal_retention_conformant": 0,
+        "all_reported_checks": 0
+      }
+    },
+    {
+      "case_lane": 3,
+      "outputs": {
+        "forward": 1,
+        "elapsed_preserved": 0,
+        "future_independent": 1,
+        "retention_preserved": 1,
+        "Arch_neutral": 1,
+        "distinct_witnesses": 1,
+        "temporal_retention_conformant": 0,
+        "all_reported_checks": 0
+      }
+    },
+    {
+      "case_lane": 4,
+      "outputs": {
+        "forward": 1,
+        "elapsed_preserved": 1,
+        "future_independent": 1,
+        "retention_preserved": 0,
+        "Arch_neutral": 1,
+        "distinct_witnesses": 1,
+        "temporal_retention_conformant": 0,
+        "all_reported_checks": 0
+      }
+    },
+    {
+      "case_lane": 5,
+      "outputs": {
+        "forward": 1,
+        "elapsed_preserved": 1,
+        "future_independent": 1,
+        "retention_preserved": 1,
+        "Arch_neutral": 0,
+        "distinct_witnesses": 1,
+        "temporal_retention_conformant": 1,
+        "all_reported_checks": 0
+      }
+    }
+  ]
+}

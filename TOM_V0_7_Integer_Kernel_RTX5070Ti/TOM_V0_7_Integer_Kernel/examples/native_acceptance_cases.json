@@ -1,0 +1,287 @@
+{
+  "schema": "tom-native-independent-acceptance-v1",
+  "purpose": "Source-derived requirements, not claims that the runtime already passes.",
+  "source": {
+    "pdf": "TOM_V0_7_Formalization.pdf",
+    "sha256": "97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc",
+    "extracted_lines": "verification/formalization_20260918/formalization.txt"
+  },
+  "notation": {
+    "terms": "Nested arrays: [OPCODE, child...] except DECL/SELF [OPCODE, symbol] and LATER_T [OPCODE, guard_id, child].",
+    "history": "Each inner array is an opaque byte tuple; flatten in displayed order. Every completed byte and tuple order must survive.",
+    "defaults": "A case overrides named defaults; time is merged by field. No expected result is inferred from another case.",
+    "status": "admitted, rejected, pending, or rewritten describe the requested operation. Unassigned dynamic results remain unavailable even when definition admission succeeds.",
+    "compare": "assert_definition_equality rejects unequal ordered definitions. validate_tom requires the full source expression, not merely well-formed syntax.",
+    "resource": "available_bytes is an injected allocator budget for deterministic failure tests; it is not an intrinsic nesting limit.",
+    "flags": "bit0=enable_A_T_alias; bit1=require_full_source_TOM; bit2=optional_external_scalar_echo_check; bit3=ADVANCE_TRANSACTION. Mode1 also requires strict later precedence."
+  },
+  "defaults": {
+    "mode": 0,
+    "flags": 8,
+    "aliases": {},
+    "sdf": true,
+    "time": {"previous": 10, "now": 15, "elapsed": 5, "latest_available": 12},
+    "history_before": [[1, 10, 3, 65], [2, 12, 2, 66]],
+    "history_proposed": [[1, 10, 3, 65], [2, 12, 2, 66], [3, 15, 5, 67]],
+    "symbol_ids": {"x": 256, "y": 257, "z": 258, "echo_minus_one": 259, "echo_minus_two": 260}
+  },
+  "cases": [
+    {
+      "id": "full_source",
+      "operation": "validate_tom",
+      "flags": 10,
+      "source": "p3 lines60-81; p18 line606",
+      "term": ["FORWARD_T", ["INVERSE_OCCAM", ["ARCH", ["C", ["J", ["DECL", "T"]]], ["E", ["C", ["J", ["DECL", "T"]]], ["INVLOG", ["DECL", "phi"]]]]]],
+      "expected": {"status": "admitted", "preserve_ordered_term": true, "dynamic_result": "unassigned", "history": "proposed"}
+    },
+    {
+      "id": "sdf_qualification",
+      "operation": "validate_definition",
+      "source": "p4 lines101-124",
+      "term": ["C", ["DECL", "x"]],
+      "sdf": false,
+      "expected": {"status": "rejected", "reason": "missing_SDF_qualification", "history": "before"}
+    },
+    {
+      "id": "first_class_definition",
+      "operation": "validate_definition",
+      "source": "p5 lines148-151",
+      "term": ["DECL", "Arch"],
+      "expected": {"status": "admitted", "preserve_ordered_term": true, "history": "proposed"}
+    },
+    {
+      "id": "alias_explicit",
+      "operation": "normalize_definition",
+      "source": "p5 lines156-159",
+      "aliases": {"A": "T"},
+      "flags": 9,
+      "term": ["DECL", "A"],
+      "expected": {"status": "rewritten", "term": ["DECL", "T"], "law": "explicit_temporal_alias", "retain_original": true}
+    },
+    {
+      "id": "alias_not_enabled",
+      "operation": "assert_definition_equality",
+      "source": "p5 lines156-159",
+      "left": ["DECL", "A"],
+      "right": ["DECL", "T"],
+      "expected": {"status": "rejected", "definitionally_equal": false, "reason": "alias_not_declared", "history": "before"}
+    },
+    {
+      "id": "io_idempotence",
+      "operation": "normalize_definition",
+      "source": "p8 lines244-248",
+      "term": ["INVERSE_OCCAM", ["INVERSE_OCCAM", ["ARCH", ["DECL", "x"], ["DECL", "y"]]]],
+      "expected": {"status": "rewritten", "term": ["INVERSE_OCCAM", ["ARCH", ["DECL", "x"], ["DECL", "y"]]], "law": "preservation_idempotence", "retain_original": true}
+    },
+    {
+      "id": "arch_role_swap",
+      "operation": "assert_definition_equality",
+      "source": "p8 lines249-251",
+      "left": ["ARCH", ["DECL", "x"], ["DECL", "y"]],
+      "right": ["ARCH", ["DECL", "y"], ["DECL", "x"]],
+      "expected": {"status": "rejected", "definitionally_equal": false, "reason": "ordered_roles_differ", "history": "before"}
+    },
+    {
+      "id": "arch_reassociation",
+      "operation": "assert_definition_equality",
+      "source": "p7 lines222-224; p11",
+      "left": ["ARCH", ["DECL", "x"], ["ARCH", ["DECL", "y"], ["DECL", "z"]]],
+      "right": ["ARCH", ["ARCH", ["DECL", "x"], ["DECL", "y"]], ["DECL", "z"]],
+      "external_scalar_witness": {"x": 1, "y": 2, "z": 3, "left_reading": 2, "right_reading": 4},
+      "expected": {"status": "rejected", "definitionally_equal": false, "reason": "binding_differs", "history": "before"}
+    },
+    {
+      "id": "equal_readings_distinct_definitions",
+      "operation": "assert_definition_equality",
+      "source": "p8 lines234-243",
+      "left": ["ARCH", ["DECL", "x"], ["DECL", "echo_minus_one"]],
+      "right": ["ARCH", ["DECL", "x"], ["DECL", "echo_minus_two"]],
+      "external_scalar_witness": {"x": 1, "echo_minus_one": -1, "echo_minus_two": -2, "left_reading": 0, "right_reading": 0},
+      "expected": {"status": "rejected", "definitionally_equal": false, "reason": "reading_equality_is_not_definition_equality", "history": "before"}
+    },
+    {
+      "id": "wrong_e_binding",
+      "operation": "validate_tom",
+      "flags": 10,
+      "source": "p3 lines62-81; p7 lines200-206",
+      "term": ["FORWARD_T", ["INVERSE_OCCAM", ["ARCH", ["C", ["J", ["DECL", "T"]]], ["E", ["INVLOG", ["DECL", "phi"]], ["C", ["J", ["DECL", "T"]]]]]]],
+      "expected": {"status": "rejected", "reason": "not_the_declared_TOM_binding", "syntactically_well_formed": true, "native_operands_admissible": false, "history": "before"}
+    },
+    {
+      "id": "j_requires_temporal_operand",
+      "operation": "validate_definition",
+      "source": "p5 lines130-138,148-150",
+      "term": ["J", ["DECL", "phi"]],
+      "expected": {"status": "rejected", "reason": "J_operand_is_not_T", "history": "before"}
+    },
+    {
+      "id": "invlog_requires_pinion_operand",
+      "operation": "validate_definition",
+      "source": "p5 lines135-138,148-150",
+      "term": ["INVLOG", ["DECL", "T"]],
+      "expected": {"status": "rejected", "reason": "InvLog_operand_is_not_phi", "history": "before"}
+    },
+    {
+      "id": "e_requires_declared_roles",
+      "operation": "validate_definition",
+      "source": "p5 lines139-141,148-150",
+      "term": ["E", ["DECL", "T"], ["DECL", "phi"]],
+      "expected": {"status": "rejected", "reason": "E_requires_C_then_InvLog_phi", "history": "before"}
+    },
+    {
+      "id": "single_io_is_not_identity",
+      "operation": "validate_definition",
+      "source": "p5 lines135-138,148-150; p8 lines244-248",
+      "term": ["INVLOG", ["INVERSE_OCCAM", ["DECL", "phi"]]],
+      "expected": {"status": "rejected", "reason": "no_law_erases_single_preservation_qualification", "history": "before"}
+    },
+    {
+      "id": "self_name_allowed",
+      "operation": "validate_definition",
+      "source": "p6 lines180-183",
+      "term": ["SELF", "TOM"],
+      "expected": {"status": "admitted", "preserve_ordered_term": true, "future_result_available": false, "history": "proposed"}
+    },
+    {
+      "id": "stationary_symbolic_declaration",
+      "operation": "validate_definition",
+      "source": "p6 lines169-172,180-190; no source law requires positive elapsed duration for every declaration",
+      "mode": 0,
+      "flags": 0,
+      "term": ["SELF", "TOM"],
+      "time": {"previous": 12, "now": 12, "elapsed": 0, "latest_available": 12},
+      "history_proposed": [[1, 10, 3, 65], [2, 12, 2, 66]],
+      "expected": {"status": "admitted", "preserve_ordered_term": true, "future_result_available": false, "history": "proposed"}
+    },
+    {
+      "id": "immediate_self_result_invalid",
+      "operation": "resolve_continuation",
+      "source": "p6 lines180-183",
+      "mode": 1,
+      "term": ["SELF", "TOM"],
+      "expected": {"status": "rejected", "reason": "unguarded_self_result", "history": "before"}
+    },
+    {
+      "id": "guarded_self_deferred",
+      "operation": "resolve_continuation",
+      "source": "p7 lines208-214",
+      "mode": 1,
+      "term": ["LATER_T", 1, ["SELF", "TOM"]],
+      "guards": [],
+      "expected": {"status": "pending", "reason": "guard_not_supplied", "preserve_ordered_term": true, "history": "before"}
+    },
+    {
+      "id": "guard_false_pending",
+      "operation": "resolve_continuation",
+      "source": "p7 lines208-214",
+      "mode": 1,
+      "term": ["LATER_T", 1, ["SELF", "TOM"]],
+      "guards": [{"id": 1, "met": false, "assigned_result": ["DECL", "x"]}],
+      "expected": {"status": "pending", "reason": "guard_not_met", "history": "before"}
+    },
+    {
+      "id": "guard_met_open_law",
+      "operation": "resolve_continuation",
+      "source": "p7 lines212-214; p14 lines469-475",
+      "mode": 1,
+      "term": ["LATER_T", 1, ["SELF", "TOM"]],
+      "guards": [{"id": 1, "met": true}],
+      "expected": {"status": "pending", "reason": "OPEN_LAW", "result_generated": false, "history": "before"}
+    },
+    {
+      "id": "guard_met_assigned_result",
+      "operation": "resolve_continuation",
+      "source": "p7 lines208-214; p14 lines476-480",
+      "mode": 1,
+      "term": ["LATER_T", 1, ["SELF", "TOM"]],
+      "guards": [{"id": 1, "met": true, "assigned_result": ["DECL", "x"], "law_label": "explicit_fixture_continuation"}],
+      "expected": {"status": "admitted", "result": ["DECL", "x"], "result_origin": "explicit_assignment_not_inferred_dynamics", "history": "proposed"}
+    },
+    {
+      "id": "same_now_cannot_consume_later_result",
+      "operation": "resolve_continuation",
+      "source": "p6 lines180-183; p7 lines208-214",
+      "mode": 1,
+      "flags": 0,
+      "term": ["LATER_T", 1, ["SELF", "TOM"]],
+      "time": {"previous": 12, "now": 12, "elapsed": 0, "latest_available": 12},
+      "guards": [{"id": 1, "met": true, "assigned_result": ["DECL", "x"]}],
+      "expected": {"status": "rejected", "reason": "later_result_requires_strictly_later_precedence", "history": "before"}
+    },
+    {
+      "id": "future_input_rejection",
+      "operation": "commit_continuation",
+      "source": "p6 lines169-172",
+      "term": ["C", ["DECL", "x"]],
+      "time": {"latest_available": 16},
+      "input_availability": [{"symbol": "x", "available_at": 16}],
+      "expected": {"status": "rejected", "reason": "future_input_consumed_as_present", "history": "before"}
+    },
+    {
+      "id": "present_input_allowed",
+      "operation": "commit_continuation",
+      "source": "p6 lines169-172",
+      "term": ["C", ["DECL", "x"]],
+      "time": {"latest_available": 15},
+      "input_availability": [{"symbol": "x", "available_at": 15}],
+      "expected": {"status": "admitted", "history": "proposed"}
+    },
+    {
+      "id": "history_append",
+      "operation": "commit_continuation",
+      "source": "p6 lines173-175",
+      "term": ["C", ["DECL", "x"]],
+      "history_proposed": [[1, 10, 3, 65], [2, 12, 2, 66], [1, 15, 5, 90]],
+      "note": "The final record is a later correction; the original byte 65 remains in its completed position.",
+      "expected": {"status": "admitted", "history": "proposed"}
+    },
+    {
+      "id": "history_content_overwrite",
+      "operation": "commit_continuation",
+      "source": "p6 lines173-175",
+      "term": ["C", ["DECL", "x"]],
+      "history_proposed": [[1, 10, 3, 90], [2, 12, 2, 66], [3, 15, 5, 67]],
+      "expected": {"status": "rejected", "reason": "completed_payload_overwritten", "history": "before"}
+    },
+    {
+      "id": "history_reorder",
+      "operation": "commit_continuation",
+      "source": "p6 lines173-175",
+      "term": ["C", ["DECL", "x"]],
+      "history_proposed": [[2, 12, 2, 66], [1, 10, 3, 65], [3, 15, 5, 67]],
+      "expected": {"status": "rejected", "reason": "completed_order_changed", "history": "before"}
+    },
+    {
+      "id": "inverse_does_not_reverse_time",
+      "operation": "commit_continuation",
+      "source": "p6 lines176-179",
+      "term": ["INVLOG", ["DECL", "phi"]],
+      "time": {"now": 9, "elapsed": 1, "latest_available": 9},
+      "expected": {"status": "rejected", "reason": "inverse_role_cannot_authorize_reverse_continuation", "history": "before"}
+    },
+    {
+      "id": "elapsed_loss",
+      "operation": "commit_continuation",
+      "source": "p6 lines184-190",
+      "term": ["INVERSE_OCCAM", ["INVERSE_OCCAM", ["DECL", "x"]]],
+      "time": {"elapsed": 0},
+      "declared_duration_before_normalization": 5,
+      "expected": {"status": "rejected", "reason": "positive_elapsed_duration_erased", "history": "before"}
+    },
+    {
+      "id": "historical_role_preserved",
+      "operation": "validate_definition",
+      "source": "p9 lines265-275",
+      "term": ["ARCH", ["DECL", "Klein"], ["DECL", "Matryoshka"]],
+      "expected": {"status": "admitted", "preserve_ordered_term": true, "extra_operation_laws": "unassigned", "history": "proposed"}
+    },
+    {
+      "id": "capacity_reject_no_erasure",
+      "operation": "commit_continuation",
+      "source": "p8 lines234-248; p9 lines283-288; finite realization atomicity contract",
+      "term": ["INVERSE_OCCAM", ["ARCH", ["DECL", "x"], ["DECL", "y"]]],
+      "resource": {"available_bytes": 0, "candidate_requires_allocation": true},
+      "expected": {"status": "rejected", "reason": "capacity_exhausted", "history": "before", "previous_definition_unchanged": true, "partial_candidate_published": false}
+    }
+  ]
+}

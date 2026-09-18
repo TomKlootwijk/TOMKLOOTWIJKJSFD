@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "scope": "editorial contract, not a TOM implementation",
+  "regression_tests": {
+    "status": "PASS",
+    "editorial_validation_cases": 10,
+    "meaning": "Known contract regressions caught; not proof of the entire formal system"
+  }
+}

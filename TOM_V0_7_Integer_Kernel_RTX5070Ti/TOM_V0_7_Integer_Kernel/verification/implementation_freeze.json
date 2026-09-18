@@ -1,0 +1,15 @@
+{
+  "stage": "implementation fixed before benchmark or final packaging",
+  "utc": "2026-09-18T16:17:58.780526+00:00",
+  "sha256": {
+    "CMakeLists.txt": "e31697a269d1c38f4ca33a2cf408b6c9bd203b1ec0adb8f474c185b2892fffd8",
+    "cuda/main.cu": "8bc9d038218236c44254a2b1aeea69259bfd5843e8dcb6988a86f7fc25ebfbc4",
+    "include/tom/cli.hpp": "8d321e3e5b423aba9db90c5d13752a5ef4a6ca16573e607a1cd15ef4c3fed0c7",
+    "include/tom/core.hpp": "bbbac783292259be79f032b4e119be68260c27205eca535b49ade8727f454114",
+    "include/tom/image.hpp": "e0c262ca0144dad61667ac819c32004ae56f51bf4677cf8e10c0c8ce529cb6d5",
+    "python/tom/__init__.py": "ef2d10258f0f8c5894b79359d4b9b79e9e42aa95ba8176365bdce95cd2410001",
+    "python/tom/builder.py": "3ba3e635ab95077aac02ab96119d7c20375d2b9433649d220143f1da8780c7b6",
+    "python/tom/compiler.py": "9a44a5870bc1d244688e5acc3a1662340a6eca48bb1ac92ff7242c736e50741b",
+    "src/cpu_main.cpp": "5a431d6220a90aebc9f2096c3b01fa0334dc3ce8923da69063c5345ce9571b8f"
+  }
+}

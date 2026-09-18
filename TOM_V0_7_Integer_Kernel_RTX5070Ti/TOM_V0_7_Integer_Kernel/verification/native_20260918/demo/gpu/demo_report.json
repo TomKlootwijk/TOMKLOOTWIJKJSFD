@@ -1,0 +1,673 @@
+{
+  "title": "A plan can be corrected without rewriting its past",
+  "purpose": "A small guarded revision-history demo using the full source TOM expression and a real native runner.",
+  "caller_choices": "The caller chooses every guard, plan value, result symbol and order tag. These are demonstration inputs, not dynamics or observations selected by TOM.",
+  "time_policy": "Each attempt uses a later external order tag. Its previous tag remains the last committed tag, so elapsed time includes rejected attempts. The runner reexecutes and validates the actual prior result through --resume before accepting a continuation.",
+  "history_codec": "JSON Lines is an explicitly chosen external history codec. The native engine compares and preserves its complete bytes; it does not assign meaning to the plan text.",
+  "source_pdf_sha256": "97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc",
+  "source_expression": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence",
+  "executable": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\build-cuda128\\Release\\tom_native_cuda.exe",
+  "executable_sha256": "b761ba159020aac24ba84d68dd0e0418db7fb29c2d6effb5f9576e391c7c8c30",
+  "all_steps_verified": true,
+  "words_compared": 2980,
+  "all_continuations_loaded_from_actual_previous_output": true,
+  "steps": [
+    {
+      "step": 1,
+      "name": "Start with the source definition",
+      "meaning": "The full source is admitted. A named later continuation is declared, without consuming a future result.",
+      "status": [
+        "ADMITTED"
+      ],
+      "continuation_request": "DECLARED",
+      "resolved_requests": 0,
+      "full_source_tom": true,
+      "resumed_from_actual_output": null,
+      "previous_output_sha256": null,
+      "before": [],
+      "proposed": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        }
+      ],
+      "committed": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        }
+      ],
+      "history_bytes": {
+        "before": 0,
+        "proposed": 137,
+        "committed": 137
+      },
+      "external_order_tags": {
+        "previous_committed": 0,
+        "this_attempt": 0,
+        "elapsed": 0
+      },
+      "input": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\01_source_admitted.ton",
+      "output": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\01_source_admitted.tor",
+      "output_sha256": "319d2f18f57942c630a0e1babe85ee0f59363d7471cb82acaed97ab103d8a806",
+      "verification": {
+        "cases": 1,
+        "words_per_result": 596,
+        "total_words_compared": 596,
+        "all_words_equal": true
+      },
+      "runner": {
+        "name": "TOM V0.7 bounded native structural executor",
+        "gpu_executed": true,
+        "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+        "input": "verification\\native_20260918\\demo\\gpu\\01_source_admitted.ton",
+        "output": "verification\\native_20260918\\demo\\gpu\\01_source_admitted.tor",
+        "cases": 1,
+        "resume": "",
+        "resume_validated": false,
+        "generated": false,
+        "template_cases": 0,
+        "requested_vram_percent": 0,
+        "repeat": 1,
+        "warmup": 0,
+        "shards": 1,
+        "block_threads": 128,
+        "compute_launches": 1,
+        "warmup_launches": 0,
+        "case_words": 336,
+        "result_words": 596,
+        "working_bytes": 3728,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "total_device_bytes": 12820480000,
+        "elapsed_compute_host_ns": 64000,
+        "result_digest": 17436290807666583627,
+        "accepted_cases": 1,
+        "not_committed_cases": 0,
+        "status_bit_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sm_count": 46,
+        "registers_per_thread": 56,
+        "local_bytes_per_thread": 0,
+        "theoretical_active_blocks_per_sm": 9,
+        "source_tom_cases": 1,
+        "inverse_occam_rewrites": 0,
+        "alias_rewrites": 0,
+        "optional_scalar_log_echo_zero_proofs": 0,
+        "resolved_requests": 0,
+        "unresolved_requests": 0,
+        "aggregation_elapsed_host_ns": 33700,
+        "aggregation_in_compute_timing": false,
+        "full_word_verification": {
+          "enabled": false,
+          "reference": "",
+          "passed": false,
+          "checked_words": 0,
+          "expected_words": 596,
+          "mismatched_words": 0,
+          "elapsed_host_ns": 0,
+          "in_compute_timing": false,
+          "scope": "every word of every generated result compared with independently supplied template bytes; only six retained-history identity words are substituted; verifier does not evaluate native terms"
+        },
+        "verified_cases": 0,
+        "all_cases_verified": false,
+        "verification_scope": "first and last up to four cases of every shard; generated inputs checked and complete results compared with shared CPU core",
+        "exported_cases": 1,
+        "exported_bytes": 2448,
+        "export_in_compute_timing": false,
+        "repeat_semantics": "independent reevaluation of the same supplied proposals",
+        "generation_semantics": "round-robin native templates; unique global case ID replaces first eight old and proposed history bytes",
+        "scope": "Actual bound native terms, canonical rewrites, guarded requests and complete finite history; unspecified transformations remain explicit open laws."
+      }
+    },
+    {
+      "step": 2,
+      "name": "Wait for the caller's condition",
+      "meaning": "The caller proposes a blue plan, but the supplied guard is false. Nothing is added to completed history.",
+      "status": [
+        "PENDING_GUARD"
+      ],
+      "continuation_request": "PENDING_GUARD",
+      "resolved_requests": 0,
+      "full_source_tom": true,
+      "resumed_from_actual_output": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\01_source_admitted.tor",
+      "previous_output_sha256": "319d2f18f57942c630a0e1babe85ee0f59363d7471cb82acaed97ab103d8a806",
+      "before": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        }
+      ],
+      "proposed": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        },
+        {
+          "event": "supplied_revision",
+          "symbol": 256,
+          "plan": "Paint the door blue."
+        }
+      ],
+      "committed": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        }
+      ],
+      "history_bytes": {
+        "before": 137,
+        "proposed": 210,
+        "committed": 137
+      },
+      "external_order_tags": {
+        "previous_committed": 0,
+        "this_attempt": 1,
+        "elapsed": 1
+      },
+      "input": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\02_waiting_for_guard.ton",
+      "output": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\02_waiting_for_guard.tor",
+      "output_sha256": "592c4a8652b1dab7b2a16203cd9a2da209c67e38079d65c9bdb74e79e300e92b",
+      "verification": {
+        "cases": 1,
+        "words_per_result": 596,
+        "total_words_compared": 596,
+        "all_words_equal": true
+      },
+      "runner": {
+        "name": "TOM V0.7 bounded native structural executor",
+        "gpu_executed": true,
+        "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+        "input": "verification\\native_20260918\\demo\\gpu\\02_waiting_for_guard.ton",
+        "output": "verification\\native_20260918\\demo\\gpu\\02_waiting_for_guard.tor",
+        "cases": 1,
+        "resume": "verification\\native_20260918\\demo\\gpu\\01_source_admitted.tor",
+        "resume_validated": true,
+        "generated": false,
+        "template_cases": 0,
+        "requested_vram_percent": 0,
+        "repeat": 1,
+        "warmup": 0,
+        "shards": 1,
+        "block_threads": 128,
+        "compute_launches": 1,
+        "warmup_launches": 0,
+        "case_words": 336,
+        "result_words": 596,
+        "working_bytes": 3728,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "total_device_bytes": 12820480000,
+        "elapsed_compute_host_ns": 84800,
+        "result_digest": 12815217670333920329,
+        "accepted_cases": 0,
+        "not_committed_cases": 1,
+        "status_bit_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "sm_count": 46,
+        "registers_per_thread": 56,
+        "local_bytes_per_thread": 0,
+        "theoretical_active_blocks_per_sm": 9,
+        "source_tom_cases": 1,
+        "inverse_occam_rewrites": 0,
+        "alias_rewrites": 0,
+        "optional_scalar_log_echo_zero_proofs": 0,
+        "resolved_requests": 0,
+        "unresolved_requests": 1,
+        "aggregation_elapsed_host_ns": 64400,
+        "aggregation_in_compute_timing": false,
+        "full_word_verification": {
+          "enabled": false,
+          "reference": "",
+          "passed": false,
+          "checked_words": 0,
+          "expected_words": 596,
+          "mismatched_words": 0,
+          "elapsed_host_ns": 0,
+          "in_compute_timing": false,
+          "scope": "every word of every generated result compared with independently supplied template bytes; only six retained-history identity words are substituted; verifier does not evaluate native terms"
+        },
+        "verified_cases": 0,
+        "all_cases_verified": false,
+        "verification_scope": "first and last up to four cases of every shard; generated inputs checked and complete results compared with shared CPU core",
+        "exported_cases": 1,
+        "exported_bytes": 2448,
+        "export_in_compute_timing": false,
+        "repeat_semantics": "independent reevaluation of the same supplied proposals",
+        "generation_semantics": "round-robin native templates; unique global case ID replaces first eight old and proposed history bytes",
+        "scope": "Actual bound native terms, canonical rewrites, guarded requests and complete finite history; unspecified transformations remain explicit open laws."
+      }
+    },
+    {
+      "step": 3,
+      "name": "Accept the supplied revision",
+      "meaning": "The caller now supplies a met guard and the blue result. The revision is appended after the existing source commitment.",
+      "status": [
+        "ADMITTED"
+      ],
+      "continuation_request": "RESOLVED",
+      "resolved_requests": 1,
+      "full_source_tom": true,
+      "resumed_from_actual_output": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\02_waiting_for_guard.tor",
+      "previous_output_sha256": "592c4a8652b1dab7b2a16203cd9a2da209c67e38079d65c9bdb74e79e300e92b",
+      "before": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        }
+      ],
+      "proposed": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        },
+        {
+          "event": "supplied_revision",
+          "symbol": 256,
+          "plan": "Paint the door blue."
+        }
+      ],
+      "committed": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        },
+        {
+          "event": "supplied_revision",
+          "symbol": 256,
+          "plan": "Paint the door blue."
+        }
+      ],
+      "history_bytes": {
+        "before": 137,
+        "proposed": 210,
+        "committed": 210
+      },
+      "external_order_tags": {
+        "previous_committed": 0,
+        "this_attempt": 2,
+        "elapsed": 2
+      },
+      "input": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\03_supplied_revision.ton",
+      "output": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\03_supplied_revision.tor",
+      "output_sha256": "c25237b9d9541d9e45af0133adc100463b3f6d58e4ab9f97f931e52cf2ce9c22",
+      "verification": {
+        "cases": 1,
+        "words_per_result": 596,
+        "total_words_compared": 596,
+        "all_words_equal": true
+      },
+      "runner": {
+        "name": "TOM V0.7 bounded native structural executor",
+        "gpu_executed": true,
+        "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+        "input": "verification\\native_20260918\\demo\\gpu\\03_supplied_revision.ton",
+        "output": "verification\\native_20260918\\demo\\gpu\\03_supplied_revision.tor",
+        "cases": 1,
+        "resume": "verification\\native_20260918\\demo\\gpu\\02_waiting_for_guard.tor",
+        "resume_validated": true,
+        "generated": false,
+        "template_cases": 0,
+        "requested_vram_percent": 0,
+        "repeat": 1,
+        "warmup": 0,
+        "shards": 1,
+        "block_threads": 128,
+        "compute_launches": 1,
+        "warmup_launches": 0,
+        "case_words": 336,
+        "result_words": 596,
+        "working_bytes": 3728,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "total_device_bytes": 12820480000,
+        "elapsed_compute_host_ns": 72000,
+        "result_digest": 14665450224372610482,
+        "accepted_cases": 1,
+        "not_committed_cases": 0,
+        "status_bit_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sm_count": 46,
+        "registers_per_thread": 56,
+        "local_bytes_per_thread": 0,
+        "theoretical_active_blocks_per_sm": 9,
+        "source_tom_cases": 1,
+        "inverse_occam_rewrites": 0,
+        "alias_rewrites": 0,
+        "optional_scalar_log_echo_zero_proofs": 0,
+        "resolved_requests": 1,
+        "unresolved_requests": 0,
+        "aggregation_elapsed_host_ns": 30600,
+        "aggregation_in_compute_timing": false,
+        "full_word_verification": {
+          "enabled": false,
+          "reference": "",
+          "passed": false,
+          "checked_words": 0,
+          "expected_words": 596,
+          "mismatched_words": 0,
+          "elapsed_host_ns": 0,
+          "in_compute_timing": false,
+          "scope": "every word of every generated result compared with independently supplied template bytes; only six retained-history identity words are substituted; verifier does not evaluate native terms"
+        },
+        "verified_cases": 0,
+        "all_cases_verified": false,
+        "verification_scope": "first and last up to four cases of every shard; generated inputs checked and complete results compared with shared CPU core",
+        "exported_cases": 1,
+        "exported_bytes": 2448,
+        "export_in_compute_timing": false,
+        "repeat_semantics": "independent reevaluation of the same supplied proposals",
+        "generation_semantics": "round-robin native templates; unique global case ID replaces first eight old and proposed history bytes",
+        "scope": "Actual bound native terms, canonical rewrites, guarded requests and complete finite history; unspecified transformations remain explicit open laws."
+      }
+    },
+    {
+      "step": 4,
+      "name": "Reject editing the accepted past",
+      "meaning": "Changing the existing blue bytes to teal is rejected, even though their lengths match and the guard is met. The candidate result is blocked.",
+      "status": [
+        "PREFIX_REWRITE"
+      ],
+      "continuation_request": "BLOCKED_TRANSACTION",
+      "resolved_requests": 0,
+      "full_source_tom": true,
+      "resumed_from_actual_output": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\03_supplied_revision.tor",
+      "previous_output_sha256": "c25237b9d9541d9e45af0133adc100463b3f6d58e4ab9f97f931e52cf2ce9c22",
+      "before": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        },
+        {
+          "event": "supplied_revision",
+          "symbol": 256,
+          "plan": "Paint the door blue."
+        }
+      ],
+      "proposed": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        },
+        {
+          "event": "supplied_revision",
+          "symbol": 256,
+          "plan": "Paint the door teal."
+        }
+      ],
+      "committed": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        },
+        {
+          "event": "supplied_revision",
+          "symbol": 256,
+          "plan": "Paint the door blue."
+        }
+      ],
+      "history_bytes": {
+        "before": 210,
+        "proposed": 210,
+        "committed": 210
+      },
+      "external_order_tags": {
+        "previous_committed": 2,
+        "this_attempt": 3,
+        "elapsed": 1
+      },
+      "input": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\04_forbidden_overwrite.ton",
+      "output": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\04_forbidden_overwrite.tor",
+      "output_sha256": "eea49b4dad1681e342714161aa76aa2b811386ac0f8383ddb2e5ff1ef3af7a8f",
+      "verification": {
+        "cases": 1,
+        "words_per_result": 596,
+        "total_words_compared": 596,
+        "all_words_equal": true
+      },
+      "runner": {
+        "name": "TOM V0.7 bounded native structural executor",
+        "gpu_executed": true,
+        "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+        "input": "verification\\native_20260918\\demo\\gpu\\04_forbidden_overwrite.ton",
+        "output": "verification\\native_20260918\\demo\\gpu\\04_forbidden_overwrite.tor",
+        "cases": 1,
+        "resume": "verification\\native_20260918\\demo\\gpu\\03_supplied_revision.tor",
+        "resume_validated": true,
+        "generated": false,
+        "template_cases": 0,
+        "requested_vram_percent": 0,
+        "repeat": 1,
+        "warmup": 0,
+        "shards": 1,
+        "block_threads": 128,
+        "compute_launches": 1,
+        "warmup_launches": 0,
+        "case_words": 336,
+        "result_words": 596,
+        "working_bytes": 3728,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "total_device_bytes": 12820480000,
+        "elapsed_compute_host_ns": 72300,
+        "result_digest": 507479848975039352,
+        "accepted_cases": 0,
+        "not_committed_cases": 1,
+        "status_bit_counts": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sm_count": 46,
+        "registers_per_thread": 56,
+        "local_bytes_per_thread": 0,
+        "theoretical_active_blocks_per_sm": 9,
+        "source_tom_cases": 1,
+        "inverse_occam_rewrites": 0,
+        "alias_rewrites": 0,
+        "optional_scalar_log_echo_zero_proofs": 0,
+        "resolved_requests": 0,
+        "unresolved_requests": 1,
+        "aggregation_elapsed_host_ns": 28500,
+        "aggregation_in_compute_timing": false,
+        "full_word_verification": {
+          "enabled": false,
+          "reference": "",
+          "passed": false,
+          "checked_words": 0,
+          "expected_words": 596,
+          "mismatched_words": 0,
+          "elapsed_host_ns": 0,
+          "in_compute_timing": false,
+          "scope": "every word of every generated result compared with independently supplied template bytes; only six retained-history identity words are substituted; verifier does not evaluate native terms"
+        },
+        "verified_cases": 0,
+        "all_cases_verified": false,
+        "verification_scope": "first and last up to four cases of every shard; generated inputs checked and complete results compared with shared CPU core",
+        "exported_cases": 1,
+        "exported_bytes": 2448,
+        "export_in_compute_timing": false,
+        "repeat_semantics": "independent reevaluation of the same supplied proposals",
+        "generation_semantics": "round-robin native templates; unique global case ID replaces first eight old and proposed history bytes",
+        "scope": "Actual bound native terms, canonical rewrites, guarded requests and complete finite history; unspecified transformations remain explicit open laws."
+      }
+    },
+    {
+      "step": 5,
+      "name": "Append a correction",
+      "meaning": "The caller appends a teal correction. Both the earlier blue commitment and the later correction remain visible in order.",
+      "status": [
+        "ADMITTED"
+      ],
+      "continuation_request": "RESOLVED",
+      "resolved_requests": 1,
+      "full_source_tom": true,
+      "resumed_from_actual_output": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\04_forbidden_overwrite.tor",
+      "previous_output_sha256": "eea49b4dad1681e342714161aa76aa2b811386ac0f8383ddb2e5ff1ef3af7a8f",
+      "before": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        },
+        {
+          "event": "supplied_revision",
+          "symbol": 256,
+          "plan": "Paint the door blue."
+        }
+      ],
+      "proposed": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        },
+        {
+          "event": "supplied_revision",
+          "symbol": 256,
+          "plan": "Paint the door blue."
+        },
+        {
+          "event": "later_correction",
+          "symbol": 257,
+          "plan": "Paint the door teal.",
+          "note": "The earlier blue commitment stays in its original position."
+        }
+      ],
+      "committed": [
+        {
+          "event": "source_definition",
+          "text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence"
+        },
+        {
+          "event": "supplied_revision",
+          "symbol": 256,
+          "plan": "Paint the door blue."
+        },
+        {
+          "event": "later_correction",
+          "symbol": 257,
+          "plan": "Paint the door teal.",
+          "note": "The earlier blue commitment stays in its original position."
+        }
+      ],
+      "history_bytes": {
+        "before": 210,
+        "proposed": 351,
+        "committed": 351
+      },
+      "external_order_tags": {
+        "previous_committed": 2,
+        "this_attempt": 4,
+        "elapsed": 2
+      },
+      "input": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\05_legal_correction.ton",
+      "output": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\demo\\gpu\\05_legal_correction.tor",
+      "output_sha256": "cd1d229ac50ad34bfef8e9c334d6446a7ab92429e3483f3d853be39331445efd",
+      "verification": {
+        "cases": 1,
+        "words_per_result": 596,
+        "total_words_compared": 596,
+        "all_words_equal": true
+      },
+      "runner": {
+        "name": "TOM V0.7 bounded native structural executor",
+        "gpu_executed": true,
+        "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+        "input": "verification\\native_20260918\\demo\\gpu\\05_legal_correction.ton",
+        "output": "verification\\native_20260918\\demo\\gpu\\05_legal_correction.tor",
+        "cases": 1,
+        "resume": "verification\\native_20260918\\demo\\gpu\\04_forbidden_overwrite.tor",
+        "resume_validated": true,
+        "generated": false,
+        "template_cases": 0,
+        "requested_vram_percent": 0,
+        "repeat": 1,
+        "warmup": 0,
+        "shards": 1,
+        "block_threads": 128,
+        "compute_launches": 1,
+        "warmup_launches": 0,
+        "case_words": 336,
+        "result_words": 596,
+        "working_bytes": 3728,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "total_device_bytes": 12820480000,
+        "elapsed_compute_host_ns": 72600,
+        "result_digest": 16493074542076204959,
+        "accepted_cases": 1,
+        "not_committed_cases": 0,
+        "status_bit_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sm_count": 46,
+        "registers_per_thread": 56,
+        "local_bytes_per_thread": 0,
+        "theoretical_active_blocks_per_sm": 9,
+        "source_tom_cases": 1,
+        "inverse_occam_rewrites": 0,
+        "alias_rewrites": 0,
+        "optional_scalar_log_echo_zero_proofs": 0,
+        "resolved_requests": 1,
+        "unresolved_requests": 0,
+        "aggregation_elapsed_host_ns": 31600,
+        "aggregation_in_compute_timing": false,
+        "full_word_verification": {
+          "enabled": false,
+          "reference": "",
+          "passed": false,
+          "checked_words": 0,
+          "expected_words": 596,
+          "mismatched_words": 0,
+          "elapsed_host_ns": 0,
+          "in_compute_timing": false,
+          "scope": "every word of every generated result compared with independently supplied template bytes; only six retained-history identity words are substituted; verifier does not evaluate native terms"
+        },
+        "verified_cases": 0,
+        "all_cases_verified": false,
+        "verification_scope": "first and last up to four cases of every shard; generated inputs checked and complete results compared with shared CPU core",
+        "exported_cases": 1,
+        "exported_bytes": 2448,
+        "export_in_compute_timing": false,
+        "repeat_semantics": "independent reevaluation of the same supplied proposals",
+        "generation_semantics": "round-robin native templates; unique global case ID replaces first eight old and proposed history bytes",
+        "scope": "Actual bound native terms, canonical rewrites, guarded requests and complete finite history; unspecified transformations remain explicit open laws."
+      }
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "source_pdf_sha256": "97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc",
+  "hardware": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "complete_domain": {
+    "distinct_candidates": 536870912,
+    "working_bytes": 10334765056,
+    "working_GiB": 9.625,
+    "ticks_per_run": 4,
+    "median_compute_ms": 129.6102,
+    "median_compute_ms_per_pass": 32.40255,
+    "checks_per_second": 16568785851.730804,
+    "median_process_seconds": 0.9755032,
+    "shards": 64,
+    "min_cuda_free_after": 1090519040,
+    "mask_counts": {
+      "forward": {
+        "expected": 234881024,
+        "actual": 234881024
+      },
+      "elapsed_preserved": {
+        "expected": 29360128,
+        "actual": 29360128
+      },
+      "future_independent": {
+        "expected": 301989888,
+        "actual": 301989888
+      },
+      "retention_preserved": {
+        "expected": 226492416,
+        "actual": 226492416
+      },
+      "temporal_retention_admissible": {
+        "expected": 9289728,
+        "actual": 9289728
+      },
+      "Arch_neutral": {
+        "expected": 299892736,
+        "actual": 299892736
+      },
+      "distinct_witnesses": {
+        "expected": 402653184,
+        "actual": 402653184
+      },
+      "temporal_and_arch_neutral": {
+        "expected": 5189184,
+        "actual": 5189184
+      },
+      "temporal_and_distinct": {
+        "expected": 6967296,
+        "actual": 6967296
+      },
+      "temporal_arch_and_distinct": {
+        "expected": 3891888,
+        "actual": 3891888
+      }
+    },
+    "unique_domain_complete": true,
+    "telemetry_ranges": {
+      "memory_used_MiB": {
+        "min": 225.0,
+        "max": 10364.0
+      },
+      "memory_free_MiB": {
+        "min": 1581.0,
+        "max": 11720.0
+      },
+      "gpu_busy_percent": {
+        "min": 1.0,
+        "max": 66.0
+      },
+      "memory_busy_percent": {
+        "min": 0.0,
+        "max": 35.0
+      },
+      "sm_clock_MHz": {
+        "min": 277.0,
+        "max": 2340.0
+      },
+      "memory_clock_MHz": {
+        "min": 405.0,
+        "max": 14001.0
+      },
+      "temperature_C": {
+        "min": 54.0,
+        "max": 66.0
+      },
+      "power_W": {
+        "min": 9.68,
+        "max": 84.1
+      }
+    }
+  },
+  "capacity": {
+    "distinct_candidates": 572194368,
+    "working_bytes": 11443887360,
+    "working_GiB": 10.657950639724731,
+    "ticks_per_run": 64,
+    "median_compute_ms": 2482.7463,
+    "median_compute_ms_per_pass": 38.7929109375,
+    "checks_per_second": 14749972460.738337,
+    "median_process_seconds": 5.4693734,
+    "shards": 69,
+    "min_cuda_free_after": 0,
+    "mask_counts": {
+      "forward": {
+        "expected": 250335036,
+        "actual": 250335036
+      },
+      "elapsed_preserved": {
+        "expected": 31291876,
+        "actual": 31291876
+      },
+      "future_independent": {
+        "expected": 321859528,
+        "actual": 321859528
+      },
+      "retention_preserved": {
+        "expected": 241373184,
+        "actual": 241373184
+      },
+      "temporal_retention_admissible": {
+        "expected": 9900072,
+        "actual": 9900072
+      },
+      "Arch_neutral": {
+        "expected": 322371136,
+        "actual": 322371136
+      },
+      "distinct_witnesses": {
+        "expected": 505085504,
+        "actual": 505085504
+      },
+      "temporal_and_arch_neutral": {
+        "expected": 5577264,
+        "actual": 5577264
+      },
+      "temporal_and_distinct": {
+        "expected": 8738856,
+        "actual": 8738856
+      },
+      "temporal_arch_and_distinct": {
+        "expected": 4928616,
+        "actual": 4928616
+      }
+    },
+    "unique_domain_complete": false,
+    "telemetry_ranges": {
+      "memory_used_MiB": {
+        "min": 225.0,
+        "max": 11430.0
+      },
+      "memory_free_MiB": {
+        "min": 515.0,
+        "max": 11720.0
+      },
+      "gpu_busy_percent": {
+        "min": 1.0,
+        "max": 100.0
+      },
+      "memory_busy_percent": {
+        "min": 0.0,
+        "max": 58.0
+      },
+      "sm_clock_MHz": {
+        "min": 1552.0,
+        "max": 2460.0
+      },
+      "memory_clock_MHz": {
+        "min": 14001.0,
+        "max": 14001.0
+      },
+      "temperature_C": {
+        "min": 59.0,
+        "max": 76.0
+      },
+      "power_W": {
+        "min": 21.97,
+        "max": 169.81
+      }
+    }
+  },
+  "profiles": {
+    "shared": {
+      "lanes": 8388608,
+      "scope": "one representative shard; separate from full-memory runs",
+      "metrics": {
+        "dram__bytes_read.sum": 30298368.0,
+        "dram__bytes_write.sum": 101780224.0,
+        "dram__throughput.avg.pct_of_peak_sustained_elapsed": 42.68,
+        "gpu__time_duration.sum": 460960.0,
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed": 81.46,
+        "sm__warps_active.avg.pct_of_peak_sustained_active": 76.69
+      },
+      "effective_DRAM_GB_per_second": 286.5293995140576
+    },
+    "global": {
+      "lanes": 8388608,
+      "scope": "one representative shard; separate from full-memory runs",
+      "metrics": {
+        "dram__bytes_read.sum": 30251008.0,
+        "dram__bytes_write.sum": 102101760.0,
+        "dram__throughput.avg.pct_of_peak_sustained_elapsed": 26.02,
+        "gpu__time_duration.sum": 757600.0,
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed": 61.59,
+        "sm__warps_active.avg.pct_of_peak_sustained_active": 92.89
+      },
+      "effective_DRAM_GB_per_second": 174.70006335797254
+    },
+    "texture": {
+      "lanes": 8388608,
+      "scope": "one representative shard; separate from full-memory runs",
+      "metrics": {
+        "dram__bytes_read.sum": 29882368.0,
+        "dram__bytes_write.sum": 100665088.0,
+        "dram__throughput.avg.pct_of_peak_sustained_elapsed": 22.71,
+        "gpu__time_duration.sum": 856352.0,
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed": 48.2,
+        "sm__warps_active.avg.pct_of_peak_sustained_active": 93.05
+      },
+      "effective_DRAM_GB_per_second": 152.44602219647996
+    }
+  },
+  "scope": "Measured finite certificate interpretation; native dynamics remain unassigned. Repeated passes reuse candidates.",
+  "full_bitmap": {
+    "status": "PASS",
+    "scope": "every admission bit independently verified",
+    "lanes": 536870912,
+    "path": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\formalization_20260918\\admissible_29bit.tommask",
+    "sha256": "f44792b897ff22a69d540b8ea9b2cac3fbd3e415b890f7f5e905d070aedb967f",
+    "file_bytes": 67108896,
+    "independent_predicate_period_lanes": 262144
+  }
+}

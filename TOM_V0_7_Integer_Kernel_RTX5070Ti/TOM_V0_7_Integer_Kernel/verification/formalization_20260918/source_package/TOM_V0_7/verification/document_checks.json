@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-18T11:42:15.131057+00:00",
+  "PDF_pages": 18,
+  "render_review": "all pages reviewed; no overflow warnings",
+  "supplied_identifiers": "present exactly",
+  "text_within_page_bounds": true,
+  "source_text_pages": 37,
+  "source_roles_and_optional_audits_separate": true,
+  "kernel_claimed": false,
+  "physics_proved_by_tests": false
+}

@@ -1,0 +1,14 @@
+{
+"name":"TOM","version":"0.7-K1","gpu_executed":true,"device":{"device":0,"name":"NVIDIA GeForce RTX 5070 Ti Laptop GPU","compute_major":12,"compute_minor":0,"free_bytes":11343495168,"total_bytes":12820480000,"shared_default_bytes":49152,"shared_optin_bytes":101376,"linear_texture_max_elements":268435456,"l2_bytes":37748736,"sm_count":46,"warp_size":32,"max_threads_per_sm":1536,"shared_bytes_per_sm":102400,"runtime_version":12080,"driver_api_version":13010},
+"backend":"global","evaluator":"lowered","block_threads":256,"lanes":8388608,"ticks":1,"epoch":1,"shards":1,
+"warmup_ticks":2,"compute_executed":true,"compute_launches":1,"warmup_compute_launches":2,
+"shard_words_cap":262144,"automatic_shard_words":67108863,"effective_shard_words":262144,"blocks_per_sm":24,
+"kernel_resources":{"registers_per_thread":40,"local_bytes_per_thread":0,"static_shared_bytes":0,"dynamic_shared_bytes":0,"max_threads_per_block":1024,"theoretical_active_blocks_per_sm":6,"theoretical_active_warps_per_sm":48,"max_warps_per_sm":48},
+"definition_bytes":18816,"working_bytes":161480704,"free_before_bytes":11519655936,"free_after_bytes":11353980928,
+"elapsed_host_ns":379262900,"sample_digest":9215541654023568915,"sample_lanes":2048,"sample_verified":false,
+"verification":{"enabled":false,"scope":"first_and_last_up_to_64_words_per_shard","shards_verified":0,"words_verified":0,"lanes_verified":0,"all_lane_words_verified":false},
+"shard_summaries":[{"index":0,"first_word":0,"words":262144,"launch_blocks":1024,"samples":[{"first_word":0,"words":64,"digest":9215541654023568915,"verified":false}]}],"shard_summaries_shown":1,"shard_summaries_omitted":0,
+"state_counts":[],"state_count_elapsed_host_ns":0,"state_count_launches":0,"state_counts_in_compute_timing":false,
+"state_mask_export":null,"state_mask_in_compute_timing":false,
+"exported_first_shard_lanes":8388608,"trace_io_in_timing":false,"setup_in_timing":false,"source_physics_validated":false
+}

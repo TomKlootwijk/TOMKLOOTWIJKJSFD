@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "executable": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\build-cuda128\\Release\\tom_native_cuda.exe",
+  "cases": [
+    {
+      "name": "first",
+      "verification": {
+        "cases": 1,
+        "words_per_result": 209,
+        "total_words_compared": 209,
+        "all_words_equal": true
+      }
+    },
+    {
+      "name": "second",
+      "verification": {
+        "cases": 1,
+        "words_per_result": 209,
+        "total_words_compared": 209,
+        "all_words_equal": true
+      }
+    },
+    {
+      "name": "forged_history",
+      "verification": {
+        "rejected_before_output": true,
+        "reason": "tom_native_cuda: resume attempted to replace completed content at case 0"
+      }
+    },
+    {
+      "name": "forged_time",
+      "verification": {
+        "rejected_before_output": true,
+        "reason": "tom_native_cuda: resume completed-time mismatch at case 0"
+      }
+    },
+    {
+      "name": "shortened_history",
+      "verification": {
+        "rejected_before_output": true,
+        "reason": "tom_native_cuda: resume completed-history length mismatch at case 0"
+      }
+    },
+    {
+      "name": "rejected_new_prefix",
+      "verification": {
+        "cases": 1,
+        "words_per_result": 209,
+        "total_words_compared": 209,
+        "all_words_equal": true
+      }
+    },
+    {
+      "name": "retry_from_rejected",
+      "verification": {
+        "cases": 1,
+        "words_per_result": 209,
+        "total_words_compared": 209,
+        "all_words_equal": true
+      }
+    }
+  ],
+  "prior_results_unchanged": true
+}

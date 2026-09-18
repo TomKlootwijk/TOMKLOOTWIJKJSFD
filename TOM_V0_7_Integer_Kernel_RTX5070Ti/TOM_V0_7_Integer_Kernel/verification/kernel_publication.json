@@ -1,0 +1,7 @@
+{
+  "from_snapshot_sha256": "88611e4fa466c6c2c3cf4a400e43e9dcd11b6db7715a5aab98c0164cbf9daf10",
+  "observed_epoch": 1,
+  "lane": 0,
+  "reconstructed_instruction_words": 28,
+  "rewrites_native_GPU_instructions": false
+}

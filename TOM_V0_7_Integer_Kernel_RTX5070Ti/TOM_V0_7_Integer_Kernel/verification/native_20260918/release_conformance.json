@@ -1,0 +1,39 @@
+{
+  "source_full": {
+    "cases": 1,
+    "words_per_result": 331,
+    "total_words_compared": 331,
+    "all_words_equal": true
+  },
+  "native_cases": {
+    "cases": 4127,
+    "words_per_result": 808,
+    "total_words_compared": 3334616,
+    "all_words_equal": true
+  },
+  "native_valid": {
+    "cases": 4127,
+    "words_per_result": 808,
+    "total_words_compared": 3334616,
+    "all_words_equal": true
+  },
+  "native_deep": {
+    "cases": 1,
+    "words_per_result": 23994,
+    "total_words_compared": 23994,
+    "all_words_equal": true
+  },
+  "native_mixed_templates": {
+    "cases": 8,
+    "words_per_result": 985,
+    "total_words_compared": 7880,
+    "all_words_equal": true
+  },
+  "deliberately_wrong_oracle": {
+    "expected_exit_code": 1,
+    "observed_exit_code": 1,
+    "mismatched_words": 33,
+    "rejected": true
+  },
+  "status": "PASS"
+}

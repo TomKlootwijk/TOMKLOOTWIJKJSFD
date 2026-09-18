@@ -1,0 +1,283 @@
+{
+  "name": "All 256 ternary operator fields x all 8 inputs",
+  "version": "0.7-K1",
+  "author": "Tom Klootwijk",
+  "identifier": "NL200678942",
+  "date_supplied": "10-07-1990",
+  "names": {
+    "KERNEL": 0,
+    "T": 1,
+    "A": 1,
+    "TOM": 2,
+    "phi": 3,
+    "jitter": 4,
+    "inverse_log_phi": 5,
+    "ArchU": 6,
+    "causality": 7,
+    "entropy": 8,
+    "InverseOccam": 9,
+    "sheet": 10,
+    "double_UU": 11,
+    "Klein": 12,
+    "Matryoshka": 13,
+    "ZERO": 14,
+    "ONE": 15,
+    "a": 16,
+    "b": 17,
+    "c": 18,
+    "truth.0": 19,
+    "truth.1": 20,
+    "truth.2": 21,
+    "truth.3": 22,
+    "truth.4": 23,
+    "truth.5": 24,
+    "truth.6": 25,
+    "truth.7": 26,
+    "result": 27,
+    "kernel_coeff.0": 28,
+    "kernel_coeff.1": 29,
+    "kernel_coeff.2": 30,
+    "kernel_coeff.3": 31,
+    "kernel_coeff.4": 32,
+    "kernel_coeff.5": 33,
+    "kernel_coeff.6": 34,
+    "kernel_coeff.7": 35,
+    "NOT": 36,
+    "AND": 37,
+    "OR": 38,
+    "XOR": 39,
+    "EQ": 40,
+    "MUX": 41,
+    "SUM3": 42,
+    "MAJ3": 43,
+    "test_rule": 44,
+    "$v0": 45,
+    "quote_kernel_coeff.0": 46,
+    "quote_kernel_coeff.1": 47,
+    "quote_kernel_coeff.2": 48,
+    "quote_kernel_coeff.3": 49,
+    "quote_kernel_coeff.4": 50,
+    "quote_kernel_coeff.5": 51,
+    "quote_kernel_coeff.6": 52,
+    "quote_kernel_coeff.7": 53
+  },
+  "state_slots": {
+    "a": 0,
+    "b": 1,
+    "c": 2,
+    "truth.0": 3,
+    "truth.1": 4,
+    "truth.2": 5,
+    "truth.3": 6,
+    "truth.4": 7,
+    "truth.5": 8,
+    "truth.6": 9,
+    "truth.7": 10,
+    "result": 11,
+    "kernel_coeff.0": 12,
+    "kernel_coeff.1": 13,
+    "kernel_coeff.2": 14,
+    "kernel_coeff.3": 15,
+    "kernel_coeff.4": 16,
+    "kernel_coeff.5": 17,
+    "kernel_coeff.6": 18,
+    "kernel_coeff.7": 19
+  },
+  "groups": {
+    "truth": {
+      "bits": [
+        "truth.0",
+        "truth.1",
+        "truth.2",
+        "truth.3",
+        "truth.4",
+        "truth.5",
+        "truth.6",
+        "truth.7"
+      ],
+      "signed": false
+    }
+  },
+  "outputs": [
+    "result",
+    "kernel_coeff.0",
+    "kernel_coeff.1",
+    "kernel_coeff.2",
+    "kernel_coeff.3",
+    "kernel_coeff.4",
+    "kernel_coeff.5",
+    "kernel_coeff.6",
+    "kernel_coeff.7"
+  ],
+  "objects": 54,
+  "scheduled_values": 20,
+  "scratch_slots": 20,
+  "unrecycled_slots": 20,
+  "kernel_microcode_words": 28,
+  "kernel_table_word": 3,
+  "native_roles_uninterpreted": [
+    "TOM",
+    "phi",
+    "jitter",
+    "inverse_log_phi",
+    "ArchU",
+    "causality",
+    "entropy",
+    "InverseOccam",
+    "sheet",
+    "double_UU",
+    "Klein",
+    "Matryoshka"
+  ],
+  "scope": "finite validation representation; not intrinsic TOM nodes, dimensions, metric or physical evolution",
+  "source_definition": {
+    "name": "All 256 ternary operator fields x all 8 inputs",
+    "state": {
+      "a": {
+        "counter_bit": 0
+      },
+      "b": {
+        "counter_bit": 1
+      },
+      "c": {
+        "counter_bit": 2
+      },
+      "truth.0": {
+        "counter_bit": 3
+      },
+      "truth.1": {
+        "counter_bit": 4
+      },
+      "truth.2": {
+        "counter_bit": 5
+      },
+      "truth.3": {
+        "counter_bit": 6
+      },
+      "truth.4": {
+        "counter_bit": 7
+      },
+      "truth.5": {
+        "counter_bit": 8
+      },
+      "truth.6": {
+        "counter_bit": 9
+      },
+      "truth.7": {
+        "counter_bit": 10
+      },
+      "result": 0,
+      "kernel_coeff.0": 0,
+      "kernel_coeff.1": 0,
+      "kernel_coeff.2": 0,
+      "kernel_coeff.3": 0,
+      "kernel_coeff.4": 0,
+      "kernel_coeff.5": 0,
+      "kernel_coeff.6": 0,
+      "kernel_coeff.7": 0
+    },
+    "rules": {
+      "NOT": 85,
+      "AND": 136,
+      "OR": 238,
+      "XOR": 102,
+      "EQ": 153,
+      "MUX": 202,
+      "SUM3": 150,
+      "MAJ3": 232,
+      "test_rule": {
+        "rows": [
+          "truth.0",
+          "truth.1",
+          "truth.2",
+          "truth.3",
+          "truth.4",
+          "truth.5",
+          "truth.6",
+          "truth.7"
+        ]
+      }
+    },
+    "expressions": {
+      "$v0": {
+        "rule": "test_rule",
+        "args": [
+          "a",
+          "b",
+          "c"
+        ]
+      }
+    },
+    "next": {
+      "result": "$v0",
+      "kernel_coeff.0": "quote_kernel_coeff.0",
+      "kernel_coeff.1": "quote_kernel_coeff.1",
+      "kernel_coeff.2": "quote_kernel_coeff.2",
+      "kernel_coeff.3": "quote_kernel_coeff.3",
+      "kernel_coeff.4": "quote_kernel_coeff.4",
+      "kernel_coeff.5": "quote_kernel_coeff.5",
+      "kernel_coeff.6": "quote_kernel_coeff.6",
+      "kernel_coeff.7": "quote_kernel_coeff.7"
+    },
+    "quotes": {
+      "quote_kernel_coeff.0": {
+        "object": "KERNEL",
+        "bit": 96
+      },
+      "quote_kernel_coeff.1": {
+        "object": "KERNEL",
+        "bit": 97
+      },
+      "quote_kernel_coeff.2": {
+        "object": "KERNEL",
+        "bit": 98
+      },
+      "quote_kernel_coeff.3": {
+        "object": "KERNEL",
+        "bit": 99
+      },
+      "quote_kernel_coeff.4": {
+        "object": "KERNEL",
+        "bit": 100
+      },
+      "quote_kernel_coeff.5": {
+        "object": "KERNEL",
+        "bit": 101
+      },
+      "quote_kernel_coeff.6": {
+        "object": "KERNEL",
+        "bit": 102
+      },
+      "quote_kernel_coeff.7": {
+        "object": "KERNEL",
+        "bit": 103
+      }
+    },
+    "groups": {
+      "truth": {
+        "bits": [
+          "truth.0",
+          "truth.1",
+          "truth.2",
+          "truth.3",
+          "truth.4",
+          "truth.5",
+          "truth.6",
+          "truth.7"
+        ],
+        "signed": false
+      }
+    },
+    "outputs": [
+      "result",
+      "kernel_coeff.0",
+      "kernel_coeff.1",
+      "kernel_coeff.2",
+      "kernel_coeff.3",
+      "kernel_coeff.4",
+      "kernel_coeff.5",
+      "kernel_coeff.6",
+      "kernel_coeff.7"
+    ]
+  }
+}

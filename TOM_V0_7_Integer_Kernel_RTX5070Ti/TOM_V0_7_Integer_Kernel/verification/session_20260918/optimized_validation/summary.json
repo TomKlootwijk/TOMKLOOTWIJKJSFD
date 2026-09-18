@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "gpu_executed": true,
+  "hardware": {
+    "device": 0,
+    "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "compute_major": 12,
+    "compute_minor": 0,
+    "free_bytes": 11561598976,
+    "total_bytes": 12820480000,
+    "shared_default_bytes": 49152,
+    "shared_optin_bytes": 101376,
+    "linear_texture_max_elements": 268435456,
+    "l2_bytes": 37748736,
+    "sm_count": 46,
+    "runtime_version": 12080,
+    "driver_api_version": 13010
+  },
+  "backends": {
+    "texture": {
+      "status": "PASS",
+      "counts": {
+        "all_table_input_cases_per_evaluator": 2048,
+        "signed_int8_Arch_pairs_per_evaluator": 65536,
+        "temporal_retention_certificates_per_evaluator": 518,
+        "self_reference_tick_configurations_per_evaluator": 5,
+        "kernel_microprogram_bits_copied_per_evaluator": 896,
+        "modified_kernel_cases": 2048,
+        "modified_kernel_outputs_changed": 1024,
+        "resume_cases": 1,
+        "random_programs": 48,
+        "random_execution_layouts": 96,
+        "invalid_input_and_time_cases": 7
+      },
+      "skipped": []
+    },
+    "global": {
+      "status": "PASS",
+      "counts": {
+        "all_table_input_cases_per_evaluator": 2048,
+        "signed_int8_Arch_pairs_per_evaluator": 65536,
+        "temporal_retention_certificates_per_evaluator": 518,
+        "self_reference_tick_configurations_per_evaluator": 5,
+        "kernel_microprogram_bits_copied_per_evaluator": 896,
+        "modified_kernel_cases": 2048,
+        "modified_kernel_outputs_changed": 1024,
+        "resume_cases": 1,
+        "random_programs": 48,
+        "random_execution_layouts": 96,
+        "invalid_input_and_time_cases": 7
+      },
+      "skipped": []
+    },
+    "shared": {
+      "status": "PASS",
+      "counts": {
+        "all_table_input_cases_per_evaluator": 2048,
+        "signed_int8_Arch_pairs_per_evaluator": 65536,
+        "temporal_retention_certificates_per_evaluator": 518,
+        "self_reference_tick_configurations_per_evaluator": 5,
+        "modified_kernel_cases": 2048,
+        "modified_kernel_outputs_changed": 1024,
+        "resume_cases": 1,
+        "random_programs": 48,
+        "random_execution_layouts": 96,
+        "invalid_input_and_time_cases": 7
+      },
+      "skipped": [
+        {
+          "program": "kernel_selfcopy",
+          "evaluator": "field",
+          "reason": "full quotation image exceeds shared limit; texture/global still test it"
+        },
+        {
+          "program": "kernel_selfcopy",
+          "evaluator": "lowered",
+          "reason": "full quotation image exceeds shared limit; texture/global still test it"
+        }
+      ]
+    }
+  }
+}

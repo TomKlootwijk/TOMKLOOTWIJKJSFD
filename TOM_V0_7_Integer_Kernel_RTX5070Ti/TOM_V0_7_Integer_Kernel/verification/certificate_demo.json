@@ -1,0 +1,7 @@
+{
+"name":"TOM","version":"0.7-K1","backend":"cpu","evaluator":"field",
+"lanes":32,"ticks":1,"epoch":1,"states":120,"scratch_slots":149,
+"definition_bytes":32064,"working_bytes":1556,
+"elapsed_host_ns":9239,"output_digest":6471862534532422070,
+"trace_io_in_timing":false,"gpu_executed":false,"source_physics_validated":false
+}

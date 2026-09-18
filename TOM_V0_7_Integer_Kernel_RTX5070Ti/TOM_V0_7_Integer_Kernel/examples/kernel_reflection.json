@@ -1,0 +1,150 @@
+{
+  "name": "All 256 ternary operator fields x all 8 inputs",
+  "state": {
+    "a": {
+      "counter_bit": 0
+    },
+    "b": {
+      "counter_bit": 1
+    },
+    "c": {
+      "counter_bit": 2
+    },
+    "truth.0": {
+      "counter_bit": 3
+    },
+    "truth.1": {
+      "counter_bit": 4
+    },
+    "truth.2": {
+      "counter_bit": 5
+    },
+    "truth.3": {
+      "counter_bit": 6
+    },
+    "truth.4": {
+      "counter_bit": 7
+    },
+    "truth.5": {
+      "counter_bit": 8
+    },
+    "truth.6": {
+      "counter_bit": 9
+    },
+    "truth.7": {
+      "counter_bit": 10
+    },
+    "result": 0,
+    "kernel_coeff.0": 0,
+    "kernel_coeff.1": 0,
+    "kernel_coeff.2": 0,
+    "kernel_coeff.3": 0,
+    "kernel_coeff.4": 0,
+    "kernel_coeff.5": 0,
+    "kernel_coeff.6": 0,
+    "kernel_coeff.7": 0
+  },
+  "rules": {
+    "NOT": 85,
+    "AND": 136,
+    "OR": 238,
+    "XOR": 102,
+    "EQ": 153,
+    "MUX": 202,
+    "SUM3": 150,
+    "MAJ3": 232,
+    "test_rule": {
+      "rows": [
+        "truth.0",
+        "truth.1",
+        "truth.2",
+        "truth.3",
+        "truth.4",
+        "truth.5",
+        "truth.6",
+        "truth.7"
+      ]
+    }
+  },
+  "expressions": {
+    "$v0": {
+      "rule": "test_rule",
+      "args": [
+        "a",
+        "b",
+        "c"
+      ]
+    }
+  },
+  "next": {
+    "result": "$v0",
+    "kernel_coeff.0": "quote_kernel_coeff.0",
+    "kernel_coeff.1": "quote_kernel_coeff.1",
+    "kernel_coeff.2": "quote_kernel_coeff.2",
+    "kernel_coeff.3": "quote_kernel_coeff.3",
+    "kernel_coeff.4": "quote_kernel_coeff.4",
+    "kernel_coeff.5": "quote_kernel_coeff.5",
+    "kernel_coeff.6": "quote_kernel_coeff.6",
+    "kernel_coeff.7": "quote_kernel_coeff.7"
+  },
+  "quotes": {
+    "quote_kernel_coeff.0": {
+      "object": "KERNEL",
+      "bit": 96
+    },
+    "quote_kernel_coeff.1": {
+      "object": "KERNEL",
+      "bit": 97
+    },
+    "quote_kernel_coeff.2": {
+      "object": "KERNEL",
+      "bit": 98
+    },
+    "quote_kernel_coeff.3": {
+      "object": "KERNEL",
+      "bit": 99
+    },
+    "quote_kernel_coeff.4": {
+      "object": "KERNEL",
+      "bit": 100
+    },
+    "quote_kernel_coeff.5": {
+      "object": "KERNEL",
+      "bit": 101
+    },
+    "quote_kernel_coeff.6": {
+      "object": "KERNEL",
+      "bit": 102
+    },
+    "quote_kernel_coeff.7": {
+      "object": "KERNEL",
+      "bit": 103
+    }
+  },
+  "groups": {
+    "truth": {
+      "bits": [
+        "truth.0",
+        "truth.1",
+        "truth.2",
+        "truth.3",
+        "truth.4",
+        "truth.5",
+        "truth.6",
+        "truth.7"
+      ],
+      "signed": false
+    }
+  },
+  "outputs": [
+    "result",
+    "kernel_coeff.0",
+    "kernel_coeff.1",
+    "kernel_coeff.2",
+    "kernel_coeff.3",
+    "kernel_coeff.4",
+    "kernel_coeff.5",
+    "kernel_coeff.6",
+    "kernel_coeff.7"
+  ]
+}

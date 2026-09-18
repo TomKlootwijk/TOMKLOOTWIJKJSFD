@@ -1,0 +1,46 @@
+{
+  "lane": 0,
+  "full_recorded_epochs": 4,
+  "observations": [
+    {
+      "epoch": 0,
+      "values": {
+        "input": 0,
+        "answer": 0,
+        "current_rule": 170,
+        "read_own_id": 0,
+        "kernel_selector_bit1": 0
+      }
+    },
+    {
+      "epoch": 1,
+      "values": {
+        "input": 0,
+        "answer": 0,
+        "current_rule": 85,
+        "read_own_id": 43,
+        "kernel_selector_bit1": 1
+      }
+    },
+    {
+      "epoch": 2,
+      "values": {
+        "input": 0,
+        "answer": 1,
+        "current_rule": 170,
+        "read_own_id": 43,
+        "kernel_selector_bit1": 1
+      }
+    },
+    {
+      "epoch": 3,
+      "values": {
+        "input": 0,
+        "answer": 0,
+        "current_rule": 85,
+        "read_own_id": 43,
+        "kernel_selector_bit1": 1
+      }
+    }
+  ]
+}

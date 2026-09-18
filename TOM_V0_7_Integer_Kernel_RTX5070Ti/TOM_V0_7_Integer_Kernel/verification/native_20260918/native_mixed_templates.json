@@ -1,0 +1,113 @@
+{
+  "source_pdf_sha256": "97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc",
+  "input": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\native_mixed_templates.ton",
+  "expected": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\native_mixed_templates_expected.tor",
+  "input_sha256": "fa084c02465f2112008eb8982ef45d0ec0469410cf686fce4b30ce7881ad503b",
+  "expected_sha256": "3ee1e1ba614eb4e957a38842ed5aa8b5fa6bf6019befdc5bcec8640795a94417",
+  "case_words": 576,
+  "result_words": 985,
+  "bytes_per_resident_case": 6244,
+  "templates": [
+    {
+      "template": 0,
+      "original_records": 13,
+      "extra_preservation_qualifications": 0,
+      "explicit_A_T_alias": false,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 477,
+      "status": 0,
+      "resolved_requests": 1,
+      "unresolved_requests": 0
+    },
+    {
+      "template": 1,
+      "original_records": 14,
+      "extra_preservation_qualifications": 1,
+      "explicit_A_T_alias": true,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 509,
+      "status": 16,
+      "resolved_requests": 0,
+      "unresolved_requests": 1
+    },
+    {
+      "template": 2,
+      "original_records": 15,
+      "extra_preservation_qualifications": 2,
+      "explicit_A_T_alias": false,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 541,
+      "status": 32,
+      "resolved_requests": 0,
+      "unresolved_requests": 1
+    },
+    {
+      "template": 3,
+      "original_records": 16,
+      "extra_preservation_qualifications": 3,
+      "explicit_A_T_alias": true,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 573,
+      "status": 16,
+      "resolved_requests": 0,
+      "unresolved_requests": 1
+    },
+    {
+      "template": 4,
+      "original_records": 17,
+      "extra_preservation_qualifications": 4,
+      "explicit_A_T_alias": false,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 605,
+      "status": 8,
+      "resolved_requests": 0,
+      "unresolved_requests": 1
+    },
+    {
+      "template": 5,
+      "original_records": 18,
+      "extra_preservation_qualifications": 5,
+      "explicit_A_T_alias": true,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 637,
+      "status": 2,
+      "resolved_requests": 0,
+      "unresolved_requests": 1
+    },
+    {
+      "template": 6,
+      "original_records": 19,
+      "extra_preservation_qualifications": 6,
+      "explicit_A_T_alias": false,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 669,
+      "status": 64,
+      "resolved_requests": 0,
+      "unresolved_requests": 2
+    },
+    {
+      "template": 7,
+      "original_records": 21,
+      "extra_preservation_qualifications": 7,
+      "explicit_A_T_alias": true,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 733,
+      "status": 16,
+      "resolved_requests": 0,
+      "unresolved_requests": 2
+    }
+  ],
+  "scope": "Full bound source expression, actual licensed normalization and complete retained history contents. No unique native dynamics assigned.",
+  "generated_variation": "Round-robin source-equivalent terms; distinct uint64 candidate identity in the first eight bytes of both completed and proposed history.",
+  "mixed_continuations": true,
+  "scenarios": [
+    "assigned result",
+    "false guard",
+    "unassigned law",
+    "missing guard",
+    "future evidence",
+    "lost elapsed duration",
+    "unguarded result",
+    "one resolved plus one pending; atomic block"
+  ]
+}

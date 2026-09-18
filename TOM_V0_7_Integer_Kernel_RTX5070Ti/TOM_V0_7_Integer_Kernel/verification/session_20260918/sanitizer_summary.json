@@ -1,0 +1,58 @@
+[
+  {
+    "tool": "memcheck",
+    "backend": "texture",
+    "evaluator": "field",
+    "exit_code": 0,
+    "log": "verification/session_20260918/memcheck_texture_field.log"
+  },
+  {
+    "tool": "memcheck",
+    "backend": "texture",
+    "evaluator": "lowered",
+    "exit_code": 0,
+    "log": "verification/session_20260918/memcheck_texture_lowered.log"
+  },
+  {
+    "tool": "memcheck",
+    "backend": "global",
+    "evaluator": "field",
+    "exit_code": 0,
+    "log": "verification/session_20260918/memcheck_global_field.log"
+  },
+  {
+    "tool": "memcheck",
+    "backend": "global",
+    "evaluator": "lowered",
+    "exit_code": 0,
+    "log": "verification/session_20260918/memcheck_global_lowered.log"
+  },
+  {
+    "tool": "memcheck",
+    "backend": "shared",
+    "evaluator": "field",
+    "exit_code": 0,
+    "log": "verification/session_20260918/memcheck_shared_field.log"
+  },
+  {
+    "tool": "memcheck",
+    "backend": "shared",
+    "evaluator": "lowered",
+    "exit_code": 0,
+    "log": "verification/session_20260918/memcheck_shared_lowered.log"
+  },
+  {
+    "tool": "racecheck",
+    "backend": "shared",
+    "evaluator": "field",
+    "exit_code": 0,
+    "log": "verification/session_20260918/racecheck_shared_field.log"
+  },
+  {
+    "tool": "synccheck",
+    "backend": "shared",
+    "evaluator": "field",
+    "exit_code": 0,
+    "log": "verification/session_20260918/synccheck_shared_field.log"
+  }
+]

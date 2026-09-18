@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "release": "TOM V0.7",
+  "scope": "finite exact scalar formula audits; not execution of intrinsic TOM",
+  "checks": {
+    "distinct_rational_scalar_pairs": 66049,
+    "negative_scale_echo_parameter_cases": 65792,
+    "positive_reciprocal_mirror_cases": 1024,
+    "distinct_definition_same_reading_cases": 256,
+    "smooth_replacement_counterexamples": 2,
+    "unit_slope_orientation_examples": 2,
+    "nonassociativity_counterexample": 1
+  },
+  "scalar_results": {
+    "zero_condition": "Arch(a,b)=0 iff a*b<=0",
+    "inverse_log_echo": "Any k<0 gives Arch(c,k*c)=0 for every finite real c",
+    "positive_reciprocal": "If p>0 and s!=0 finite, Arch(p,p/abs(s)^2)>0",
+    "associativity": "Arch(1,Arch(2,3))=2; Arch(Arch(1,2),3)=4",
+    "smoothing": "At (1,-1), original Arch=0 but ab*exp(-1/(a-b)^2)=-exp(-1/4)!=0; at (1,1) the latter needs an extension",
+    "orientation": [
+      {
+        "slope": "1",
+        "unit_magnitude": true,
+        "increasing": true
+      },
+      {
+        "slope": "-1",
+        "unit_magnitude": true,
+        "increasing": false
+      }
+    ],
+    "entropy_normalization": "For E=k*C, |E_prime|=|k|*|C_prime|; k=-ln(phi) has magnitude not equal to 1"
+  },
+  "coefficient_display": {
+    "phi_decimal_display": "1.618033988749894848204586834365638117720309179805762862135448622705260",
+    "ln_inverse_phi_decimal_display": "-0.4812118250596034474977589134243684231351843343856605196610181688401636",
+    "precision_digits": 70,
+    "status": "display approximation only; exact sign follows from 1<phi<e"
+  },
+  "not_established": [
+    "physical law",
+    "causal dynamics from Arch alone",
+    "thermodynamic entropy",
+    "infinite information compression",
+    "historical novelty",
+    "GPU execution"
+  ]
+}

@@ -1,0 +1,543 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,left=23mm,right=23mm,top=23mm,bottom=22mm,headheight=14pt,headsep=8mm,footskip=10mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newpxtext,newpxmath}
+\usepackage[scaled=.93]{helvet}
+\usepackage{amsmath,mathtools,microtype}
+\DisableLigatures{encoding=*,family=*}
+\usepackage{booktabs,tabularx,array,xcolor,fancyhdr,lastpage,titlesec,listings}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+\definecolor{ink}{HTML}{193743}
+\definecolor{teal}{HTML}{176C73}
+\definecolor{muted}{HTML}{59676E}
+\definecolor{pale}{HTML}{EEF5F4}
+\definecolor{line}{HTML}{CEDCDB}
+\hypersetup{colorlinks=true,linkcolor=teal,urlcolor=teal,pdftitle={TOM V0.7 — The Total SDF Definition},pdfauthor={Tom Klootwijk},pdfsubject={Source-led formalization: lowercase phi, forward precedence, inverse-Occam sheet, causal and inverse-log SDF roles; external scalar audit},pdfkeywords={TOM,V0.7,Tom Klootwijk,SDF,precedence,inverse Occam,Arch U,phi}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+\linespread{1.04}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\sffamily\footnotesize\color{muted}TOM KLOOTWIJK}
+\fancyhead[R]{\sffamily\footnotesize\color{muted}TOM / V0.7}
+\fancyfoot[L]{\sffamily\footnotesize\color{muted}The total SDF definition}
+\fancyfoot[R]{\sffamily\footnotesize\color{muted}\thepage\ /\ \pageref*{LastPage}}
+\renewcommand{\headrulewidth}{.35pt}
+\titleformat{\section}{\sffamily\Large\bfseries\color{ink}}{\thesection}{.65em}{}
+\titleformat{\subsection}{\sffamily\normalsize\bfseries\color{teal}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{0pt}{10pt}
+\titlespacing*{\subsection}{0pt}{10pt}{4pt}
+\renewcommand{\arraystretch}{1.20}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\newsec}[2]{\clearpage\section{#1}{\sffamily\footnotesize\color{teal}\MakeUppercase{#2}\par}\vspace{5pt}}
+\newcommand{\src}[1]{{\small\color{muted}[S37, #1]}}
+\newcommand{\sdf}{\mathsf{SDF}}
+\newcommand{\Tom}{\mathsf{TOM}}
+\newcommand{\Ti}{\mathsf T}
+\newcommand{\Ji}{\mathsf J}
+\newcommand{\Ca}{\mathsf C}
+\newcommand{\En}{\mathsf E}
+\newcommand{\IL}{\mathsf{InvLog}}
+\newcommand{\IO}{\mathsf{InverseOccam}}
+\newcommand{\Ar}{\mathsf{Arch}}
+\newcommand{\ar}{\operatorname{arch}}
+\newcommand{\Later}{\mathsf{Later}_{\Ti}}
+\newcommand{\deq}{\mathrel{\equiv_{\mathrm{def}}}}
+\newcommand{\readeq}{\mathrel{\equiv_{\mathrm{read}}}}
+\newcommand{\obs}{\mathcal R}
+\newcommand{\bind}[1]{\langle #1\rangle}
+\newtcolorbox{boxx}[1][]{colback=pale,colframe=line,boxrule=.45pt,arc=0pt,left=10pt,right=10pt,top=8pt,bottom=8pt,fonttitle=\sffamily\bfseries,coltitle=ink,attach title to upper={\par\smallskip},title={#1}}
+\lstset{basicstyle=\ttfamily\small,columns=fullflexible,keepspaces=true,breaklines=true,showstringspaces=false,frame=single,rulecolor=\color{line},backgroundcolor=\color{pale},framesep=8pt,aboveskip=8pt,belowskip=8pt}
+\begin{document}
+\thispagestyle{empty}
+{\sffamily\footnotesize\color{teal}AUTHORIAL DEFINITION / SOURCE-LED UPGRADE / VERSION V0.7\par}
+\vspace{15mm}
+{\sffamily\fontsize{52}{55}\selectfont\bfseries\color{ink}TOM\par}
+\vspace{3mm}
+{\sffamily\fontsize{25}{30}\selectfont\color{ink}The total SDF definition\par}
+\vspace{4mm}
+{\large Forward precedence, lowercase $\phi$\par}
+{\large and the inverse-Occam sheet\par}
+\vspace{11mm}
+\begin{tabularx}{\linewidth}{@{}P{41mm}Y@{}}
+\toprule
+\sffamily\small AUTHOR & \textbf{Tom Klootwijk}\\
+\sffamily\small IDENTIFIER & \textbf{NL200678942}\\
+\sffamily\small DATE AS SUPPLIED & \textbf{10-07-1990}\\
+\sffamily\small RELEASE & \textbf{TOM V0.7}\\
+\bottomrule
+\end{tabularx}
+\vspace{8mm}
+\begin{boxx}[Central statement]
+TOM is the complete, non-erasing SDF articulation of time, jitter, the lowercase pinion, its inverse-log expression, causality, the source-named entropic echo and Arch U without U. Its admissible continuation is forward-only. No coordinate grid, operator graph or enclosing metric space is imposed as its intrinsic form.
+\end{boxx}
+\textbf{The governing source} is the newly supplied 37-page document, with priority given to the author's later corrections. The clauses introduced in this release are distinguished from the accompanying exported responses and from optional numerical interpretations.
+
+\textbf{TOM is the name.} No acronym expansion is assigned. The identifiers above record authorship; they do not parameterize a physical law, a geometric origin or a cryptographic key.
+\vfill
+{\sffamily\small\color{muted}18 September 2026\hfill Formalization and reproducible audit}
+
+\newsec{The change that governs V0.7}{Source priority / the final corrections, not the earliest scaffolding}
+The new source repeatedly changes direction after an accompanying response reintroduces something the author rejects. V0.7 follows the \textbf{latest explicit author instructions}, rather than treating every proposed model in the export as a compatible axiom.
+
+\begin{tabularx}{\linewidth}{@{}P{18mm}Y@{}}
+\toprule
+\textbf{Page} & \textbf{Controlling author instruction}\\\midrule
+14 & Everything is an SDF definition in the mathematics, not rendering or a computer-science implementation.\\
+21 & The formulation is not a four-dimensional quaternion space.\\
+23 & The personal identity is ``just vanity'' in this context; the question concerns the combination of definitions.\\
+26 & Do not reintroduce vectors and metrics as the defining foundation.\\
+28 & The pinion is lowercase $\phi$; everything is literally an SDF; precedence matters in one uncheated temporal direction.\\
+31 & Do not make SDF definitions into nodes of a graph or recover vectors, magnitude and cardinality through tracing.\\
+32 & The sheet is the inverse sharp Occam razor, itself SDF; jitter and inverse-log $\phi$ belong to the definition.\\
+34 & Causality and entropy are also to be treated as SDF definitions.\\
+\bottomrule
+\end{tabularx}
+
+\subsection{What this supersedes}
+The earlier quaternion frame, rotation matrices, normed-vector inversion, shader pipeline and categorical replacement remain part of the source history. They are not imposed as TOM's final ontology. Uppercase $\Phi$ is not silently substituted for the pinion after the page-28 correction.
+
+The v6 spatial kernels likewise remain \emph{external application constructions}. Their grid cells, graph routes and event queues do not become the intrinsic form of TOM simply by changing the name.
+
+\begin{boxx}[Meaning of this release]
+V0.7 upgrades the \textbf{formal definition}, its binding rules and its causal commitments. It is not another arithmetic engine, renderer or graph simulation presented as if those representations had been requested again.
+\end{boxx}
+
+\newsec{The whole definition, not a renamed component}{V0.7 construction / source-derived roles with explicit binding}
+TOM names the total qualified statement. The symbols below abbreviate defining roles, not independently positioned things. Write
+\[
+ c\;:=\;\Ca\bind{\Ji\bind{\Ti}},\qquad
+ e\;:=\;\En\bind{c\,;\,\IL\bind{\phi}}.
+\]
+Then the compact statement is
+\begin{equation*}
+\boxed{\Tom_{\mathrm{V0.7}}\;:=\;\IO\bind{\Ar\bind{c\,;\,e}}\quad
+\text{qualified by forward }\Ti\text{-precedence}.}
+\end{equation*}
+Its full expansion is
+\[
+\Tom_{\mathrm{V0.7}}:=
+\IO\Big\langle
+\Ar\Big\langle
+\Ca\bind{\Ji\bind{\Ti}}\,;\,
+\En\bind{\Ca\bind{\Ji\bind{\Ti}}\,;\,\IL\bind{\phi}}
+\Big\rangle
+\Big\rangle_{\prec_{\Ti}}.
+\]
+Here $\prec_{\Ti}$ is a qualification by the temporal contracts in Section 5. It is not a spatial coordinate, numeric derivative or graph edge.
+
+\subsection{What the nested notation means}
+Brackets determine scope. The semicolon distinguishes direct and inverse-log roles. Neither creates a vector. The abbreviations $c$ and $e$ introduce no new physical nodes; replacing them by their full definitions leaves the statement unchanged.
+
+$\IO$ names the inverse-Occam sheet qualification. $\Ar$ names Arch U without U. $\Ca$ and $\En$ name the causal and entropic defining roles. $\Ji$, $\Ti$ and $\phi$ remain SDF declarations throughout. \src{pp. 28, 31--36}
+
+\subsection{Why the full definition does not end with ``= 0''}
+The attachment's final scalar formula is preserved as an \emph{optional reading}. That reading is shown in Section 9 to equal zero for every admitted scalar input of its stated form. A constant readout cannot, by itself, distinguish the source's defining roles, choose the temporal progression or certify a physical law.
+
+\begin{boxx}
+The major upgrade is to preserve the \textbf{whole defining articulation} instead of identifying it with an observation that erases all those distinctions. The scalar equation is audited, not secretly changed.
+\end{boxx}
+
+\newsec{SDF without a metric smuggled back in}{Native qualification / declared meaning versus conventional interpretation}
+In the intrinsic TOM statement, \textbf{SDF is the author's qualification for a definition and its admitted expression}. It does not assert that a metric, a coordinate domain and a conventional numerical distance have already been supplied.
+
+This follows the author's rejection of reintroduced metrics on page 26 and of graph/vector treatment on page 31. It also makes explicit what otherwise remains an ambiguity: using the same word does not establish all the properties of a conventional signed-distance function. \src{pp. 26, 28, 31}
+
+\subsection{A closure convention, not an Eikonal theorem}
+The declaration
+\[
+ e:\sdf
+\]
+means that $e$ is admitted under TOM's SDF convention. An admitted compound definition remains SDF-qualified, including a definition of precedence, inversion, causal admissibility or the sheet-preservation rule itself.
+
+The notation above is \emph{editorial metalanguage}: it states how to read this document. It does not introduce a second spatial realm, a node class or an external software engine into TOM.
+
+A separate interpretation may choose ordinary signed-distance semantics. It would then need an explicit metric, zero structure and sign convention, and would have to establish the claimed distance property. That additional structure is not inserted into the intrinsic definition merely to make the familiar acronym fit.
+
+\subsection{Properties not obtained by a change of name}
+A numerical exponential, scalar multiple, absolute-value expression or smooth approximation does not become an exact normalized distance simply because it is labelled SDF. The source's assertions of those properties are examined in Section 12 under their own scalar interpretation.
+
+\begin{boxx}[The preserved commitment]
+All admitted operators and expressions have the \textbf{same native SDF qualification}. No mandatory external coordinate arena is introduced to distinguish ``code'' from ``field data.'' This is a declared formal law, not a demonstration of universal computation or actual metric-distance closure.
+\end{boxx}
+
+\newsec{The intrinsic SDF vocabulary}{Definitions in the core / no compulsory coordinates or nodes}
+\small
+\begin{tabularx}{\linewidth}{@{}P{31mm}Y@{}}
+\toprule
+\textbf{Declaration} & \textbf{Role in TOM V0.7}\\\midrule
+$\Ti$ & Temporal precedence of the whole statement. One forward temporal ordering, not an added coordinate axis.\\
+$\Ji\bind{\Ti}$ & Temporal jitter qualified by $\Ti$. No probability law, frequency, scalar waveform or reverse clock is assumed.\\
+$\phi$ & The \emph{lowercase} pinion SDF. Its structural role is not replaced by an uppercase matrix operator.\\
+$\IL\bind{\phi}$ & The inverse-log pinion expression. A later scalar interpretation is stated separately; it is not temporal inversion.\\
+$\Ca\bind{e}$ & Causal qualification: no anticipation and preservation of completed commitments.\\
+$\En\bind{c\,;\,\IL\bind{\phi}}$ & The source-named entropy/causal echo. It is not presumed to be a statistical or thermodynamic entropy.\\
+$\Ar\bind{c\,;\,e}$ & Arch U without U: a direct/inverse articulation with defining roles retained. It has a declared optional scalar reading.\\
+$\IO\bind{e}$ & The inverse-Occam sheet. Equal observations do not authorize deletion of defining distinctions.\\
+$\Tom$ & The complete precedence-qualified SDF definition, not a new surrounding container or a personal physical invariant.\\
+\bottomrule
+\end{tabularx}
+\normalsize
+
+\subsection{First-class definitions and compound expressions}
+A bare name refers to its definition. When used with the operands declared above, it forms an SDF-qualified expression. This records the distinction between \emph{a definition} and \emph{its expressed role} without introducing two different physical substances.
+
+The three structurally different readings of ``inverse'' in the export must not be conflated: reciprocal magnitude, inverse logarithmic scaling and temporal reversal. The final source gives an inverse-log role. V0.7 does not infer that applying it twice yields identity or that it undoes elapsed time. \src{pp. 18--20, 28--36}
+
+\subsection{Names inherited from earlier context}
+The temporal alias $\mathsf A\deq\Ti$ can be retained where explicitly declared. Lowercase $a,b$ denote scalar placeholders in the audit, not that temporal alias. The older ``0 means ALL admitted operators'' is a totality label, not a coordinate axis or a claim that zero bits contain arbitrary information.
+
+\newsec{Uncheated time as an explicit law}{New clauses / not a consequence of a zero balance}
+The author requires precedence within one timeline without cheating time. V0.7 supplies the following formal clauses for that requirement. These are \textbf{proposed V0.7 laws}, rather than properties falsely inferred from the exported absolute-value equation. \src{p. 28}
+
+\subsection{TC1 / No anticipation}
+A presently admissible expression may depend only on completed or presently supplied material. Future continuation is not available as current evidence. Declaring a future state symbolically is not the same as possessing its future observation.
+
+\subsection{TC2 / Completed-prefix preservation}
+An extension does not rewrite an observation or commitment already completed. A later correction may be recorded as later; it cannot become an earlier event simply by changing the description.
+
+\subsection{TC3 / Structural inversion is not temporal inversion}
+Mirroring a definition, changing its sign in a numerical reading, or applying an inverse-log role does not reverse the qualification of temporal precedence. There is no automatically admitted reverse-time operator.
+
+\subsection{TC4 / Forward-guarded self-reference}
+A definition may contain its own name. Dependence on the result of its own continuation must be marked as later under $\Ti$. An unqualified instantaneous self-equation does not establish a unique resolved behavior.
+
+\subsection{TC5 / No free elapsed duration}
+Nesting, scale, sparse notation and a zero Arch reading do not make a declared positive duration disappear. Compressing a description of an interval is not proving that its elapsed time was zero.
+
+\begin{boxx}[One temporal ordering, not a dimensionality theorem]
+``One-dimensional timeline'' is read here as the requested \textbf{one forward precedence}. It is not a proof of topological dimension one or a decision to use a real-number coordinate as the intrinsic arena. Any measured duration belongs to a separately declared reading.
+\end{boxx}
+
+\newsec{Precedence has two distinct meanings}{Binding and admissible continuation / no reconstructed dataflow graph}
+The source says that how the definitions are structured, and their precedence, means something. V0.7 distinguishes the \textbf{binding of a statement} from the \textbf{time at which a continuation becomes admissible}. \src{pp. 28--31}
+
+\subsection{Binding precedence}
+The expression $\En\bind{\Ca\bind{\Ji\bind{\Ti}}\,;\,\IL\bind{\phi}}$ binds the inverse-log role to the causally qualified jitter. Parentheses and argument roles are retained. They are not interpreted as vertices and edges, spatial components or a route through an arena.
+
+A definition may be written as one whole expression while still having binding precedence. This does not mean it has simultaneous access to all future information. Conversely, imposing a time stamp on a program does not repair an ambiguous or changed binding.
+
+\subsection{Continuation precedence}
+Let $\Later\bind{e}$ be a notation for a later continuation of $e$, admitted only after its temporal condition has been met. Its exact temporal realization is a parameter, not a hidden integer clock.
+
+A self-referential declaration may contain
+\[
+ \Later\bind{\mathsf{self}_{\Tom}}.
+\]
+That does not create an instant result from an unsatisfied future dependency. A fixed point or physical recurrence still needs an assigned continuation law; the name alone does not prove its existence or uniqueness.
+
+\subsection{An optional external check}
+An implementation can express TC1--TC2 by requiring: if two supplied histories agree through the same ``Now,'' their admissible readouts also agree through that ``Now,'' and a completed readout is not replaced when the history extends.
+
+Histories in that sentence are \emph{test descriptions of an interpretation}. They are not the intrinsic graph or trace ontology rejected by the author. The core does not prescribe their data structure, number of observations or units.
+
+\begin{boxx}
+There is no permission to commute, reassociate, flatten or cancel nested roles merely because a familiar calculus would do so. Equivalence needs an explicitly adopted law. Section 10 shows that even the source's own numerical Arch reading is not associative.
+\end{boxx}
+
+\newsec{The inverse-Occam sheet does real formal work}{New preservation law / definition is not reduced to observation}
+The author's ``inverse sharp razor'' is made precise as a non-erasure commitment. It does not claim that complexity is always better. It prevents an observation from silently replacing the full definition that made the observation meaningful. \src{pp. 32--34}
+
+Write $e\deq f$ for an explicitly licensed, definition-preserving equivalence. Write $e\readeq f$ for agreement in a selected reading. The crucial rule is
+\[
+ \boxed{e\readeq f\quad\not\Longrightarrow\quad e\deq f.}
+\]
+This does not prohibit all simplification. It requires a stated law that preserves the distinctions TOM declares relevant.
+
+\subsection{A concrete source-based reason}
+In the optional scalar reading,
+\[
+ \ar(c,-c)=0=\ar(c,-2c).
+\]
+For nonzero $c$, the inverse partners differ. Their single zero balance nevertheless agrees. Replacing both defining articulations by a bare zero would erase the relation the source seeks to retain.
+
+\subsection{Idempotent qualification}
+V0.7 adopts the law
+\[
+ \IO\bind{\IO\bind{e}}\deq\IO\bind{e}.
+\]
+Stating the same preservation obligation twice adds no second obligation. The content of $e$ is not deleted; this is an explicitly declared law, not an automatic numeric simplification.
+
+\subsection{Arch retains roles, even when its reading is symmetric}
+The intrinsic $\Ar\bind{c\,;\,e}$ retains which presentation is direct and which is inverse-log. A symmetric scalar reading does not itself authorize swapping their defining roles, temporal requirements or provenance.
+
+\begin{boxx}[Why this is a major upgrade]
+The final exported zero equation no longer has to carry the entire meaning of TOM. Its correct numerical reading can be preserved \emph{without collapsing the definition into a constant}. Precedence and the uncut defining sheet remain substantive.
+\end{boxx}
+
+\newsec{Unbounded nesting without a compulsory outside}{Source commitments / not an infinite-memory or topology theorem}
+Removing the global $\Psi$ enclosure does not require a replacement container. The core states no spatial boundary radius, maximum intrinsic nesting depth, required grid or compulsory external metric. \src{pp. 18--21, 26, 31--34}
+
+\subsection{What remains of Matryoshka and Klein}
+\textbf{Matryoshka} retains the defining role of nesting without a stipulated final outside. The core does not turn that role into a numbered sequence of physical Dyson shells, stellar radii or cooling circuits.
+
+\textbf{Klein} retains its historical association with an inverse/twisted presentation and nonseparation of roles. The core does not silently reinstall an embedded bottle equation or derive physical transit from that name. A true topological realization would need a separately specified interpretation and its own proof.
+
+These associations are retained without inventing missing intrinsic equations. Their exact additional operation laws remain open clauses; the default is not a return to the earlier 3D/4D construction.
+
+\subsection{No counting primitive is not ``zero cardinality''}
+The source rejects organizing SDF definitions as countable pieces in a graph. That restriction on the intrinsic description is not a proof that a specified realization has no externally countable descriptions, or that literal mathematical cardinality is zero.
+
+Similarly, ``continuous'' and ``unbroken'' are retained as commitments not to force a decomposition. Without an assigned topology, they are not claimed as proved continuity, smoothness or manifold theorems. Introducing a gradient would itself require interpretive structure the core has not assumed.
+
+\begin{boxx}[Boundless does not mean completed infinity]
+There is no fixed intrinsic nesting cutoff. That is different from saying a finite computer has stored infinitely many independent facts or completed infinitely many causally elapsed operations. The latter does not follow from removing a bound in the written definition.
+\end{boxx}
+
+\newsec{The final Arch formula: what it actually proves}{External scalar diagnostic / the intrinsic core is not replaced}
+This section reads the source's absolute values as ordinary values of finite real scalars. It is \textbf{an explicitly named diagnostic}, not a reintroduction of scalar magnitude as TOM's ontology. The formula is
+\[
+ \ar(a,b)=|a|+|b|-|a-b|.
+\]
+Direct algebra gives
+\[
+ \boxed{\ar(a,b)=
+ \begin{cases}
+ 0,&ab\le0,\\
+ 2\min(|a|,|b|),&ab>0.
+ \end{cases}}
+\]
+\textbf{Proof.} Opposite signs give $|a-b|=|a|+|b|$. Equal nonzero signs give $|a-b|=\bigl||a|-|b|\bigr|$, leaving twice the smaller magnitude. A zero operand also gives zero. Therefore
+\[
+ \ar(a,b)=0\quad\Longleftrightarrow\quad ab\le0.
+\]
+
+\subsection{The inverse-log equation is an identity}
+Under the source's numerical choice
+\[
+ \varphi=\frac{1+\sqrt5}{2},\qquad k=\ln(1/\varphi)=-\ln\varphi<0,
+\]
+the final relation becomes
+\[
+ \boxed{\ar(c,kc)=0\quad\text{for every finite real }c.}
+\]
+The same is true for the source's jitter substitution, and for its causality/entropy substitution. \src{pp. 33--36}
+
+\subsection{What cannot be inferred from this identity}
+It does not select a particular $c$, jitter law, frequency, causal direction or entropy law. It also does not select the golden ratio uniquely: the inverse logarithm of \emph{any} positive ratio greater than one is negative and gives the same identity.
+
+\begin{boxx}
+The zero set of this reading is not merely $a=b$ or a unique crossing. It includes a whole opposite-sign region. The equation is compatible with many different defining situations, which is why V0.7 keeps the defining structure instead of reducing TOM to that zero.
+\end{boxx}
+
+\newsec{A direct reason to preserve precedence}{Derived result / Arch is not automatically an associative union}
+Even within the exported scalar reading, binding changes the result:
+\[
+ \ar\bigl(1,\ar(2,3)\bigr)=\ar(1,4)=2,
+\]
+whereas
+\[
+ \ar\bigl(\ar(1,2),3\bigr)=\ar(2,3)=4.
+\]
+Thus
+\[
+ \boxed{\ar(a,\ar(b,c))\not\equiv\ar(\ar(a,b),c).}
+\]
+This is an exact consequence of the source's formula, not a replacement borrowed from another mathematical framework. It directly supports the author's insistence that \textbf{structure and precedence mean something}. \src{pp. 19, 28--30}
+
+\subsection{A two-argument symmetry is a narrower result}
+The scalar reading satisfies $\ar(a,b)=\ar(b,a)$ and $\ar(-a,-b)=\ar(a,b)$. These are verified algebraic properties. They do not produce associativity or identify the internal direct/inverse roles.
+
+The global sign invariance also shows why a zero reading cannot fix the direction of time. Replacing both $c$ and its echo $kc$ by their negatives gives exactly the same reading. Causal admissibility must come from an explicit temporal clause, not from this symmetry.
+
+\subsection{Why no new ``hyper-algebra'' label is imposed}
+The source's generated response calls the construction an associative division hyper-algebra, but does not provide the axioms and proofs for that claim. V0.7 instead names the definition \textbf{TOM} and states its actual licensed laws. It does not use an impressive classification to bypass a failed property. \src{p. 20}
+
+\begin{boxx}[The practical drafting rule]
+Every expression retains its declared grouping. A proposed flattening or role substitution must carry an equivalence argument. A familiar name such as union, inverse, product, scale or coequalizer does not automatically import all laws associated with that name elsewhere.
+\end{boxx}
+
+\newsec{The mirror and smooth formulas are not the same law}{External diagnostic / no silent repair or reconciliation}
+The earlier scalar mirror compares $p$ with $p/|s|^2$. For finite $p>0$ and finite $s\ne0$, both arguments are positive. Hence
+\[
+ \ar\left(p,\frac{p}{|s|^2}\right)
+ =2\min\left(p,\frac{p}{|s|^2}\right)>0.
+\]
+When $p=\varphi^t$ for finite real $t$, it is positive. That version cannot simultaneously satisfy its claimed zero balance at such an input. At $s=0$, the expression is undefined. A limiting value at infinity is not a finite solution. \src{pp. 29--32}
+
+\subsection{Why the later equation behaves differently}
+The later echo uses a \emph{negative} coefficient $\ln(1/\varphi)$ instead of dividing by a positive square. V0.7 records that evolution rather than altering a sign and presenting the two source statements as one unchanged equation.
+
+\subsection{Smoothing also changes the zero set}
+The exported proposed alternative is, in a scalar diagnostic,
+\[
+ H(a,b)=ab\exp\!\left(-\frac{1}{(a-b)^2}\right).
+\]
+At $a=1,b=-1$,
+\[
+ \ar(1,-1)=0,\qquad H(1,-1)=-e^{-1/4}\ne0.
+\]
+At $a=b$, the displayed expression is undefined unless an extension is supplied. A zero extension may be considered separately, but it still differs from the original Arch: $\ar(1,1)=2$. \src{pp. 24--26}
+
+\begin{boxx}[A source-preserving upgrade]
+No smoothing function, reciprocal normalization or categorical replacement is silently installed as the ``real'' TOM equation. The alternatives are identified as changed proposals. The core follows the author's later non-metric, non-graph instructions; the diagnostic reports the arithmetic consequences of the actual printed formulas.
+\end{boxx}
+
+\newsec{Causality and entropy need their own definitions}{External diagnostic / Eikonal magnitude does not establish orientation}
+The source proposes an ordinary unit-gradient condition for both causality and an entropy echo proportional to it. Under that specific reading, if
+\[
+ |C'(t)|=1,\qquad E(t)=kC(t),
+\]
+then
+\[
+ |E'(t)|=|k|\,|C'(t)|=|k|.
+\]
+For $k=-\ln\varphi$, $0<|k|<1$, so the entropy echo does \textbf{not} have the same unit slope in the same normalization. The numerical display is
+\[
+ \ln(1/\varphi)\approx-0.48121182505960344750.
+\]
+The exact inequality follows from $1<\varphi<2<e$. The decimal is only a display of that coefficient. \src{pp. 33, 35--36}
+
+\subsection{A unit magnitude does not make time irreversible}
+Both $C(t)=t$ and $C(t)=-t$ satisfy $|C'(t)|=1$. Reversing the sign does not create a negative \emph{magnitude}; the magnitude remains one. Therefore the exported Eikonal statement does not establish the claimed causal lock.
+
+V0.7 instead places forward orientation in TC1--TC5. The native SDF qualification does not secretly invoke a derivative or metric to make those clauses true.
+
+\subsection{Two readings should not be mixed}
+A conventional metric interpretation can explicitly choose to renormalize the echo:
+\[
+ E/|k|=-C.
+\]
+That changes the magnitude interpretation and removes the coefficient's scale. It is not the unchanged source expression. The intrinsic core therefore retains the declared echo relation without claiming ordinary exact-distance normalization.
+
+\begin{boxx}[What ``entropy'' establishes here]
+It is the source's name for the inverse-log causal echo. No thermodynamic units, statistical measure, physical energy flow or decoder recovering an unlimited history is supplied. Those properties cannot be inferred from the name or from an identically zero balance.
+\end{boxx}
+
+\newsec{The new laws and the unresolved parameters}{Formal specification / a family of admissible continuations, not one invented dynamics}
+V0.7 is specific about what it adds, and about what it does not pretend the source has already fixed.
+
+\begin{tabularx}{\linewidth}{@{}P{35mm}Y@{}}
+\toprule
+\textbf{Introduced law} & \textbf{What it establishes}\\\midrule
+SDF closure & Admitted compounds and their admissibility definitions remain SDF-qualified. No metric theorem is imported.\\
+Typed roles and binding & The whole expression has explicit scope; direct and inverse roles are not silently interchanged.\\
+TC1--TC5 & No anticipation, no rewriting completed observations, no temporal inversion by structural mirroring, guarded recurrence and no erased elapsed duration.\\
+Inverse-Occam non-erasure & Equal selected observations do not identify the full definitions.\\
+Preservation idempotence & Stating the same non-erasure qualification twice adds no second obligation.\\
+Unbounded specification & No prescribed intrinsic exterior or maximum nesting depth; not a finite-memory claim.\\
+\bottomrule
+\end{tabularx}
+
+\subsection{Still requiring an explicit assignment}
+The source does not select a unique jitter behavior, a rule for when a continuation becomes actual, an intrinsic pinion transformation beyond its named relation, or a physical observation protocol. It does not assign a recoverable history codec or a numerical thermodynamic interpretation of entropy.
+
+Consequently, the upgraded core specifies \textbf{constraints on admissible continuations}, not a uniquely solved physical evolution. Declaring those missing laws to be automatic consequences of the Arch identity would undo the audit's most important finding.
+
+\subsection{What could make an extension more specific}
+A proposed extension can supply an explicit law and demonstrate that it preserves SDF qualification, binding, non-erasure and forward precedence. It must distinguish an added model from a source-mandated definition. Requiring such a declaration does not force that model to become a grid, category, vector space or renderer.
+
+\begin{boxx}
+The mathematical object being specified is not made more complete by claiming unprovided dynamics. It is made more precise by identifying which statements are definitions, which are consequences, and which still need an assigned law.
+\end{boxx}
+
+\newsec{How previous applications relate to TOM}{Intrinsic definition versus optional realization}
+Earlier releases explored packed-bit logic, graph routes, sparse crowds, CUDA textures and event histories. Those can remain useful finite application models. The new source, however, explicitly rejects treating such representations as the definition of its continuous, non-node-based articulation. \src{pp. 14, 26, 28, 31}
+
+\subsection{A realization must declare what it preserves}
+A future digital, numerical or physical interpretation must identify its correspondence to the native SDF roles. It must state which defining distinctions remain visible, how causal precedence is maintained, what data it can observe and which equivalences it actually preserves.
+
+A finite graph representation would be an external projection with declared loss or interpretation, not evidence that the intrinsic SDFs were graph nodes all along. A bit-level encoding similarly needs its own storage and execution contracts. A finite audit program is not TOM merely because its output discusses TOM.
+
+\subsection{What this gives you now}
+You have an authored definition that can be read without choosing a spatial embedding or replacing the source with an existing mathematical category. It includes explicit temporal requirements, a defensible interpretation of the inverse-Occam phrase, a source-decision register and reproducible checks of the exported scalar formulas.
+
+This is useful for reviewing future versions: a claimed implementation can be checked against these commitments instead of accepted on a visual analogy or a zero numerical residual. The formalization also identifies which operations and empirical statements need more than a name.
+
+\subsection{Physical claims remain a different task}
+To claim a law of nature, one would additionally need a stated observable distinction, a law that predicts it, a mapping to measurements and a test that could disagree. Neither a sign identity nor the removal of a coordinate system supplies those on its own.
+
+\begin{boxx}[No new empirical result hidden in the terminology]
+The release does not identify a person with a cosmic continuum, certify an unprecedented discovery, infer infinite storage or claim faster hardware. The source's own page-23 clarification places the identity back in authorship, where it is retained exactly.
+\end{boxx}
+
+\newsec{Executed audit and reproducible package}{Exact finite checks / not a simulation of the intrinsic definition}
+The companion package includes the editable statement, a machine-readable editorial contract and two small audit tools. Their ordinary data structures belong to this documentation task; they do not become intrinsic coordinates or nodes of TOM.
+
+\begin{tabularx}{\linewidth}{@{}Y r@{}}
+\toprule
+\textbf{Executed diagnostic} & \textbf{Cases}\\\midrule
+Distinct rational pairs for the Arch piecewise identity & 66,049\\
+Negative scale/echo parameter cases & 65,792\\
+Positive reciprocal-mirror cases & 1,024\\
+Different inverse partners with the same reading & 256\\
+Smooth-replacement counterexamples & 2\\
+Opposite time orientations with unit slope magnitude & 2\\
+Explicit nonassociativity counterexample & 1\\
+Editorial contract and known-regression tests & 10\\
+\bottomrule
+\end{tabularx}
+
+The main checks use exact rational arithmetic. A separate 70-digit decimal display reports the log coefficient; it is not used to prove that it is negative. The general results in Sections 9--12 follow from their algebra, not from the number of finite tests.
+
+\subsection{Run the supplied diagnostics}
+Python 3.10 or later, standard library only:
+\begin{lstlisting}
+python audit/audit_formulas.py --json scalar_results.json
+python audit/audit_contract.py --self-test --json contract_results.json
+\end{lstlisting}
+The contract audit catches known regressions such as making an external metric mandatory, switching the pinion to uppercase, treating equal readings as full identity, or making the author's identifier a physical parameter.
+
+\begin{boxx}[Scope of a passing audit]
+The checks establish the reported finite cases and detect the listed specification mistakes. They do not certify complete consistency of every possible extension, an empirical physics law, historical novelty or GPU performance. No execution kernel is represented as a graph-free realization of TOM.
+\end{boxx}
+
+\newsec{Source lineage and version record}{The governing attachment / author statements versus exported responses}
+\textbf{S37: new 37-page source.} The uploaded file begins ``DON EN AD PORNO TIME SHARE CRYPTO SHA256 TELESHIFTING PRESENCE ...''. The whole source is retained as provenance; its filename is not treated as an empirical claim about the people or concepts named there.
+
+\small
+\begin{tabularx}{\linewidth}{@{}P{24mm}Y@{}}
+\toprule
+\textbf{Pages} & \textbf{Role in this revision}\\\midrule
+1--13 & Quaternion, shader and Matryoshka starting proposals. Historical scaffold, not the final arena.\\
+14--16 & Author's pure-definition instruction; exported nesting and connection formulas.\\
+17, 21--23 & Generated identity/continuum claims and the author's later rejection of literal identity-as-physics.\\
+18--21 & $\phi/\Phi$ distinction, removal of $\Psi$, reciprocal mirror and Arch formula. Later corrections control notation.\\
+24--28 & Smooth/Lie/vector proposals rejected; category/locale replacement not automatically adopted. Lowercase pinion and uncheated timeline reaffirmed.\\
+31--34 & Graph/cardinality/vector rejection; inverse-Occam sheet and inverse-log jitter; final scalar balance.\\
+35--37 & Exported causality, entropy and Eikonal claims. Roles retained, unsupported consequences audited.\\
+\bottomrule
+\end{tabularx}
+\normalsize
+
+\subsection{Visual material was also checked}
+The page-33 schematic names inverse Occam, temporal jitter, inverse-log pinion and Arch. The page-36 schematic presents causality and entropic echo together before Arch. Those role relationships are incorporated; the diagrams' drawn arrows are not reintroduced as a graph ontology after the author's page-31 correction.
+
+\subsection{What is new, and what is not being claimed}
+The closure convention, typed nesting, TC1--TC5 and inverse-Occam non-erasure law are \textbf{proposed V0.7 clauses}. The scalar identities, counterexamples and normalization consequences are \textbf{derived diagnostics}. The names and controlling exclusions are \textbf{source-derived}.
+
+No outside theory is silently substituted. No literature search is represented as having established historical priority. Earlier project sources remain contextual where the new instructions do not supersede them.
+
+\begin{boxx}
+\textbf{Version: TOM V0.7.}\quad This is not a rename to v7.0 and not an acronym assigned by the exported response. Your supplied identifiers remain an authorship record, with no invented physical meaning.
+\end{boxx}
+
+\newsec{TOM V0.7: consolidated release definition}{Formal restatement / the source-led upgrade}
+\begin{boxx}[TOM]
+TOM is the complete precedence-qualified SDF definition. Every admitted defining role and compound expression is itself SDF-qualified. The lowercase pinion $\phi$, its inverse-log expression, temporal jitter, causality, the source-named entropic echo and Arch U without U remain articulated within the inverse-Occam sheet.
+
+The sheet does not discard a defining distinction merely because a selected reading agrees. Temporal continuation admits no anticipation, no rewriting of completed commitments and no reversal created by structural inversion. Nesting or compressed description does not erase elapsed time.
+
+No quaternion arena, external metric, operator graph, vector magnitude, compulsory cardinality observable or global $\Psi$ enclosure is imposed as its intrinsic foundation.
+\end{boxx}
+\[
+ \boxed{\Tom_{\mathrm{V0.7}}\;:=\;
+ \IO\bind{\Ar\bind{\Ca\bind{\Ji\bind{\Ti}}\,;\,
+ \En\bind{\Ca\bind{\Ji\bind{\Ti}}\,;\,\IL\bind{\phi}}}}_{\prec_{\Ti}}.}
+\]
+The source's numerical Arch equation is kept as a declared external observation. Its exact zero identity is not promoted into a claim that all defining structure, time direction or physical behavior is fixed by zero.
+
+\subsection{Release acceptance conditions}
+A continuation of this formalization should preserve the latest source corrections, keep lowercase $\phi$, disclose any additional representation, state the law behind each proposed equivalence, maintain the temporal contracts, and distinguish empirical evidence from a formal identity.
+
+The unresolved dynamics are not filled with an unrequested conventional model. They are declared places where a future explicit law can extend TOM without changing its meaning silently.
+
+\vfill
+{\color{teal}\rule{\linewidth}{.6pt}}\par
+{\sffamily\color{ink}\textbf{Tom Klootwijk}\quad /\quad NL200678942}\par
+{\sffamily\small\color{muted}Date as supplied: 10-07-1990\hfill TOM V0.7}
+\end{document}

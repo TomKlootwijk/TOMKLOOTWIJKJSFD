@@ -1,0 +1,9 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (5.7s)
+-- Generating done (0.3s)
+-- Build files have been written to: C:/TOMKLOOTWIJKJSFD/TOM_V0_7_Integer_Kernel_RTX5070Ti/TOM_V0_7_Integer_Kernel/build-cuda128
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+  tom_cpu.vcxproj -> C:\TOMKLOOTWIJKJSFD\TOM_V0_7_Integer_Kernel_RTX5070Ti\TOM_V0_7_Integer_Kernel\build-cuda128\Release\tom_cpu.exe
+  tom_core_tests.vcxproj -> C:\TOMKLOOTWIJKJSFD\TOM_V0_7_Integer_Kernel_RTX5070Ti\TOM_V0_7_Integer_Kernel\build-cuda128\Release\tom_core_tests.exe
+  tom_cuda.vcxproj -> C:\TOMKLOOTWIJKJSFD\TOM_V0_7_Integer_Kernel_RTX5070Ti\TOM_V0_7_Integer_Kernel\build-cuda128\Release\tom_cuda.exe

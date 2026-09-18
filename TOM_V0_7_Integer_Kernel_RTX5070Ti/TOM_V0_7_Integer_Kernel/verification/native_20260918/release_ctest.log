@@ -1,0 +1,17 @@
+Test project C:/TOMKLOOTWIJKJSFD/TOM_V0_7_Integer_Kernel_RTX5070Ti/TOM_V0_7_Integer_Kernel/build-cuda128
+    Start 1: tom_integer_core
+1/6 Test #1: tom_integer_core .................   Passed    0.12 sec
+    Start 2: tom_native_output_integrity
+2/6 Test #2: tom_native_output_integrity ......   Passed    0.09 sec
+    Start 3: tom_compiler
+3/6 Test #3: tom_compiler .....................   Passed    1.05 sec
+    Start 4: tom_native_semantics
+4/6 Test #4: tom_native_semantics .............   Passed    2.18 sec
+    Start 5: tom_native_resume
+5/6 Test #5: tom_native_resume ................   Passed    0.64 sec
+    Start 6: tom_bounded_space
+6/6 Test #6: tom_bounded_space ................   Passed    1.00 sec
+
+100% tests passed, 0 tests failed out of 6
+
+Total Test time (real) =   5.20 sec

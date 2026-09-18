@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "epoch": 1,
+  "saved_candidates": 536870912,
+  "source_pdf_sha256": "97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc",
+  "scope": "Exact saved bounded certificate answers; candidate indices and witnesses are implementation data, not native TOM constituents.",
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "previous_time": 0,
+        "current_time": 0,
+        "elapsed": 0,
+        "latest_dependency": 0,
+        "retained_before": 0,
+        "retained_after": 0,
+        "direct": 0,
+        "echo": 0,
+        "left_definition_witness": 0,
+        "right_definition_witness": 0
+      },
+      "saved_gpu_admissible": false,
+      "independent_checks": {
+        "forward": 0,
+        "elapsed_preserved": 0,
+        "future_independent": 1,
+        "retention_preserved": 1,
+        "temporal_retention_admissible": 0,
+        "Arch_neutral": 1,
+        "distinct_witnesses": 0,
+        "temporal_and_arch_neutral": 0,
+        "temporal_and_distinct": 0,
+        "temporal_arch_and_distinct": 0,
+        "Arch_residual": 0
+      }
+    },
+    {
+      "case_index": 72,
+      "inputs": {
+        "previous_time": 0,
+        "current_time": 1,
+        "elapsed": 1,
+        "latest_dependency": 0,
+        "retained_before": 0,
+        "retained_after": 0,
+        "direct": 0,
+        "echo": 0,
+        "left_definition_witness": 0,
+        "right_definition_witness": 0
+      },
+      "saved_gpu_admissible": true,
+      "independent_checks": {
+        "forward": 1,
+        "elapsed_preserved": 1,
+        "future_independent": 1,
+        "retention_preserved": 1,
+        "temporal_retention_admissible": 1,
+        "Arch_neutral": 1,
+        "distinct_witnesses": 0,
+        "temporal_and_arch_neutral": 1,
+        "temporal_and_distinct": 0,
+        "temporal_arch_and_distinct": 0,
+        "Arch_residual": 0
+      }
+    },
+    {
+      "case_index": 1096,
+      "inputs": {
+        "previous_time": 0,
+        "current_time": 1,
+        "elapsed": 1,
+        "latest_dependency": 2,
+        "retained_before": 0,
+        "retained_after": 0,
+        "direct": 0,
+        "echo": 0,
+        "left_definition_witness": 0,
+        "right_definition_witness": 0
+      },
+      "saved_gpu_admissible": false,
+      "independent_checks": {
+        "forward": 1,
+        "elapsed_preserved": 1,
+        "future_independent": 0,
+        "retention_preserved": 1,
+        "temporal_retention_admissible": 0,
+        "Arch_neutral": 1,
+        "distinct_witnesses": 0,
+        "temporal_and_arch_neutral": 0,
+        "temporal_and_distinct": 0,
+        "temporal_arch_and_distinct": 0,
+        "Arch_residual": 0
+      }
+    },
+    {
+      "case_index": 67108936,
+      "inputs": {
+        "previous_time": 0,
+        "current_time": 1,
+        "elapsed": 1,
+        "latest_dependency": 0,
+        "retained_before": 0,
+        "retained_after": 0,
+        "direct": 0,
+        "echo": 0,
+        "left_definition_witness": 1,
+        "right_definition_witness": 0
+      },
+      "saved_gpu_admissible": true,
+      "independent_checks": {
+        "forward": 1,
+        "elapsed_preserved": 1,
+        "future_independent": 1,
+        "retention_preserved": 1,
+        "temporal_retention_admissible": 1,
+        "Arch_neutral": 1,
+        "distinct_witnesses": 1,
+        "temporal_and_arch_neutral": 1,
+        "temporal_and_distinct": 1,
+        "temporal_arch_and_distinct": 1,
+        "Arch_residual": 0
+      }
+    }
+  ]
+}

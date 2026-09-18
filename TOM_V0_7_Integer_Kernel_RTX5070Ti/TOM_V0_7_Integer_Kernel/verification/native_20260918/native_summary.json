@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "source_pdf_sha256": "97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc",
+  "binary_sha256": "0202167a718d9fb770eb65d2179aadc35361e7288aef61f0e9ff0b9a41329489",
+  "distinct_cases": 2474208,
+  "working_bytes": 11559499776,
+  "working_GiB": 10.765623092651367,
+  "cuda_free_after_bytes": [
+    0,
+    0,
+    0
+  ],
+  "repetitions_per_run": 16,
+  "samples": 3,
+  "median_compute_ms_per_pass": 126.1641375,
+  "median_process_seconds": 2.7591053,
+  "native_cases_per_second": 19611024.5671041,
+  "full_word_verification": {
+    "enabled": true,
+    "reference": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\native_templates_expected.tor",
+    "passed": true,
+    "checked_words": 1821017088,
+    "expected_words": 1821017088,
+    "mismatched_words": 0,
+    "elapsed_host_ns": 29158100,
+    "in_compute_timing": false,
+    "scope": "every word of every generated result compared with independently supplied template bytes; only six retained-history identity words are substituted; verifier does not evaluate native terms"
+  },
+  "inverse_occam_rewrites_per_pass": 8659728,
+  "explicit_alias_rewrites_per_pass": 1237104,
+  "source_TOM_cases": 2474208,
+  "telemetry_peaks": {
+    "memory_used_MiB": 11194.0,
+    "memory_free_MiB": 11932.0,
+    "gpu_busy_percent": 100.0,
+    "memory_busy_percent": 50.0,
+    "temperature_C": 69.0,
+    "power_W": 142.74
+  },
+  "optimization": {
+    "same_cases": 262144,
+    "baseline_per_pass_ms": 16.0553625,
+    "optimized_per_pass_ms": 13.302475,
+    "elapsed_reduction_percent": 17.146218280652338,
+    "throughput_increase_percent": 20.694551201937994
+  },
+  "minimum_device_memory_free_MiB": 751.0,
+  "final_measurement": "final_capacity.json",
+  "representative_profile": {
+    "cases": 32768,
+    "scope": "separate representative shard, not full-memory run",
+    "SM_throughput_percent_of_peak": 3.55,
+    "DRAM_throughput_percent_of_peak": 24.48,
+    "active_warp_occupancy_percent": 46.46,
+    "duration_ns": 1645344,
+    "source": "ncu_native_tile.csv"
+  }
+}

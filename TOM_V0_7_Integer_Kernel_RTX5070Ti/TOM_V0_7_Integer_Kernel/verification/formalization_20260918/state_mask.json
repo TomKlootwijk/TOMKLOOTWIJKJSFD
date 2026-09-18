@@ -1,0 +1,5055 @@
+{
+  "status": "PASS",
+  "gpu_executed": true,
+  "hardware": {
+    "device": 0,
+    "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "compute_major": 12,
+    "compute_minor": 0,
+    "free_bytes": 11561598976,
+    "total_bytes": 12820480000,
+    "shared_default_bytes": 49152,
+    "shared_optin_bytes": 101376,
+    "linear_texture_max_elements": 268435456,
+    "l2_bytes": 37748736,
+    "sm_count": 46,
+    "warp_size": 32,
+    "max_threads_per_sm": 1536,
+    "shared_bytes_per_sm": 102400,
+    "runtime_version": 12080,
+    "driver_api_version": 13010
+  },
+  "program_sha256": "26b141c1c6a2edf4cb0a1c6a5f5700a5c6dc7d5f33ac38a96d284539bcecacca",
+  "executable_sha256": "a00a3c0968fb3f3acd49bd65d8040ba541788805a170a769a254a3b61eeb1201",
+  "counts": {
+    "mask_gpu_runs": 25,
+    "disabled_export_runs": 1,
+    "invalid_option_runs": 4,
+    "backends": 3,
+    "evaluators": 2
+  },
+  "scope": "Every exported mask byte checked against an independent minterm oracle, including header, global word order, population totals, existing-file truncation, seeded and resumed data, warmup and zero ticks. Includes a selected plane larger than 1 MiB crossing both a transfer chunk and shard boundary; this checks output correctness, not the exporter peak allocation.",
+  "runs": [
+    {
+      "scenario": "seeded_single_word_shards",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "texture",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 2,
+        "shards": 19,
+        "warmup_ticks": 0,
+        "compute_executed": true,
+        "compute_launches": 38,
+        "warmup_compute_launches": 0,
+        "shard_words_cap": 1,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 1,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 39,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 475600,
+        "sample_digest": 13676872028393425776,
+        "sample_lanes": 32,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 19,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 1,
+                "digest": 13676872028393425776,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 1,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 1,
+                "words": 1,
+                "digest": 9539561310272117708,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 2,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 2,
+                "words": 1,
+                "digest": 1379140186704445209,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "first_word": 3,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 3,
+                "words": 1,
+                "digest": 2758971944027120340,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "first_word": 4,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 4,
+                "words": 1,
+                "digest": 6505516197028549730,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "first_word": 5,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 5,
+                "words": 1,
+                "digest": 5227914198834937791,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "first_word": 6,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 6,
+                "words": 1,
+                "digest": 14447633181950200611,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "first_word": 7,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 1,
+                "digest": 7248070628858861205,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "first_word": 8,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 8,
+                "words": 1,
+                "digest": 15392547464863624176,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "first_word": 9,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 9,
+                "words": 1,
+                "digest": 4840569988454536260,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "first_word": 10,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 10,
+                "words": 1,
+                "digest": 14893832454840953130,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "first_word": 11,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 11,
+                "words": 1,
+                "digest": 7029396419793148199,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "first_word": 12,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 12,
+                "words": 1,
+                "digest": 4865557828806375841,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "first_word": 13,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 13,
+                "words": 1,
+                "digest": 11220195417636630002,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "first_word": 14,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 1,
+                "digest": 7296378923715824504,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "first_word": 15,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 15,
+                "words": 1,
+                "digest": 9087572732911171332,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "first_word": 16,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 16,
+                "words": 1,
+                "digest": 10248756615132771428,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "first_word": 17,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 17,
+                "words": 1,
+                "digest": 2952480692099326075,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "first_word": 18,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 18,
+                "words": 1,
+                "digest": 4879266076439712135,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 19,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 0,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 147400,
+        "state_count_launches": 19,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\texture_field_seeded_single_word_shards.tmask",
+          "slot": 0,
+          "lanes": 608,
+          "epoch": 2,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 32,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "f4dbe73b11025fc3048393db3cc751a32f9405f5a92c3d5020574e9a8e647bf8",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "warmed_dynamic_mask",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "texture",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 3,
+        "epoch": 3,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": true,
+        "compute_launches": 9,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 39,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 119000,
+        "sample_digest": 4019591201609330996,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 4019591201609330996,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 8767712356511467230,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 14849261829141267698,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 53100,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\texture_field_warmed_dynamic_mask.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 3,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "a84cbea21a0c6d027fc12d327fb1dfa0cc646362028e8fba840b516f14b90951",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "resumed_high_counter_plane",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "texture",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 1099511627809,
+        "shards": 3,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 6,
+        "warmup_compute_launches": 6,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 39,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 83900,
+        "sample_digest": 9947012812831377833,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 9947012812831377833,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 16132125146922990750,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 12694177411095973636,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 4,
+            "ones": 307,
+            "zeros": 301,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 68200,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\texture_field_resumed_high_counter_plane.tmask",
+          "slot": 4,
+          "lanes": 608,
+          "epoch": 1099511627809,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 307,
+      "mask_sha256": "d7c75bf2048c455bb740141cbdf48da2d08b13bb19c50eb4d40d3ba91a970a8e",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "zero_ticks_warmed_resume",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "texture",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 0,
+        "epoch": 1099511627807,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": false,
+        "compute_launches": 0,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 39,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 400,
+        "sample_digest": 8048872748209506512,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 8048872748209506512,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 5672800261234882613,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 696493136041568663,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 325,
+            "zeros": 283,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 63500,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\texture_field_zero_ticks_warmed_resume.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 1099511627807,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 325,
+      "mask_sha256": "8b501f57a014649b2d709557a4ca67f20adbb7297cbaf695dd2bc860c9b35dd4",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "seeded_single_word_shards",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "texture",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 2,
+        "shards": 19,
+        "warmup_ticks": 0,
+        "compute_executed": true,
+        "compute_launches": 38,
+        "warmup_compute_launches": 0,
+        "shard_words_cap": 1,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 1,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 38,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 424400,
+        "sample_digest": 13676872028393425776,
+        "sample_lanes": 32,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 19,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 1,
+                "digest": 13676872028393425776,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 1,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 1,
+                "words": 1,
+                "digest": 9539561310272117708,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 2,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 2,
+                "words": 1,
+                "digest": 1379140186704445209,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "first_word": 3,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 3,
+                "words": 1,
+                "digest": 2758971944027120340,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "first_word": 4,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 4,
+                "words": 1,
+                "digest": 6505516197028549730,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "first_word": 5,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 5,
+                "words": 1,
+                "digest": 5227914198834937791,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "first_word": 6,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 6,
+                "words": 1,
+                "digest": 14447633181950200611,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "first_word": 7,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 1,
+                "digest": 7248070628858861205,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "first_word": 8,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 8,
+                "words": 1,
+                "digest": 15392547464863624176,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "first_word": 9,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 9,
+                "words": 1,
+                "digest": 4840569988454536260,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "first_word": 10,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 10,
+                "words": 1,
+                "digest": 14893832454840953130,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "first_word": 11,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 11,
+                "words": 1,
+                "digest": 7029396419793148199,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "first_word": 12,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 12,
+                "words": 1,
+                "digest": 4865557828806375841,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "first_word": 13,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 13,
+                "words": 1,
+                "digest": 11220195417636630002,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "first_word": 14,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 1,
+                "digest": 7296378923715824504,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "first_word": 15,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 15,
+                "words": 1,
+                "digest": 9087572732911171332,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "first_word": 16,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 16,
+                "words": 1,
+                "digest": 10248756615132771428,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "first_word": 17,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 17,
+                "words": 1,
+                "digest": 2952480692099326075,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "first_word": 18,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 18,
+                "words": 1,
+                "digest": 4879266076439712135,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 19,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 0,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 210700,
+        "state_count_launches": 19,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\texture_lowered_seeded_single_word_shards.tmask",
+          "slot": 0,
+          "lanes": 608,
+          "epoch": 2,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 32,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "f4dbe73b11025fc3048393db3cc751a32f9405f5a92c3d5020574e9a8e647bf8",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "warmed_dynamic_mask",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "texture",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 3,
+        "epoch": 3,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": true,
+        "compute_launches": 9,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 38,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 101500,
+        "sample_digest": 4019591201609330996,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 4019591201609330996,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 8767712356511467230,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 14849261829141267698,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 34700,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\texture_lowered_warmed_dynamic_mask.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 3,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "a84cbea21a0c6d027fc12d327fb1dfa0cc646362028e8fba840b516f14b90951",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "resumed_high_counter_plane",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "texture",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 1099511627809,
+        "shards": 3,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 6,
+        "warmup_compute_launches": 6,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 38,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 110600,
+        "sample_digest": 9947012812831377833,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 9947012812831377833,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 16132125146922990750,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 12694177411095973636,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 4,
+            "ones": 307,
+            "zeros": 301,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 46200,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\texture_lowered_resumed_high_counter_plane.tmask",
+          "slot": 4,
+          "lanes": 608,
+          "epoch": 1099511627809,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 307,
+      "mask_sha256": "d7c75bf2048c455bb740141cbdf48da2d08b13bb19c50eb4d40d3ba91a970a8e",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "zero_ticks_warmed_resume",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "texture",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 0,
+        "epoch": 1099511627807,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": false,
+        "compute_launches": 0,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 38,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 400,
+        "sample_digest": 8048872748209506512,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 8048872748209506512,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 5672800261234882613,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 696493136041568663,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 325,
+            "zeros": 283,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 58600,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\texture_lowered_zero_ticks_warmed_resume.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 1099511627807,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 325,
+      "mask_sha256": "8b501f57a014649b2d709557a4ca67f20adbb7297cbaf695dd2bc860c9b35dd4",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "seeded_single_word_shards",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 2,
+        "shards": 19,
+        "warmup_ticks": 0,
+        "compute_executed": true,
+        "compute_launches": 38,
+        "warmup_compute_launches": 0,
+        "shard_words_cap": 1,
+        "automatic_shard_words": 134217728,
+        "effective_shard_words": 1,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 405500,
+        "sample_digest": 13676872028393425776,
+        "sample_lanes": 32,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 19,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 1,
+                "digest": 13676872028393425776,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 1,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 1,
+                "words": 1,
+                "digest": 9539561310272117708,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 2,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 2,
+                "words": 1,
+                "digest": 1379140186704445209,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "first_word": 3,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 3,
+                "words": 1,
+                "digest": 2758971944027120340,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "first_word": 4,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 4,
+                "words": 1,
+                "digest": 6505516197028549730,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "first_word": 5,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 5,
+                "words": 1,
+                "digest": 5227914198834937791,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "first_word": 6,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 6,
+                "words": 1,
+                "digest": 14447633181950200611,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "first_word": 7,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 1,
+                "digest": 7248070628858861205,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "first_word": 8,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 8,
+                "words": 1,
+                "digest": 15392547464863624176,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "first_word": 9,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 9,
+                "words": 1,
+                "digest": 4840569988454536260,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "first_word": 10,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 10,
+                "words": 1,
+                "digest": 14893832454840953130,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "first_word": 11,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 11,
+                "words": 1,
+                "digest": 7029396419793148199,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "first_word": 12,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 12,
+                "words": 1,
+                "digest": 4865557828806375841,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "first_word": 13,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 13,
+                "words": 1,
+                "digest": 11220195417636630002,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "first_word": 14,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 1,
+                "digest": 7296378923715824504,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "first_word": 15,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 15,
+                "words": 1,
+                "digest": 9087572732911171332,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "first_word": 16,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 16,
+                "words": 1,
+                "digest": 10248756615132771428,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "first_word": 17,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 17,
+                "words": 1,
+                "digest": 2952480692099326075,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "first_word": 18,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 18,
+                "words": 1,
+                "digest": 4879266076439712135,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 19,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 0,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 193700,
+        "state_count_launches": 19,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\global_field_seeded_single_word_shards.tmask",
+          "slot": 0,
+          "lanes": 608,
+          "epoch": 2,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 32,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "f4dbe73b11025fc3048393db3cc751a32f9405f5a92c3d5020574e9a8e647bf8",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "warmed_dynamic_mask",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 3,
+        "epoch": 3,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": true,
+        "compute_launches": 9,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 134217728,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 105100,
+        "sample_digest": 4019591201609330996,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 4019591201609330996,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 8767712356511467230,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 14849261829141267698,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 35800,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\global_field_warmed_dynamic_mask.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 3,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "a84cbea21a0c6d027fc12d327fb1dfa0cc646362028e8fba840b516f14b90951",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "resumed_high_counter_plane",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 1099511627809,
+        "shards": 3,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 6,
+        "warmup_compute_launches": 6,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 134217728,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 102900,
+        "sample_digest": 9947012812831377833,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 9947012812831377833,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 16132125146922990750,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 12694177411095973636,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 4,
+            "ones": 307,
+            "zeros": 301,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 39000,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\global_field_resumed_high_counter_plane.tmask",
+          "slot": 4,
+          "lanes": 608,
+          "epoch": 1099511627809,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 307,
+      "mask_sha256": "d7c75bf2048c455bb740141cbdf48da2d08b13bb19c50eb4d40d3ba91a970a8e",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "zero_ticks_warmed_resume",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 0,
+        "epoch": 1099511627807,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": false,
+        "compute_launches": 0,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 134217728,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 500,
+        "sample_digest": 8048872748209506512,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 8048872748209506512,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 5672800261234882613,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 696493136041568663,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 325,
+            "zeros": 283,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 56600,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\global_field_zero_ticks_warmed_resume.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 1099511627807,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 325,
+      "mask_sha256": "8b501f57a014649b2d709557a4ca67f20adbb7297cbaf695dd2bc860c9b35dd4",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "seeded_single_word_shards",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 2,
+        "shards": 19,
+        "warmup_ticks": 0,
+        "compute_executed": true,
+        "compute_launches": 38,
+        "warmup_compute_launches": 0,
+        "shard_words_cap": 1,
+        "automatic_shard_words": 134217728,
+        "effective_shard_words": 1,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 386100,
+        "sample_digest": 13676872028393425776,
+        "sample_lanes": 32,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 19,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 1,
+                "digest": 13676872028393425776,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 1,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 1,
+                "words": 1,
+                "digest": 9539561310272117708,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 2,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 2,
+                "words": 1,
+                "digest": 1379140186704445209,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "first_word": 3,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 3,
+                "words": 1,
+                "digest": 2758971944027120340,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "first_word": 4,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 4,
+                "words": 1,
+                "digest": 6505516197028549730,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "first_word": 5,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 5,
+                "words": 1,
+                "digest": 5227914198834937791,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "first_word": 6,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 6,
+                "words": 1,
+                "digest": 14447633181950200611,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "first_word": 7,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 1,
+                "digest": 7248070628858861205,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "first_word": 8,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 8,
+                "words": 1,
+                "digest": 15392547464863624176,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "first_word": 9,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 9,
+                "words": 1,
+                "digest": 4840569988454536260,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "first_word": 10,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 10,
+                "words": 1,
+                "digest": 14893832454840953130,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "first_word": 11,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 11,
+                "words": 1,
+                "digest": 7029396419793148199,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "first_word": 12,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 12,
+                "words": 1,
+                "digest": 4865557828806375841,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "first_word": 13,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 13,
+                "words": 1,
+                "digest": 11220195417636630002,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "first_word": 14,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 1,
+                "digest": 7296378923715824504,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "first_word": 15,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 15,
+                "words": 1,
+                "digest": 9087572732911171332,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "first_word": 16,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 16,
+                "words": 1,
+                "digest": 10248756615132771428,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "first_word": 17,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 17,
+                "words": 1,
+                "digest": 2952480692099326075,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "first_word": 18,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 18,
+                "words": 1,
+                "digest": 4879266076439712135,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 19,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 0,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 248200,
+        "state_count_launches": 19,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\global_lowered_seeded_single_word_shards.tmask",
+          "slot": 0,
+          "lanes": 608,
+          "epoch": 2,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 32,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "f4dbe73b11025fc3048393db3cc751a32f9405f5a92c3d5020574e9a8e647bf8",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "warmed_dynamic_mask",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 3,
+        "epoch": 3,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": true,
+        "compute_launches": 9,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 134217728,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 84700,
+        "sample_digest": 4019591201609330996,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 4019591201609330996,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 8767712356511467230,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 14849261829141267698,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 47900,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\global_lowered_warmed_dynamic_mask.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 3,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "a84cbea21a0c6d027fc12d327fb1dfa0cc646362028e8fba840b516f14b90951",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "resumed_high_counter_plane",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 1099511627809,
+        "shards": 3,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 6,
+        "warmup_compute_launches": 6,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 134217728,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 62700,
+        "sample_digest": 9947012812831377833,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 9947012812831377833,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 16132125146922990750,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 12694177411095973636,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 4,
+            "ones": 307,
+            "zeros": 301,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 44900,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\global_lowered_resumed_high_counter_plane.tmask",
+          "slot": 4,
+          "lanes": 608,
+          "epoch": 1099511627809,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 307,
+      "mask_sha256": "d7c75bf2048c455bb740141cbdf48da2d08b13bb19c50eb4d40d3ba91a970a8e",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "zero_ticks_warmed_resume",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 0,
+        "epoch": 1099511627807,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": false,
+        "compute_launches": 0,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 134217728,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 500,
+        "sample_digest": 8048872748209506512,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 8048872748209506512,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 5672800261234882613,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 696493136041568663,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 325,
+            "zeros": 283,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 44400,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\global_lowered_zero_ticks_warmed_resume.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 1099511627807,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 325,
+      "mask_sha256": "8b501f57a014649b2d709557a4ca67f20adbb7297cbaf695dd2bc860c9b35dd4",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "seeded_single_word_shards",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 2,
+        "shards": 19,
+        "warmup_ticks": 0,
+        "compute_executed": true,
+        "compute_launches": 38,
+        "warmup_compute_launches": 0,
+        "shard_words_cap": 1,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 1,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 39,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 2112,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 306300,
+        "sample_digest": 13676872028393425776,
+        "sample_lanes": 32,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 19,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 1,
+                "digest": 13676872028393425776,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 1,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 1,
+                "words": 1,
+                "digest": 9539561310272117708,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 2,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 2,
+                "words": 1,
+                "digest": 1379140186704445209,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "first_word": 3,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 3,
+                "words": 1,
+                "digest": 2758971944027120340,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "first_word": 4,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 4,
+                "words": 1,
+                "digest": 6505516197028549730,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "first_word": 5,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 5,
+                "words": 1,
+                "digest": 5227914198834937791,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "first_word": 6,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 6,
+                "words": 1,
+                "digest": 14447633181950200611,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "first_word": 7,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 1,
+                "digest": 7248070628858861205,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "first_word": 8,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 8,
+                "words": 1,
+                "digest": 15392547464863624176,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "first_word": 9,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 9,
+                "words": 1,
+                "digest": 4840569988454536260,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "first_word": 10,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 10,
+                "words": 1,
+                "digest": 14893832454840953130,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "first_word": 11,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 11,
+                "words": 1,
+                "digest": 7029396419793148199,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "first_word": 12,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 12,
+                "words": 1,
+                "digest": 4865557828806375841,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "first_word": 13,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 13,
+                "words": 1,
+                "digest": 11220195417636630002,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "first_word": 14,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 1,
+                "digest": 7296378923715824504,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "first_word": 15,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 15,
+                "words": 1,
+                "digest": 9087572732911171332,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "first_word": 16,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 16,
+                "words": 1,
+                "digest": 10248756615132771428,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "first_word": 17,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 17,
+                "words": 1,
+                "digest": 2952480692099326075,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "first_word": 18,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 18,
+                "words": 1,
+                "digest": 4879266076439712135,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 19,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 0,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 194400,
+        "state_count_launches": 19,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\shared_field_seeded_single_word_shards.tmask",
+          "slot": 0,
+          "lanes": 608,
+          "epoch": 2,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 32,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "f4dbe73b11025fc3048393db3cc751a32f9405f5a92c3d5020574e9a8e647bf8",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "warmed_dynamic_mask",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 3,
+        "epoch": 3,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": true,
+        "compute_launches": 9,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 39,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 2112,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 67900,
+        "sample_digest": 4019591201609330996,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 4019591201609330996,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 8767712356511467230,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 14849261829141267698,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 45800,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\shared_field_warmed_dynamic_mask.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 3,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "a84cbea21a0c6d027fc12d327fb1dfa0cc646362028e8fba840b516f14b90951",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "resumed_high_counter_plane",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 1099511627809,
+        "shards": 3,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 6,
+        "warmup_compute_launches": 6,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 39,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 2112,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 95500,
+        "sample_digest": 9947012812831377833,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 9947012812831377833,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 16132125146922990750,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 12694177411095973636,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 4,
+            "ones": 307,
+            "zeros": 301,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 36000,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\shared_field_resumed_high_counter_plane.tmask",
+          "slot": 4,
+          "lanes": 608,
+          "epoch": 1099511627809,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 307,
+      "mask_sha256": "d7c75bf2048c455bb740141cbdf48da2d08b13bb19c50eb4d40d3ba91a970a8e",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "zero_ticks_warmed_resume",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "field",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 0,
+        "epoch": 1099511627807,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": false,
+        "compute_launches": 0,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 39,
+          "local_bytes_per_thread": 72,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 2112,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 1000,
+        "sample_digest": 8048872748209506512,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 8048872748209506512,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 5672800261234882613,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 696493136041568663,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 325,
+            "zeros": 283,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 69100,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\shared_field_zero_ticks_warmed_resume.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 1099511627807,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 325,
+      "mask_sha256": "8b501f57a014649b2d709557a4ca67f20adbb7297cbaf695dd2bc860c9b35dd4",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "seeded_single_word_shards",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 2,
+        "shards": 19,
+        "warmup_ticks": 0,
+        "compute_executed": true,
+        "compute_launches": 38,
+        "warmup_compute_launches": 0,
+        "shard_words_cap": 1,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 1,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 34,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 2112,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 303800,
+        "sample_digest": 13676872028393425776,
+        "sample_lanes": 32,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 19,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 1,
+                "digest": 13676872028393425776,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 1,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 1,
+                "words": 1,
+                "digest": 9539561310272117708,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 2,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 2,
+                "words": 1,
+                "digest": 1379140186704445209,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "first_word": 3,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 3,
+                "words": 1,
+                "digest": 2758971944027120340,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "first_word": 4,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 4,
+                "words": 1,
+                "digest": 6505516197028549730,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "first_word": 5,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 5,
+                "words": 1,
+                "digest": 5227914198834937791,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "first_word": 6,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 6,
+                "words": 1,
+                "digest": 14447633181950200611,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "first_word": 7,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 1,
+                "digest": 7248070628858861205,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "first_word": 8,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 8,
+                "words": 1,
+                "digest": 15392547464863624176,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "first_word": 9,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 9,
+                "words": 1,
+                "digest": 4840569988454536260,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "first_word": 10,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 10,
+                "words": 1,
+                "digest": 14893832454840953130,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "first_word": 11,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 11,
+                "words": 1,
+                "digest": 7029396419793148199,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "first_word": 12,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 12,
+                "words": 1,
+                "digest": 4865557828806375841,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "first_word": 13,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 13,
+                "words": 1,
+                "digest": 11220195417636630002,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "first_word": 14,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 1,
+                "digest": 7296378923715824504,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "first_word": 15,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 15,
+                "words": 1,
+                "digest": 9087572732911171332,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "first_word": 16,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 16,
+                "words": 1,
+                "digest": 10248756615132771428,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "first_word": 17,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 17,
+                "words": 1,
+                "digest": 2952480692099326075,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "first_word": 18,
+            "words": 1,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 18,
+                "words": 1,
+                "digest": 4879266076439712135,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 19,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 0,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 184200,
+        "state_count_launches": 19,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\shared_lowered_seeded_single_word_shards.tmask",
+          "slot": 0,
+          "lanes": 608,
+          "epoch": 2,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 32,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "f4dbe73b11025fc3048393db3cc751a32f9405f5a92c3d5020574e9a8e647bf8",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "warmed_dynamic_mask",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 3,
+        "epoch": 3,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": true,
+        "compute_launches": 9,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 34,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 2112,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 63600,
+        "sample_digest": 4019591201609330996,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 4019591201609330996,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 8767712356511467230,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 14849261829141267698,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 294,
+            "zeros": 314,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 52100,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\shared_lowered_warmed_dynamic_mask.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 3,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 294,
+      "mask_sha256": "a84cbea21a0c6d027fc12d327fb1dfa0cc646362028e8fba840b516f14b90951",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "resumed_high_counter_plane",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 2,
+        "epoch": 1099511627809,
+        "shards": 3,
+        "warmup_ticks": 2,
+        "compute_executed": true,
+        "compute_launches": 6,
+        "warmup_compute_launches": 6,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 34,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 2112,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 83300,
+        "sample_digest": 9947012812831377833,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 9947012812831377833,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 16132125146922990750,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 12694177411095973636,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 4,
+            "ones": 307,
+            "zeros": 301,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 50000,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\shared_lowered_resumed_high_counter_plane.tmask",
+          "slot": 4,
+          "lanes": 608,
+          "epoch": 1099511627809,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 307,
+      "mask_sha256": "d7c75bf2048c455bb740141cbdf48da2d08b13bb19c50eb4d40d3ba91a970a8e",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "zero_ticks_warmed_resume",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11559501824,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "shared",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 608,
+        "ticks": 0,
+        "epoch": 1099511627807,
+        "shards": 3,
+        "warmup_ticks": 3,
+        "compute_executed": false,
+        "compute_launches": 0,
+        "warmup_compute_launches": 9,
+        "shard_words_cap": 7,
+        "automatic_shard_words": 38347922,
+        "effective_shard_words": 7,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 34,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 2112,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 1976,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11559501824,
+        "elapsed_host_ns": 500,
+        "sample_digest": 8048872748209506512,
+        "sample_lanes": 224,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 3,
+          "words_verified": 19,
+          "lanes_verified": 608,
+          "all_lane_words_verified": true
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 7,
+                "digest": 8048872748209506512,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 7,
+            "words": 7,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 7,
+                "words": 7,
+                "digest": 5672800261234882613,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "first_word": 14,
+            "words": 5,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 14,
+                "words": 5,
+                "digest": 696493136041568663,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 3,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 6,
+            "ones": 325,
+            "zeros": 283,
+            "lanes": 608,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 38200,
+        "state_count_launches": 3,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\shared_lowered_zero_ticks_warmed_resume.tmask",
+          "slot": 6,
+          "lanes": 608,
+          "epoch": 1099511627807,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 76,
+          "file_bytes": 108
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 224,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 325,
+      "mask_sha256": "8b501f57a014649b2d709557a4ca67f20adbb7297cbaf695dd2bc860c9b35dd4",
+      "file_bytes": 108
+    },
+    {
+      "scenario": "streaming_buffer_and_shard_boundary",
+      "report": {
+        "name": "TOM",
+        "version": "0.7-K1",
+        "gpu_executed": true,
+        "device": {
+          "device": 0,
+          "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+          "compute_major": 12,
+          "compute_minor": 0,
+          "free_bytes": 11528044544,
+          "total_bytes": 12820480000,
+          "shared_default_bytes": 49152,
+          "shared_optin_bytes": 101376,
+          "linear_texture_max_elements": 268435456,
+          "l2_bytes": 37748736,
+          "sm_count": 46,
+          "warp_size": 32,
+          "max_threads_per_sm": 1536,
+          "shared_bytes_per_sm": 102400,
+          "runtime_version": 12080,
+          "driver_api_version": 13010
+        },
+        "backend": "global",
+        "evaluator": "lowered",
+        "block_threads": 128,
+        "lanes": 8388896,
+        "ticks": 0,
+        "epoch": 0,
+        "shards": 2,
+        "warmup_ticks": 0,
+        "compute_executed": false,
+        "compute_launches": 0,
+        "warmup_compute_launches": 0,
+        "shard_words_cap": 262147,
+        "automatic_shard_words": 134217728,
+        "effective_shard_words": 262147,
+        "blocks_per_sm": 8,
+        "kernel_resources": {
+          "registers_per_thread": 40,
+          "local_bytes_per_thread": 0,
+          "static_shared_bytes": 0,
+          "dynamic_shared_bytes": 0,
+          "max_threads_per_block": 1024,
+          "theoretical_active_blocks_per_sm": 12,
+          "theoretical_active_warps_per_sm": 48,
+          "max_warps_per_sm": 48
+        },
+        "definition_bytes": 2112,
+        "working_bytes": 27263912,
+        "free_before_bytes": 11559501824,
+        "free_after_bytes": 11528044544,
+        "elapsed_host_ns": 700,
+        "sample_digest": 6216010084864677916,
+        "sample_lanes": 2048,
+        "sample_verified": true,
+        "verification": {
+          "enabled": true,
+          "scope": "first_and_last_up_to_64_words_per_shard",
+          "shards_verified": 2,
+          "words_verified": 134,
+          "lanes_verified": 4288,
+          "all_lane_words_verified": false
+        },
+        "shard_summaries": [
+          {
+            "index": 0,
+            "first_word": 0,
+            "words": 262147,
+            "launch_blocks": 368,
+            "samples": [
+              {
+                "first_word": 0,
+                "words": 64,
+                "digest": 6216010084864677916,
+                "verified": true
+              },
+              {
+                "first_word": 262083,
+                "words": 64,
+                "digest": 12262085788186946065,
+                "verified": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "first_word": 262147,
+            "words": 6,
+            "launch_blocks": 1,
+            "samples": [
+              {
+                "first_word": 262147,
+                "words": 6,
+                "digest": 8316793246492755882,
+                "verified": true
+              }
+            ]
+          }
+        ],
+        "shard_summaries_shown": 2,
+        "shard_summaries_omitted": 0,
+        "state_counts": [
+          {
+            "slot": 1,
+            "ones": 4194432,
+            "zeros": 4194464,
+            "lanes": 8388896,
+            "scope": "all_lanes_all_shards"
+          }
+        ],
+        "state_count_elapsed_host_ns": 49600,
+        "state_count_launches": 2,
+        "state_counts_in_compute_timing": false,
+        "state_mask_export": {
+          "path": "C:\\Users\\Tom\\AppData\\Local\\Temp\\tom-state-mask-cey_ckk_\\global_lowered_streaming_buffer_and_shard_boundary.tmask",
+          "slot": 1,
+          "lanes": 8388896,
+          "epoch": 0,
+          "version": 1,
+          "scope": "all_lanes_all_shards",
+          "data_bytes": 1048612,
+          "file_bytes": 1048644
+        },
+        "state_mask_in_compute_timing": false,
+        "exported_first_shard_lanes": 8388704,
+        "trace_io_in_timing": false,
+        "setup_in_timing": false,
+        "source_physics_validated": false
+      },
+      "expected_ones": 4194432,
+      "mask_sha256": "758896ef0d5db61d24c85b8e6b1556d494dfb069d3ff8ae7ee53edfe245de900",
+      "file_bytes": 1048644
+    }
+  ],
+  "disabled_export_report": {
+    "name": "TOM",
+    "version": "0.7-K1",
+    "gpu_executed": true,
+    "device": {
+      "device": 0,
+      "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "compute_major": 12,
+      "compute_minor": 0,
+      "free_bytes": 11559501824,
+      "total_bytes": 12820480000,
+      "shared_default_bytes": 49152,
+      "shared_optin_bytes": 101376,
+      "linear_texture_max_elements": 268435456,
+      "l2_bytes": 37748736,
+      "sm_count": 46,
+      "warp_size": 32,
+      "max_threads_per_sm": 1536,
+      "shared_bytes_per_sm": 102400,
+      "runtime_version": 12080,
+      "driver_api_version": 13010
+    },
+    "backend": "global",
+    "evaluator": "field",
+    "block_threads": 128,
+    "lanes": 32,
+    "ticks": 0,
+    "epoch": 0,
+    "shards": 1,
+    "warmup_ticks": 0,
+    "compute_executed": false,
+    "compute_launches": 0,
+    "warmup_compute_launches": 0,
+    "shard_words_cap": 0,
+    "automatic_shard_words": 134217728,
+    "effective_shard_words": 134217728,
+    "blocks_per_sm": 8,
+    "kernel_resources": {
+      "registers_per_thread": 40,
+      "local_bytes_per_thread": 72,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "max_threads_per_block": 1024,
+      "theoretical_active_blocks_per_sm": 12,
+      "theoretical_active_warps_per_sm": 48,
+      "max_warps_per_sm": 48
+    },
+    "definition_bytes": 2112,
+    "working_bytes": 104,
+    "free_before_bytes": 11561598976,
+    "free_after_bytes": 11559501824,
+    "elapsed_host_ns": 2200,
+    "sample_digest": 11736380216881908647,
+    "sample_lanes": 32,
+    "sample_verified": false,
+    "verification": {
+      "enabled": false,
+      "scope": "first_and_last_up_to_64_words_per_shard",
+      "shards_verified": 0,
+      "words_verified": 0,
+      "lanes_verified": 0,
+      "all_lane_words_verified": false
+    },
+    "shard_summaries": [
+      {
+        "index": 0,
+        "first_word": 0,
+        "words": 1,
+        "launch_blocks": 1,
+        "samples": [
+          {
+            "first_word": 0,
+            "words": 1,
+            "digest": 11736380216881908647,
+            "verified": false
+          }
+        ]
+      }
+    ],
+    "shard_summaries_shown": 1,
+    "shard_summaries_omitted": 0,
+    "state_counts": [],
+    "state_count_elapsed_host_ns": 0,
+    "state_count_launches": 0,
+    "state_counts_in_compute_timing": false,
+    "state_mask_export": null,
+    "state_mask_in_compute_timing": false,
+    "exported_first_shard_lanes": 32,
+    "trace_io_in_timing": false,
+    "setup_in_timing": false,
+    "source_physics_validated": false
+  },
+  "rejected_options": [
+    {
+      "scenario": "missing_slot",
+      "stderr": "tom_cuda: state-mask-out and state-mask-slot must be supplied together"
+    },
+    {
+      "scenario": "missing_path",
+      "stderr": "tom_cuda: state-mask-out and state-mask-slot must be supplied together"
+    },
+    {
+      "scenario": "slot_out_of_range",
+      "stderr": "tom_cuda: state-mask-slot is outside program state planes"
+    },
+    {
+      "scenario": "negative_slot",
+      "stderr": "tom_cuda: unsigned integer required: -1"
+    }
+  ]
+}

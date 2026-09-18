@@ -1,0 +1,78 @@
+{
+  "source_pdf_sha256": "97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc",
+  "input": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\native_templates.ton",
+  "expected": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\native_templates_expected.tor",
+  "input_sha256": "8ecb8e4c5adebc5cbcc1959c0e69983746f24e5f9fb704f0c07510729dd8a715",
+  "expected_sha256": "2938b9036792c7e697550ae0c9c5eaf44cb41ab8794560aa211db2973f101ce1",
+  "case_words": 432,
+  "result_words": 736,
+  "bytes_per_resident_case": 4672,
+  "templates": [
+    {
+      "template": 0,
+      "original_records": 9,
+      "extra_preservation_qualifications": 0,
+      "explicit_A_T_alias": false,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 349
+    },
+    {
+      "template": 1,
+      "original_records": 10,
+      "extra_preservation_qualifications": 1,
+      "explicit_A_T_alias": true,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 381
+    },
+    {
+      "template": 2,
+      "original_records": 11,
+      "extra_preservation_qualifications": 2,
+      "explicit_A_T_alias": false,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 413
+    },
+    {
+      "template": 3,
+      "original_records": 12,
+      "extra_preservation_qualifications": 3,
+      "explicit_A_T_alias": true,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 445
+    },
+    {
+      "template": 4,
+      "original_records": 13,
+      "extra_preservation_qualifications": 4,
+      "explicit_A_T_alias": false,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 477
+    },
+    {
+      "template": 5,
+      "original_records": 14,
+      "extra_preservation_qualifications": 5,
+      "explicit_A_T_alias": true,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 509
+    },
+    {
+      "template": 6,
+      "original_records": 15,
+      "extra_preservation_qualifications": 6,
+      "explicit_A_T_alias": false,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 541
+    },
+    {
+      "template": 7,
+      "original_records": 16,
+      "extra_preservation_qualifications": 7,
+      "explicit_A_T_alias": true,
+      "old_history_bytes": 45,
+      "proposed_history_bytes": 573
+    }
+  ],
+  "scope": "Full bound source expression, actual licensed normalization and complete retained history contents. No unique native dynamics assigned.",
+  "generated_variation": "Round-robin source-equivalent terms; distinct uint64 candidate identity in the first eight bytes of both completed and proposed history."
+}

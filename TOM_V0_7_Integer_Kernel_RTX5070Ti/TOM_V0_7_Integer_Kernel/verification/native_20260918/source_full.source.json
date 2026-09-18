@@ -1,0 +1,28 @@
+{
+  "schema": "tom-native-source-compilation-v1",
+  "source_pdf_sha256": "97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc",
+  "source_text": "TOM := InverseOccam[ Arch[ C[J[T]], E[C[J[T]]; InvLog[phi]] ] ] qualified_by forward_T_precedence",
+  "source_utf8_sha256": "4f22b047d0a163512f056c1334847344aacc3b14c07f8c8de56647b4af014a74",
+  "declared_bindings": "c := C[J[T]]; e := E[c; InvLog[phi]]; TOM := InverseOccam[Arch[c;e]] qualified_by forward_T_precedence",
+  "expansion_semantics": "Textual c/e/TOM references resolve the source's declared definitions before encoding. First-class DECL names remain available separately; expansion assigns no dynamic law.",
+  "source_provenance": {
+    "location": "complete old and proposed history bytes, then committed history in successful output",
+    "format": "8-byte TOMSRC1\\0 magic, uint64 little-endian UTF-8 byte length, exact UTF-8 source",
+    "bytes": 113,
+    "utf8_offset_bytes": 16,
+    "classification": "external retained source metadata, not an additional intrinsic operator or causal event"
+  },
+  "term_count": 12,
+  "root_id": 11,
+  "term_capacity": 12,
+  "history_capacity_words": 29,
+  "case_words": 174,
+  "result_words": 331,
+  "full_source_tom": true,
+  "io_rewrites": 0,
+  "alias_rewrites": 0,
+  "optional_scalar_echo_zero_proved": true,
+  "unique_dynamics_assigned": false,
+  "input": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\source_full.ton",
+  "oracle": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\native_20260918\\source_full.reference.tor"
+}

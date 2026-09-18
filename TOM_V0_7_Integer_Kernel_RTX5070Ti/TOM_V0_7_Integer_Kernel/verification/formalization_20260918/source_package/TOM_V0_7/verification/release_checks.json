@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-18T11:42:42.234638+00:00",
+  "exact_diagnostics_reproduced": true,
+  "contract_regression_tests_reproduced": true,
+  "PDF_pages": 18,
+  "artifact_kind": "formal definition plus external audit sources; not a runtime kernel",
+  "no_font_files": true
+}

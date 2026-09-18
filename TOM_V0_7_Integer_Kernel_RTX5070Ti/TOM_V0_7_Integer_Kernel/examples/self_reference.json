@@ -1,0 +1,197 @@
+{
+  "name": "Self-referential operator: quote definitions, publish future truth rows",
+  "state": {
+    "input": {
+      "counter_bit": 0
+    },
+    "self_row.0": 0,
+    "self_row.1": 1,
+    "self_row.2": 0,
+    "self_row.3": 1,
+    "self_row.4": 0,
+    "self_row.5": 1,
+    "self_row.6": 0,
+    "self_row.7": 1,
+    "answer": 0,
+    "read_own_id.0": 0,
+    "read_own_id.1": 0,
+    "read_own_id.2": 0,
+    "read_own_id.3": 0,
+    "read_own_id.4": 0,
+    "read_own_id.5": 0,
+    "read_own_id.6": 0,
+    "read_own_id.7": 0,
+    "kernel_selector_bit1": 0
+  },
+  "rules": {
+    "NOT": 85,
+    "AND": 136,
+    "OR": 238,
+    "XOR": 102,
+    "EQ": 153,
+    "MUX": 202,
+    "SUM3": 150,
+    "MAJ3": 232,
+    "SELF": {
+      "rows": [
+        "self_row.0",
+        "self_row.1",
+        "self_row.2",
+        "self_row.3",
+        "self_row.4",
+        "self_row.5",
+        "self_row.6",
+        "self_row.7"
+      ]
+    }
+  },
+  "expressions": {
+    "$v0": {
+      "rule": "SELF",
+      "args": [
+        "input"
+      ]
+    },
+    "$v1": {
+      "rule": "NOT",
+      "args": [
+        "self_row.0"
+      ]
+    },
+    "$v2": {
+      "rule": "NOT",
+      "args": [
+        "self_row.1"
+      ]
+    },
+    "$v3": {
+      "rule": "NOT",
+      "args": [
+        "self_row.2"
+      ]
+    },
+    "$v4": {
+      "rule": "NOT",
+      "args": [
+        "self_row.3"
+      ]
+    },
+    "$v5": {
+      "rule": "NOT",
+      "args": [
+        "self_row.4"
+      ]
+    },
+    "$v6": {
+      "rule": "NOT",
+      "args": [
+        "self_row.5"
+      ]
+    },
+    "$v7": {
+      "rule": "NOT",
+      "args": [
+        "self_row.6"
+      ]
+    },
+    "$v8": {
+      "rule": "NOT",
+      "args": [
+        "self_row.7"
+      ]
+    }
+  },
+  "next": {
+    "answer": "$v0",
+    "self_row.0": "$v1",
+    "self_row.1": "$v2",
+    "self_row.2": "$v3",
+    "self_row.3": "$v4",
+    "self_row.4": "$v5",
+    "self_row.5": "$v6",
+    "self_row.6": "$v7",
+    "self_row.7": "$v8",
+    "read_own_id.0": "own_id_bit.0",
+    "read_own_id.1": "own_id_bit.1",
+    "read_own_id.2": "own_id_bit.2",
+    "read_own_id.3": "own_id_bit.3",
+    "read_own_id.4": "own_id_bit.4",
+    "read_own_id.5": "own_id_bit.5",
+    "read_own_id.6": "own_id_bit.6",
+    "read_own_id.7": "own_id_bit.7",
+    "kernel_selector_bit1": "read_kernel_bit"
+  },
+  "quotes": {
+    "own_id_bit.0": {
+      "object": "SELF",
+      "bit": 448
+    },
+    "own_id_bit.1": {
+      "object": "SELF",
+      "bit": 449
+    },
+    "own_id_bit.2": {
+      "object": "SELF",
+      "bit": 450
+    },
+    "own_id_bit.3": {
+      "object": "SELF",
+      "bit": 451
+    },
+    "own_id_bit.4": {
+      "object": "SELF",
+      "bit": 452
+    },
+    "own_id_bit.5": {
+      "object": "SELF",
+      "bit": 453
+    },
+    "own_id_bit.6": {
+      "object": "SELF",
+      "bit": 454
+    },
+    "own_id_bit.7": {
+      "object": "SELF",
+      "bit": 455
+    },
+    "read_kernel_bit": {
+      "object": "KERNEL",
+      "bit": 97
+    }
+  },
+  "groups": {
+    "current_rule": {
+      "bits": [
+        "self_row.0",
+        "self_row.1",
+        "self_row.2",
+        "self_row.3",
+        "self_row.4",
+        "self_row.5",
+        "self_row.6",
+        "self_row.7"
+      ],
+      "signed": false
+    },
+    "read_own_id": {
+      "bits": [
+        "read_own_id.0",
+        "read_own_id.1",
+        "read_own_id.2",
+        "read_own_id.3",
+        "read_own_id.4",
+        "read_own_id.5",
+        "read_own_id.6",
+        "read_own_id.7"
+      ],
+      "signed": false
+    }
+  },
+  "outputs": [
+    "input",
+    "answer",
+    "current_rule",
+    "read_own_id",
+    "kernel_selector_bit1"
+  ]
+}

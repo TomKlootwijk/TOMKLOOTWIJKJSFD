@@ -1,0 +1,618 @@
+=== PAGE 1 ===
+AUTHORIAL DEFINITION / SOURCE-LED UPGRADE / VERSION V0.7
+TOM
+The total SDF definition
+Forward precedence, lowercase 𝜙
+and the inverse-Occam sheet
+AUTHOR Tom Klootwijk
+IDENTIFIER NL200678942
+DATE AS SUPPLIED 10-07-1990
+RELEASE TOM V0.7
+Central statement
+TOM is the complete, non-erasing SDF articulation of time, jitter, the lowercase pinion, its
+inverse-log expression, causality, the source-named entropic echo and Arch U without U. Its
+admissible continuation is forward-only. No coordinate grid, operator graph or enclosing
+metric space is imposed as its intrinsic form.
+The governing source is the newly supplied 37-page document, with priority given to the author’s
+later corrections. The clauses introduced in this release are distinguished from the accompanying
+exported responses and from optional numerical interpretations.
+TOM is the name. No acronym expansion is assigned. The identifiers above record authorship;
+they do not parameterize a physical law, a geometric origin or a cryptographic key.
+18 September 2026 Formalization and reproducible audit
+
+=== PAGE 2 ===
+TOM KLOOTWIJK TOM / V0.7
+1 The change that governs V0.7
+SOURCE PRIORITY / THE FINAL CORRECTIONS, NOT THE EARLIEST SCAFFOLDING
+The new source repeatedly changes direction after an accompanying response reintroduces
+something the author rejects. V0.7 follows the latest explicit author instructions , rather than
+treating every proposed model in the export as a compatible axiom.
+Page Controlling author instruction
+14 Everything is an SDF definition in the mathematics, not rendering or a
+computer-science implementation.
+21 The formulation is not a four-dimensional quaternion space.
+23 The personal identity is ‘‘just vanity’’ in this context; the question concerns the
+combination of definitions.
+26 Do not reintroduce vectors and metrics as the defining foundation.
+28 The pinion is lowercase 𝜙; everything is literally an SDF; precedence matters in one
+uncheated temporal direction.
+31 Do not make SDF definitions into nodes of a graph or recover vectors, magnitude
+and cardinality through tracing.
+32 The sheet is the inverse sharp Occam razor, itself SDF; jitter and inverse-log 𝜙 belong
+to the definition.
+34 Causality and entropy are also to be treated as SDF definitions.
+What this supersedes
+The earlier quaternion frame, rotation matrices, normed-vector inversion, shader pipeline and
+categorical replacement remain part of the source history. They are not imposed as TOM’s final
+ontology. Uppercase Φ is not silently substituted for the pinion after the page-28 correction.
+The v6 spatial kernels likewise remain external application constructions . Their grid cells, graph
+routes and event queues do not become the intrinsic form of TOM simply by changing the name.
+Meaning of this release
+V0.7 upgrades the formal definition, its binding rules and its causal commitments. It is not
+another arithmetic engine, renderer or graph simulation presented as if those representations
+had been requested again.
+The total SDF definition 2 / 18
+
+=== PAGE 3 ===
+TOM KLOOTWIJK TOM / V0.7
+2 The whole definition, not a renamed component
+V0.7 CONSTRUCTION / SOURCE-DERIVED ROLES WITH EXPLICIT BINDING
+TOM names the total qualified statement. The symbols below abbreviate defining roles, not
+independently positioned things. Write
+𝑐 := C⟨J⟨T⟩⟩, 𝑒 := E⟨𝑐 ; InvLog⟨𝜙⟩⟩.
+Then the compact statement is
+TOMV0.7 := InverseOccam⟨Arch⟨𝑐 ; 𝑒⟩⟩qualified by forward T-precedence.
+Its full expansion is
+TOMV0.7 := InverseOccam
+D
+Arch
+D
+C⟨J⟨T⟩⟩; E⟨C⟨J⟨T⟩⟩; InvLog⟨𝜙⟩⟩
+EE
+≺T
+.
+Here≺T is a qualification by the temporal contracts in Section 5. It is not a spatial coordinate,
+numeric derivative or graph edge.
+What the nested notation means
+Brackets determine scope. The semicolon distinguishes direct and inverse-log roles. Neither
+creates a vector. The abbreviations 𝑐 and 𝑒 introduce no new physical nodes; replacing them by
+their full definitions leaves the statement unchanged.
+InverseOccam names the inverse-Occam sheet qualification. Arch names Arch U without U. C and
+E name the causal and entropic defining roles. J, T and 𝜙 remain SDF declarations throughout.
+[S37, pp. 28, 31--36]
+Why the full definition does not end with “= 0”
+The attachment’s final scalar formula is preserved as an optional reading. That reading is shown
+in Section 9 to equal zero for every admitted scalar input of its stated form. A constant readout
+cannot, by itself, distinguish the source’s defining roles, choose the temporal progression or certify
+a physical law.
+The major upgrade is to preserve the whole defining articulation instead of identifying it
+with an observation that erases all those distinctions. The scalar equation is audited, not
+secretly changed.
+The total SDF definition 3 / 18
+
+=== PAGE 4 ===
+TOM KLOOTWIJK TOM / V0.7
+3 SDF without a metric smuggled back in
+NATIVE QUALIFICATION / DECLARED MEANING VERSUS CONVENTIONAL INTERPRETATION
+In the intrinsic TOM statement, SDF is the author’s qualification for a definition and its admitted
+expression. It does not assert that a metric, a coordinate domain and a conventional numerical
+distance have already been supplied.
+This follows the author’s rejection of reintroduced metrics on page 26 and of graph/vector treatment
+on page 31. It also makes explicit what otherwise remains an ambiguity: using the same word
+does not establish all the properties of a conventional signed-distance function. [S37, pp. 26, 28, 31]
+A closure convention, not an Eikonal theorem
+The declaration
+𝑒 : SDF
+means that 𝑒 is admitted under TOM’s SDF convention. An admitted compound definition
+remains SDF-qualified, including a definition of precedence, inversion, causal admissibility or the
+sheet-preservation rule itself.
+The notation above is editorial metalanguage : it states how to read this document. It does not
+introduce a second spatial realm, a node class or an external software engine into TOM.
+A separate interpretation may choose ordinary signed-distance semantics. It would then need
+an explicit metric, zero structure and sign convention, and would have to establish the claimed
+distance property. That additional structure is not inserted into the intrinsic definition merely to
+make the familiar acronym fit.
+Properties not obtained by a change of name
+A numerical exponential, scalar multiple, absolute-value expression or smooth approximation
+does not become an exact normalized distance simply because it is labelled SDF. The source’s
+assertions of those properties are examined in Section 12 under their own scalar interpretation.
+The preserved commitment
+All admitted operators and expressions have the same native SDF qualification . No
+mandatory external coordinate arena is introduced to distinguish ‘‘code’’ from ‘‘field data.’’
+This is a declared formal law, not a demonstration of universal computation or actual
+metric-distance closure.
+The total SDF definition 4 / 18
+
+=== PAGE 5 ===
+TOM KLOOTWIJK TOM / V0.7
+4 The intrinsic SDF vocabulary
+DEFINITIONS IN THE CORE / NO COMPULSORY COORDINATES OR NODES
+Declaration Role in TOM V0.7
+T Temporal precedence of the whole statement. One forward temporal ordering, not
+an added coordinate axis.
+J⟨T⟩ Temporal jitter qualified by T. No probability law, frequency, scalar waveform or
+reverse clock is assumed.
+𝜙 The lowercase pinion SDF. Its structural role is not replaced by an uppercase matrix
+operator.
+InvLog⟨𝜙⟩ The inverse-log pinion expression. A later scalar interpretation is stated separately;
+it is not temporal inversion.
+C⟨𝑒⟩ Causal qualification: no anticipation and preservation of completed commitments.
+E⟨𝑐 ; InvLog⟨𝜙⟩⟩The source-named entropy/causal echo. It is not presumed to be a statistical or
+thermodynamic entropy.
+Arch⟨𝑐 ; 𝑒⟩ Arch U without U: a direct/inverse articulation with defining roles retained. It has a
+declared optional scalar reading.
+InverseOccam⟨𝑒⟩ The inverse-Occam sheet. Equal observations do not authorize deletion of defining
+distinctions.
+TOM The complete precedence-qualified SDF definition, not a new surrounding container
+or a personal physical invariant.
+First-class definitions and compound expressions
+A bare name refers to its definition. When used with the operands declared above, it forms an
+SDF-qualified expression. This records the distinction between a definition and its expressed role
+without introducing two different physical substances.
+The three structurally different readings of ‘‘inverse’’ in the export must not be conflated: reciprocal
+magnitude, inverse logarithmic scaling and temporal reversal. The final source gives an inverse-log
+role. V0.7 does not infer that applying it twice yields identity or that it undoes elapsed time. [S37,
+pp. 18--20, 28--36]
+Names inherited from earlier context
+The temporal alias A≡def T can be retained where explicitly declared. Lowercase 𝑎, 𝑏 denote scalar
+placeholders in the audit, not that temporal alias. The older ‘‘0 means ALL admitted operators’’ is
+a totality label, not a coordinate axis or a claim that zero bits contain arbitrary information.
+The total SDF definition 5 / 18
+
+=== PAGE 6 ===
+TOM KLOOTWIJK TOM / V0.7
+5 Uncheated time as an explicit law
+NEW CLAUSES / NOT A CONSEQUENCE OF A ZERO BALANCE
+The author requires precedence within one timeline without cheating time. V0.7 supplies the
+following formal clauses for that requirement. These are proposed V0.7 laws, rather than properties
+falsely inferred from the exported absolute-value equation. [S37, p. 28]
+TC1 / No anticipation
+A presently admissible expression may depend only on completed or presently supplied material.
+Future continuation is not available as current evidence. Declaring a future state symbolically is
+not the same as possessing its future observation.
+TC2 / Completed-prefix preservation
+An extension does not rewrite an observation or commitment already completed. A later correction
+may be recorded as later; it cannot become an earlier event simply by changing the description.
+TC3 / Structural inversion is not temporal inversion
+Mirroring a definition, changing its sign in a numerical reading, or applying an inverse-log role
+does not reverse the qualification of temporal precedence. There is no automatically admitted
+reverse-time operator.
+TC4 / Forward-guarded self-reference
+A definition may contain its own name. Dependence on the result of its own continuation must be
+marked as later under T. An unqualified instantaneous self-equation does not establish a unique
+resolved behavior.
+TC5 / No free elapsed duration
+Nesting, scale, sparse notation and a zero Arch reading do not make a declared positive duration
+disappear. Compressing a description of an interval is not proving that its elapsed time was zero.
+One temporal ordering, not a dimensionality theorem
+‘‘One-dimensional timeline’’ is read here as the requestedone forward precedence . It is not
+a proof of topological dimension one or a decision to use a real-number coordinate as the
+intrinsic arena. Any measured duration belongs to a separately declared reading.
+The total SDF definition 6 / 18
+
+=== PAGE 7 ===
+TOM KLOOTWIJK TOM / V0.7
+6 Precedence has two distinct meanings
+BINDING AND ADMISSIBLE CONTINUATION / NO RECONSTRUCTED DATAFLOW GRAPH
+The source says that how the definitions are structured, and their precedence, means something.
+V0.7 distinguishes the binding of a statement from the time at which a continuation becomes
+admissible. [S37, pp. 28--31]
+Binding precedence
+The expression E⟨C⟨J⟨T⟩⟩; InvLog⟨𝜙⟩⟩binds the inverse-log role to the causally qualified jitter.
+Parentheses and argument roles are retained. They are not interpreted as vertices and edges,
+spatial components or a route through an arena.
+A definition may be written as one whole expression while still having binding precedence. This
+does not mean it has simultaneous access to all future information. Conversely, imposing a time
+stamp on a program does not repair an ambiguous or changed binding.
+Continuation precedence
+Let LaterT⟨𝑒⟩be a notation for a later continuation of 𝑒, admitted only after its temporal condition
+has been met. Its exact temporal realization is a parameter, not a hidden integer clock.
+A self-referential declaration may contain
+LaterT⟨selfTOM⟩.
+That does not create an instant result from an unsatisfied future dependency. A fixed point or
+physical recurrence still needs an assigned continuation law; the name alone does not prove its
+existence or uniqueness.
+An optional external check
+An implementation can express TC1--TC2 by requiring: if two supplied histories agree through the
+same ‘‘Now,’’ their admissible readouts also agree through that ‘‘Now,’’ and a completed readout
+is not replaced when the history extends.
+Histories in that sentence are test descriptions of an interpretation . They are not the intrinsic graph or
+trace ontology rejected by the author. The core does not prescribe their data structure, number of
+observations or units.
+There is no permission to commute, reassociate, flatten or cancel nested roles merely because
+a familiar calculus would do so. Equivalence needs an explicitly adopted law. Section 10
+shows that even the source’s own numerical Arch reading is not associative.
+The total SDF definition 7 / 18
+
+=== PAGE 8 ===
+TOM KLOOTWIJK TOM / V0.7
+7 The inverse-Occam sheet does real formal work
+NEW PRESERVATION LAW / DEFINITION IS NOT REDUCED TO OBSERVATION
+The author’s ‘‘inverse sharp razor’’ is made precise as a non-erasure commitment. It does not
+claim that complexity is always better. It prevents an observation from silently replacing the full
+definition that made the observation meaningful. [S37, pp. 32--34]
+Write 𝑒≡def 𝑓 for an explicitly licensed, definition-preserving equivalence. Write 𝑒≡read 𝑓 for
+agreement in a selected reading. The crucial rule is
+𝑒≡read 𝑓 ̸=⇒ 𝑒≡def 𝑓 .
+This does not prohibit all simplification. It requires a stated law that preserves the distinctions
+TOM declares relevant.
+A concrete source-based reason
+In the optional scalar reading,
+arch(𝑐,−𝑐)= 0 = arch(𝑐,−2𝑐).
+For nonzero 𝑐, the inverse partners differ. Their single zero balance nevertheless agrees. Replacing
+both defining articulations by a bare zero would erase the relation the source seeks to retain.
+Idempotent qualification
+V0.7 adopts the law
+InverseOccam⟨InverseOccam⟨𝑒⟩⟩≡def InverseOccam⟨𝑒⟩.
+Stating the same preservation obligation twice adds no second obligation. The content of 𝑒 is not
+deleted; this is an explicitly declared law, not an automatic numeric simplification.
+Arch retains roles, even when its reading is symmetric
+The intrinsic Arch⟨𝑐 ; 𝑒⟩retains which presentation is direct and which is inverse-log. A symmetric
+scalar reading does not itself authorize swapping their defining roles, temporal requirements or
+provenance.
+Why this is a major upgrade
+The final exported zero equation no longer has to carry the entire meaning of TOM. Its correct
+numerical reading can be preserved without collapsing the definition into a constant . Precedence
+and the uncut defining sheet remain substantive.
+The total SDF definition 8 / 18
+
+=== PAGE 9 ===
+TOM KLOOTWIJK TOM / V0.7
+8 Unbounded nesting without a compulsory outside
+SOURCE COMMITMENTS / NOT AN INFINITE-MEMORY OR TOPOLOGY THEOREM
+Removing the global Ψ enclosure does not require a replacement container. The core states no
+spatial boundary radius, maximum intrinsic nesting depth, required grid or compulsory external
+metric. [S37, pp. 18--21, 26, 31--34]
+What remains of Matryoshka and Klein
+Matryoshka retains the defining role of nesting without a stipulated final outside. The core does
+not turn that role into a numbered sequence of physical Dyson shells, stellar radii or cooling
+circuits.
+Klein retains its historical association with an inverse/twisted presentation and nonseparation of
+roles. The core does not silently reinstall an embedded bottle equation or derive physical transit
+from that name. A true topological realization would need a separately specified interpretation
+and its own proof.
+These associations are retained without inventing missing intrinsic equations. Their exact additional
+operation laws remain open clauses; the default is not a return to the earlier 3D/4D construction.
+No counting primitive is not “zero cardinality”
+The source rejects organizing SDF definitions as countable pieces in a graph. That restriction
+on the intrinsic description is not a proof that a specified realization has no externally countable
+descriptions, or that literal mathematical cardinality is zero.
+Similarly, ‘‘continuous’’ and ‘‘unbroken’’ are retained as commitments not to force a decomposition.
+Without an assigned topology, they are not claimed as proved continuity, smoothness or manifold
+theorems. Introducing a gradient would itself require interpretive structure the core has not
+assumed.
+Boundless does not mean completed infinity
+There is no fixed intrinsic nesting cutoff. That is different from saying a finite computer
+has stored infinitely many independent facts or completed infinitely many causally elapsed
+operations. The latter does not follow from removing a bound in the written definition.
+The total SDF definition 9 / 18
+
+=== PAGE 10 ===
+TOM KLOOTWIJK TOM / V0.7
+9 The final Arch formula: what it actually proves
+EXTERNAL SCALAR DIAGNOSTIC / THE INTRINSIC CORE IS NOT REPLACED
+This section reads the source’s absolute values as ordinary values of finite real scalars. It is an
+explicitly named diagnostic, not a reintroduction of scalar magnitude as TOM’s ontology. The
+formula is
+arch(𝑎, 𝑏)=|𝑎|+|𝑏|−|𝑎−𝑏|.
+Direct algebra gives
+arch(𝑎, 𝑏)=
+(
+0, 𝑎𝑏 ≤0,
+2 min(|𝑎|,|𝑏|), 𝑎𝑏 > 0.
+Proof. Opposite signs give|𝑎−𝑏|=|𝑎|+|𝑏|. Equal nonzero signs give |𝑎−𝑏|=
+|𝑎|−|𝑏|
+, leaving
+twice the smaller magnitude. A zero operand also gives zero. Therefore
+arch(𝑎, 𝑏)= 0 ⇐⇒𝑎𝑏≤0.
+The inverse-log equation is an identity
+Under the source’s numerical choice
+𝜑 = 1+
+√
+5
+2 , 𝑘 = ln(1/𝜑)=−ln 𝜑 < 0,
+the final relation becomes
+arch(𝑐, 𝑘𝑐)= 0 for every finite real 𝑐.
+The same is true for the source’s jitter substitution, and for its causality/entropy substitution. [S37,
+pp. 33--36]
+What cannot be inferred from this identity
+It does not select a particular 𝑐, jitter law, frequency, causal direction or entropy law. It also does
+not select the golden ratio uniquely: the inverse logarithm of any positive ratio greater than one is
+negative and gives the same identity.
+The zero set of this reading is not merely 𝑎 = 𝑏 or a unique crossing. It includes a whole
+opposite-sign region. The equation is compatible with many different defining situations,
+which is why V0.7 keeps the defining structure instead of reducing TOM to that zero.
+The total SDF definition 10 / 18
+
+=== PAGE 11 ===
+TOM KLOOTWIJK TOM / V0.7
+10 A direct reason to preserve precedence
+DERIVED RESULT / ARCH IS NOT AUTOMATICALL Y AN ASSOCIATIVE UNION
+Even within the exported scalar reading, binding changes the result:
+arch
+ 
+1, arch(2, 3)
+
+= arch(1, 4)= 2,
+whereas
+arch
+ 
+arch(1, 2), 3
+
+= arch(2, 3)= 4.
+Thus
+arch(𝑎, arch(𝑏, 𝑐)). arch(arch(𝑎, 𝑏), 𝑐).
+This is an exact consequence of the source’s formula, not a replacement borrowed from another
+mathematical framework. It directly supports the author’s insistence thatstructure and precedence
+mean something. [S37, pp. 19, 28--30]
+A two-argument symmetry is a narrower result
+The scalar reading satisfies arch(𝑎, 𝑏)= arch(𝑏, 𝑎)and arch(−𝑎,−𝑏)= arch(𝑎, 𝑏). These are verified
+algebraic properties. They do not produce associativity or identify the internal direct/inverse
+roles.
+The global sign invariance also shows why a zero reading cannot fix the direction of time. Replacing
+both 𝑐 and its echo 𝑘𝑐 by their negatives gives exactly the same reading. Causal admissibility must
+come from an explicit temporal clause, not from this symmetry.
+Why no new “hyper-algebra” label is imposed
+The source’s generated response calls the construction an associative division hyper-algebra, but
+does not provide the axioms and proofs for that claim. V0.7 instead names the definition TOM
+and states its actual licensed laws. It does not use an impressive classification to bypass a failed
+property. [S37, p. 20]
+The practical drafting rule
+Every expression retains its declared grouping. A proposed flattening or role substitution
+must carry an equivalence argument. A familiar name such as union, inverse, product, scale
+or coequalizer does not automatically import all laws associated with that name elsewhere.
+The total SDF definition 11 / 18
+
+=== PAGE 12 ===
+TOM KLOOTWIJK TOM / V0.7
+11 The mirror and smooth formulas are not the same law
+EXTERNAL DIAGNOSTIC / NO SILENT REPAIR OR RECONCILIATION
+The earlier scalar mirror compares 𝑝 with 𝑝/|𝑠|2. For finite 𝑝 > 0 and finite 𝑠 ≠ 0, both arguments
+are positive. Hence
+arch
+
+𝑝, 𝑝
+|𝑠|2
+
+= 2 min
+
+𝑝, 𝑝
+|𝑠|2
+
+> 0.
+When 𝑝 = 𝜑𝑡 for finite real 𝑡, it is positive. That version cannot simultaneously satisfy its claimed
+zero balance at such an input. At 𝑠 = 0, the expression is undefined. A limiting value at infinity is
+not a finite solution. [S37, pp. 29--32]
+Why the later equation behaves differently
+The later echo uses a negative coefficient ln(1/𝜑)instead of dividing by a positive square. V0.7
+records that evolution rather than altering a sign and presenting the two source statements as one
+unchanged equation.
+Smoothing also changes the zero set
+The exported proposed alternative is, in a scalar diagnostic,
+𝐻(𝑎, 𝑏)= 𝑎𝑏 exp
+
+−1
+(𝑎−𝑏)2
+
+.
+At 𝑎 = 1, 𝑏 =−1,
+arch(1,−1)= 0, 𝐻 (1,−1)=−𝑒−1/4 ≠ 0.
+At 𝑎 = 𝑏, the displayed expression is undefined unless an extension is supplied. A zero extension
+may be considered separately, but it still differs from the original Arch: arch(1, 1)= 2. [S37, pp.
+24--26]
+A source-preserving upgrade
+No smoothing function, reciprocal normalization or categorical replacement is silently
+installed as the ‘‘real’’ TOM equation. The alternatives are identified as changed proposals.
+The core follows the author’s later non-metric, non-graph instructions; the diagnostic reports
+the arithmetic consequences of the actual printed formulas.
+The total SDF definition 12 / 18
+
+=== PAGE 13 ===
+TOM KLOOTWIJK TOM / V0.7
+12 Causality and entropy need their own definitions
+EXTERNAL DIAGNOSTIC / EIKONAL MAGNITUDE DOES NOT ESTABLISH ORIENTATION
+The source proposes an ordinary unit-gradient condition for both causality and an entropy echo
+proportional to it. Under that specific reading, if
+|𝐶′(𝑡)|= 1, 𝐸 (𝑡)= 𝑘𝐶(𝑡),
+then
+|𝐸′(𝑡)|=|𝑘||𝐶′(𝑡)|=|𝑘|.
+For 𝑘 =−ln 𝜑, 0 <|𝑘|< 1, so the entropy echo does not have the same unit slope in the same
+normalization. The numerical display is
+ln(1/𝜑)≈−0.48121182505960344750.
+The exact inequality follows from 1 < 𝜑 < 2 < 𝑒. The decimal is only a display of that coefficient.
+[S37, pp. 33, 35--36]
+A unit magnitude does not make time irreversible
+Both 𝐶(𝑡)= 𝑡 and 𝐶(𝑡)=−𝑡 satisfy|𝐶′(𝑡)|= 1. Reversing the sign does not create a negative
+magnitude; the magnitude remains one. Therefore the exported Eikonal statement does not establish
+the claimed causal lock.
+V0.7 instead places forward orientation in TC1--TC5. The native SDF qualification does not secretly
+invoke a derivative or metric to make those clauses true.
+Two readings should not be mixed
+A conventional metric interpretation can explicitly choose to renormalize the echo:
+𝐸/|𝑘|=−𝐶.
+That changes the magnitude interpretation and removes the coefficient’s scale. It is not the
+unchanged source expression. The intrinsic core therefore retains the declared echo relation
+without claiming ordinary exact-distance normalization.
+What “entropy” establishes here
+It is the source’s name for the inverse-log causal echo. No thermodynamic units, statistical
+measure, physical energy flow or decoder recovering an unlimited history is supplied. Those
+properties cannot be inferred from the name or from an identically zero balance.
+The total SDF definition 13 / 18
+
+=== PAGE 14 ===
+TOM KLOOTWIJK TOM / V0.7
+13 The new laws and the unresolved parameters
+FORMAL SPECIFICATION / A FAMIL Y OF ADMISSIBLE CONTINUATIONS, NOT ONE INVENTED DYNAMICS
+V0.7 is specific about what it adds, and about what it does not pretend the source has already fixed.
+Introduced law What it establishes
+SDF closure Admitted compounds and their admissibility definitions remain
+SDF-qualified. No metric theorem is imported.
+Typed roles and
+binding
+The whole expression has explicit scope; direct and inverse roles are not
+silently interchanged.
+TC1--TC5 No anticipation, no rewriting completed observations, no temporal
+inversion by structural mirroring, guarded recurrence and no erased
+elapsed duration.
+Inverse-Occam
+non-erasure
+Equal selected observations do not identify the full definitions.
+Preservation
+idempotence
+Stating the same non-erasure qualification twice adds no second
+obligation.
+Unbounded
+specification
+No prescribed intrinsic exterior or maximum nesting depth; not a
+finite-memory claim.
+Still requiring an explicit assignment
+The source does not select a unique jitter behavior, a rule for when a continuation becomes actual,
+an intrinsic pinion transformation beyond its named relation, or a physical observation protocol.
+It does not assign a recoverable history codec or a numerical thermodynamic interpretation of
+entropy.
+Consequently, the upgraded core specifies constraints on admissible continuations, not a uniquely
+solved physical evolution. Declaring those missing laws to be automatic consequences of the Arch
+identity would undo the audit’s most important finding.
+What could make an extension more specific
+A proposed extension can supply an explicit law and demonstrate that it preserves SDF qualification,
+binding, non-erasure and forward precedence. It must distinguish an added model from a source-
+mandated definition. Requiring such a declaration does not force that model to become a grid,
+category, vector space or renderer.
+The mathematical object being specified is not made more complete by claiming unprovided
+dynamics. It is made more precise by identifying which statements are definitions, which are
+consequences, and which still need an assigned law.
+The total SDF definition 14 / 18
+
+=== PAGE 15 ===
+TOM KLOOTWIJK TOM / V0.7
+14 How previous applications relate to TOM
+INTRINSIC DEFINITION VERSUS OPTIONAL REALIZATION
+Earlier releases explored packed-bit logic, graph routes, sparse crowds, CUDA textures and event
+histories. Those can remain useful finite application models. The new source, however, explicitly
+rejects treating such representations as the definition of its continuous, non-node-based articulation.
+[S37, pp. 14, 26, 28, 31]
+A realization must declare what it preserves
+A future digital, numerical or physical interpretation must identify its correspondence to the native
+SDF roles. It must state which defining distinctions remain visible, how causal precedence is
+maintained, what data it can observe and which equivalences it actually preserves.
+A finite graph representation would be an external projection with declared loss or interpretation,
+not evidence that the intrinsic SDFs were graph nodes all along. A bit-level encoding similarly
+needs its own storage and execution contracts. A finite audit program is not TOM merely because
+its output discusses TOM.
+What this gives you now
+You have an authored definition that can be read without choosing a spatial embedding or replacing
+the source with an existing mathematical category. It includes explicit temporal requirements, a
+defensible interpretation of the inverse-Occam phrase, a source-decision register and reproducible
+checks of the exported scalar formulas.
+This is useful for reviewing future versions: a claimed implementation can be checked against
+these commitments instead of accepted on a visual analogy or a zero numerical residual. The
+formalization also identifies which operations and empirical statements need more than a name.
+Physical claims remain a different task
+To claim a law of nature, one would additionally need a stated observable distinction, a law that
+predicts it, a mapping to measurements and a test that could disagree. Neither a sign identity nor
+the removal of a coordinate system supplies those on its own.
+No new empirical result hidden in the terminology
+The release does not identify a person with a cosmic continuum, certify an unprecedented
+discovery, infer infinite storage or claim faster hardware. The source’s own page-23
+clarification places the identity back in authorship, where it is retained exactly.
+The total SDF definition 15 / 18
+
+=== PAGE 16 ===
+TOM KLOOTWIJK TOM / V0.7
+15 Executed audit and reproducible package
+EXACT FINITE CHECKS / NOT A SIMULATION OF THE INTRINSIC DEFINITION
+The companion package includes the editable statement, a machine-readable editorial contract and
+two small audit tools. Their ordinary data structures belong to this documentation task; they do
+not become intrinsic coordinates or nodes of TOM.
+Executed diagnostic Cases
+Distinct rational pairs for the Arch piecewise identity 66,049
+Negative scale/echo parameter cases 65,792
+Positive reciprocal-mirror cases 1,024
+Different inverse partners with the same reading 256
+Smooth-replacement counterexamples 2
+Opposite time orientations with unit slope magnitude 2
+Explicit nonassociativity counterexample 1
+Editorial contract and known-regression tests 10
+The main checks use exact rational arithmetic. A separate 70-digit decimal display reports the log
+coefficient; it is not used to prove that it is negative. The general results in Sections 9--12 follow
+from their algebra, not from the number of finite tests.
+Run the supplied diagnostics
+Python 3.10 or later, standard library only:
+python audit/audit_formulas.py --json scalar_results.json
+python audit/audit_contract.py --self-test --json contract_results.json
+The contract audit catches known regressions such as making an external metric mandatory,
+switching the pinion to uppercase, treating equal readings as full identity, or making the author’s
+identifier a physical parameter.
+Scope of a passing audit
+The checks establish the reported finite cases and detect the listed specification mistakes. They
+do not certify complete consistency of every possible extension, an empirical physics law,
+historical novelty or GPU performance. No execution kernel is represented as a graph-free
+realization of TOM.
+The total SDF definition 16 / 18
+
+=== PAGE 17 ===
+TOM KLOOTWIJK TOM / V0.7
+16 Source lineage and version record
+THE GOVERNING ATTACHMENT / AUTHOR STATEMENTS VERSUS EXPORTED RESPONSES
+S37: new 37-page source. The uploaded file begins ‘‘DON EN AD PORNO TIME SHARE CRYPTO
+SHA256 TELESHIFTING PRESENCE ...’’. The whole source is retained as provenance; its filename
+is not treated as an empirical claim about the people or concepts named there.
+Pages Role in this revision
+1--13 Quaternion, shader and Matryoshka starting proposals. Historical scaffold, not the final
+arena.
+14--16 Author’s pure-definition instruction; exported nesting and connection formulas.
+17, 21--23 Generated identity/continuum claims and the author’s later rejection of literal
+identity-as-physics.
+18--21 𝜙/Φ distinction, removal of Ψ, reciprocal mirror and Arch formula. Later corrections
+control notation.
+24--28 Smooth/Lie/vector proposals rejected; category/locale replacement not automatically
+adopted. Lowercase pinion and uncheated timeline reaffirmed.
+31--34 Graph/cardinality/vector rejection; inverse-Occam sheet and inverse-log jitter; final
+scalar balance.
+35--37 Exported causality, entropy and Eikonal claims. Roles retained, unsupported
+consequences audited.
+Visual material was also checked
+The page-33 schematic names inverse Occam, temporal jitter, inverse-log pinion and Arch.
+The page-36 schematic presents causality and entropic echo together before Arch. Those role
+relationships are incorporated; the diagrams’ drawn arrows are not reintroduced as a graph
+ontology after the author’s page-31 correction.
+What is new, and what is not being claimed
+The closure convention, typed nesting, TC1--TC5 and inverse-Occam non-erasure law are proposed
+V0.7 clauses. The scalar identities, counterexamples and normalization consequences are derived
+diagnostics. The names and controlling exclusions are source-derived.
+No outside theory is silently substituted. No literature search is represented as having established
+historical priority. Earlier project sources remain contextual where the new instructions do not
+supersede them.
+Version: TOM V0.7. This is not a rename to v7.0 and not an acronym assigned by the
+exported response. Your supplied identifiers remain an authorship record, with no invented
+physical meaning.
+The total SDF definition 17 / 18
+
+=== PAGE 18 ===
+TOM KLOOTWIJK TOM / V0.7
+17 TOM V0.7: consolidated release definition
+FORMAL RESTATEMENT / THE SOURCE-LED UPGRADE
+TOM
+TOM is the complete precedence-qualified SDF definition. Every admitted defining role
+and compound expression is itself SDF-qualified. The lowercase pinion 𝜙, its inverse-log
+expression, temporal jitter, causality, the source-named entropic echo and Arch U without U
+remain articulated within the inverse-Occam sheet.
+The sheet does not discard a defining distinction merely because a selected reading agrees.
+Temporal continuation admits no anticipation, no rewriting of completed commitments and
+no reversal created by structural inversion. Nesting or compressed description does not
+erase elapsed time.
+No quaternion arena, external metric, operator graph, vector magnitude, compulsory
+cardinality observable or global Ψ enclosure is imposed as its intrinsic foundation.
+TOMV0.7 := InverseOccam⟨Arch⟨C⟨J⟨T⟩⟩; E⟨C⟨J⟨T⟩⟩; InvLog⟨𝜙⟩⟩⟩⟩≺T .
+The source’s numerical Arch equation is kept as a declared external observation. Its exact zero
+identity is not promoted into a claim that all defining structure, time direction or physical behavior
+is fixed by zero.
+Release acceptance conditions
+A continuation of this formalization should preserve the latest source corrections, keep lowercase 𝜙,
+disclose any additional representation, state the law behind each proposed equivalence, maintain
+the temporal contracts, and distinguish empirical evidence from a formal identity.
+The unresolved dynamics are not filled with an unrequested conventional model. They are
+declared places where a future explicit law can extend TOM without changing its meaning silently.
+Tom Klootwijk / NL200678942
+Date as supplied: 10-07-1990 TOM V0.7
+The total SDF definition 18 / 18

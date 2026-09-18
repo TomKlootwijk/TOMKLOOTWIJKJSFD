@@ -1,0 +1,1574 @@
+{
+  "status": "PASS",
+  "backend": "cpu",
+  "gpu_executed": false,
+  "streams": 8,
+  "submitted_ticks": 3,
+  "idle_ticks": 1,
+  "decisions_per_evaluator": 24,
+  "accepted_per_evaluator": 17,
+  "rejected_per_evaluator": 7,
+  "allocated_lanes": 32,
+  "padding_lanes": 24,
+  "validation": [
+    "plain integer policy oracle",
+    "complete minterm state comparison",
+    "field/lowered equivalence",
+    "resumed epoch and state",
+    "idle submission consumption"
+  ],
+  "scope": "Finite supplied-data policy; no timestamp authentication, dependency existence proof, or physical causality proof.",
+  "program": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\examples\\event_admission.tsdf",
+  "executions": [
+    {
+      "evaluator": "field",
+      "observations": [
+        {
+          "stream": "append",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "replay",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "backward_time",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "wrong_elapsed",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "future_dependency",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "fact_erasure",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "combined_recovery",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "uint16_boundary",
+          "tick": 1,
+          "before": {
+            "last_sequence": 65533,
+            "last_time": 65533,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 65534,
+            "event_time": 65534,
+            "claimed_elapsed": 1,
+            "latest_dependency": 65533,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 65534,
+            "last_time": 65534,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "append",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "replay",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": false,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "backward_time",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 104,
+            "claimed_elapsed": 65535,
+            "latest_dependency": 100,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": false,
+            "elapsed_exact": false,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "wrong_elapsed",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 4,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": false,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "future_dependency",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 111,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": false,
+            "facts_retained": true
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "fact_erasure",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 3
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": false
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "combined_recovery",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 40,
+            "event_time": 104,
+            "claimed_elapsed": 65535,
+            "latest_dependency": 106,
+            "proposed_facts": 1
+          },
+          "checks": {
+            "sequence_forward": false,
+            "time_forward": false,
+            "elapsed_exact": false,
+            "dependency_not_future": false,
+            "facts_retained": false
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "uint16_boundary",
+          "tick": 2,
+          "before": {
+            "last_sequence": 65534,
+            "last_time": 65534,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 65535,
+            "event_time": 65535,
+            "claimed_elapsed": 1,
+            "latest_dependency": 65534,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 65535,
+            "last_time": 65535,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "append",
+          "tick": 3,
+          "before": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          },
+          "event": {
+            "event_sequence": 43,
+            "event_time": 115,
+            "claimed_elapsed": 5,
+            "latest_dependency": 110,
+            "proposed_facts": 31
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 43,
+            "last_time": 115,
+            "retained_facts": 31
+          }
+        },
+        {
+          "stream": "replay",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "backward_time",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "wrong_elapsed",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "future_dependency",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "fact_erasure",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "combined_recovery",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "uint16_boundary",
+          "tick": 3,
+          "before": {
+            "last_sequence": 65535,
+            "last_time": 65535,
+            "retained_facts": 15
+          },
+          "event": {
+            "event_sequence": 0,
+            "event_time": 0,
+            "claimed_elapsed": 1,
+            "latest_dependency": 0,
+            "proposed_facts": 31
+          },
+          "checks": {
+            "sequence_forward": false,
+            "time_forward": false,
+            "elapsed_exact": false,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 65535,
+            "last_time": 65535,
+            "retained_facts": 15
+          }
+        }
+      ],
+      "run_reports": [
+        {
+          "name": "TOM",
+          "version": "0.7-K1",
+          "backend": "cpu",
+          "evaluator": "field",
+          "lanes": 32,
+          "ticks": 1,
+          "epoch": 1,
+          "states": 119,
+          "scratch_slots": 135,
+          "definition_bytes": 37632,
+          "working_bytes": 1492,
+          "elapsed_host_ns": 48200,
+          "output_digest": 17495605578193787910,
+          "trace_io_in_timing": false,
+          "gpu_executed": false,
+          "source_physics_validated": false
+        },
+        {
+          "name": "TOM",
+          "version": "0.7-K1",
+          "backend": "cpu",
+          "evaluator": "field",
+          "lanes": 32,
+          "ticks": 1,
+          "epoch": 2,
+          "states": 119,
+          "scratch_slots": 135,
+          "definition_bytes": 37632,
+          "working_bytes": 1492,
+          "elapsed_host_ns": 12500,
+          "output_digest": 764004825529613707,
+          "trace_io_in_timing": false,
+          "gpu_executed": false,
+          "source_physics_validated": false
+        },
+        {
+          "name": "TOM",
+          "version": "0.7-K1",
+          "backend": "cpu",
+          "evaluator": "field",
+          "lanes": 32,
+          "ticks": 1,
+          "epoch": 3,
+          "states": 119,
+          "scratch_slots": 135,
+          "definition_bytes": 37632,
+          "working_bytes": 1492,
+          "elapsed_host_ns": 11800,
+          "output_digest": 8656447013416833932,
+          "trace_io_in_timing": false,
+          "gpu_executed": false,
+          "source_physics_validated": false
+        },
+        {
+          "name": "TOM",
+          "version": "0.7-K1",
+          "backend": "cpu",
+          "evaluator": "field",
+          "lanes": 32,
+          "ticks": 1,
+          "epoch": 4,
+          "states": 119,
+          "scratch_slots": 135,
+          "definition_bytes": 37632,
+          "working_bytes": 1492,
+          "elapsed_host_ns": 11100,
+          "output_digest": 11124903119329479644,
+          "trace_io_in_timing": false,
+          "gpu_executed": false,
+          "source_physics_validated": false
+        }
+      ]
+    },
+    {
+      "evaluator": "lowered",
+      "observations": [
+        {
+          "stream": "append",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "replay",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "backward_time",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "wrong_elapsed",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "future_dependency",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "fact_erasure",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "combined_recovery",
+          "tick": 1,
+          "before": {
+            "last_sequence": 40,
+            "last_time": 100,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 105,
+            "claimed_elapsed": 5,
+            "latest_dependency": 100,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "uint16_boundary",
+          "tick": 1,
+          "before": {
+            "last_sequence": 65533,
+            "last_time": 65533,
+            "retained_facts": 3
+          },
+          "event": {
+            "event_sequence": 65534,
+            "event_time": 65534,
+            "claimed_elapsed": 1,
+            "latest_dependency": 65533,
+            "proposed_facts": 7
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 65534,
+            "last_time": 65534,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "append",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "replay",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 41,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": false,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "backward_time",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 104,
+            "claimed_elapsed": 65535,
+            "latest_dependency": 100,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": false,
+            "elapsed_exact": false,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "wrong_elapsed",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 4,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": false,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "future_dependency",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 111,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": false,
+            "facts_retained": true
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "fact_erasure",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 3
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": false
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "combined_recovery",
+          "tick": 2,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 40,
+            "event_time": 104,
+            "claimed_elapsed": 65535,
+            "latest_dependency": 106,
+            "proposed_facts": 1
+          },
+          "checks": {
+            "sequence_forward": false,
+            "time_forward": false,
+            "elapsed_exact": false,
+            "dependency_not_future": false,
+            "facts_retained": false
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          }
+        },
+        {
+          "stream": "uint16_boundary",
+          "tick": 2,
+          "before": {
+            "last_sequence": 65534,
+            "last_time": 65534,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 65535,
+            "event_time": 65535,
+            "claimed_elapsed": 1,
+            "latest_dependency": 65534,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 65535,
+            "last_time": 65535,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "append",
+          "tick": 3,
+          "before": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          },
+          "event": {
+            "event_sequence": 43,
+            "event_time": 115,
+            "claimed_elapsed": 5,
+            "latest_dependency": 110,
+            "proposed_facts": 31
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 43,
+            "last_time": 115,
+            "retained_facts": 31
+          }
+        },
+        {
+          "stream": "replay",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "backward_time",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "wrong_elapsed",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "future_dependency",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "fact_erasure",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "combined_recovery",
+          "tick": 3,
+          "before": {
+            "last_sequence": 41,
+            "last_time": 105,
+            "retained_facts": 7
+          },
+          "event": {
+            "event_sequence": 42,
+            "event_time": 110,
+            "claimed_elapsed": 5,
+            "latest_dependency": 105,
+            "proposed_facts": 15
+          },
+          "checks": {
+            "sequence_forward": true,
+            "time_forward": true,
+            "elapsed_exact": true,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": true,
+          "after": {
+            "last_sequence": 42,
+            "last_time": 110,
+            "retained_facts": 15
+          }
+        },
+        {
+          "stream": "uint16_boundary",
+          "tick": 3,
+          "before": {
+            "last_sequence": 65535,
+            "last_time": 65535,
+            "retained_facts": 15
+          },
+          "event": {
+            "event_sequence": 0,
+            "event_time": 0,
+            "claimed_elapsed": 1,
+            "latest_dependency": 0,
+            "proposed_facts": 31
+          },
+          "checks": {
+            "sequence_forward": false,
+            "time_forward": false,
+            "elapsed_exact": false,
+            "dependency_not_future": true,
+            "facts_retained": true
+          },
+          "accepted": false,
+          "after": {
+            "last_sequence": 65535,
+            "last_time": 65535,
+            "retained_facts": 15
+          }
+        }
+      ],
+      "run_reports": [
+        {
+          "name": "TOM",
+          "version": "0.7-K1",
+          "backend": "cpu",
+          "evaluator": "lowered",
+          "lanes": 32,
+          "ticks": 1,
+          "epoch": 1,
+          "states": 119,
+          "scratch_slots": 135,
+          "definition_bytes": 37632,
+          "working_bytes": 1492,
+          "elapsed_host_ns": 5700,
+          "output_digest": 17495605578193787910,
+          "trace_io_in_timing": false,
+          "gpu_executed": false,
+          "source_physics_validated": false
+        },
+        {
+          "name": "TOM",
+          "version": "0.7-K1",
+          "backend": "cpu",
+          "evaluator": "lowered",
+          "lanes": 32,
+          "ticks": 1,
+          "epoch": 2,
+          "states": 119,
+          "scratch_slots": 135,
+          "definition_bytes": 37632,
+          "working_bytes": 1492,
+          "elapsed_host_ns": 5400,
+          "output_digest": 764004825529613707,
+          "trace_io_in_timing": false,
+          "gpu_executed": false,
+          "source_physics_validated": false
+        },
+        {
+          "name": "TOM",
+          "version": "0.7-K1",
+          "backend": "cpu",
+          "evaluator": "lowered",
+          "lanes": 32,
+          "ticks": 1,
+          "epoch": 3,
+          "states": 119,
+          "scratch_slots": 135,
+          "definition_bytes": 37632,
+          "working_bytes": 1492,
+          "elapsed_host_ns": 10300,
+          "output_digest": 8656447013416833932,
+          "trace_io_in_timing": false,
+          "gpu_executed": false,
+          "source_physics_validated": false
+        },
+        {
+          "name": "TOM",
+          "version": "0.7-K1",
+          "backend": "cpu",
+          "evaluator": "lowered",
+          "lanes": 32,
+          "ticks": 1,
+          "epoch": 4,
+          "states": 119,
+          "scratch_slots": 135,
+          "definition_bytes": 37632,
+          "working_bytes": 1492,
+          "elapsed_host_ns": 7700,
+          "output_digest": 11124903119329479644,
+          "trace_io_in_timing": false,
+          "gpu_executed": false,
+          "source_physics_validated": false
+        }
+      ]
+    }
+  ]
+}

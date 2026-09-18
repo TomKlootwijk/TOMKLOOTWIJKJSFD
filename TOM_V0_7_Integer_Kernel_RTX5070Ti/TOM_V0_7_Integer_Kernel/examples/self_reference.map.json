@@ -1,0 +1,346 @@
+{
+  "name": "Self-referential operator: quote definitions, publish future truth rows",
+  "version": "0.7-K1",
+  "author": "Tom Klootwijk",
+  "identifier": "NL200678942",
+  "date_supplied": "10-07-1990",
+  "names": {
+    "KERNEL": 0,
+    "T": 1,
+    "A": 1,
+    "TOM": 2,
+    "phi": 3,
+    "jitter": 4,
+    "inverse_log_phi": 5,
+    "ArchU": 6,
+    "causality": 7,
+    "entropy": 8,
+    "InverseOccam": 9,
+    "sheet": 10,
+    "double_UU": 11,
+    "Klein": 12,
+    "Matryoshka": 13,
+    "ZERO": 14,
+    "ONE": 15,
+    "input": 16,
+    "self_row.0": 17,
+    "self_row.1": 18,
+    "self_row.2": 19,
+    "self_row.3": 20,
+    "self_row.4": 21,
+    "self_row.5": 22,
+    "self_row.6": 23,
+    "self_row.7": 24,
+    "answer": 25,
+    "read_own_id.0": 26,
+    "read_own_id.1": 27,
+    "read_own_id.2": 28,
+    "read_own_id.3": 29,
+    "read_own_id.4": 30,
+    "read_own_id.5": 31,
+    "read_own_id.6": 32,
+    "read_own_id.7": 33,
+    "kernel_selector_bit1": 34,
+    "NOT": 35,
+    "AND": 36,
+    "OR": 37,
+    "XOR": 38,
+    "EQ": 39,
+    "MUX": 40,
+    "SUM3": 41,
+    "MAJ3": 42,
+    "SELF": 43,
+    "$v0": 44,
+    "$v1": 45,
+    "$v2": 46,
+    "$v3": 47,
+    "$v4": 48,
+    "$v5": 49,
+    "$v6": 50,
+    "$v7": 51,
+    "$v8": 52,
+    "own_id_bit.0": 53,
+    "own_id_bit.1": 54,
+    "own_id_bit.2": 55,
+    "own_id_bit.3": 56,
+    "own_id_bit.4": 57,
+    "own_id_bit.5": 58,
+    "own_id_bit.6": 59,
+    "own_id_bit.7": 60,
+    "read_kernel_bit": 61
+  },
+  "state_slots": {
+    "input": 0,
+    "self_row.0": 1,
+    "self_row.1": 2,
+    "self_row.2": 3,
+    "self_row.3": 4,
+    "self_row.4": 5,
+    "self_row.5": 6,
+    "self_row.6": 7,
+    "self_row.7": 8,
+    "answer": 9,
+    "read_own_id.0": 10,
+    "read_own_id.1": 11,
+    "read_own_id.2": 12,
+    "read_own_id.3": 13,
+    "read_own_id.4": 14,
+    "read_own_id.5": 15,
+    "read_own_id.6": 16,
+    "read_own_id.7": 17,
+    "kernel_selector_bit1": 18
+  },
+  "groups": {
+    "current_rule": {
+      "bits": [
+        "self_row.0",
+        "self_row.1",
+        "self_row.2",
+        "self_row.3",
+        "self_row.4",
+        "self_row.5",
+        "self_row.6",
+        "self_row.7"
+      ],
+      "signed": false
+    },
+    "read_own_id": {
+      "bits": [
+        "read_own_id.0",
+        "read_own_id.1",
+        "read_own_id.2",
+        "read_own_id.3",
+        "read_own_id.4",
+        "read_own_id.5",
+        "read_own_id.6",
+        "read_own_id.7"
+      ],
+      "signed": false
+    }
+  },
+  "outputs": [
+    "input",
+    "answer",
+    "current_rule",
+    "read_own_id",
+    "kernel_selector_bit1"
+  ],
+  "objects": 62,
+  "scheduled_values": 28,
+  "scratch_slots": 19,
+  "unrecycled_slots": 28,
+  "kernel_microcode_words": 28,
+  "kernel_table_word": 3,
+  "native_roles_uninterpreted": [
+    "TOM",
+    "phi",
+    "jitter",
+    "inverse_log_phi",
+    "ArchU",
+    "causality",
+    "entropy",
+    "InverseOccam",
+    "sheet",
+    "double_UU",
+    "Klein",
+    "Matryoshka"
+  ],
+  "scope": "finite validation representation; not intrinsic TOM nodes, dimensions, metric or physical evolution",
+  "source_definition": {
+    "name": "Self-referential operator: quote definitions, publish future truth rows",
+    "state": {
+      "input": {
+        "counter_bit": 0
+      },
+      "self_row.0": 0,
+      "self_row.1": 1,
+      "self_row.2": 0,
+      "self_row.3": 1,
+      "self_row.4": 0,
+      "self_row.5": 1,
+      "self_row.6": 0,
+      "self_row.7": 1,
+      "answer": 0,
+      "read_own_id.0": 0,
+      "read_own_id.1": 0,
+      "read_own_id.2": 0,
+      "read_own_id.3": 0,
+      "read_own_id.4": 0,
+      "read_own_id.5": 0,
+      "read_own_id.6": 0,
+      "read_own_id.7": 0,
+      "kernel_selector_bit1": 0
+    },
+    "rules": {
+      "NOT": 85,
+      "AND": 136,
+      "OR": 238,
+      "XOR": 102,
+      "EQ": 153,
+      "MUX": 202,
+      "SUM3": 150,
+      "MAJ3": 232,
+      "SELF": {
+        "rows": [
+          "self_row.0",
+          "self_row.1",
+          "self_row.2",
+          "self_row.3",
+          "self_row.4",
+          "self_row.5",
+          "self_row.6",
+          "self_row.7"
+        ]
+      }
+    },
+    "expressions": {
+      "$v0": {
+        "rule": "SELF",
+        "args": [
+          "input"
+        ]
+      },
+      "$v1": {
+        "rule": "NOT",
+        "args": [
+          "self_row.0"
+        ]
+      },
+      "$v2": {
+        "rule": "NOT",
+        "args": [
+          "self_row.1"
+        ]
+      },
+      "$v3": {
+        "rule": "NOT",
+        "args": [
+          "self_row.2"
+        ]
+      },
+      "$v4": {
+        "rule": "NOT",
+        "args": [
+          "self_row.3"
+        ]
+      },
+      "$v5": {
+        "rule": "NOT",
+        "args": [
+          "self_row.4"
+        ]
+      },
+      "$v6": {
+        "rule": "NOT",
+        "args": [
+          "self_row.5"
+        ]
+      },
+      "$v7": {
+        "rule": "NOT",
+        "args": [
+          "self_row.6"
+        ]
+      },
+      "$v8": {
+        "rule": "NOT",
+        "args": [
+          "self_row.7"
+        ]
+      }
+    },
+    "next": {
+      "answer": "$v0",
+      "self_row.0": "$v1",
+      "self_row.1": "$v2",
+      "self_row.2": "$v3",
+      "self_row.3": "$v4",
+      "self_row.4": "$v5",
+      "self_row.5": "$v6",
+      "self_row.6": "$v7",
+      "self_row.7": "$v8",
+      "read_own_id.0": "own_id_bit.0",
+      "read_own_id.1": "own_id_bit.1",
+      "read_own_id.2": "own_id_bit.2",
+      "read_own_id.3": "own_id_bit.3",
+      "read_own_id.4": "own_id_bit.4",
+      "read_own_id.5": "own_id_bit.5",
+      "read_own_id.6": "own_id_bit.6",
+      "read_own_id.7": "own_id_bit.7",
+      "kernel_selector_bit1": "read_kernel_bit"
+    },
+    "quotes": {
+      "own_id_bit.0": {
+        "object": "SELF",
+        "bit": 448
+      },
+      "own_id_bit.1": {
+        "object": "SELF",
+        "bit": 449
+      },
+      "own_id_bit.2": {
+        "object": "SELF",
+        "bit": 450
+      },
+      "own_id_bit.3": {
+        "object": "SELF",
+        "bit": 451
+      },
+      "own_id_bit.4": {
+        "object": "SELF",
+        "bit": 452
+      },
+      "own_id_bit.5": {
+        "object": "SELF",
+        "bit": 453
+      },
+      "own_id_bit.6": {
+        "object": "SELF",
+        "bit": 454
+      },
+      "own_id_bit.7": {
+        "object": "SELF",
+        "bit": 455
+      },
+      "read_kernel_bit": {
+        "object": "KERNEL",
+        "bit": 97
+      }
+    },
+    "groups": {
+      "current_rule": {
+        "bits": [
+          "self_row.0",
+          "self_row.1",
+          "self_row.2",
+          "self_row.3",
+          "self_row.4",
+          "self_row.5",
+          "self_row.6",
+          "self_row.7"
+        ],
+        "signed": false
+      },
+      "read_own_id": {
+        "bits": [
+          "read_own_id.0",
+          "read_own_id.1",
+          "read_own_id.2",
+          "read_own_id.3",
+          "read_own_id.4",
+          "read_own_id.5",
+          "read_own_id.6",
+          "read_own_id.7"
+        ],
+        "signed": false
+      }
+    },
+    "outputs": [
+      "input",
+      "answer",
+      "current_rule",
+      "read_own_id",
+      "kernel_selector_bit1"
+    ]
+  }
+}
