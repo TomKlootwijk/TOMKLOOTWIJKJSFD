@@ -1,0 +1,128 @@
+{
+  "application": "aTOMos Gate",
+  "benchmark": {
+    "accepted": 10000,
+    "iterations": 10000,
+    "max_latency_ns": 220800,
+    "median_latency_ns": 1300.0,
+    "rejected": 0
+  },
+  "fixtures": {
+    "all_rejected_core_states_preserved": true,
+    "final_state": {
+      "accepted_count": 2,
+      "last_seq": 2,
+      "last_t": 20,
+      "negative_memory_bits": 255,
+      "rejected_count": 8,
+      "retained_fact_mask": 3,
+      "stream_id": "demo"
+    },
+    "fixtures": [
+      {
+        "accepted": true,
+        "adapter_count": 4,
+        "core_state_committed": true,
+        "name": "valid_append",
+        "reasons": [],
+        "rejected_core_state_preserved": true
+      },
+      {
+        "accepted": false,
+        "adapter_count": 4,
+        "core_state_committed": false,
+        "name": "replay",
+        "reasons": [
+          "stale_sequence",
+          "backward_time",
+          "wrong_elapsed"
+        ],
+        "rejected_core_state_preserved": true
+      },
+      {
+        "accepted": false,
+        "adapter_count": 4,
+        "core_state_committed": false,
+        "name": "backward_time",
+        "reasons": [
+          "backward_time"
+        ],
+        "rejected_core_state_preserved": true
+      },
+      {
+        "accepted": false,
+        "adapter_count": 4,
+        "core_state_committed": false,
+        "name": "wrong_elapsed",
+        "reasons": [
+          "wrong_elapsed"
+        ],
+        "rejected_core_state_preserved": true
+      },
+      {
+        "accepted": false,
+        "adapter_count": 4,
+        "core_state_committed": false,
+        "name": "future_dependency",
+        "reasons": [
+          "future_dependency"
+        ],
+        "rejected_core_state_preserved": true
+      },
+      {
+        "accepted": false,
+        "adapter_count": 4,
+        "core_state_committed": false,
+        "name": "fact_erasure",
+        "reasons": [
+          "fact_erasure"
+        ],
+        "rejected_core_state_preserved": true
+      },
+      {
+        "accepted": false,
+        "adapter_count": 4,
+        "core_state_committed": false,
+        "name": "not_fresh",
+        "reasons": [
+          "not_fresh"
+        ],
+        "rejected_core_state_preserved": true
+      },
+      {
+        "accepted": false,
+        "adapter_count": 4,
+        "core_state_committed": false,
+        "name": "u16_overflow",
+        "reasons": [
+          "u16_overflow"
+        ],
+        "rejected_core_state_preserved": true
+      },
+      {
+        "accepted": false,
+        "adapter_count": 4,
+        "core_state_committed": false,
+        "name": "wrong_stream",
+        "reasons": [
+          "wrong_stream"
+        ],
+        "rejected_core_state_preserved": true
+      },
+      {
+        "accepted": true,
+        "adapter_count": 4,
+        "core_state_committed": true,
+        "name": "recovery_after_reject",
+        "reasons": [],
+        "rejected_core_state_preserved": true
+      }
+    ]
+  },
+  "operator": {
+    "AB": "atomic admission bit",
+    "JIT": "accepted relation emitted then released",
+    "W": "bounded reason mask"
+  },
+  "replay_digest": "53d2fc80ee1d895033e22ef8c7ae8083c8552db5ebf6890f42a805b841c27e98"
+}

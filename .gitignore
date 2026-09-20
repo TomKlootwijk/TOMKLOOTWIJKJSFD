@@ -1,0 +1,9 @@
+# Scratch extracted/rendered PDF inspection files.
+tmp_pdf_extract.txt
+tmp_pdf_extract/
+tmp_pdf_pages/
+tmp_pdf_render/
+
+# Local Python caches and PDF-build intermediates.
+**/__pycache__/
+tmp/pdfs/
