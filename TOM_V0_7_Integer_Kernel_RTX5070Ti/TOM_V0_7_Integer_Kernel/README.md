@@ -39,6 +39,24 @@ independent reference is `python/tom/native.py`. The [ABI](docs/native_abi.json)
 and [31 source-derived cases](examples/native_acceptance_cases.json) make the
 external representation and obligations inspectable.
 
+## Clean SDF/Klein semantic core
+
+`python/tom/sdf_core.py` is the reference semantic layer for the universal
+substrate direction. It treats SDF as a definition-level operator relation,
+not as a mandatory Euclidean distance or coordinate grid. A term carries its
+ordered operator identity, sign, exact value or symbolic value, double-packed
+`KleinPack`, optional seed-derived `Pinion`, provenance, history, and open
+obligations. `pack_term` and `Registry.pack` provide canonical digest-checked
+serialization.
+
+`python/tom/sdf_lowering.py` is the explicit compatibility seam into the
+validated TOM/K1 evaluator. It lowers only operators declared by the selected
+profile and emits a semantic sidecar for fields that the fixed ABI cannot yet
+carry. Unsupported operators and unresolved obligations are rejected; they are
+never silently flattened into a scalar or Boolean result. See
+[`docs/SDF_CORE.md`](docs/SDF_CORE.md) and the `tom_sdf_core`/
+`tom_sdf_lowering` tests.
+
 ## Historical Boolean K1 implementation
 
 Everything below describes the earlier `tom_cpu` / `tom_cuda` Boolean circuit

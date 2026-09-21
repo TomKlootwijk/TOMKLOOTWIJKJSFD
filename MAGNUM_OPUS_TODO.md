@@ -16,6 +16,24 @@ The packed carrier is a **double-packed Klein-bottle/SDF operator structure**. T
 
 The first concrete deliverable is a **clean kernel core**. It is the universal substrate from which domain profiles, lowerings, and datacenter composition are derived. GPU, CPU, LUT, bitplane, FPGA, storage, and network forms are execution lowerings of the same semantic object and must be checked for semantic equivalence.
 
+## Provenance of the semantic-core direction
+
+The full architecture rundown from the 21 September 2026 design discussion is preserved in [provenance/2026-09-21_sdf_semantic_core_rundown.md](provenance/2026-09-21_sdf_semantic_core_rundown.md). Its governing conclusion is:
+
+```text
+SDF/Klein semantic term
+        -> canonical validation and qualification
+        -> loss-preserving lowering
+        -> existing TOM v0.7 kernel
+        -> CPU / GPU / LUT / FPGA / storage / network execution
+```
+
+The existing validated kernel remains the finite execution backend. The new
+semantic core defines the canonical operator object: SDF relation, Klein host,
+pinion, provenance, obligations, self-reference, and explicit application
+readouts. The new layer earns its place only when complete terms, histories,
+obligations, and readouts survive lowering with independent equivalence proof.
+
 ## Ontological wrapper
 
 Every packed term must be representable as an explicit record with at least:
