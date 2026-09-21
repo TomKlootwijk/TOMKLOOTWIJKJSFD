@@ -1,7 +1,7 @@
 # SDF/Klein core readiness audit
 
 Date: 2026-09-21
-Initial audited revision: `1077a7e`; follow-up repairs through `02c50fd`
+Initial audited revision: `1077a7e`; follow-up repairs through `ac41c72`
 Scope: `python/tom/sdf_core.py`, `python/tom/sdf_lowering.py`, their tests,
 and the existing native backend contract. No implementation was changed by this audit.
 

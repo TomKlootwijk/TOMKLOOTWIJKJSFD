@@ -80,7 +80,8 @@ explicit next obligations rather than implicit claims.
 ## Implementation follow-up recorded
 
 The hardening sequence was committed and pushed as `6aa8148`, `0b9ae8f`,
-`28037bb`, `7281d24`, `60bcdb4`, and `02c50fd`. The corresponding guides are
+`28037bb`, `7281d24`, `60bcdb4`, `02c50fd`, `607c670`, `5be7292`, and
+`ac41c72`. The corresponding guides are
 `docs/SDF_CORE.md`, `docs/ELI5_SDF_CORE.md`, `docs/BUILD_SDF_CORE.md`, and
 `docs/SDF_CORE_GPU.md`. This records the design direction and the measured
 boundary without rewriting the original architecture response as if it had

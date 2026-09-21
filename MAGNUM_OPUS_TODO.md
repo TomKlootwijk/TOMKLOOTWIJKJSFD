@@ -7,7 +7,7 @@ This document records the governing direction for the project.
 ## Release readiness - 21 September 2026
 
 Revision `1077a7e` introduced the semantic layer. Subsequent pushed revisions
-through `02c50fd` repaired the first admission, packing, lowering, restart,
+through `ac41c72` repaired the first admission, packing, lowering, restart,
 and GPU-equivalence blockers. The historical
 [readiness audit](TOM_V0_7_Integer_Kernel_RTX5070Ti/TOM_V0_7_Integer_Kernel/docs/SDF_CORE_READINESS_AUDIT.md)
 records both the original failures and the follow-up boundary. The local core
