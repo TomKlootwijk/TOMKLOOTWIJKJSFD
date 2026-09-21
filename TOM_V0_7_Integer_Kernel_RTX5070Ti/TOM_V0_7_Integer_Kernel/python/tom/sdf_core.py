@@ -40,6 +40,30 @@ TERM_FORMAT = "TOM-SDF-KLEIN-TERM-1"
 BUNDLE_FORMAT = "TOM-SDF-KLEIN-BUNDLE-1"
 
 
+@dataclass(frozen=True)
+class CoreLimits:
+    """Deterministic admission and evaluation budgets for one core profile."""
+
+    max_terms: int = 4096
+    max_term_bytes: int = 1 << 20
+    max_bundle_bytes: int = 16 << 20
+    max_definition_chars: int = 256
+    max_operator_chars: int = 128
+    max_role_chars: int = 256
+    max_provenance_chars: int = 4096
+    max_operands: int = 64
+    max_history_entries: int = 4096
+    max_obligations: int = 64
+    max_text_chars: int = 4096
+    max_value_chars: int = 16384
+    max_eval_depth: int = 256
+
+    def __post_init__(self) -> None:
+        for name, value in self.__dict__.items():
+            if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
+                raise SDFError(f"{name} must be a positive integer")
+
+
 class Sign(str, Enum):
     NEGATIVE = "-"
     ZERO = "0"
@@ -301,6 +325,38 @@ class Readout:
                 "falsifier": self.falsifier}
 
 
+def _check_term_limits(term: SDFTerm, limits: CoreLimits) -> None:
+    """Reject oversized semantic records before they enter a registry."""
+    text_fields = ((term.definition_id, limits.max_definition_chars, "definition id"),
+                   (term.operator, limits.max_operator_chars, "operator"),
+                   (term.role, limits.max_role_chars, "role"),
+                   (term.provenance, limits.max_provenance_chars, "provenance"))
+    for value, maximum, label in text_fields:
+        if len(value) > maximum:
+            raise SDFError(f"{label} exceeds the configured resource limit")
+    if len(term.operands) > limits.max_operands:
+        raise SDFError("term operand count exceeds the configured resource limit")
+    if len(term.history) > limits.max_history_entries:
+        raise SDFError("term history exceeds the configured resource limit")
+    if len(term.obligations) > limits.max_obligations:
+        raise SDFError("term obligation count exceeds the configured resource limit")
+    for values, label in ((term.operands, "operand"),
+                          (term.history, "history entry"),
+                          (term.obligations, "obligation")):
+        if any(len(value) > limits.max_text_chars for value in values):
+            raise SDFError(f"{label} exceeds the configured resource limit")
+    encoded_value = _exact_value(term.value)
+    if encoded_value is not None and any(
+            len(value) > limits.max_value_chars for value in encoded_value.values()):
+        raise SDFError("exact value exceeds the configured resource limit")
+    if term.pinion is not None and any(
+            len(value) > limits.max_text_chars
+            for value in (term.pinion.seed, term.pinion.parent or "", term.pinion.payload)):
+        raise SDFError("pinion text exceeds the configured resource limit")
+    if len(term.canonical_bytes) > limits.max_term_bytes:
+        raise SDFError("term exceeds the configured byte limit")
+
+
 def canonical_json(value: Any) -> bytes:
     """Canonical UTF-8 JSON bytes used by every semantic identity."""
     return json.dumps(value, ensure_ascii=False, sort_keys=True,
@@ -426,20 +482,31 @@ def _strict_json_loads(data: bytes, label: str) -> Any:
         raise SDFError(f"invalid {label} bytes") from exc
 
 
-def pack_term(term: SDFTerm) -> bytes:
+def pack_term(term: SDFTerm, *, limits: CoreLimits | None = None) -> bytes:
     """Pack one double-packed term with a self-checking semantic digest."""
-    return canonical_json({"format": TERM_FORMAT, "term": term.canonical(),
-                           "digest": term.digest})
+    selected_limits = limits or CoreLimits()
+    _check_term_limits(term, selected_limits)
+    packed = canonical_json({"format": TERM_FORMAT, "term": term.canonical(),
+                             "digest": term.digest})
+    if len(packed) > selected_limits.max_term_bytes:
+        raise SDFError("term envelope exceeds the configured byte limit")
+    return packed
 
 
-def unpack_term(data: bytes) -> SDFTerm:
+def unpack_term(data: bytes, *, limits: CoreLimits | None = None) -> SDFTerm:
     """Unpack and verify one canonical double-packed term."""
+    selected_limits = limits or CoreLimits()
+    if not isinstance(data, (bytes, bytearray)):
+        raise SDFError("canonical term bytes must be bytes")
+    if len(data) > selected_limits.max_term_bytes:
+        raise SDFError("canonical term exceeds the configured byte limit")
     payload = _strict_json_loads(data, "canonical term")
     payload = _object_with_shape(payload, label="canonical term envelope",
                                  required={"format", "term", "digest"})
     if payload["format"] != TERM_FORMAT:
         raise SDFError("unsupported SDF/Klein term format")
     term = term_from_canonical(payload["term"])
+    _check_term_limits(term, selected_limits)
     if payload["digest"] != term.digest:
         raise SDFError("canonical term digest mismatch")
     return term
@@ -448,13 +515,19 @@ def unpack_term(data: bytes) -> SDFTerm:
 class Registry:
     """Content-addressable term registry with explicit self-reference."""
 
-    def __init__(self) -> None:
+    def __init__(self, *, limits: CoreLimits | None = None) -> None:
         self._terms: dict[str, SDFTerm] = {}
+        self.limits = limits or CoreLimits()
 
     def register(self, term: SDFTerm) -> str:
+        if not isinstance(term, SDFTerm):
+            raise SDFError("registry entries must be SDFTerm values")
+        _check_term_limits(term, self.limits)
         existing = self._terms.get(term.definition_id)
         if existing is not None and existing.canonical_bytes != term.canonical_bytes:
             raise SDFError(f"definition id collision: {term.definition_id}")
+        if existing is None and len(self._terms) >= self.limits.max_terms:
+            raise SDFError("registry term count exceeds the configured resource limit")
         self._terms[term.definition_id] = term
         return term.definition_id
 
@@ -473,21 +546,29 @@ class Registry:
 
     def pack(self) -> bytes:
         """Pack the complete ordered registry with its content identity."""
-        return canonical_json({
+        packed = canonical_json({
             "format": BUNDLE_FORMAT,
             "terms": [self._terms[key].canonical() for key in sorted(self._terms)],
             "digest": self.digest(),
         })
+        if len(packed) > self.limits.max_bundle_bytes:
+            raise SDFError("registry bundle exceeds the configured byte limit")
+        return packed
 
     @classmethod
-    def unpack(cls, data: bytes) -> "Registry":
+    def unpack(cls, data: bytes, *, limits: CoreLimits | None = None) -> "Registry":
         """Unpack and verify a complete registry bundle."""
+        selected_limits = limits or CoreLimits()
+        if not isinstance(data, (bytes, bytearray)):
+            raise SDFError("canonical registry bytes must be bytes")
+        if len(data) > selected_limits.max_bundle_bytes:
+            raise SDFError("canonical registry exceeds the configured byte limit")
         payload = _strict_json_loads(data, "canonical registry")
         payload = _object_with_shape(payload, label="canonical registry envelope",
                                      required={"format", "terms", "digest"})
         if payload["format"] != BUNDLE_FORMAT:
             raise SDFError("unsupported SDF/Klein registry format")
-        registry = cls()
+        registry = cls(limits=selected_limits)
         terms = payload["terms"]
         if not isinstance(terms, list):
             raise SDFError("registry terms must be an array")
@@ -546,12 +627,14 @@ class SDFKernel:
     }
 
     def __init__(self, registry: Registry, *, capacity: int = 1024,
-                 seed: str = "TOM-SDF-SEED") -> None:
+                 seed: str = "TOM-SDF-SEED",
+                 limits: CoreLimits | None = None) -> None:
         if isinstance(capacity, bool) or not isinstance(capacity, int) or capacity <= 0:
             raise SDFError("kernel capacity must be positive")
         self.registry = registry
         self.capacity = capacity
         self.seed = _nonempty(seed, "kernel seed")
+        self.limits = limits or registry.limits
         self.state = KernelState()
 
     def evaluate(self, definition_id: str, *, now: int,
@@ -565,7 +648,10 @@ class SDFKernel:
             return Evaluation(status, candidate, reason, definition_id, now,
                               evidence_available, self.registry.digest(), self.seed)
 
-        def check_dependencies(candidate: SDFTerm, active: set[str]) -> Evaluation | None:
+        def check_dependencies(candidate: SDFTerm, active: set[str], depth: int) -> Evaluation | None:
+            if depth > self.limits.max_eval_depth:
+                return result(Status.CAPACITY, candidate,
+                              "dependency depth exceeds the configured resource limit")
             if candidate.definition_id in active:
                 return result(Status.INVALID, candidate,
                               "cyclic evaluation requires an explicit delayed law")
@@ -582,7 +668,7 @@ class SDFKernel:
                     if dependency.obligations:
                         return result(Status.OPEN_LAW, candidate,
                                       f"dependency {ref} has unresolved application obligations")
-                    failure = check_dependencies(dependency, active)
+                    failure = check_dependencies(dependency, active, depth + 1)
                     if failure is not None and failure.status != Status.DECLARED:
                         return failure
                 return None
@@ -602,7 +688,7 @@ class SDFKernel:
         if term.obligations:
             return result(Status.OPEN_LAW, term,
                           "term has unresolved application obligations")
-        dependency_failure = check_dependencies(term, set())
+        dependency_failure = check_dependencies(term, set(), 0)
         if dependency_failure is not None:
             return dependency_failure
         if term.operator == "QUOTE":

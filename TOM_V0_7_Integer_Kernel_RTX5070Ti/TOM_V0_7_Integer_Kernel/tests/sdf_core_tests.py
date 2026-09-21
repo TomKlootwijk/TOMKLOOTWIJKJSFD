@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "python"))
 
 from tom.sdf_core import (  # noqa: E402
+    CoreLimits,
     KleinPack,
     Registry,
     SDFError,
@@ -197,6 +198,22 @@ class SDFCoreTests(unittest.TestCase):
         pinion = derive_pinion("seed", None, 2, term.digest)
         rejected = kernel.commit(evaluation, pinion=pinion)
         self.assertEqual(rejected.status, Status.TEMPORAL)
+
+    def test_registry_and_evaluation_limits_are_explicit(self):
+        limits = CoreLimits(max_terms=4, max_eval_depth=1, max_text_chars=8)
+        registry = Registry(limits=limits)
+        base = self.term("base", provenance="ok")
+        registry.register(base)
+        quote = self.term("quote", operator="QUOTE", operands=(base.definition_id,))
+        registry.register(quote)
+        deep = self.term("deep", operator="QUOTE", operands=(quote.definition_id,))
+        registry.register(deep)
+        registry.register(self.term("overflow"))
+        with self.assertRaises(SDFError):
+            registry.register(self.term("overflow2"))
+        result = SDFKernel(registry, limits=limits).evaluate(
+            deep.definition_id, now=0, evidence_available=0)
+        self.assertEqual(result.status, Status.CAPACITY)
 
 
 if __name__ == "__main__":
