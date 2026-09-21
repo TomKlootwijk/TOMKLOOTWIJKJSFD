@@ -183,7 +183,7 @@ class KleinPack:
                          self.inverted != other.inverted, self.closure)
 
     def canonical(self) -> dict[str, Any]:
-        return {"host": self.host, "seam": self.seam,
+        return {"law": KLEIN_LAW, "host": self.host, "seam": self.seam,
                 "orientation": self.orientation, "inverted": self.inverted,
                 "closure": self.closure}
 
@@ -437,7 +437,9 @@ def _decode_exact_value(value: Any) -> int | Fraction | Symbolic | None:
 
 def _decode_klein(value: Any) -> KleinPack:
     obj = _object_with_shape(value, label="canonical Klein pack",
-                             required={"host", "seam", "orientation", "inverted", "closure"})
+                             required={"law", "host", "seam", "orientation", "inverted", "closure"})
+    if obj["law"] != KLEIN_LAW:
+        raise SDFError("unsupported canonical Klein composition law")
     return KleinPack(obj["host"], obj["seam"], obj["orientation"],
                      obj["inverted"], obj["closure"])
 
