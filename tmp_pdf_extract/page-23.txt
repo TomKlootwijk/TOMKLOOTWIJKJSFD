@@ -1,0 +1,31 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 23
+APPENDIX A1
+Retained source expressions: origin
+SOURCE  /  S, pp. 1-3, 6-8
+The expressions below preserve the opening numerical stage in linear typesetting. They are not used to 
+replace the source’s later coordinate-free formalism. Subscripts are written with an underscore where 
+useful; “|| ||” denotes the norm notation printed in the original.
+A1.1  Phyllotactic field and node phase
+SDF_phy(x) = min over i in V [ ||x - p_i(θ,z)|| - r_i ]
+θ_i = i · α  (mod 2π)
+z_i = h · i
+Optimal:   α = 2π / Φ²
+Deviated:  α = 2π · φ
+The source assigns Φ ≈ 1.618 and φ ≈ 0.618 to the two named arrangements. The field uses a finite set of 
+primordium positions and radii. [S, p. 1]
+A1.2  Energy and thermal scaling
+λ(E,T) = exp[-ΔG‡ / (R(T₀ + ΔT))] · [E(t) / E₀]
+f_thermo(x,t) = SDF_phy(x / λ(E,T)) · λ(E,T)
+E(t) is the remaining chemical-energy quantity in the source’s explanation. The displayed scaling uses E₀, R, 
+T₀ and ΔG‡ without providing their numerical assignments. The ΔT in this expression is the thermal shift. 
+[S, pp. 1-2]
+A1.3  Boundary transport
+∂f/∂t + v_growth · ∇f = 0
+This is the opening kinematic expression preceding the LUT. Its three example rows are reproduced in 
+Section 9. [S, pp. 2-3]
+A1.4  Early Psi scaling
+Stick A:  scale = 1.0 - (delta_t · φ)
+Stick B:  scale = 0.0 + (delta_t · φ)
+These branch expressions precede the author’s correction that sticks and houses are metaphors and AB is 
+the single double-definition word. Here delta_t is the temporal increment of that pseudocode. [S, pp. 7-8]

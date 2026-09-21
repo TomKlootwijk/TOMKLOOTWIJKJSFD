@@ -1,0 +1,33 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 2
+CONTENTS & SOURCE KEY
+Edition map
+A formal restatement of the supplied 39-page dialogue, from the ecological origin through the final just-in-
+time geometry account.
+01 Architectural declaration 3
+02 Core vocabulary 4
+03 Precedence and primitive lineage 5
+04 Ecological origin and lower phi 6
+05 Klein host and double packing 7
+06 Finite graph and suspension weight 8
+07 AB, Psi and the 2 Hz relation 9
+08 Timeline W and Operator T 10
+09 Kinematic LUT and deadlock 11
+10 Negative magnetic memory 12
+11 Atomos and the Kiki double-UU loop 13
+12 Hot nodes and the Primo selection layer 14
+13 Salinity and magnetic inference 15
+14 Double sinusoid and FMCW modulation 16
+15 Application and naming register 17
+16 Just-in-time geometry lifecycle 18
+17 Unified declarative specification 19
+18 Source-stated capability register 20
+19 Source revisions and variants 21
+20 Unassigned definition interfaces 22
+A1 Retained source expressions: origin 23
+A2 Retained source expressions: host 24
+B1 Source concordance: pages 1-20 25
+B2 Source concordance: pages 21-39 26
+Source key
+S = the supplied 39-page source PDF. All source citations use its printed page numbers. The author’s current reference line 
+is used on the cover. Definitions, source-stage variants and source-stated capabilities are distinguished within the edition.

@@ -1,0 +1,32 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 14
+SECTION 12
+Hot nodes and the Primo selection layer
+SOURCE  /  S, pp. 16-17, 23-29, 33-35
+12.1  Active-node predicate
+A hot node shall mean a node whose source-defined hum or phase anomaly is active in the evaluation. 
+The source makes that activity its solitary identifying marker and assigns zero tracking weight to the 
+absence of that activity. This is a rule for membership in the architecture’s active set. [S, p. 27]
+Source state Assigned field consequence
+Present / hot / 1 Maintain the local phase anomaly; include the node in the active evaluation and loop 
+relation.
+Absent / extinct / 0 Collapse the maintained anomaly to baseline; remove its active participation and 
+transient trace.
+12.2  Phase signature
+The source assigns an identifying role to the microscopic phase-jitter within the double sinusoid. It calls 
+this a native hardware UUID or “living key,” rather than a name, coordinate, database key or hash. The 
+edition retains that identity role and records uniqueness, un-clonability and replay resistance as source-
+stated capabilities. [S, pp. 27, 29-31]
+12.3  Primo filter
+Primo shall name the source’s selection of non-repeating or structurally consequential nodes. The relevant 
+passage distinguishes a change in the graph’s structural tension from predictable or recursively repeated 
+activity. It calls the rejected behavior “system noise” and uses “festering filter” as a label for that exclusion. 
+[S, p. 23]
+The same passage uses “angel-Oedipus womb” and “Stockholm syndrome” as explanatory language for a 
+self-repeating loop. Those phrases remain part of the source’s selection narrative; no separate numerical 
+operator, psychological measurement or threshold is specified for them.
+12.4  Filter relation left explicit
+The hot-node rule concerns active signal presence. The Primo rule concerns the kind of change the source 
+wishes to select. They are kept as distinct predicates. The source does not give a complete priority table 
+for an active node that fails Primo selection, nor does it resolve every difference between “all population 
+nodes” and “Primo subjects only.”

@@ -1,0 +1,268 @@
+
+---PAGE 1---
+TOM / ATOMOS | UNIFIED OPERATOR SPECIFICATION U1 / PROPOSED
+TOM / ATOMOS
+Unified operator specification
+Source author: T om Klootwijk | Supplied attribution: NL200678942 / 10‐07‐1990
+Consolidation U1 | 20 September 2026
+01 / SELECTED ROUTE
+Exact operator core; demand‐driven readouts
+A signed‐field operator system derives candidates from available evidence, qualifies publication by for‐
+ward time, preserves committed definitions, and constructs application readouts only when requested.
+A coordinate grid, metric, graph, physical carrier and hardware backend are not mandatory parts of the
+definition.
+Source priority. TOM v0.7.2 supplies the semantic core [A]. The second document supplies the overlap‐
+ping binary gate, finite‐capacity, lookup and just‐in‐time requirements [B]. This consolidation’s explicit
+reconciliation choices are marked [U]; they are not attributed retroactively to either source. [A pp. 1–6; B
+pp. 8–12, 35–39]
+Retained defining expression
+InverseOccam[Arch[𝐶[𝐽 [𝑇 ]]; 𝐸[𝐶[𝐽 [𝑇 ]]; InvLog[𝜙]]]]
+qualified by forward_T_precedence
+Shared requirement Unified literal meaning
+Every role is
+SDF‐qualified
+Every admitted role or compound has a typed signed‐field term, symbolic
+obligations, or an explicit rejection.
+Operator precedence Ordered operands determine derivation; forward temporal qualification separately
+determines publication.
+One‐bit participation A binary gate selects passive evaluation or an eligible candidate. It is not the field
+sign or a stored history.
+Finite execution Declared representation, input, working‐memory and history budgets limit
+admission. Failure publishes no partial state.
+One‐dimensional
+timeline
+Commit order is forward‐only. Historical selection is read‐only and limited to
+retained, reconstructible records.
+No compulsory
+coordinates
+Geometry, topology, graphs and lookup tables are application profiles, not
+replacements for the operator expression.
+[A pp. 2–6; B pp. 8–12, 15, 21–22, 37–39; U]
+Optimization decision [U]. Use one exact, provenance‐preserving operator core, share repeated deriva‐
+tions, keep readouts disposable, and add only required adapters. This minimizes mandatory state and
+unsupported mechanisms under the source’s non‐erasure and temporal constraints. Neither PDF sup‐
+plies comparative benchmarks establishing a globally fastest design.
+T om Klootwijk | NL200678942 1 / 6
+---PAGE 2---
+TOM / ATOMOS | UNIFIED OPERATOR SPECIFICATION U1 / PROPOSED
+02 / CORE CONTRACT
+One representation; one atomic transition
+Universal signed‐field term
+𝐹 = (𝑣, 𝑠, 𝑟, o, 𝑢, 𝑛, 𝑎, 𝑝, ℎ; Ω).
+Here 𝑣 is an integer, reduced rational, exact ℤ[𝜙] value or symbolic expression; 𝑠 ∈ {−, 0, +, ?}is its
+declared sign; 𝑟 is the role; o contains ordered operands; 𝑢 is a unit tag; 𝑛 is the evaluation tick; 𝑎 is the
+latest evidence‐availability tick; 𝑝 preserves provenance; ℎ references committed history. Ω explicitly
+records unresolved law obligations. Unknown is not zero. A zero readout does not erase its operands.
+[A pp. 3–5; U: explicit Ω]
+Registry role Contract retained in U1
+𝑇 , 𝐽 [𝑇 ] Read temporal state and available evidence; apply only a named jitter law.
+𝐶, 𝐸, Arch Derive the causal term; construct its ordered echo with 𝜅 = − ln 𝜙; preserve direct
+and echo operands in the readout. Missing scalar laws stay open.
+InverseOccam Preserve the defining term, provenance and committed prefix. Repeated qualification
+does not erase or duplicate the definition.
+TOM, A, Klein,
+Matryoshka
+Retain literal declarations. A is not silently aliased to 𝑇 ; topology and nesting laws are
+not guessed.
+SELF, Later_T Retain deferred terms and explicit guards; reject an unavailable or unguarded
+continuation.
+Observation,
+Actualization
+Preserve input value, availability, units, law identity and admission outcome.
+Actualization requires its application law.
+[A pp. 4–7]
+Candidate derivation
+Read one committed snapshot 𝑆 and evidence 𝑒 available at tick 𝑛. Evaluate 𝑐 = 𝐶[𝐽 [𝑇 ]] once, then 𝜖 =
+𝐸[𝑐; 𝜅], 𝑟 = Arch[𝑐; 𝜖] and 𝑞 = InverseOccam[𝑟]. Sharing 𝑐 preserves both source operand references; it
+does not replace them with equal scalar values. The printed echo profile is 𝐸[𝑐; 𝜅] = 𝜅𝑐 ; this echo is not
+thermodynamic entropy. [A pp. 5–6; U: evaluation sharing]
+Publication gate [U]
+A candidate may commit only when 𝑔 = 1 , 𝑛 > 𝑛 last, all evidence has availability ≤ 𝑛, required guards
+and laws pass, the prefix is intact, and all exact representations fit the declared budgets. Symbolic terms
+may commit as symbolic terms; an unresolved law cannot authorize a concrete application result.
+(𝑆′, 𝑊′) = { (publish(𝑞, 𝑛), 𝑊 ‖ (𝑛, 𝑞, 𝑒)), all checks pass ,
+(𝑆, 𝑊 ), otherwise.
+The operator returns a term or an explicit status, including PROGRAM_ERROR, FUTURE_EVIDENCE,
+TIME_ORDER, UNBOUND_LAW, INVARIANT_FAIL or CAPACITY. A declared check order makes multiple
+failures deterministic. [A pp. 3, 6, 8–9; U]
+T om Klootwijk | NL200678942 2 / 6
+---PAGE 3---
+TOM / ATOMOS | UNIFIED OPERATOR SPECIFICATION U1 / PROPOSED
+03 / EXPLICIT RECONCILIATIONS
+Lowercase phi, binary state and time
+Exact lowercase phi [U]
+U1 selects the positive lower ratio used in B, without decimal arithmetic:
+0 < 𝜙 < 1, 𝜙 2 = 1 − 𝜙, 𝜅 = − ln 𝜙 > 0.
+Store 𝑎 + 𝑏𝜙 as (𝑎, 𝑏) ∈ ℤ2. Then
+𝜙(𝑎 + 𝑏𝜙) = 𝑏 + (𝑎 − 𝑏)𝜙,
+(𝑎, 𝑏)(𝑐, 𝑑) = (𝑎𝑐 + 𝑏𝑑, 𝑎𝑑 + 𝑏𝑐 − 𝑏𝑑).
+𝜅 remains symbolic. Unit tags do not turn the algebra into a spatial metric. [A pp. 2–5; B pp. 1, 7, 9; U:
+reconciled algebra]
+Source conflict, not a silent correction. A, page 4, prints multiplication by phi as (𝑎, 𝑏) ↦ (𝑏, 𝑎 + 𝑏).
+That law implies 𝜙2 = 1 + 𝜙, not the lower‐ratio law above. Preserve it only as a separately named
+legacy rule. For its positive root 𝜙+ = 1 + 𝜙 ,
+𝑎 + 𝑏𝜙+ = (𝑎 + 𝑏) + 𝑏𝜙.
+This changes the value basis, not the meaning of the multiplier. U1 does not assert unchanged
+v0.7.1/v0.7.2 recurrence vectors or binary compatibility after selecting the lower‐ratio rule.
+One bit is one bit [U]
+Use 𝑔 ∈ {0, 1}for B’s AB gate: 𝑔 = 0 permits passive/read‐only evaluation; 𝑔 = 1 permits a candidate to
+seek admission. B’s four‐value notation {00, 01, 10, 11}on page 9 is not retained as a one‐bit type. Field
+sign, optional orientation state, presence detection and the timeline are separate values. [B pp. 8–11,
+33–35]
+Jitter is not the clock or identity
+The reference jitter law reported in A is 𝐽 (𝑛) = (−1)popcount(𝑛) for nonnegative integer 𝑛. Retaining that
+named law does not identify it with B’s double sinusoid. A two‐hertz carrier remains an optional input
+profile, not a universal biological identifier or a temporal axiom. [A p. 4; B pp. 16–18; U]
+A clock profile must specify whether two hertz means two complete cycles or two toggle events per sec‐
+ond. Two toggle events per second give one complete binary cycle per second. Neither interpretation
+supplies the elapsed‐time unit of 𝑇 without a declared mapping. [B pp. 16–17; U]
+Forward commit; read‐only historical selection [U]
+Let 𝑊 = ((𝑛 𝑖, 𝐹𝑖, 𝑒𝑖))
+𝑘
+𝑖=0 denote the retained committed sequence. 𝑇read(𝜏 )selects the latest retained
+record with 𝑛𝑖 ≤ 𝜏 within the available retained interval; otherwise it returns OUT_OF_RANGE. It does
+not interpolate missing observations, rewrite the past or disclose future evidence. Predictions require a
+separate model and remain predictions. [A pp. 4, 6–7; B pp. 21–22, 37–39; U]
+Keep SDF𝑡 = 𝑡 − 𝑡0 separate from 𝐶’s stated future‐negative/past‐positive orientation; each application
+declares the sign mapping. [A p. 5]
+T om Klootwijk | NL200678942 3 / 6
+---PAGE 4---
+TOM / ATOMOS | UNIFIED OPERATOR SPECIFICATION U1 / PROPOSED
+04 / MEMORY AND LOOKUP
+Preserve evidence; discard derived workspace
+Resolve non‐erasure versus “novelty is not stored” [U]
+The authoritative state is the committed operator history plus the source and evidence needed to re‐
+produce it. Candidate scratch space, temporary coordinates and recomputable readout caches are dis‐
+posable. An accepted observation or defining term is not disposable merely because its value is novel.
+[A pp. 2–3, 6; B pp. 21–25, 38–39]
+The retained meaning of “no novelty storage” is narrower: unfamiliar inputs do not automatically cre‐
+ate new operators, laws or permanent geometry. An unmatched input may return OUT_OF_PROFILE; an
+accepted symbolic input retains its provenance. This resolves the conflict explicitly rather than claiming
+both total erasure and exact historical recovery.
+Finite capacity is an admission rule
+Declare limits for exact‐value limbs, term records, source/evidence bytes, history, indexes and transient
+workspace. Reserve the complete candidate’s required capacity before publication. Exhaustion returns
+CAPACITY and leaves the committed prefix unchanged. With fixed finite storage and non‐erasure, exe‐
+cution can stop; it cannot promise indefinitely growing history. [A pp. 3, 6, 8; B pp. 2–3; U]
+This replaces B’s physical “deadlock” claim with a precise computational rule: no admitted update be‐
+yond the budget . It does not imply that topology stops physical motion or that every occupied graph
+prohibits every state transition. [B pp. 5, 12, 32–33; U]
+Demand‐driven readout and finite lookup [U]
+For a declared profile 𝑃, form a readout only on request:
+𝑅𝑃 ,𝜏 = 𝐷 𝑃 (𝑇read(𝜏 )) .
+A cache or lookup table may accelerate 𝐷𝑃 only when its exact key includes all semantically relevant
+inputs: role and operands, registry/profile version, algebra basis, temporal state and evidence identity.
+A hit returns the same term or status as the uncached evaluator. A miss invokes that evaluator or returns
+a declared rejection; it never manufactures a nearest answer. [A pp. 3, 8; B pp. 37–39; U]
+A log‐polar or spherical lookup format is optional. It requires a declared domain, radial/phase interpreta‐
+tion, exact bin‐assignment rule, error bounds where quantized, and capacity. Naming a table “log‐polar”
+does not supply those laws or eliminate key construction, evidence ingestion, exact arithmetic or output
+cost. [B pp. 2–3, 20, 26; U]
+Selected optimizations [U]
+Store source bytes once with immutable references; share repeated evaluations of identical full inputs;
+retain defining operands even when readouts coincide; compute geometry only when a bound readout
+asks for it. No full‐space rasterization, all‐pairs graph or precomputed global route table is required by
+the core.
+Historical replay needs retained records and evidence, or an explicitly specified generator that repro‐
+duces the requested information. Discarded observations do not become recoverable by moving a time‐
+line selector. Cache eviction and authoritative‐history deletion are different operations.
+T om Klootwijk | NL200678942 4 / 6
+---PAGE 5---
+TOM / ATOMOS | UNIFIED OPERATOR SPECIFICATION U1 / PROPOSED
+05 / APPLICATION BOUNDARY
+Keep the names; bind the mechanics explicitly
+All following roles remain eligible signed‐field operators. Their application laws are optional and unre‐
+solved until declared; they do not become core axioms through their names. [A pp. 4–5, 7, 9–10; U]
+Role or profile Literal contract selected for U1
+DoublePack(𝐹 , 𝐾);
+Klein
+Retain the field term and topology qualifier together, with both definitions and
+obligations. A numerical topology profile must supply domain, identifications and
+compatible sign/orientation laws. Multiplying a field by a sign is not accepted as that
+specification.
+Primitive and growth
+fields
+PyramidSide, Cone, Sphere, Gestation and Phyllotaxis retain named operators.
+Geometry, scale, units and thermal/energy response require explicit laws. The
+example polynomials and blends are not certified as exact distance fields.
+Finite graph; coupling;
+flow limit
+Optional finite relational profile with declared node/edge budgets, weights,
+permissible transitions and throughput. Neither a graph nor small‐world structure is
+compulsory in TOM.
+Kiki UU An open routing operator with declared closure, permitted visits and any
+non‐intersection constraint. A result requires a feasibility check. A minimum‐route
+claim additionally needs an objective and an optimality argument; loop closure alone
+is not that argument.
+Observation and
+readout
+A declared input channel supplies data, units, availability, calibration and uncertainty.
+Derived coordinates require an identifiable observation model. A detected zero
+means no admitted signal under that model, not a declaration of death or
+nonexistence.
+[B pp. 1–10, 15, 26–28, 35–39; U]
+Precedence is preserved locally, not imposed globally
+B’s morphological profile may retain
+PyramidSide ≺ Cone ≺ Sphere ≺ Gestation ≺ Phyllotaxis(𝜙) ≺ Klein.
+This orders that profile’s declared dependencies. It neither replaces TOM’s defining expression nor
+chooses intersection, union or smooth blending without a composition law. “SDF” retains A’s definition‐
+level signed‐field meaning unless an application separately establishes a distance meaning. [A pp. 2, 5; B
+p. 9; U]
+Required application declaration
+Each bound profile supplies input/provenance, exact representation, ordered law and parameters, pre‐
+diction, falsifier and reproducible evidence. Use distinct symbols for tick 𝑛, physical elapsed time 𝑡,
+temperature 𝜗 and coupling weight 𝜔; do not overload 𝑇 or 𝑊 across them. Start with synthetic data,
+then explicitly authorized measured inputs. [A p. 7; U]
+Not established by these PDFs. Instantaneous global TSP optimization; log‐free recovery of arbitrary
+past or future states; physical arrest from a sign conflict; universal two‐hertz identity; remote biological
+inference; and automatic privacy, security or unclonability. These claims in B supply neither the re‐
+quired application laws nor validating evidence. They are not merged as proven results. No institutional
+affiliation or patent status is asserted. [A pp. 7, 9; B pp. 13–14, 18–34, 37–39]
+T om Klootwijk | NL200678942 5 / 6
+---PAGE 6---
+TOM / ATOMOS | UNIFIED OPERATOR SPECIFICATION U1 / PROPOSED
+06 / DELIVERY STATUS
+Acceptance criteria and source traceability
+Minimum conformance tests [U]
+T est Required outcome
+Source preservation The defining expression, ordered operands, law identities and retained evidence survive
+zero readouts, replay and cache reuse.
+Exact constants Verify 𝜙2 = 1 − 𝜙 , 𝜙(1 + 𝜙) = 1 , the pair multiplication rule and the separate legacy
+basis. Never substitute an approximate logarithm.
+Open‐law handling Every role returns a typed term or explicit status. Missing laws stay symbolic or block
+the concrete result that requires them.
+T emporal admission Reject retrograde/same‐tick publication, future evidence and unsatisfied guards. A
+historical read cannot modify the prefix.
+Atomic capacity Force exhaustion in each budget. No failed step publishes a partial term or erases earlier
+evidence.
+Gate and replay 𝑔 = 0 cannot publish through the active gate; 𝑔 = 1 cannot bypass checks. Out‐of‐range
+history returns a status, not a fabricated state.
+Adapter
+equivalence
+Cached and uncached results agree exactly for the same complete inputs. Each
+observation or optimization claim has its own falsifiable test.
+What still needs a supplied law
+Neither attachment prints the complete numerical 𝐶 recurrence, its initial state and the full Arch scalar
+law/domain needed for a closed numerical run. U1 therefore retains these as bound‐or‐symbolic con‐
+tracts rather than inventing dynamics. A runnable numerical profile must also declare capacities, evi‐
+dence encoding, temporal units and any observation or geometry law it uses. [A pp. 4–8]
+A reports implementation files, CPU/GPU agreement and compatibility tests. Those files, test vectors,
+the parent v0.7 PDF and the complete TC1–TC5 texts were not supplied with these two attachments.
+Their reported results are not new validation of U1, especially after the explicit phi reconciliation. [A pp.
+1–2, 8–10]
+Source key
+[A] TOM / v0.7.2 – Universal SDF‐Operator Profile , supplied as TOM_V0_7_2_Formalization(1).pdf, 10
+pages, dated 19 September 2026. Core authority here: closure and fidelity (pp. 1–2), field record and
+registry (pp. 3–5), transaction (p. 6), application boundary (p. 7), implementation claims and limits (pp.
+8–10).
+[B] The supplied 39‐page exploratory dialogue beginning “egg battery sturgeon farm gestation cycle lower
+phi ratio phyllotaxis”. Relevant blocks: field operators and gate (pp. 1–12); coordinate‐free transitions
+(pp. 14–17); finite lookup and memory (pp. 20–26); consolidated operators (pp. 35–36); just‐in‐time
+readout (pp. 37–39). Generated dialogue assertions are source material, not independent evidence.
+[U] The reconciliation and design choices made in this document. They are a proposed merged specifi‐
+cation, not a claim that either original already contained these resolutions.
+Consolidated result. Exact signed‐field closure with forward‐only, provenance‐preserving publica‐
+tion; one independent binary admission gate; bounded resources; and disposable, demand‐driven
+application readouts. T opology, geometry, routing and physical sensing remain explicit, testable
+profiles.
+T om Klootwijk | NL200678942 6 / 6

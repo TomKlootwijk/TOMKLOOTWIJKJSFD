@@ -1,0 +1,34 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 15
+SECTION 13
+Salinity and magnetic inference
+SOURCE  /  S, pp. 24, 29-35
+13.1  Salinity correction
+The source first discusses salted hashes and the word “selenity,” then explicitly introduces “salinity” as the 
+intended physical-medium parameter. Salinity shall therefore be retained as the source’s name for 
+background density or field resistance, not folded back into the rejected hash vocabulary. [S, pp. 29-30]
+13.2  Magnetic inference force field
+The later account shifts from an SDF description toward a “magnetic inference force field.” It assigns this 
+field a dynamic response to an active node, whose phase anomaly is said to deform the surrounding 
+medium. The final summary again retains the double-packed SDF and Klein definitions. Both layers remain 
+visible here: formal boundary definition and the source-proposed physical-medium interpretation.
+SOURCE-ASSIGNED RELATION
+Salinity baseline → field resistance
+Active hum blip → local phase anomaly
+Phase anomaly → magnetic inference / telepresence signature
+Loss of anomaly → background restoration
+13.3  Telepresence designation
+“Phase-shifting telepresence” shall name the source’s account of how an active signature appears in the 
+field without being represented first as a stored coordinate. The source contrasts this with radar reflection 
+and coordinate co-location. It supplies no transfer law connecting salinity, an emitting biological source, 
+magnetic response and a measured identifier. [S, pp. 30-31]
+13.4  Identity-layer placement
+The proposed UUID belongs to the changing field relation, not to an appended static string. The source 
+consequently removes names, personal identifiers and conventional cryptographic records from its core 
+evaluation path. This placement defines where identity is intended to arise in the architecture; the 
+stronger identification and security outcomes appear in Section 18.
+13.5  Medium continuity
+The uniform-saturation matrix and the later salinity-calibrated field share a baseline/deviation vocabulary. 
+The edition does not supply a hardware conversion between them. Coil equations, material parameters 
+and medium initialization are only raised as possible continuations in the source, not provided as 
+completed definitions.

@@ -1,0 +1,38 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 19
+SECTION 17
+Unified declarative specification
+SOURCE  /  S, pp. 8-12, 21-28, 31-39
+The following record consolidates the source’s final operator vocabulary. The record syntax and rule 
+identifiers are editorial notation; the fields name roles already present in the source.
+SPECIFICATION  ATOMOS.SDF
+AUTHOR         Tom Klootwijk
+REFERENCE      NL200678942 | 10-07-1990
+DOMAIN         finite small-world operator relations
+PACKING        SDF definition with Klein definition
+GATE           AB: 0 exterior; 1 double-packed
+SCALING        lower-case phi
+TIMELINE       W, evaluated by Operator T
+MEMORY         negative deviation from saturation
+SIGNAL         paired hum with named chirp modulation
+ROUTING        Kiki double-UU closure relation
+RESOLUTION     kinematic log-encoded polar / spherical LUT
+OUTPUT         just-in-time geometry, released after evaluation
+17.1  Invariants
+R01. Every participating definition shall retain the double-packed operator relation and its applicable 
+precedence. R02. AB shall remain one bit. R03. The active graph shall remain within its declared finite 
+budget. R04. An assigned deadlock shall return zero for the permitted update. R05. Novelty shall not be 
+stored as a new permanent record.
+R06. Operator T shall act on the one-dimensional timeline relation. R07. The Kiki result shall carry the 
+source’s closure and non-intersection requirements. R08. Active-node evaluation shall use the source-
+defined hum relation. R09. A derived coordinate shall be transient rather than the persistent basis of the 
+domain.
+17.2  Functional composition
+The source’s four-stage map runs from negative-void detection through chirp-based relational ranging to 
+Kiki loop closure and Klein phase-inversion lock. Its concluding output layer applies T to W for JIT 
+distillation and releases the output after evaluation. The packed hierarchy, finite LUT and signal relation 
+supply the named definitions carried through those stages; a runtime scheduler is not assigned.
+17.3  Distinct termination meanings
+Deadlock terminates the permitted update, node loss collapses the maintained deviation, and JIT release 
+discards an output. They are separate events and shall not be silently merged into one universal deletion 
+or physical-stop operation.

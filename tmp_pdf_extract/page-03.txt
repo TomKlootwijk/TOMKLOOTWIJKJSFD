@@ -1,0 +1,32 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 3
+SECTION 01
+Architectural declaration
+SOURCE  /  S, pp. 8-12, 31-39
+Atomos is the source name for Tom Klootwijk’s coordinate-free, double-packed signed distance field 
+architecture. Its organizing unit is an operator relation rather than a stored position. The same relation 
+carries a signed distance field definition and a Klein bottle definition, with execution governed by the AB 
+one-bit word, the lower-case phi relation, and a finite kinematic look-up table.
+1.1  Domain
+The architecture shall describe proximity, movement, presence, memory and boundary behavior through 
+the relationships of its operators. A persistent Cartesian grid is not part of the final domain definition. The 
+concluding just-in-time layer permits a coordinate to be produced for an evaluation and then released; 
+that output is distinct from a coordinate grid used as the system’s stored foundation. [S, pp. 15, 37-39]
+1.2  Double definition
+Every participating operator shall retain its own formal SDF identity while being packed with the Klein 
+bottle operator. “Double-packed” therefore names concurrent definition, not two independent spatial 
+copies. Sticks, houses and the diabolo are retained as source vocabulary for contrast and constrained 
+transfer, not as mandatory physical scene objects. [S, pp. 8-9]
+1.3  Finite execution
+The small-world graph shall supply a finite node and connection budget. The LUT shall register the source-
+defined progression from open evaluation, through constrained evaluation, to a zero-update state. 
+“Deathlocked gridder” names that limiting state within the architecture. The finite boundary is intrinsic to 
+the specified state rules. [S, pp. 2-3, 11-12]
+1.4  Formal reading
+The numbered definitions and “shall” clauses state the behavior assigned by this specification. Source-
+stated outcomes such as instantaneous routing, living-key identity and global tracking are collected 
+separately in Section 18. This edition’s identifiers, tables and clause labels organize those definitions; they 
+do not introduce a new computational implementation.
+Canonical sequence
+Operator relation → double packing → AB evaluation → finite LUT resolution → timeline evaluation 
+→ just-in-time output → release.

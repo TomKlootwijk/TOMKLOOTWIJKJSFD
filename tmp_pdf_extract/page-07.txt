@@ -1,0 +1,32 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 7
+SECTION 05
+Klein host and double packing
+SOURCE  /  S, pp. 3-11, 31-35
+5.1  Host definition
+The Klein operator shall name the architecture’s non-orientable host relation. A participating SDF shall be 
+evaluated together with that relation, not first resolved in an unrelated coordinate room and only 
+afterward decorated with a Klein label.
+5.2  Packed operator identity
+PACKED OPERATOR
+Local definition: the named signed distance field operator.
+Host definition: the Klein bottle operator.
+Evaluation: both definitions are carried together.
+Order: the applicable source precedence chain.
+This record expresses the author’s correction on source page 8: all earlier operators are double-packed, 
+and AB is one bit. The sticks and houses are metaphors for contrast. Their literal shapes or social meanings 
+are not additional components of the formal operator inventory.
+5.3  Inversion semantics
+The source assigns an inverted return to traversal of the host relation. “Inside,” “outside,” “positive” and 
+“negative” are the boundary-state labels used to describe that return. The LUT’s zero-update response to 
+an unresolved inverted return is the architecture’s declared transition rule. [S, pp. 4-5, 11-12]
+5.4  Dimensional progression
+The initial reply proposes a four-component parametric representation and a host-distance expression. 
+The author then redirects the fourth component to time already accounted for by the one-bit relation. 
+Subsequent turns remove the persistent coordinate grid and describe movement as intrinsic state 
+transition. These stages remain visible in the edition. [S, pp. 3-6, 14-15]
+5.5  Locus of control
+Locus of control shall mean the currently evaluated side or mode of the packed relation. It is not a fixed 
+observer position in an added coordinate frame. At AB = 0 the source places the locus outside the host; at 
+AB = 1 it evaluates the host and the preceding operator definitions together. The later presence/absence 
+reading of those states is retained as an additional source-stage interpretation.

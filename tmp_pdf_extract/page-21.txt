@@ -1,0 +1,56 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 21
+SECTION 19
+Source revisions and variants
+SOURCE  /  S, pp. 3-11, 17, 21-25, 27, 30-39
+The source is a developing dialogue. Later author corrections and differing reply formulations are kept 
+visible rather than silently reconciled.
+Topic Source record Edition treatment
+One-bit width The author specifies 0/1 on p. 8; a reply prints {00, 
+01, 10, 11} on p. 9.
+Use the author’s one-bit definition; retain the 
+four-word expression as a variant.
+Fourth component
+A four-component host appears on pp. 3-4; the 
+author assigns the extra component to time on pp. 
+5-6.
+Keep the early representation in Appendix A; 
+use the later temporal reading in the main 
+specification.
+Coordinate role
+The initial listings use coordinates and 
+rasterization; pp. 14-15 remove a coordinate 
+foundation; pp. 37-39 derive transient outputs.
+Separate early numerical representation, final 
+relational domain and JIT output.
+Precedence The p. 9 chain includes sturgeon gestation; the p. 
+35 compact chain omits it.
+Retain the full earlier chain and identify the 
+later omission.
+Memory retention
+No novelty/history storage on pp. 21-25; 
+“negative memory write” on p. 23; ongoing W 
+retained on pp. 37-39.
+Keep both stated roles; leave depth and 
+reconstruction unspecified.
+Selection scope Primo-only selection on p. 23; universal hot-node 
+and population language elsewhere.
+Keep active presence and Primo selection as 
+distinct predicates.
+Field terminology
+The p. 30 reply shifts toward magnetic inference 
+“vs. SDF”; final summaries restore packed SDF 
+vocabulary.
+Retain the medium interpretation and formal 
+operator layer without inventing their 
+conversion.
+Identity line p. 17 gives NL20078942; p. 27 gives 
+NL200678942.
+Use the current author instruction: 
+NL200678942, 10-07-1990.
+Source frequency The text uses 2 Hz “mid-Theta,” two cycles, two 
+checks and one-cycle updates.
+Preserve the source name and keep the 
+unspecified event timing visible.
+The early cone expressions, composite rules, mixed ΔT meanings and the scalar/polynomial/formal uses of “SDF” are 
+additionally documented in Appendix A and Section 20.

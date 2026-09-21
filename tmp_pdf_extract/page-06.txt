@@ -1,0 +1,33 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 6
+SECTION 04
+Ecological origin and lower phi
+SOURCE  /  S, pp. 1-3, 9-10, 23-24, 35
+The opening model is the egg-battery sturgeon-farm gestation cycle, extended by the author to fertility 
+cycles globally. It couples developmental morphology to finite chemical reserves and to ecological 
+variation through thermodynamic shifts. This origin supplies the architecture’s first distinction between a 
+finite source and a developing boundary.
+4.1  Developmental operator
+The egg or embryo boundary is represented by a phyllotactic SDF built from primordium positions and 
+radii. Yolk energy is the named finite resource. Somatic growth is the named receiving layer. The source 
+assigns developmental speed and structural scaling to the available energy and the thermal state. 
+[S, pp. 1-2]
+4.2  Phi relation
+Source designation Assigned role
+Upper-case Phi, Φ ≈ 1.618 The opening optimal phyllotactic arrangement.
+Lower-case phi, φ ≈ 0.618 The relaxed or compressed arrangement under the source’s structural or thermal shift.
+Thermal scaling The opening expression multiplies an exponential temperature-dependent factor by the 
+remaining energy fraction.
+Later damping The source subsequently uses lower phi in phase scaling, morphology and the 
+convection of the one-dimensional timeline.
+4.3  Finite-source inheritance
+The later architecture inherits the relation “finite source → constrained transfer → boundary update” from 
+this biological account. The term “egg battery” is therefore retained as an originating operator context 
+rather than dropped when the text moves to Kuiper weighting, Atomos nodes or JIT geometry.
+4.4  Declared ecological scope
+Thermal shift, chemical-energy depletion and morphology are the supplied ecological inputs. The source 
+names global fertility cycles as the intended scope, but supplies no species-by-species parameter register 
+or measured ecological series. The edition leaves those input values unassigned instead of extending the 
+opening model with outside biological assumptions.
+The original numerical expressions are retained in Appendix A. The three displayed early LUT rows, including their exact 
+threshold bands, are transcribed in Section 9.

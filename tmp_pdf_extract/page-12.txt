@@ -1,0 +1,33 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 12
+SECTION 10
+Negative magnetic memory
+SOURCE  /  S, pp. 21-25, 29-30, 37-39
+10.1  Baseline and deviation
+Negative memory shall denote the registration of a vacancy or deviation relative to a uniformly saturated 
+baseline. The source’s “Spintronic Vacuum Matrix” names the medium assigned to this role. It describes an 
+active node as maintaining a local phase inversion or void, rather than accumulating a positive record for 
+each event.
+10.2  Novelty rule
+Baseline: saturated field state.
+Active relation: a maintained deviation from that baseline.
+Novelty: evaluated without appending a new permanent history record.
+Loss of the active relation: local return to baseline.
+“Novelty is never stored” shall retain its source meaning as a restriction on record accumulation. “Query-
+free” shall retain its role as direct evaluation against the existing field/LUT relation, rather than a growing 
+catalog of new tags, rows or target histories. [S, pp. 21-22]
+10.3  Node loss
+The source assigns collapse of the maintained void to the loss of the node’s hum. It then assigns removal 
+of the active trace and restoration of the uniform background. “Extinction,” “flatline” and “goes dark” are 
+source labels for this loss condition; the specified memory action is the return to baseline. [S, pp. 24-25]
+10.4  Dynamic state versus accumulated history
+The late-source account retains W while dropping the derived coordinate output. Thus this edition 
+distinguishes the wave state being evaluated, the live negative-memory relation and the transient result. 
+Their storage layout, temporal depth and reconstruction mapping are not defined by the source.
+10.5  Excluded record layers
+The source excludes SHA-256 blocks, salted hashes, tokens and blockchains from its intended identity and 
+memory path. It assigns identity to the active signature instead. This is retained as an operator-inventory 
+decision, with the source’s associated security and privacy assertions registered as capabilities in Section 
+18. [S, pp. 29-30]
+The earlier “negative memory write” phrase and the simultaneous no-novelty/no-history rule are both retained in the 
+source-variant register. No new write protocol is inferred from their coexistence.

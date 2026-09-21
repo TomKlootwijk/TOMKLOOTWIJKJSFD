@@ -1,0 +1,36 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 22
+SECTION 20
+Unassigned definition interfaces
+SOURCE  /  S, pp. 1-39
+A formal interface can be named without silently supplying its missing construction. The items below are 
+named in the source, but the corresponding details are not assigned there.
+Interface Definition detail left unassigned
+Intrinsic signed relation A complete coordinate-free distance/sign rule, comparison scale and construction linking 
+the early scalar fields to the final operator relation.
+Klein return The exact identification, traversal state and evaluable predicate that distinguish an ordinary 
+phase return from the declared deadlock return.
+Finite graph A numerical node budget, adjacency construction, weight update rule and quantitative 
+saturation predicate.
+Kuiper suspension Belt-density values, tensor calibration and the threshold connecting weight to the specified 
+zero-update condition.
+Log-polar / spherical LUT Log base, quantization, index construction, full entries, update policy and treatment of 
+source-uncovered input ranges.
+Kiki double-UU Its set algebra, route-cost function, non-intersection test, visit rule and criterion establishing 
+global route optimality.
+Signal and identity A complete paired-wave specification, sensing transfer law, phase-signature extractor and 
+uniqueness or error criterion.
+Magnetic / salinity 
+medium
+Physical medium parameters and a transfer equation from source activity to field deviation 
+and measurable response.
+Memory and W The retained state’s depth, information content, reconstruction mapping and compatibility 
+with the no-novelty rule.
+JIT distillation An inverse map, reference frame and uniqueness rule from a zero-crossing event to a spatial 
+output.
+Selection and recovery The priority between hot-node and Primo rules, reset after deadlock, and detailed multi-
+node or signal-loss transitions.
+Timing and scale A shared timing convention, resource account and evaluation cost tying the source’s 
+instantaneous, propagation-time and cycle-time language together.
+These are definition slots, not substitute assumptions. This edition adds names and structure to the specification while 
+leaving their source-unsupplied contents open.

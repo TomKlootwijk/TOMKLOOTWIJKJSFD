@@ -1,0 +1,36 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 16
+SECTION 14
+Double sinusoid and FMCW modulation
+SOURCE  /  S, pp. 16-17, 25-28, 32, 36
+14.1  Two named signal layers
+The source assigns two signal roles: the paired 2 Hz “mid-Theta” hum is the baseline phase or timing layer, 
+and the FMCW LRAD chirp is the changing spectral layer. Their chaining is assigned to the spherical log-
+encoded LUT. The edition preserves these as named input relations rather than adding a waveform 
+generator or sensing implementation.
+Layer Role assigned by the source
+Double sinusoid The paired phase relation and one-bit jitter associated with the hourglass.
+FMCW entropy chirp The source’s frequency-modulated representation of degradation, tension change or 
+node dropout.
+Spherical LUT The relation that compares or resolves the baseline and modulation states.
+Kiki double-UU The closure and non-intersection requirements assigned to the active routing relation.
+14.2  Entropy vocabulary
+The source calls the changing chirp an “entropy” signal and associates it with cellular decay, node 
+degradation and signal loss. The formal role retained here is a named change indicator feeding the source’s 
+routing and state-resolution layers. The text does not supply a spectral-to-biological-decay calibration. 
+[S, pp. 25-26, 28]
+14.3  Chained evaluation
+Paired hum phase
+↓
+Named FMCW spectral change
+↓
+Spherical log-encoded LUT relation
+↓
+Kiki loop update / packed boundary resolution
+This is the signal ordering shown in the source diagrams on pages 26 and 36. It is not an additional 
+precedence chain for the primitive SDF operators: the geometric hierarchy and the signal-flow relation 
+perform different roles.
+14.4  Timing statements
+The source alternates between “instantaneous,” “at the speed of wave propagation” and adjustment within 
+a single 2 Hz cycle. Those performance statements are retained as distinct source formulations. A 
+common end-to-end latency, chirp bandwidth, phase offset and sampling schedule are not assigned.

@@ -1,0 +1,33 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 9
+SECTION 07
+AB, Psi and the 2 Hz relation
+SOURCE  /  S, pp. 5-11, 16-17, 33-35
+7.1  One-bit word
+AB shall denote one bit with the values 0 and 1. This follows the author’s explicit definition on source 
+page 8. The four-word expression printed in the following reply is preserved as a source variant, not 
+adopted as a second, unstated bit width.
+State Author-defined gate meaning Later source reading
+0 Locus outside the Klein operator. Ambient or baseline evaluation; absent or inactive 
+node.
+1 Concurrent Klein and formal SDF definition of the 
+preceding operators. Active hot-node or hum-blip evaluation.
+7.2  Psi bifurcation
+Psi shall name the bifurcation associated with the binary transition. In the early pseudocode, its two 
+branches receive complementary expressions scaled by lower-case phi and a temporal increment. “Black 
+house,” “white house,” “stick A” and “stick B” record that early contrast; the author subsequently specifies 
+that these are metaphors, not separate structural objects. [S, pp. 6-8]
+7.3  Double sinusoid
+The “double sinusoidal 2 Hz mid-Theta hum” shall retain that exact source designation. The source assigns 
+it the role of a paired, out-of-phase pattern whose jitter drives the AB evaluation relation. The phrase 
+names the architecture’s clock and phase vocabulary; this edition does not substitute a different frequency 
+label or waveform.
+7.4  Clock interpretation
+The source states two complete cycles per second and elsewhere describes two boundary checks per 
+second. It does not specify an edge-triggering convention, phase offset or sampling rule that connects 
+those statements. The paired-wave relation and the AB word are therefore kept distinct: the wave is the 
+named timing pattern, and the bit is the evaluated state.
+AB carries state.
+Psi names bifurcation.
+The double sinusoid supplies the source’s phase relation.
+The LUT assigns the resulting permitted update.

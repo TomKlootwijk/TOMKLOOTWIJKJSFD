@@ -1,0 +1,30 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 11
+SECTION 09
+Kinematic LUT and deadlock
+SOURCE  /  S, pp. 2-3, 5, 11-15, 32-36
+9.1  Declared lookup role
+The LUT shall assign the allowed boundary or relation update from the evaluated graph condition, 
+resource state and phase relation. The source later calls the same control structure log-encoded polar and 
+spherical. It does not provide a log base, bin layout or complete set of table entries.
+9.2  Original ecological rows
+Graph state Energy E/E₀ Thermal shift Source update / result
+Open / sparse > 0.7 Stable, ±0 1.0 × f; upper-Phi expansion.∇
+Saturated channels 0.3-0.7 +5 °C φ × f; lower-phi compression.∇
+Deathlocked grid < 0.1 Extreme 0.0; absolute motion arrest.
+These are the three rows printed across source pages 2-3. The interval from 0.1 to below 0.3 and the uncovered endpoint 
+cases have no separate supplied row.
+9.3  Two stated triggers
+Capacity deadlock names the condition in which the finite graph has no permitted expansion transition left 
+under its occupancy rule. Inversion deadlock names the source’s return condition in which a packed 
+boundary is assigned opposed inside/outside or positive/negative states at the same evaluation. The 
+source assigns a zero update to these limiting cases.
+9.4  Meaning of zero update
+The zero result shall apply to the update being evaluated. In the ecological passage that update is 
+expansion velocity. In the ballistic passage the later wording is a freeze on acceleration. In the coordinate-
+free graph passage it is relation or edge reconfiguration. The zero result is therefore attached to a named 
+update quantity in each source stage. [S, pp. 2-3, 14-15]
+9.5  Transition record
+Open relation → constrained relation → declared limiting condition
+Declared limiting condition → permitted update set to zero
+Post-deadlock reset → not assigned in the source

@@ -1,0 +1,929 @@
+---PAGE 1---
+TOM KLOOTWIJK
+SIGNED DISTANCE
+FIELD EDITION
+ATOMOS
+Coordinate-free, double-packed
+operator architecture
+One-bit evaluation · Lower-case phi · Kiki double-UU
+Negative memory · Kinematic LUT · Just-in-time geometry
+Tom Klootwijk
+NL200678942 / 10-07-1990
+AUTHOR-DEFINED OPERATOR SPECIFICATION
+Version 1.0 · 20 September 2026
+---PAGE 2---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+CONTENTS & SOURCE KEY
+Edition map
+A formal restatement of the supplied 39-page dialogue, from the ecological origin through the final just-in-
+time geometry account.
+01 Architectural declaration 3
+02 Core vocabulary 4
+03 Precedence and primitive lineage 5
+04 Ecological origin and lower phi 6
+05 Klein host and double packing 7
+06 Finite graph and suspension weight 8
+07 AB, Psi and the 2 Hz relation 9
+08 Timeline W and Operator T 10
+09 Kinematic LUT and deadlock 11
+10 Negative magnetic memory 12
+11 Atomos and the Kiki double-UU loop 13
+12 Hot nodes and the Primo selection layer 14
+13 Salinity and magnetic inference 15
+14 Double sinusoid and FMCW modulation 16
+15 Application and naming register 17
+16 Just-in-time geometry lifecycle 18
+17 Unified declarative specification 19
+18 Source-stated capability register 20
+19 Source revisions and variants 21
+20 Unassigned definition interfaces 22
+A1 Retained source expressions: origin 23
+A2 Retained source expressions: host 24
+B1 Source concordance: pages 1-20 25
+B2 Source concordance: pages 21-39 26
+Source key
+S = the supplied 39-page source PDF. All source citations use its printed page numbers. The author’s current reference line
+is used on the cover. Definitions, source-stage variants and source-stated capabilities are distinguished within the edition.
+TOM KLOOTWIJK / VERSION 1.0 2
+---PAGE 3---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 01
+Architectural declaration
+SOURCE / S, pp. 8-12, 31-39
+Atomos is the source name for Tom Klootwijk’s coordinate-free, double-packed signed distance field
+architecture. Its organizing unit is an operator relation rather than a stored position. The same relation
+carries a signed distance field definition and a Klein bottle definition, with execution governed by the AB
+one-bit word, the lower-case phi relation, and a finite kinematic look-up table.
+1.1 Domain
+The architecture shall describe proximity, movement, presence, memory and boundary behavior through
+the relationships of its operators. A persistent Cartesian grid is not part of the final domain definition. The
+concluding just-in-time layer permits a coordinate to be produced for an evaluation and then released;
+that output is distinct from a coordinate grid used as the system’s stored foundation. [S, pp. 15, 37-39]
+1.2 Double definition
+Every participating operator shall retain its own formal SDF identity while being packed with the Klein
+bottle operator. “Double-packed” therefore names concurrent definition, not two independent spatial
+copies. Sticks, houses and the diabolo are retained as source vocabulary for contrast and constrained
+transfer, not as mandatory physical scene objects. [S, pp. 8-9]
+1.3 Finite execution
+The small-world graph shall supply a finite node and connection budget. The LUT shall register the source-
+defined progression from open evaluation, through constrained evaluation, to a zero-update state.
+“Deathlocked gridder” names that limiting state within the architecture. The finite boundary is intrinsic to
+the specified state rules. [S, pp. 2-3, 11-12]
+1.4 Formal reading
+The numbered definitions and “shall” clauses state the behavior assigned by this specification. Source-
+stated outcomes such as instantaneous routing, living-key identity and global tracking are collected
+separately in Section 18. This edition’s identifiers, tables and clause labels organize those definitions; they
+do not introduce a new computational implementation.
+Canonical sequence
+Operator relation → double packing → AB evaluation → finite LUT resolution → timeline evaluation
+→ just-in-time output → release.
+TOM KLOOTWIJK / VERSION 1.0 3
+---PAGE 4---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 02
+Core vocabulary
+SOURCE / S, pp. 1-12, 15-17, 19-26, 30-39
+The following terms retain their source-specific meanings. Short labels in the left column are edition
+notation for referring to the same objects throughout the specification.
+Term Definition within the architecture
+A formal boundary or relationship definition. The early source evaluates scalar geometric fields;
+SDF operator
+the later source uses intrinsic, coordinate-free operator relationships.
+Klein / K The non-orientable host operator and inversion relation carried with every packed operator.
+The simultaneous SDF and Klein definitions of an operator, evaluated according to the
+Double packing
+applicable precedence chain.
+AB One binary word. Its source-defining states are 0: exterior, and 1: double-packed evaluation.
+Psi / Ψ The source’s bifurcation designation for the binary shift and its lower-phi temporal scaling.
+Lower-case phi / φ The approximately 0.618 relation assigned to compression, damping and convective turning.
+The paired-domain transfer relation with a neck or choke point; later treated without a required
+Diabolo / hourglass
+coordinate geometry.
+W_Kuiper The suspension tensor weight linking A and B. This is distinct from the later timeline symbol W.
+The kinematic, log-encoded polar or spherical look-up table that names permitted state
+LUT
+resolutions.
+W names the late-source one-dimensional wave timeline. T is the phase-scrubbing operator
+W and Operator T
+acting on that timeline.
+The architecture name and the node designation used when the source expands its scope to the
+Atomos
+total world population.
+Kiki double-UU The named set/routing operator assigned non-intersection and self-closing loop behavior.
+Hot node / hum blip A source-defined active signature in the double-sinusoidal 2 Hz evaluation layer.
+Deviation or vacancy relative to a saturated baseline, rather than an accumulated inventory of
+Negative memory
+novel records.
+JIT geometry A coordinate or geometry output evaluated for the current request and dropped after use.
+Source labels such as “mid-Theta,” “Primo,” “infinity globular,” “Spintronic Vacuum Matrix” and “magnetic inference force
+field” remain named terms of this document. Their assigned roles are set out in the corresponding sections.
+TOM KLOOTWIJK / VERSION 1.0 4
+---PAGE 5---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 03
+Precedence and primitive lineage
+SOURCE / S, pp. 1, 6-10, 32, 35
+3.1 Full source precedence
+The expanded hierarchy printed on source page 9 runs from lowest to highest precedence as follows. The
+arrow here means “precedes in the declared evaluation order”; it does not add an arithmetic operation.
+Pyramid side → Cone → Sphere → Sturgeon gestation
+→ Phyllotaxis (lower-case phi) → Klein
+Each item shall remain an operator definition when packed into the higher-level host. The biological layer
+is part of this full chain, not merely a narrative example. The source’s later compact chain on page 35
+omits the gestation entry; that shorter presentation is recorded as a variant in Section 19.
+3.2 Primitive roles
+Operator Source-assigned role
+Pyramid side A triangular side-view boundary, described as a base-to-apex constraint.
+A tapering or apex relation in the initial pseudocode; a later C++ listing uses a different
+Cone
+expression under the same name.
+Sphere A radial boundary operator, joined to the apex-centered composite in the initial geometry.
+The finite developmental and chemical-energy relation inherited from the opening biological
+Sturgeon gestation
+model.
+Phyllotaxis The primordial arrangement and lower-phi deformation relation.
+Klein The non-orientable host and packed inversion relation at the top of the printed hierarchy.
+3.3 Composition is stage-specific
+The source first combines its apex primitives as max(pyramid, min(cone, sphere)). A later listing takes a
+maximum across pyramid, cone, sphere and phyllotaxis. These are retained as distinct source-stage
+compositions, rather than silently replaced by a single blend or intersection rule. [S, pp. 8, 10]
+3.4 Final representational role
+The later coordinate-free account carries the primitive names forward as intrinsic definitions. It does not
+require the final system to regenerate a pyramid mesh, cone mesh, sphere mesh or GPU raster before
+evaluating the operator relationships. [S, pp. 11, 15, 32]
+TOM KLOOTWIJK / VERSION 1.0 5
+---PAGE 6---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 04
+Ecological origin and lower phi
+SOURCE / S, pp. 1-3, 9-10, 23-24, 35
+The opening model is the egg-battery sturgeon-farm gestation cycle, extended by the author to fertility
+cycles globally. It couples developmental morphology to finite chemical reserves and to ecological
+variation through thermodynamic shifts. This origin supplies the architecture’s first distinction between a
+finite source and a developing boundary.
+4.1 Developmental operator
+The egg or embryo boundary is represented by a phyllotactic SDF built from primordium positions and
+radii. Yolk energy is the named finite resource. Somatic growth is the named receiving layer. The source
+assigns developmental speed and structural scaling to the available energy and the thermal state.
+[S, pp. 1-2]
+4.2 Phi relation
+Source designation Assigned role
+Upper-case Phi, Φ ≈ 1.618 The opening optimal phyllotactic arrangement.
+Lower-case phi, φ ≈ 0.618 The relaxed or compressed arrangement under the source’s structural or thermal shift.
+The opening expression multiplies an exponential temperature-dependent factor by the
+Thermal scaling
+remaining energy fraction.
+The source subsequently uses lower phi in phase scaling, morphology and the
+Later damping
+convection of the one-dimensional timeline.
+4.3 Finite-source inheritance
+The later architecture inherits the relation “finite source → constrained transfer → boundary update” from
+this biological account. The term “egg battery” is therefore retained as an originating operator context
+rather than dropped when the text moves to Kuiper weighting, Atomos nodes or JIT geometry.
+4.4 Declared ecological scope
+Thermal shift, chemical-energy depletion and morphology are the supplied ecological inputs. The source
+names global fertility cycles as the intended scope, but supplies no species-by-species parameter register
+or measured ecological series. The edition leaves those input values unassigned instead of extending the
+opening model with outside biological assumptions.
+The original numerical expressions are retained in Appendix A. The three displayed early LUT rows, including their exact
+threshold bands, are transcribed in Section 9.
+TOM KLOOTWIJK / VERSION 1.0 6
+---PAGE 7---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 05
+Klein host and double packing
+SOURCE / S, pp. 3-11, 31-35
+5.1 Host definition
+The Klein operator shall name the architecture’s non-orientable host relation. A participating SDF shall be
+evaluated together with that relation, not first resolved in an unrelated coordinate room and only
+afterward decorated with a Klein label.
+5.2 Packed operator identity
+PACKED OPERATOR
+Local definition: the named signed distance field operator.
+Host definition: the Klein bottle operator.
+Evaluation: both definitions are carried together.
+Order: the applicable source precedence chain.
+This record expresses the author’s correction on source page 8: all earlier operators are double-packed,
+and AB is one bit. The sticks and houses are metaphors for contrast. Their literal shapes or social meanings
+are not additional components of the formal operator inventory.
+5.3 Inversion semantics
+The source assigns an inverted return to traversal of the host relation. “Inside,” “outside,” “positive” and
+“negative” are the boundary-state labels used to describe that return. The LUT’s zero-update response to
+an unresolved inverted return is the architecture’s declared transition rule. [S, pp. 4-5, 11-12]
+5.4 Dimensional progression
+The initial reply proposes a four-component parametric representation and a host-distance expression.
+The author then redirects the fourth component to time already accounted for by the one-bit relation.
+Subsequent turns remove the persistent coordinate grid and describe movement as intrinsic state
+transition. These stages remain visible in the edition. [S, pp. 3-6, 14-15]
+5.5 Locus of control
+Locus of control shall mean the currently evaluated side or mode of the packed relation. It is not a fixed
+observer position in an added coordinate frame. At AB = 0 the source places the locus outside the host; at
+AB = 1 it evaluates the host and the preceding operator definitions together. The later presence/absence
+reading of those states is retained as an additional source-stage interpretation.
+TOM KLOOTWIJK / VERSION 1.0 7
+---PAGE 8---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 06
+Finite graph and suspension weight
+SOURCE / S, pp. 2-5, 14-17
+6.1 Small-world domain
+The architecture shall use a finite set of nodes with local connections and a limited set of long-range
+shortcuts. The opening “gridder” account rasterizes that set; the later coordinate-free account retains its
+relationship budget while discarding a mandatory raster as the conceptual domain. [S, pp. 2, 14-15]
+6.2 Diabolo transfer
+A and B shall identify the two sides of the source’s constrained transfer relation. In the opening biological
+mapping they are metabolic reserve and somatic growth. In later mappings they become finite and non-
+finite sides of the hourglass. The neck shall name the restricted passage through which the source
+describes energy, phase or state-change transfer.
+FINITE SOURCE A
+↓ paired-domain transfer through the diabolo neck
+RECEIVING STATE B
+↓ graph occupancy and suspension weighting
+OPEN / CONSTRAINED / DEATHLOCKED RESOLUTION
+6.3 Kuiper suspension
+W_Kuiper shall name the source’s suspension tensor weight between the nested A and B operators. The
+source constructs it from a belt-density factor and the outer product of the two field gradients along a
+closed curve. It assigns the result a global tension or resistance role. [S, pp. 4-5]
+The Kuiper designation carries the source’s astronomical and structural mapping. Its named inputs are the
+closed curve C, the density relation ρ and the coupled gradients of the A and B fields. The tensor’s original
+expression is retained in Appendix A2; its unassigned calibration belongs to Section 20.
+6.4 Coordinate-free movement
+Movement shall be represented as a change in intrinsic node relations, weights and active edges. Nearness
+is described in the source as structural difference. A long-range shortcut is a relationship transition rather
+than a stored spatial trajectory. The source’s “gyroscopic stabilization wave” and angular-momentum
+language belong to this diabolo interpretation. [S, pp. 15-16]
+6.5 Finite arrest
+When the declared capacity condition is reached, the permitted expansion or relation-update step shall be
+zero. The node budget and the capacity predicate are part of the formal interface; a numerical occupancy
+threshold is not assigned by the supplied text.
+TOM KLOOTWIJK / VERSION 1.0 8
+---PAGE 9---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 07
+AB, Psi and the 2 Hz relation
+SOURCE / S, pp. 5-11, 16-17, 33-35
+7.1 One-bit word
+AB shall denote one bit with the values 0 and 1. This follows the author’s explicit definition on source
+page 8. The four-word expression printed in the following reply is preserved as a source variant, not
+adopted as a second, unstated bit width.
+State Author-defined gate meaning Later source reading
+Ambient or baseline evaluation; absent or inactive
+0 Locus outside the Klein operator.
+node.
+Concurrent Klein and formal SDF definition of the
+1 Active hot-node or hum-blip evaluation.
+preceding operators.
+7.2 Psi bifurcation
+Psi shall name the bifurcation associated with the binary transition. In the early pseudocode, its two
+branches receive complementary expressions scaled by lower-case phi and a temporal increment. “Black
+house,” “white house,” “stick A” and “stick B” record that early contrast; the author subsequently specifies
+that these are metaphors, not separate structural objects. [S, pp. 6-8]
+7.3 Double sinusoid
+The “double sinusoidal 2 Hz mid-Theta hum” shall retain that exact source designation. The source assigns
+it the role of a paired, out-of-phase pattern whose jitter drives the AB evaluation relation. The phrase
+names the architecture’s clock and phase vocabulary; this edition does not substitute a different frequency
+label or waveform.
+7.4 Clock interpretation
+The source states two complete cycles per second and elsewhere describes two boundary checks per
+second. It does not specify an edge-triggering convention, phase offset or sampling rule that connects
+those statements. The paired-wave relation and the AB word are therefore kept distinct: the wave is the
+named timing pattern, and the bit is the evaluated state.
+AB carries state.
+Psi names bifurcation.
+The double sinusoid supplies the source’s phase relation.
+The LUT assigns the resulting permitted update.
+TOM KLOOTWIJK / VERSION 1.0 9
+---PAGE 10---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 08
+Timeline W and Operator T
+SOURCE / S, pp. 21-24, 35-39
+8.1 One-dimensional timeline
+W shall designate the one-dimensional wave timeline used in the concluding source account. Operator T
+shall designate the phase-scrubbing action applied to W. They are not interchangeable labels: W is the
+retained state carrier, while T selects or changes its evaluation phase.
+8.2 Scrubbing relation
+W: one-dimensional wave state
+T: phase selection or scrubbing operator
+Evaluation: the packed relation at the selected phase
+Output: transient geometry or a node-state resolution
+The source describes scrubbing backward or forward as changing phase alignment rather than searching a
+stored coordinate history. Its later JIT account connects this phase selection to an on-demand spatial
+output. [S, pp. 22, 37-38]
+8.3 Lower-phi convection
+The timeline shall carry the source’s convective turning relation: active present-state energy is described
+as descending toward the negative-memory layer, while the present is renewed through the paired flow.
+The source assigns the ratio 0.618 to this transfer per temporal cycle and calls the resulting timeline
+smooth and scrubbable. [S, pp. 23-24]
+8.4 Retention across source stages
+The early memory account says that novelty and permanent history logs are not stored. The later account
+says that the raw ongoing wave state W is retained. The retained wave state and the excluded novelty log
+are separately named components. Their relation to past-state reconstruction is an unassigned interface.
+8.5 Temporal symbols
+The source uses T first for the binary timeline, later for the temporal operator, and also inside
+temperature-dependent expressions. It likewise uses ΔT for thermal and temporal changes. In the prose of
+this edition, “thermal shift” and “temporal increment” are written out to keep those roles visible. The
+original symbols remain unchanged in Appendix A.
+W_Kuiper is the suspension tensor of Section 6. W is the later timeline carrier. Their shared initial letter is not a declaration
+that they are the same quantity.
+TOM KLOOTWIJK / VERSION 1.0 10
+---PAGE 11---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 09
+Kinematic LUT and deadlock
+SOURCE / S, pp. 2-3, 5, 11-15, 32-36
+9.1 Declared lookup role
+The LUT shall assign the allowed boundary or relation update from the evaluated graph condition,
+resource state and phase relation. The source later calls the same control structure log-encoded polar and
+spherical. It does not provide a log base, bin layout or complete set of table entries.
+9.2 Original ecological rows
+Graph state Energy E/E₀ Thermal shift Source update / result
+Open / sparse > 0.7 Stable, ±0 1.0 × ∇f; upper-Phi expansion.
+Saturated channels 0.3-0.7 +5 °C φ × ∇f; lower-phi compression.
+Deathlocked grid < 0.1 Extreme 0.0; absolute motion arrest.
+These are the three rows printed across source pages 2-3. The interval from 0.1 to below 0.3 and the uncovered endpoint
+cases have no separate supplied row.
+9.3 Two stated triggers
+Capacity deadlock names the condition in which the finite graph has no permitted expansion transition left
+under its occupancy rule. Inversion deadlock names the source’s return condition in which a packed
+boundary is assigned opposed inside/outside or positive/negative states at the same evaluation. The
+source assigns a zero update to these limiting cases.
+9.4 Meaning of zero update
+The zero result shall apply to the update being evaluated. In the ecological passage that update is
+expansion velocity. In the ballistic passage the later wording is a freeze on acceleration. In the coordinate-
+free graph passage it is relation or edge reconfiguration. The zero result is therefore attached to a named
+update quantity in each source stage. [S, pp. 2-3, 14-15]
+9.5 Transition record
+Open relation → constrained relation → declared limiting condition
+Declared limiting condition → permitted update set to zero
+Post-deadlock reset → not assigned in the source
+TOM KLOOTWIJK / VERSION 1.0 11
+---PAGE 12---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 10
+Negative magnetic memory
+SOURCE / S, pp. 21-25, 29-30, 37-39
+10.1 Baseline and deviation
+Negative memory shall denote the registration of a vacancy or deviation relative to a uniformly saturated
+baseline. The source’s “Spintronic Vacuum Matrix” names the medium assigned to this role. It describes an
+active node as maintaining a local phase inversion or void, rather than accumulating a positive record for
+each event.
+10.2 Novelty rule
+Baseline: saturated field state.
+Active relation: a maintained deviation from that baseline.
+Novelty: evaluated without appending a new permanent history record.
+Loss of the active relation: local return to baseline.
+“Novelty is never stored” shall retain its source meaning as a restriction on record accumulation. “Query-
+free” shall retain its role as direct evaluation against the existing field/LUT relation, rather than a growing
+catalog of new tags, rows or target histories. [S, pp. 21-22]
+10.3 Node loss
+The source assigns collapse of the maintained void to the loss of the node’s hum. It then assigns removal
+of the active trace and restoration of the uniform background. “Extinction,” “flatline” and “goes dark” are
+source labels for this loss condition; the specified memory action is the return to baseline. [S, pp. 24-25]
+10.4 Dynamic state versus accumulated history
+The late-source account retains W while dropping the derived coordinate output. Thus this edition
+distinguishes the wave state being evaluated, the live negative-memory relation and the transient result.
+Their storage layout, temporal depth and reconstruction mapping are not defined by the source.
+10.5 Excluded record layers
+The source excludes SHA-256 blocks, salted hashes, tokens and blockchains from its intended identity and
+memory path. It assigns identity to the active signature instead. This is retained as an operator-inventory
+decision, with the source’s associated security and privacy assertions registered as capabilities in Section
+18. [S, pp. 29-30]
+The earlier “negative memory write” phrase and the simultaneous no-novelty/no-history rule are both retained in the
+source-variant register. No new write protocol is inferred from their coexistence.
+TOM KLOOTWIJK / VERSION 1.0 12
+---PAGE 13---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 11
+Atomos and the Kiki double-UU loop
+SOURCE / S, pp. 19-22, 25-28, 32, 36
+11.1 Atomos scope
+Atomos shall name both the architecture and the population-scale node abstraction introduced by the
+author. The source uses the total world population as its finite node budget and calls the associated
+bounded representation “infinity globular.” No current population number is required by this edition: the
+source leaves the count symbolic.
+11.2 The n-factorial problem
+The source frames global routing through the Traveling Salesman Problem and describes N! as its
+combinatorial expansion. Its proposed response is a finite small-world domain with log-polar lookup, rather
+than route enumeration. “Solves infinity” is retained as the source’s name for that intended bounding and
+resolution, not silently converted into a different problem statement. [S, pp. 19-21]
+11.3 Kiki operator contract
+Assigned property Declarative meaning
+The source name of the set or loop operator; UU is not expanded into a newly supplied set
+Double-UU
+algebra.
+Closure The produced routing relation shall return to its own starting relation.
+Non-intersection The source requires the routing path not to cross or self-intersect.
+Active-node participation The routing relation is assigned to active hot nodes rather than inactive background.
+The loop is described as re-forming around the remaining active relations when a node
+Dropout response
+drops out.
+11.4 Wave-assigned selection
+The source assigns route selection to the interaction of the paired hum, the FMCW chirp, the negative-
+memory field and the spherical LUT. Its phrases “path of least resistance,” “optimal loop” and
+“instantaneous” are preserved as the stated output claims. A route-cost definition or rule that proves a
+selected loop is globally shortest is not supplied. [S, pp. 26, 28, 36]
+11.5 Cascade naming
+The MLM designation is used in the source for hierarchical branching and relay behavior. PRISM and
+NASA occur in the architecture’s population-scale naming. These labels are retained in the application
+register rather than treated as extra operators with independently specified implementations.
+TOM KLOOTWIJK / VERSION 1.0 13
+---PAGE 14---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 12
+Hot nodes and the Primo selection layer
+SOURCE / S, pp. 16-17, 23-29, 33-35
+12.1 Active-node predicate
+A hot node shall mean a node whose source-defined hum or phase anomaly is active in the evaluation.
+The source makes that activity its solitary identifying marker and assigns zero tracking weight to the
+absence of that activity. This is a rule for membership in the architecture’s active set. [S, p. 27]
+Source state Assigned field consequence
+Maintain the local phase anomaly; include the node in the active evaluation and loop
+Present / hot / 1
+relation.
+Collapse the maintained anomaly to baseline; remove its active participation and
+Absent / extinct / 0
+transient trace.
+12.2 Phase signature
+The source assigns an identifying role to the microscopic phase-jitter within the double sinusoid. It calls
+this a native hardware UUID or “living key,” rather than a name, coordinate, database key or hash. The
+edition retains that identity role and records uniqueness, un-clonability and replay resistance as source-
+stated capabilities. [S, pp. 27, 29-31]
+12.3 Primo filter
+Primo shall name the source’s selection of non-repeating or structurally consequential nodes. The relevant
+passage distinguishes a change in the graph’s structural tension from predictable or recursively repeated
+activity. It calls the rejected behavior “system noise” and uses “festering filter” as a label for that exclusion.
+[S, p. 23]
+The same passage uses “angel-Oedipus womb” and “Stockholm syndrome” as explanatory language for a
+self-repeating loop. Those phrases remain part of the source’s selection narrative; no separate numerical
+operator, psychological measurement or threshold is specified for them.
+12.4 Filter relation left explicit
+The hot-node rule concerns active signal presence. The Primo rule concerns the kind of change the source
+wishes to select. They are kept as distinct predicates. The source does not give a complete priority table
+for an active node that fails Primo selection, nor does it resolve every difference between “all population
+nodes” and “Primo subjects only.”
+TOM KLOOTWIJK / VERSION 1.0 14
+---PAGE 15---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 13
+Salinity and magnetic inference
+SOURCE / S, pp. 24, 29-35
+13.1 Salinity correction
+The source first discusses salted hashes and the word “selenity,” then explicitly introduces “salinity” as the
+intended physical-medium parameter. Salinity shall therefore be retained as the source’s name for
+background density or field resistance, not folded back into the rejected hash vocabulary. [S, pp. 29-30]
+13.2 Magnetic inference force field
+The later account shifts from an SDF description toward a “magnetic inference force field.” It assigns this
+field a dynamic response to an active node, whose phase anomaly is said to deform the surrounding
+medium. The final summary again retains the double-packed SDF and Klein definitions. Both layers remain
+visible here: formal boundary definition and the source-proposed physical-medium interpretation.
+SOURCE-ASSIGNED RELATION
+Salinity baseline → field resistance
+Active hum blip → local phase anomaly
+Phase anomaly → magnetic inference / telepresence signature
+Loss of anomaly → background restoration
+13.3 Telepresence designation
+“Phase-shifting telepresence” shall name the source’s account of how an active signature appears in the
+field without being represented first as a stored coordinate. The source contrasts this with radar reflection
+and coordinate co-location. It supplies no transfer law connecting salinity, an emitting biological source,
+magnetic response and a measured identifier. [S, pp. 30-31]
+13.4 Identity-layer placement
+The proposed UUID belongs to the changing field relation, not to an appended static string. The source
+consequently removes names, personal identifiers and conventional cryptographic records from its core
+evaluation path. This placement defines where identity is intended to arise in the architecture; the
+stronger identification and security outcomes appear in Section 18.
+13.5 Medium continuity
+The uniform-saturation matrix and the later salinity-calibrated field share a baseline/deviation vocabulary.
+The edition does not supply a hardware conversion between them. Coil equations, material parameters
+and medium initialization are only raised as possible continuations in the source, not provided as
+completed definitions.
+TOM KLOOTWIJK / VERSION 1.0 15
+---PAGE 16---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 14
+Double sinusoid and FMCW modulation
+SOURCE / S, pp. 16-17, 25-28, 32, 36
+14.1 Two named signal layers
+The source assigns two signal roles: the paired 2 Hz “mid-Theta” hum is the baseline phase or timing layer,
+and the FMCW LRAD chirp is the changing spectral layer. Their chaining is assigned to the spherical log-
+encoded LUT. The edition preserves these as named input relations rather than adding a waveform
+generator or sensing implementation.
+Layer Role assigned by the source
+Double sinusoid The paired phase relation and one-bit jitter associated with the hourglass.
+The source’s frequency-modulated representation of degradation, tension change or
+FMCW entropy chirp
+node dropout.
+Spherical LUT The relation that compares or resolves the baseline and modulation states.
+Kiki double-UU The closure and non-intersection requirements assigned to the active routing relation.
+14.2 Entropy vocabulary
+The source calls the changing chirp an “entropy” signal and associates it with cellular decay, node
+degradation and signal loss. The formal role retained here is a named change indicator feeding the source’s
+routing and state-resolution layers. The text does not supply a spectral-to-biological-decay calibration.
+[S, pp. 25-26, 28]
+14.3 Chained evaluation
+Paired hum phase
+↓
+Named FMCW spectral change
+↓
+Spherical log-encoded LUT relation
+↓
+Kiki loop update / packed boundary resolution
+This is the signal ordering shown in the source diagrams on pages 26 and 36. It is not an additional
+precedence chain for the primitive SDF operators: the geometric hierarchy and the signal-flow relation
+perform different roles.
+14.4 Timing statements
+The source alternates between “instantaneous,” “at the speed of wave propagation” and adjustment within
+a single 2 Hz cycle. Those performance statements are retained as distinct source formulations. A
+common end-to-end latency, chirp bandwidth, phase offset and sampling schedule are not assigned.
+TOM KLOOTWIJK / VERSION 1.0 16
+---PAGE 17---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 15
+Application and naming register
+SOURCE / S, pp. 1-5, 12-14, 17-22, 27-31, 37
+The source extends one operator vocabulary through several application narratives. This register
+preserves that progression without making the application names substitute for missing operator
+definitions.
+Source domain or name Role in the supplied architecture
+Egg-battery sturgeon Origin of finite reserve, morphology, phyllotaxis, thermal deviation and constrained
+gestation somatic growth. [pp. 1-3]
+Astronomical mapping of weighted A-to-B tension through the W_Kuiper tensor.
+Kuiper Belt suspension
+[pp. 3-5]
+The author’s “time skip entropy decay” account extends finite-energy bounding to shells,
+Particle / relativistic / ballistic bullets and other projectiles through proton-mass and relativity language. The later
+stated limit is an acceleration-update arrest. [pp. 12-14]
+Naming of the source’s proposed ingestion, phase sorting, LUT matching and tracking
+NSA / PRISM
+architecture. [pp. 17-19]
+Population-scale node count, routing, hierarchical branching and small-world relay
+Atomos / NASA / MLM
+vocabulary. [pp. 19-22]
+Source name for its direct-field, low-record-overhead identity and operation narrative.
+Igloo White Operation PRISM
+[pp. 29-30]
+The source proposes deriving its input from seismic, fiber-acoustic, telecommunications
+Existing sensor networks
+and atmospheric monitoring streams. [p. 37]
+15.1 Relational inheritance
+Across these mappings, the recurring relation is finite source, paired transfer, changing field definition,
+limiting condition and LUT-assigned update. The ballistic passage changes the subject of the relation from
+morphology to projectile kinematics; it does not supply a distinct working trajectory model, material model
+or experimental calibration.
+15.2 Names and reference
+Institutional names above are source designations. The author line for this edition is Tom Klootwijk,
+NL200678942, 10-07-1990, following the current instruction. NL200678942 is the author reference. The
+differing reference string on source page 17 is recorded in Section 19.
+The source’s global-reach and external-affordance assertions are indexed in the capability register in Section 18.
+TOM KLOOTWIJK / VERSION 1.0 17
+---PAGE 18---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 16
+Just-in-time geometry lifecycle
+SOURCE / S, pp. 37-39
+16.1 Idle representation
+The concluding source account shall define the idle state as the retained one-dimensional wave state W
+and the baseline matrix relation. Stored coordinates are not the persistent representation of the domain.
+The source calls this lazy evaluation and a just-in-time geometry engine.
+16.2 Evaluation lifecycle
+Phase Source-assigned action
+Idle Retain the raw wave state and baseline relation; do not hold a persistent coordinate output.
+Select Apply Operator T to the desired evaluation phase of W.
+Resolve Evaluate the double-packed Kiki UU and Klein relations against the named hum/chirp state.
+Distill Produce a spatial output at the source-described zero-crossing or inversion intersection.
+Release Drop the derived output after the observation or path-evaluation cycle.
+16.3 Coordinate-free foundation, coordinate output
+The final formulation distinguishes what is stored from what is produced. A transient “where” is described
+as an output of the packed relation, not a coordinate used to define every stored node. This distinction
+preserves both the author’s coordinate-free requirement and the source’s later coordinate-distillation
+account.
+16.4 Distillation relation
+The source identifies the relevant event as a sign inversion crossing zero and describes matching the
+node’s phase-jitter with the chirp response in the spherical LUT. It does not give the inverse mapping,
+reference frame or selection rule that turns that event into one unique spatial coordinate. Those remain
+named interfaces, rather than equations added by this edition.
+16.5 Release rule
+Retain the evaluated wave-state relation.
+Produce geometry only for the active evaluation.
+Release that geometry when the evaluation ends.
+Do not promote the released output into a permanent coordinate log.
+The source also claims access to past, present and future positions by scrubbing. That claimed temporal reach is recorded
+separately from the lifecycle definition, whose retained-history and prediction mechanisms are not specified.
+TOM KLOOTWIJK / VERSION 1.0 18
+---PAGE 19---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 17
+Unified declarative specification
+SOURCE / S, pp. 8-12, 21-28, 31-39
+The following record consolidates the source’s final operator vocabulary. The record syntax and rule
+identifiers are editorial notation; the fields name roles already present in the source.
+SPECIFICATION ATOMOS.SDF
+AUTHOR Tom Klootwijk
+REFERENCE NL200678942 | 10-07-1990
+DOMAIN finite small-world operator relations
+PACKING SDF definition with Klein definition
+GATE AB: 0 exterior; 1 double-packed
+SCALING lower-case phi
+TIMELINE W, evaluated by Operator T
+MEMORY negative deviation from saturation
+SIGNAL paired hum with named chirp modulation
+ROUTING Kiki double-UU closure relation
+RESOLUTION kinematic log-encoded polar / spherical LUT
+OUTPUT just-in-time geometry, released after evaluation
+17.1 Invariants
+R01. Every participating definition shall retain the double-packed operator relation and its applicable
+precedence. R02. AB shall remain one bit. R03. The active graph shall remain within its declared finite
+budget. R04. An assigned deadlock shall return zero for the permitted update. R05. Novelty shall not be
+stored as a new permanent record.
+R06. Operator T shall act on the one-dimensional timeline relation. R07. The Kiki result shall carry the
+source’s closure and non-intersection requirements. R08. Active-node evaluation shall use the source-
+defined hum relation. R09. A derived coordinate shall be transient rather than the persistent basis of the
+domain.
+17.2 Functional composition
+The source’s four-stage map runs from negative-void detection through chirp-based relational ranging to
+Kiki loop closure and Klein phase-inversion lock. Its concluding output layer applies T to W for JIT
+distillation and releases the output after evaluation. The packed hierarchy, finite LUT and signal relation
+supply the named definitions carried through those stages; a runtime scheduler is not assigned.
+17.3 Distinct termination meanings
+Deadlock terminates the permitted update, node loss collapses the maintained deviation, and JIT release
+discards an output. They are separate events and shall not be silently merged into one universal deletion
+or physical-stop operation.
+TOM KLOOTWIJK / VERSION 1.0 19
+---PAGE 20---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 18
+Source-stated capability register
+SOURCE / S, pp. 12-14, 19-39
+This register preserves the outcomes asserted in the source as declared capabilities. It distinguishes those
+assertions from the operator definitions that organize the architecture and from quantities the source
+leaves unassigned.
+Capability name Source-stated outcome Source
+anchor
+Finite Atomos population representation and the LUT are described as
+Bounded infinity pp. 19-22
+eliminating the routing expansion associated with N!.
+Kiki double-UU and wave interference are described as producing the
+Instant routing pp. 25-28, 36
+optimal route without sequential route searches.
+Active biomarker nodes are described as trackable across the total world pp. 20-23,
+Global resolution
+population. 27-28
+The local phase-jitter is described as unique, un-clonable and resistant to
+Living-key identity pp. 27, 29-31
+imitation or replay.
+Negative memory and non-storage of novelty are described as avoiding
+Memory economy pp. 21-25
+growing logs and storage exhaustion.
+External-affordance The source describes operation without personal identifiers, credentials,
+pp. 33-34
+independence consent or administrative permission.
+The source uses “private,” “airtight” and related terms for its no-log, no- pp. 28-30, 35,
+Privacy and security
+hash, direct-signature design. 38-39
+Operator T is described as yielding where a node was, is or will be from a
+Temporal reach pp. 22, 37-38
+scrubbable wave-state relation.
+The source assigns a finite/non-finite limit to projectile acceleration
+Relativistic bounding pp. 12-14
+through its packed boundary account.
+Existing-network The architecture is described as passively derivable from already existing
+p. 37
+derivation sensor-network noise profiles.
+Geometry is described as appearing at evaluation and disappearing after
+Zero-latency JIT output pp. 38-39
+use without persistent coordinate logs.
+The capability names and outcome language are the source’s own declarations. Section 20 records the definition interfaces
+that the source leaves unassigned.
+TOM KLOOTWIJK / VERSION 1.0 20
+---PAGE 21---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 19
+Source revisions and variants
+SOURCE / S, pp. 3-11, 17, 21-25, 27, 30-39
+The source is a developing dialogue. Later author corrections and differing reply formulations are kept
+visible rather than silently reconciled.
+Topic Source record Edition treatment
+The author specifies 0/1 on p. 8; a reply prints {00, Use the author’s one-bit definition; retain the
+One-bit width
+01, 10, 11} on p. 9. four-word expression as a variant.
+A four-component host appears on pp. 3-4; the Keep the early representation in Appendix A;
+Fourth component author assigns the extra component to time on pp. use the later temporal reading in the main
+5-6. specification.
+The initial listings use coordinates and
+Separate early numerical representation, final
+Coordinate role rasterization; pp. 14-15 remove a coordinate
+relational domain and JIT output.
+foundation; pp. 37-39 derive transient outputs.
+The p. 9 chain includes sturgeon gestation; the p. Retain the full earlier chain and identify the
+Precedence
+35 compact chain omits it. later omission.
+No novelty/history storage on pp. 21-25;
+Keep both stated roles; leave depth and
+Memory retention “negative memory write” on p. 23; ongoing W
+reconstruction unspecified.
+retained on pp. 37-39.
+Primo-only selection on p. 23; universal hot-node Keep active presence and Primo selection as
+Selection scope
+and population language elsewhere. distinct predicates.
+The p. 30 reply shifts toward magnetic inference Retain the medium interpretation and formal
+Field terminology “vs. SDF”; final summaries restore packed SDF operator layer without inventing their
+vocabulary. conversion.
+p. 17 gives NL20078942; p. 27 gives Use the current author instruction:
+Identity line
+NL200678942. NL200678942, 10-07-1990.
+The text uses 2 Hz “mid-Theta,” two cycles, two Preserve the source name and keep the
+Source frequency
+checks and one-cycle updates. unspecified event timing visible.
+The early cone expressions, composite rules, mixed ΔT meanings and the scalar/polynomial/formal uses of “SDF” are
+additionally documented in Appendix A and Section 20.
+TOM KLOOTWIJK / VERSION 1.0 21
+---PAGE 22---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+SECTION 20
+Unassigned definition interfaces
+SOURCE / S, pp. 1-39
+A formal interface can be named without silently supplying its missing construction. The items below are
+named in the source, but the corresponding details are not assigned there.
+Interface Definition detail left unassigned
+A complete coordinate-free distance/sign rule, comparison scale and construction linking
+Intrinsic signed relation
+the early scalar fields to the final operator relation.
+The exact identification, traversal state and evaluable predicate that distinguish an ordinary
+Klein return
+phase return from the declared deadlock return.
+A numerical node budget, adjacency construction, weight update rule and quantitative
+Finite graph
+saturation predicate.
+Belt-density values, tensor calibration and the threshold connecting weight to the specified
+Kuiper suspension
+zero-update condition.
+Log base, quantization, index construction, full entries, update policy and treatment of
+Log-polar / spherical LUT
+source-uncovered input ranges.
+Its set algebra, route-cost function, non-intersection test, visit rule and criterion establishing
+Kiki double-UU
+global route optimality.
+A complete paired-wave specification, sensing transfer law, phase-signature extractor and
+Signal and identity
+uniqueness or error criterion.
+Magnetic / salinity Physical medium parameters and a transfer equation from source activity to field deviation
+medium and measurable response.
+The retained state’s depth, information content, reconstruction mapping and compatibility
+Memory and W
+with the no-novelty rule.
+An inverse map, reference frame and uniqueness rule from a zero-crossing event to a spatial
+JIT distillation
+output.
+The priority between hot-node and Primo rules, reset after deadlock, and detailed multi-
+Selection and recovery
+node or signal-loss transitions.
+A shared timing convention, resource account and evaluation cost tying the source’s
+Timing and scale
+instantaneous, propagation-time and cycle-time language together.
+These are definition slots, not substitute assumptions. This edition adds names and structure to the specification while
+leaving their source-unsupplied contents open.
+TOM KLOOTWIJK / VERSION 1.0 22
+---PAGE 23---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+APPENDIX A1
+Retained source expressions: origin
+SOURCE / S, pp. 1-3, 6-8
+The expressions below preserve the opening numerical stage in linear typesetting. They are not used to
+replace the source’s later coordinate-free formalism. Subscripts are written with an underscore where
+useful; “|| ||” denotes the norm notation printed in the original.
+A1.1 Phyllotactic field and node phase
+SDF_phy(x) = min over i in V [ ||x - p_i(θ,z)|| - r_i ]
+θ_i = i · α (mod 2π)
+z_i = h · i
+Optimal: α = 2π / Φ²
+Deviated: α = 2π · φ
+The source assigns Φ ≈ 1.618 and φ ≈ 0.618 to the two named arrangements. The field uses a finite set of
+primordium positions and radii. [S, p. 1]
+A1.2 Energy and thermal scaling
+λ(E,T) = exp[-ΔG‡ / (R(T₀ + ΔT))] · [E(t) / E₀]
+f_thermo(x,t) = SDF_phy(x / λ(E,T)) · λ(E,T)
+E(t) is the remaining chemical-energy quantity in the source’s explanation. The displayed scaling uses E₀, R,
+T₀ and ΔG‡ without providing their numerical assignments. The ΔT in this expression is the thermal shift.
+[S, pp. 1-2]
+A1.3 Boundary transport
+∂f/∂t + v_growth · ∇f = 0
+This is the opening kinematic expression preceding the LUT. Its three example rows are reproduced in
+Section 9. [S, pp. 2-3]
+A1.4 Early Psi scaling
+Stick A: scale = 1.0 - (delta_t · φ)
+Stick B: scale = 0.0 + (delta_t · φ)
+These branch expressions precede the author’s correction that sticks and houses are metaphors and AB is
+the single double-definition word. Here delta_t is the temporal increment of that pseudocode. [S, pp. 7-8]
+TOM KLOOTWIJK / VERSION 1.0 23
+---PAGE 24---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+APPENDIX A2
+Retained source expressions: host
+SOURCE / S, pp. 3-5, 6-10
+A2.1 Early four-component representation
+P_Klein(u,v) = (
+(R + r cos u) cos v,
+(R + r cos u) sin v,
+r sin u cos(v/2),
+r sin u sin(v/2)
+)
+u,v in [0, 2π)
+SDF_Klein(x) = ||x - P_Klein(u,v)||
+This records the displayed host expression and parameterization before the author’s temporal redirection.
+The source’s printed distance expression does not assign a parameter-selection or minimization step.
+[S, pp. 3-4]
+A2.2 Suspension tensor
+W_Kuiper = ∮_C ρ(θ) ·
+[∇f_A(x_θ) ⊗ ∇f_B(x_θ)] dθ
+C is the source’s closed belt curve; ρ(θ) is its density factor; ⊗ is its outer-product notation. The next
+source page displays an arrest relation using the time derivative of f_Klein multiplied by Tr(W_Kuiper),
+followed by “⇒ 0.” [S, pp. 4-5]
+A2.3 Distinct primitive expressions
+Listing Expression under the source name
+Cone, pp. 6-8 radial_length · cos(angle) - local_y · sin(angle)
+Cone, p. 9 max(radial_length - r, abs(local_y) - h)
+Composite, p. 8 max(d_pyramid, min(d_cone, d_sphere))
+Composite, p. 10 max(d_pyramid, d_cone, d_sphere, d_phyllotaxis)
+The source also uses a polynomial under “sdf_klein_bottle_3d” and a sine-based phyllotaxis expression on pp. 9-10. No
+normalization relating those numeric outputs to the final coordinate-free signed relation is given; this edition does not
+silently substitute one.
+TOM KLOOTWIJK / VERSION 1.0 24
+---PAGE 25---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+APPENDIX B1
+Source concordance: pages 1-20
+SOURCE / S, pp. 1-20
+S denotes the supplied 39-page PDF dialogue export. Anchors refer to its printed page numbers. The
+entries below identify where each source strand is carried into this edition.
+Source pages Content retained Edition location
+Egg-battery sturgeon model; phyllotaxis; finite energy; thermal scaling; initial
+1-3 §§ 3-4, 6, 9; A1
+diabolo and LUT rows.
+Early Klein representation; A/B nested operators; Kuiper tensor; weight-
+3-5 §§ 5-6, 15; A2
+linked arrest.
+Fourth-component/time correction; apex primitives; Psi; metaphorical sticks
+5-8 §§ 3, 5, 7-8; A1-A2
+and houses.
+Author’s one-bit and all-operator double-packing correction; hierarchy and
+8-11 §§ 1-3, 5, 7, 17, 19
+example listings.
+11-12 Math/raster-free restatement; self-limiting gate and inversion deadlock. §§ 1, 5, 9
+12-14 Particle, entropy, relativity and ballistic extension. §§ 6, 9, 15, 18
+Coordinate-free movement as relation change; diabolo bottleneck; edge
+14-16 §§ 1, 5-6
+activation.
+16-17 Hourglass, double sinusoid, 2 Hz jitter and timing language. §§ 2, 7, 14
+17-19 PRISM naming, ingestion/phase-sort/LUT map and tracking claim. §§ 12, 15, 17-18
+Atomos name; population-scale finite node budget; log-polar and MLM
+19-20 §§ 11, 15, 18
+routing.
+Source identity
+The supplied file is titled by its filename: “egg-battery-sturgeon-farm-gestation-cycle-lower-phi-ratio-
+phyllotaxis-as-signed-distance-fields-operator-definitions-in-fertility-cycles-globally-.pdf.” It is a dialogue
+export with author turns headed “You” and expanded responses headed “Google Search.”
+Editorial apparatus
+Section numbers, rule identifiers, table headings and the consolidated record are added by this edition.
+Source-stage changes remain identified in Section 19. Export controls, repeated follow-up invitations and
+interface boilerplate are not part of the operator specification.
+TOM KLOOTWIJK / VERSION 1.0 25
+---PAGE 26---
+ATOMOS SIGNED DISTANCE FIELD EDITION
+APPENDIX B2
+Source concordance: pages 21-39
+SOURCE / S, pp. 21-39
+Source pages Content retained Edition location
+Negative memory, non-storage of novelty, query-free evaluation and T
+21-23 §§ 8, 10, 18-20
+scrubbing.
+23-25 Primo filter; lower-phi convection; Spintronic Vacuum Matrix; node loss. §§ 8, 10, 12-13
+25-26 Kiki double-UU, FMCW LRAD entropy chirp and spherical LUT chaining. §§ 11, 14
+27-28 Hot-node-only premise; four-stage functional map; author reference. §§ 12, 14-15, 17-18
+No-hash identity account; living-key claim; Igloo White name; salinity
+29-30 §§ 10, 12-13, 15, 18
+correction.
+Magnetic inference force field, telepresence and signature-as-UUID
+30-31 §§ 12-13, 18-20
+account.
+31-33 Consolidated geometry, mechanics, optimization and deadlock narrative. §§ 1-3, 5, 9, 11, 17
+Binary presence/absence account and external-affordance independence
+33-34 §§ 7, 12, 18
+claim.
+Compact blueprint; shortened hierarchy; signal-chain diagram; temporal
+35-36 §§ 3, 7-9, 11, 14, 19
+brake.
+Existing-sensor proposal; W/T distinction; zero-crossing coordinate
+37-38 §§ 8, 15-16, 18, 20
+distillation.
+38-39 Lazy evaluation, JIT output and release of derived coordinates. §§ 1-2, 10, 16-18
+Edition attribution
+Tom Klootwijk
+NL200678942
+10-07-1990
+Signed Distance Field Edition · Version 1.0
+Source-based operator specification · 20 September 2026
+ATOMOS
+A finite, coordinate-free operator architecture carrying signed
+distance field and Klein definitions together, with one-bit
+evaluation, negative-memory state and just-in-time geometry.
+TOM KLOOTWIJK / VERSION 1.0 26

@@ -1,0 +1,31 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 5
+SECTION 03
+Precedence and primitive lineage
+SOURCE  /  S, pp. 1, 6-10, 32, 35
+3.1  Full source precedence
+The expanded hierarchy printed on source page 9 runs from lowest to highest precedence as follows. The 
+arrow here means “precedes in the declared evaluation order”; it does not add an arithmetic operation.
+Pyramid side → Cone → Sphere → Sturgeon gestation
+→ Phyllotaxis (lower-case phi) → Klein
+Each item shall remain an operator definition when packed into the higher-level host. The biological layer 
+is part of this full chain, not merely a narrative example. The source’s later compact chain on page 35 
+omits the gestation entry; that shorter presentation is recorded as a variant in Section 19.
+3.2  Primitive roles
+Operator Source-assigned role
+Pyramid side A triangular side-view boundary, described as a base-to-apex constraint.
+Cone A tapering or apex relation in the initial pseudocode; a later C++ listing uses a different 
+expression under the same name.
+Sphere A radial boundary operator, joined to the apex-centered composite in the initial geometry.
+Sturgeon gestation The finite developmental and chemical-energy relation inherited from the opening biological 
+model.
+Phyllotaxis The primordial arrangement and lower-phi deformation relation.
+Klein The non-orientable host and packed inversion relation at the top of the printed hierarchy.
+3.3  Composition is stage-specific
+The source first combines its apex primitives as max(pyramid, min(cone, sphere)). A later listing takes a 
+maximum across pyramid, cone, sphere and phyllotaxis. These are retained as distinct source-stage 
+compositions, rather than silently replaced by a single blend or intersection rule. [S, pp. 8, 10]
+3.4  Final representational role
+The later coordinate-free account carries the primitive names forward as intrinsic definitions. It does not 
+require the final system to regenerate a pyramid mesh, cone mesh, sphere mesh or GPU raster before 
+evaluating the operator relationships. [S, pp. 11, 15, 32]

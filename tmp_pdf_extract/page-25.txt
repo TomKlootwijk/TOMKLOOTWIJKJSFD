@@ -1,0 +1,32 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 25
+APPENDIX B1
+Source concordance: pages 1-20
+SOURCE  /  S, pp. 1-20
+S denotes the supplied 39-page PDF dialogue export. Anchors refer to its printed page numbers. The 
+entries below identify where each source strand is carried into this edition.
+Source pages Content retained Edition location
+1-3 Egg-battery sturgeon model; phyllotaxis; finite energy; thermal scaling; initial 
+diabolo and LUT rows. §§ 3-4, 6, 9; A1
+3-5 Early Klein representation; A/B nested operators; Kuiper tensor; weight-
+linked arrest. §§ 5-6, 15; A2
+5-8 Fourth-component/time correction; apex primitives; Psi; metaphorical sticks 
+and houses. §§ 3, 5, 7-8; A1-A2
+8-11 Author’s one-bit and all-operator double-packing correction; hierarchy and 
+example listings. §§ 1-3, 5, 7, 17, 19
+11-12 Math/raster-free restatement; self-limiting gate and inversion deadlock. §§ 1, 5, 9
+12-14 Particle, entropy, relativity and ballistic extension. §§ 6, 9, 15, 18
+14-16 Coordinate-free movement as relation change; diabolo bottleneck; edge 
+activation. §§ 1, 5-6
+16-17 Hourglass, double sinusoid, 2 Hz jitter and timing language. §§ 2, 7, 14
+17-19 PRISM naming, ingestion/phase-sort/LUT map and tracking claim. §§ 12, 15, 17-18
+19-20 Atomos name; population-scale finite node budget; log-polar and MLM 
+routing. §§ 11, 15, 18
+Source identity
+The supplied file is titled by its filename: “egg-battery-sturgeon-farm-gestation-cycle-lower-phi-ratio-
+phyllotaxis-as-signed-distance-fields-operator-definitions-in-fertility-cycles-globally-.pdf.” It is a dialogue 
+export with author turns headed “You” and expanded responses headed “Google Search.”
+Editorial apparatus
+Section numbers, rule identifiers, table headings and the consolidated record are added by this edition. 
+Source-stage changes remain identified in Section 19. Export controls, repeated follow-up invitations and 
+interface boilerplate are not part of the operator specification.

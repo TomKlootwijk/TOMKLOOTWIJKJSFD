@@ -1,0 +1,1303 @@
+
+---PAGE 1---
+TOM KLOOTWIJK / JSFD
+Klootwijk SDF
+Directional Definition
+Calculus
+Consolidation D1
+Individual definitions.
+Packed composition.
+Causal throughput.
+The mathematical formalization and its
+present‐day and far‐future possibility space.
+A definition supplies a direction, not an intrinsic length or a built‐in inside or outside. Its mean‐
+ing, its relationships and its change over time are defined explicitly. Packing keeps the individ‐
+ual definitions recoverable.
+T om Klootwijk
+NL200678942 | 10‐07‐1990
+18 September 2026
+A new mathematical consolidation of the stated project direction.
+Plain‐language explanations accompany the definitions and examples.
+---PAGE 2---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+The consolidation in one page
+Y our goal is a common way to define things, operations, expressions, relationships and change, with
+each definition retaining its own identity. Y our latest clarification places a directional eigenaxis at
+the foundation. It does not place a sampled spatial volume, a signed distance, a magnitude, or an
+inside/outside test there.[P0, H]
+This edition calls that direction the Klootwijk SDF Directional Definition Calculus. The project label
+SDF is retained. The descriptive name is introduced here; it is not presented as a recovered title from
+an unavailable original.
+In everyday language
+Imagine a collection of named arrows. Stretching an arrow does not change which way it points.
+Each arrow has its own definition. Some definitions name things; some say how things relate;
+some say what can happen next. Putting them in one collection does not melt them into one
+giant object. Y ou can still point to each definition, change it, reuse it and follow what depends
+on it.
+What is formalized. The document defines direction‐only primitives, their eigenaxis witnesses, indi‐
+vidual identity, lossless packing, operators represented in the same notation, composition, explicit
+time, self‐reference, optional measurements, geometric and topological descriptions, and through‐
+put from inputs to justified outcomes.
+What the possibility space becomes. A single descriptive calculus can organize route problems,
+design constraints, changing systems, mechanism models and learned rules. More ambitious ex‐
+tensions include self‐repairing digital structures, adaptive materials, molecular rule systems, robotic
+collectives, virtual tissues and entirely invented mathematical worlds. The connection to each appli‐
+cation is a stated construction, not a claim that naming an application already realizes it.
+What changed from the previous reports. Their signed‐distance and Boolean‐room constructions
+are not the foundation here. Their implementation‐centered framing is also not the foundation.
+What survives is the unification objective: individually defined things and rules, reusable composi‐
+tion, explicit change and broad applications. [P1, P2]
+Source basis. The two supplied consolidation PDFs have been inspected, alongside the visible
+project history and your current clarification. The original geometry, routing and nature source PDFs
+themselves remain unavailable. New mathematics supplied to reconcile the requirements is identi‐
+fied as D1 construction; it is not silently attributed to those missing documents. Appendix B gives
+the precise source ledger.
+The central result: a dimension‐independent, direction‐only definition calculus with explicit
+composition and causal semantics. Its strength is the ability to state and connect many kinds
+of mechanism without making intrinsic magnitude or containment part of every primitive.
+18 September 2026 2 / 35
+---PAGE 3---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+Contents
+The consolidation in one page 2
+1 Y our goal and the revised foundation 4
+2 The objects of the calculus, before equations 5
+3 The individual SDF: an oriented eigenaxis 5
+4 How everything can itself have an SDF definition 7
+5 Packing without merging the definitions 8
+6 Operators, expressions and relationships 10
+7 Time, self‐reference and changing definitions 11
+8 Geometry, quantities and the source motifs 12
+9 Throughput: from definitions to resolved outcomes 14
+10 What follows mathematically, and the stronger questions 16
+11 Three complete examples in readable language 18
+12 Present‐day possibilities, explained simply 20
+13 The nature and mechanism branch, formalized 22
+14 Where present‐day frontier research already connects 24
+15 Far‐future possibilities: the extended space 26
+16 What you actually have after this consolidation 30
+A Compact formal charter 31
+B Provenance, versions and the source ledger 32
+C Plain‐language glossary 33
+D Sources and research references 34
+Reading routes. For the idea without the mathematics, read Sections 1–2, the blue explanation
+boxes, and Sections 12–16. For the exact formalization, read Sections 3–11 and the compact
+charter in Appendix A. Appendix B records the source lineage and what was actually available.
+18 September 2026 3 / 35
+---PAGE 4---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+1 Y our goal and the revised foundation
+1.1 What the revisions were reaching toward
+The visible sequence begins with geometric definitions and named shapes. It expands into operators
+and expressions being definitions themselves, compact individual representations, logarithmic/polar
+organization, an explicit time operator, self‐reference, and applications involving routes and mech‐
+anisms found in nature. Y our later requests repeatedly reject a mere calculator or renderer as the
+destination.[H, P1, P2]
+The common ambition is representational unity without losing individuality : the thing being de‐
+scribed, the rule relating it to something else, and the rule governing its change should all be express‐
+ible within the same formal vocabulary. A relationship should not need to become an unrelated kind
+of object merely because it is an operation rather than a shape.
+Y our current clarification adds a decisive constraint: the native SDF supplies a directional eigenaxis,
+not an inherent scalar distance, length or containment classification. D1 treats that as the current
+definition of the project primitive. [P0]
+1.2 A precise terminology boundary
+In conventional mathematical and geometric usage, a signed‐distance function returns a signed
+scalar distance to a boundary. An eigenvector instead concerns a linear operator that maps a nonzero
+vector to a scalar multiple of itself. These are different mathematical objects. [R1, R2]
+Here, SDF means the project’s direction‐only definition primitive . When conventional signed dis‐
+tance is needed for a particular application, it must be introduced as an additional, explicitly named
+measurement. Nothing in the native calculus assumes a cubic grid, three or four spatial coordinates,
+or a pre‐existing volume. The distinction is the stated mathematical contract, not an assertion that
+conventional mathematics is limited to cubic grids.
+1.3 What D1 retains and what it replaces
+Theme Retained D1 refinement
+Individual definitions Objects, rules and expressions
+have definitions.
+Each has a recoverable identity
+and a directional representation.
+Packing and reuse Many definitions belong together. Packing preserves components; it
+is not vector addition or spatial
+fusion.
+Time and self‐reference Change and references are
+first‐class.
+Time is an explicit transition
+relation; cyclic references have
+stated semantics.
+Geometry and nature Shape, routes and mechanisms
+remain in scope.
+Physical properties are separate
+definitions, not inferred from a
+bare axis.
+Throughput Definitions are intended to
+produce useful outcomes.
+Throughput is defined relationally
+and causally, independently of a
+device.
+18 September 2026 4 / 35
+---PAGE 5---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+In everyday language
+The earlier reports began with little rooms and asked whether an answer was inside a room.
+This version begins with individually named directions and asks what each direction means and
+which relationships connect them. A room can still be described, but rooms are no longer the
+starting assumption.
+2 The objects of the calculus, before equations
+A complete definition has an identity, a declared role and a directional expression. Identity tells
+us which definition is being referenced. The role tells us whether its interpretation is a value, a
+relationship, a clock rule, a measurement, a shape description or a description of another definition.
+The native directional content has no intrinsic length. Its interpretation can nevertheless refer to a
+length, just as the written word “metre” is not itself one metre long. This distinction is essential for
+keeping the primitive direction‐only while still allowing quantitative applications.
+A pack is an organized collection of such definitions together with explicit connections. The con‐
+nections are also describable as definitions. A composition connects an output role to a compatible
+input role. A transition relates an earlier situation to a later one. An observation specifies what
+counts as an answer to a question.
+Direction is the native representation. Interpretation supplies meaning. Composition sup‐
+plies relationships. Time supplies allowed change. Measurement supplies quantities only
+where a model explicitly calls for them.
+This is not merely a change of names for the earlier signed‐distance construction. The mathematical
+equivalence relation, the meaning of packing, the status of time, and the conditions for physical
+interpretation are all stated afresh below.
+3 The individual SDF: an oriented eigenaxis
+3.1 Direction without intrinsic magnitude
+Choose a real vector space𝑉 for a particular kind of definition. It is an abstract carrier, not necessarily
+physical space. Different kinds may use different carriers. No universal spatial dimension is imposed.
+Definition 3.1 (Oriented directional content). For nonzero vectors 𝑣, 𝑤 ∈ 𝑉 , define
+𝑣 ∼ + 𝑤 ⟺ 𝑤 = 𝑎𝑣 for some 𝑎 > 0. (1)
+The oriented direction represented by 𝑣 is [𝑣]+. The collection of such directions is
+Dir(𝑉) = (𝑉 ∖ {0})/ ∼ + .
+There is no chosen vector length in this definition. For example, (1, 2), (3, 6) and (10, 20) represent
+the same directional content. Their coordinate ratios agree, but their representative lengths need
+not. A norm is not needed to define the quotient.
+18 September 2026 5 / 35
+---PAGE 6---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+Orientation matters. The directions [𝑣]+ and [−𝑣]+ are distinct. An unoriented axis would instead
+identify both signs. D1 uses the oriented version because your wording includes direction and be‐
+cause a one‐bit distinction can then be represented by opposite orientations. This is an explicit D1
+choice, not a claim that the missing PDFs had already settled that convention.
+Zero is not a direction. A zero vector cannot provide an axis. A definition that has no directional
+result at a particular argument is undefined there, or returns an explicitly defined status such as
+“stationary. ” The status is a separate definition; it is not a hidden zero‐length arrow.
+In everyday language
+A small arrow pointing northeast and a long arrow pointing northeast mean the same direction.
+T urning the arrow around changes its direction. Erasing the arrow entirely does not create a
+special direction; it leaves no arrow.
+3.2 Making “eigenaxis” literal
+An eigenaxis must be associated with an operator. An arbitrary arrow is not, by itself, evidence of a
+natural or physical eigenmode. The standard relation is 𝐿𝑣 = 𝜆𝑣 for 𝑣 ≠ 0 .[R2]
+Definition 3.2 (Eigenaxis witness). A directional SDF may have a witness 𝐿 ∶ 𝑉 → 𝑉 such that
+𝐿𝑣 = 𝜆𝑣, 𝜆 > 0. (2)
+The native result remains [𝑣]+; 𝐿 and 𝜆 belong to the explicit witness description, not to an intrinsic
+length of the result.
+The positive eigenvalue preserves the oriented direction. A negative eigenvalue preserves the un‐
+derlying line but reverses orientation. Those two situations must not be conflated. A repeated eigen‐
+value can also admit many directions; it does not automatically select one. For example, the identity
+operator preserves every direction. A real planar quarter‐turn has no nonzero real eigenvector. The
+choice of carrier and witness therefore matters.
+Proposition 3.1 (Every direction admits an eigenaxis witness) . For every nonzero 𝑣 in a finite‐
+dimensional real vector space, there is a linear map 𝑃 with 𝑃2 = 𝑃 and 𝑃𝑣 = 𝑣 .
+Proof. Choose a linear functional ℓ satisfying ℓ(𝑣) = 1 , and set 𝑃(𝑤) = 𝑣ℓ(𝑤) . Then 𝑃𝑣 = 𝑣 and
+𝑃2(𝑤) = 𝑣ℓ(𝑣ℓ(𝑤)) = 𝑣ℓ(𝑤) = 𝑃(𝑤) . Replacing 𝑣 by 𝑎𝑣 and ℓ by ℓ/𝑎 leaves 𝑃 unchanged.
+This construction makes the word eigenaxis exact without attaching a physical amplitude. The eigen‐
+value 1 is a witness convention, not a law of nature. Many different witnesses can preserve the same
+direction. Consequently, knowing a direction alone does not recover a unique operator, material law
+or mechanism.
+3.3 Named definitions and contextual results
+A readable definition record is written
+𝐷𝑖 = (𝑖, 𝜏𝑖, 𝑒𝑖), (3)
+18 September 2026 6 / 35
+---PAGE 7---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+where 𝑖 is a unique identity, 𝜏𝑖 declares the role or input/output types, and 𝑒𝑖 is its finite expression.
+These are descriptive slots in a record, not spatial coordinates. Section 4 gives a single direction‐only
+representation of the entire record.
+For a single‐result definition applied to a permitted context 𝑐, the native result, when defined, is
+SDF𝑖(𝑐) = [𝑣 𝑖(𝑐)]+ . (4)
+A context can be a symbolic expression, a collection of named arguments, an event history or a
+geometric query. It need not be a physical location. A relation that admits several results returns a
+collection of individually identified directional answers, not one fabricated average direction.
+4 How everything can itself have an SDF definition
+4.1 Representation and interpretation are different jobs
+The goal that values, operators, expressions and time are each SDF‐defined can be made mathemat‐
+ically literal. It does not require every such object to have the same meaning.
+For each declared type 𝜏, let 𝑋𝜏 be a collection of finitely describable values. Choose an injective
+representation
+𝐸𝜏 ∶ 𝑋 𝜏 ⟶ Dir(𝑉𝜏), Dec𝜏(𝐸𝜏(𝑥)) = 𝑥. (5)
+The decoder is defined on valid representations. Its interpretation is part of the declared calculus. An
+operator’s description has an SDF representation, while the operator’s meaning specifies the allowed
+input/output relationships between other representations.
+In everyday language
+The word “turn” and the word “chair” can both be written with letters. They do not therefore
+do the same thing. In the same way, an operator and an object can both have directional
+definitions without becoming interchangeable.
+4.2 A constructive direction‐only encoding
+Proposition 4.1 (Every finite definition record can be represented by an eigenaxis). Fix a finite alpha‐
+bet and an unambiguous finite encoding of definition records. There is an injective representation
+of those records by oriented eigenaxes in a two‐dimensional abstract carrier.
+Proof. Convert a record 𝑠 to a finite binary word. Prefix the word by a leading 1 and interpret it as
+an integer 𝑛(𝑠). This preserves leading zeros and distinguishes different word lengths. Set
+𝐸(𝑠) = 􏿰􏿶
+1
+𝑛(𝑠)􏿹􏿳
++
+, 𝐿 𝑠 = 􏿶
+1 0
+𝑛(𝑠) 0 􏿹 . (6)
+If 𝐸(𝑠) = 𝐸(𝑡) , then (1, 𝑛(𝑡)) = 𝑎(1, 𝑛(𝑠)) for 𝑎 > 0 . The first coordinate gives 𝑎 = 1 , so 𝑛(𝑠) = 𝑛(𝑡) and
+𝑠 = 𝑡 . Also 𝐿𝑠(1, 𝑛(𝑠))𝑇 = (1, 𝑛(𝑠))𝑇 and 𝐿2𝑠 = 𝐿 𝑠.
+18 September 2026 7 / 35
+---PAGE 8---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+The integer is carried by a coordinate ratio, not by the length of the representative vector. Scal‐
+ing both coordinates does not change the encoded record. The two‐dimensional carrier is a rep‐
+resentational choice; it does not assert that a described object, mechanism or world is physically
+two‐dimensional.
+This proves that a finite description of an operator, an input, a clock rule, a pack, an observation
+or an expression can have the same native directional form. It does not prove that arbitrary finite
+data require only constant physical information. Distinguishing larger integers requires sufficient
+symbolic detail or directional precision. The finite‐state information argument in Section 10 makes
+that boundary exact.
+4.3 A common vocabulary, not an unexplained oracle
+An expression such as Then (𝑝, 𝑞) has its own encoded direction. So do Pack, Quote, Observe and 𝑇.
+Their semantics still have to be declared. Encoding a rule is not a substitute for saying what the rule
+means.
+The starting assumptions are the ordinary logical reading of the definitions, the declared grammar,
+identity resolution and the interpretation clauses. These form the mathematical foundation of the
+calculus. They can themselves be described and quoted within it; storing their descriptions does not
+remove the need for a foundation from which those descriptions are read.
+A definition can refer to its own identity or to another definition without containing infinitely many
+physical copies. Such references are finite expressions. Their meaning is supplied by the time or
+fixed‐point conventions in Section 7, not by circular spelling alone.
+4.4 One bit fits, but not every direction is one bit
+In a one‐dimensional real carrier,
+𝐸Bit(0) = [−1] + , 𝐸 Bit(1) = [+1] + .
+There are exactly two oriented directions, so this is a genuine binary distinction. An unoriented line
+would merge them and lose the bit. In higher‐dimensional carriers, additional directional distinctions
+can represent richer objects. The calculus therefore preserves the one‐bit case without pretending
+that every possible definition contains only one bit of information.
+5 Packing without merging the definitions
+5.1 A lossless collection of individuals
+Let 𝐼 be a set of distinct definition identities. A finite pack has a registry of representations and an
+explicit collection of relationships:
+𝒫 = 􏿴𝐼, {𝛿𝑖}𝑖∈𝐼 , 𝒲 􏿷, 𝛿 𝑖 = 𝐸(𝐷 𝑖). (7)
+Here 𝒲 specifies references and typed connections. Its finite descriptions can themselves appear
+as individually named definitions in the same registry. The notation separates them for readability,
+not because relationships require a different native substance.
+18 September 2026 8 / 35
+---PAGE 9---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+Definition 5.1 (Lossless packing). Packing is lossless when every constituent has a projection satis‐
+fying
+𝜋𝑖(𝒫 ) = 𝛿𝑖. (8)
+Two distinct definitions may have equivalent behavior while remaining different identities.
+Definition identity is not object‐state identity. One reusable transition rule may govern many in‐
+stances. Sharing its description does not mean that the instances must share their changing states.
+Conversely, two references to one stateful instance must not be silently duplicated into independent
+instances.
+In everyday language
+A book can contain many recipes. Y ou can retrieve each recipe, and two kitchens can use the
+same recipe without sharing one saucepan. Putting the recipes in one book neither mixes the
+ingredients nor makes the two kitchens identical.
+5.2 Each direction keeps its own freedom of scale
+For a pack of directional contents, the native mathematical object is a product
+􏾟
+𝑖∈𝐼
+Dir(𝑉𝑖), (9)
+with labels and relationships retained. Each representative 𝑣𝑖 may independently be replaced by 𝑎𝑖𝑣𝑖,
+𝑎𝑖 > 0, without changing the contents.
+This is generally not the same as taking one direction in ⨁𝑖 𝑉𝑖. In a single concatenated direction,
+only one common scaling is discarded. The remaining ratios between components would introduce
+information that the separate primitives never had.
+For example, two separately represented directions [𝑣]+ and [𝑤]+ are unchanged when 𝑣 is dou‐
+bled. But the combined vectors (𝑣, 𝑤) and (2𝑣, 𝑤) are generally not scalar multiples. T reating those
+combined vectors as a single native direction would manufacture a relative magnitude between the
+definitions.
+A pack can still have its own directional description. Apply the finite‐record encoding to the descrip‐
+tion of the whole pack. That new SDF names the collection; it is not a vector sum of its members.
+Decoding it recovers the individual definitions and their independent equivalences.
+5.3 The meaning of the packing symbol
+D1 reserves the bare symbol | for definition‐preserving packing:
+𝒫 ∣ 𝒬 = Pack(𝒫 , 𝒬 ). (10)
+Identity collisions must be resolved by explicit sharing or consistent renaming. With that convention,
+packing is associative up to renaming and has an empty‐pack identity. It introduces no interactions
+that were not declared.
+A Boolean OR, a sequential operation and an alternative choice are separately defined operations.
+They can all have SDF descriptions, but they are not secretly the same operation because one printed
+symbol was used in an earlier discussion. This removes the earlier ambiguity without narrowing the
+possible operator vocabulary.
+18 September 2026 9 / 35
+---PAGE 10---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+6 Operators, expressions and relationships
+6.1 An operator is individually defined
+A relation‐type definition 𝑝 ∶ 𝜏 ⇝ 𝜎 has an explicit meaning
+𝑅𝑝 = 􏿚𝑝􏿞 ⊆ 𝑋 𝜏 × 𝑋𝜎. (11)
+Its directional representation is 𝐸Code(𝐷𝑝). Its application semantics relate encoded inputs and out‐
+puts according to
+𝐸𝜏(𝑥)
+𝑝
+= ⇒ 𝐸𝜎(𝑦) ⟺ (𝑥, 𝑦) ∈ 𝑅 𝑝. (12)
+No distance or inside/outside test appears in this definition.
+A deterministic operation has one permitted output for each permitted input. A partial operation
+may have none. A nondeterministic relationship or design constraint may allow several. D1 keeps
+those cases distinct instead of forcing every definition to return one arbitrary answer.
+6.2 The basic composition rules
+For 𝑝 ∶ 𝜏 ⇝ 𝜎 and 𝑞 ∶ 𝜎 ⇝ 𝜐 , sequential composition is
+(𝑥, 𝑧) ∈ 𝑅 𝑞∘𝑝 ⟺ ∃𝑦 ∶ (𝑥, 𝑦) ∈ 𝑅 𝑝 ∧ (𝑦, 𝑧) ∈ 𝑅 𝑞. (13)
+The intermediate value is a witness connecting the two definitions. Independent composition is
+((𝑥, 𝑢), (𝑦, 𝑣)) ∈ 𝑅𝑝⊗𝑞 ⟺ (𝑥, 𝑦) ∈ 𝑅 𝑝 ∧ (𝑢, 𝑣) ∈ 𝑅 𝑞. (14)
+Alternative choice between same‐typed relations is 𝑅𝑝⊔𝑞 = 𝑅 𝑝 ∪ 𝑅 𝑞. Requiring both same‐typed
+conditions is 𝑅𝑝∩𝑞 = 𝑅 𝑝 ∩ 𝑅𝑞. Identity has relation 𝑅id = {(𝑥, 𝑥)}. Rearranging named arguments is an
+explicitly defined permutation, not a change in what those arguments mean.
+Each constructor has a finite description and therefore its own SDF representation under Equa‐
+tion ( 6). This gives closure of the descriptive language : composing defined relationships produces
+another individually representable definition.
+In everyday language
+One recipe says how to make a wheel. Another says how a wheel connects to an axle. A third
+says what a turning axle does. Composition joins the matching parts. Packing merely keeps
+the recipes together; composition says how they work together.
+6.3 What a derivation establishes
+A derivation records which definitions and intermediate values justify an outcome. It answers “why
+does this follow under these rules?” A valid derivation does not automatically show that an empirical
+rule is a correct description of nature. That requires observations and a stated physical interpreta‐
+tion.
+Likewise, a relationship may describe all acceptable solutions without giving a short way to find one.
+The existential quantifier in Equation ( 13) states what a connecting witness must satisfy. It is not an
+assumption that the witness appears for free.
+18 September 2026 10 / 35
+---PAGE 11---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+6.4 Equivalence and substitution
+Definitions 𝑝 and 𝑞 are behaviorally equivalent for a declared observation family 𝒪 when every ap‐
+plicable observation gives the same answer for both. Exact relational equality, 𝑅𝑝 = 𝑅 𝑞, is a stronger
+and simpler sufficient condition for replacing one pure relation by the other in the constructions
+above.
+For timed, stateful or resource‐sensitive definitions, observations must include those features when‐
+ever they matter. Two expressions producing the same final symbol need not be interchangeable
+when one changes a shared state, takes a different modeled time or consumes a different modeled
+resource. The relevant equivalence must say what is preserved.
+7 Time, self‐reference and changing definitions
+7.1 Time is a defined relation, not a compulsory fourth coordinate
+Let 𝒮 be the collection of permitted situations and ℰ the collection of event descriptions. A time
+definition has semantics
+𝑅𝑇 ⊆ 𝒮 × ℰ × 𝒮 , 𝑠
+𝑒
+− →𝑇 𝑠′. (15)
+A situation can include active states and the currently active versions of definitions. An event says
+which change occurred. A history is a compatible sequence, or more generally a partially ordered
+collection, of such events.
+Causal order 𝑒1 ≺ 𝑒 2 says that the second event depends on the first. It does not by itself assign
+a number of seconds. A physical clock requires a separately defined calibration 𝜃 and appropriate
+durations. A cyclic phase label alone also does not distinguish all elapsed cycles.
+The earlier phrase “A is T” is retained as a possible explicit alias 𝐴 ≡ 𝑇 : a name referring to the
+time definition. It does not force time to be an opacity, a geometric dimension or a storage‐channel
+interpretation.[H, P1]
+In everyday language
+Time first means “this can happen after that. ” Seconds are something a clock adds. The rule
+for what happens next belongs in the same collection as the things that change.
+7.2 Feedback with a past value
+A rule such as
+𝑏𝑘+1 = NOT(𝑏𝑘) (16)
+is well‐defined once 𝑏0 is supplied. Starting from 0, it produces 0, 1, 0, 1, …. By contrast, the simul‐
+taneous Boolean equation 𝑏 = NOT(𝑏) has no solution. The difference is the declared causal delay,
+not the appearance of the same symbol on both sides.
+A finite acyclic dependency graph admits an evaluation order consistent with its dependencies. With
+specified inputs and pure deterministic rules, all such orders give the same results. Feedback can be
+unfolded to a finite event horizon when an initial state and a strictly causal delay convention are
+provided. A static fixed‐point interpretation is another possibility, but it must supply existence and
+selection conditions rather than assume every loop has one solution.
+18 September 2026 11 / 35
+---PAGE 12---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+7.3 Self‐description and reflection
+Quotation gives a directional representation of an expression:
+Quote(𝑒) = 𝐸 Code(𝑒).
+A declared interpretation relation specifies how a quoted expression relates an input to an output.
+The description of that interpretation relation can itself be quoted. This is self‐description; it is not
+an automatic assertion that every statement the system can express is true.
+Changing a rule is a transition of the form
+(𝒫𝑘, 𝑠𝑘)
+𝑒
+− →𝑇 (𝒫𝑘+1, 𝑠𝑘+1). (17)
+The event states which definitions changed, which old references remain meaningful and which
+versions were used to justify the outcome. Identity and versioning prevent a later rewrite from
+silently changing the meaning of an earlier derivation.
+7.4 Learning as a particular kind of change
+A learning process is not implied merely by storing rules as definitions. It is introduced by defining
+observations, a comparison criterion and an update relation on candidate rules. In schematic form,
+(rule, observation, criterion) ⇝ revised rule.
+All four descriptions can be SDF‐defined. Whether the revised rule improves prediction or behavior
+is then a question answered by the defined criterion and independent observations, not by its use
+of the common notation.
+8 Geometry, quantities and the source motifs
+8.1 Measurements are separate definitions
+The absence of native magnitude does not require an application to pretend that lengths, rates or
+amounts do not exist. It requires them to enter explicitly. A measurement definition can have se‐
+mantics
+Measure𝑞,𝑢(𝑥) = 𝑚, (18)
+where 𝑞 names the measured property, 𝑢 names the unit or reference convention, and 𝑚 is a de‐
+scribed value. The measurement rule and the value each have their own SDF representation. The
+representative length of either encoding is unrelated to 𝑚.
+This also separates a formal eigenaxis witness from a physical eigenmode. A material model may define
+an operator whose eigenvalues have a physical interpretation, such as a stiffness‐related quantity.
+That interpretation belongs to the material model and its units. The fixed eigenvalue 1 used in the
+encoding proof does not predict the material’s response.
+8.2 Circle, sphere, cone, apex and pyramid
+The shape words in the source filenames can be retained without making every native definition a
+spatial scalar. The following are explicit D1 constructions, not transcriptions of the absent geometry
+source.[H, P1]
+18 September 2026 12 / 35
+---PAGE 13---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+With a declared positive‐definite inner product 𝑔 (a Euclidean length‐and‐angle convention), center
+𝑐 and positive radius 𝑟, define a sphere surface by the relation
+SphereSurface(𝑥; 𝑐, 𝑟, 𝑔) ⟺ 𝑔(𝑥 − 𝑐, 𝑥 − 𝑐) = 𝑟 2. (19)
+A circle is the corresponding surface relation in a declared plane. The center, radius, plane, measure‐
+ment convention and surface relation all have individual definitions. The equality specifies a surface.
+An interior would require a separate predicate, for example 𝑔(𝑥 − 𝑐, 𝑥 − 𝑐) < 𝑟 2; it is not built into the
+primitive.
+For a cone surface, define an apex 𝑎, an axis direction, the chosen inner product, an opening angle
+0 < 𝛼 < 𝜋/2 and a forward parameterℎ ≥ 0 . Using that inner product only within this shape definition,
+let 𝑢 be the unit representative of the axis. Then
+𝑥 = 𝑎 + ℎ𝑢 + 𝑤, 𝑔(𝑤, 𝑢) = 0, √𝑔(𝑤, 𝑤) = ℎ tan 𝛼. (20)
+A finite cone adds a range for ℎ. A pyramid can instead use named base vertices and triangular faces
+joining them to an apex. The apex itself is a specified point in that application; it need not supply a
+unique surface‐normal direction.
+In everyday language
+“Point this way” does not tell you the size of a circle or the opening of a cone. Those are
+additional recipes. This preserves the direction‐only primitive while still letting the collection
+describe complete shapes.
+8.3 Direction alone does not determine a whole shape
+At points away from a shared center, all concentric circles have the same radial direction [𝑥 − 𝑐]+.
+They can nevertheless have different radii and boundaries. Therefore radial directions alone cannot
+distinguish those circles. A scale or equivalent relational constraint must be defined separately.
+Similarly, a normal direction does not generally specify which side is to count as interior, and an
+eigenaxis does not identify a unique substance or behavior. The useful response is not to hide
+those missing choices inside the word SDF, but to make each choice another individually inspectable
+definition.
+8.4 Log‐polar organization without sneaking magnitude back in
+In a declared two‐coordinate chart, an angular label such as
+𝜑 = atan2(𝑣2, 𝑣1)
+is unchanged by positive rescaling of 𝑣. Its meaning depends on the chart; it need not be a physical
+angle in an application. Higher‐dimensional carriers may require more coordinates or several charts.
+A logarithmic scale label has a different status. It can be defined for an additional positive scale 𝑠
+relative to 𝑠0:
+𝜌 = log(𝑠/𝑠0). (21)
+Using 𝑠 = ‖𝑣‖ as an intrinsic property of a native direction would be invalid, because log ‖𝑎𝑣‖ =
+log ‖𝑣‖ + log 𝑎. D1 therefore allows angular organization of directions and separately defined loga‐
+rithmic scale descriptions, but it does not infer a native radius from an arbitrary vector representative.
+18 September 2026 13 / 35
+---PAGE 14---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+A lookup collection or a binary search tree can organize named definitions. Neither organization is
+itself the semantics of a molecule, a route or a universe. The symbol 𝜑 is used here only as a chart
+angle; the missing source’s exact interpretation of lowercase phi is not assumed to be an angle or
+the golden ratio.
+8.5 T opology and the Klein‐bottle motif
+T opology can enter as separately defined identifications rather than as a demand that everything live
+in ordinary physical space. For example, take a square of parameter labels and impose
+(0, 𝑣) ∼ (1, 1 − 𝑣), (𝑢, 0) ∼ (𝑢, 1). (22)
+This is the usual edge‐identification description of a Klein bottle. It supplies explicit neighbor and
+identification rules. A traversal across the twisted identification reverses the local orientation con‐
+vention. A local coordinate arrow therefore needs an explicit transformation rule when it crosses
+that identification.
+The mathematical object is not the same thing as a physical surface manufactured without intersec‐
+tion in ordinary three‐dimensional space. Its value here is descriptive: the calculus can express dif‐
+ferent connectivities and local coordinate conventions without baking one global physical geometry
+into every primitive. The quotient construction above supplies the intended abstract identification
+directly; no image of a self‐intersecting bottle is needed to define it. [R3]
+9 Throughput: from definitions to resolved outcomes
+9.1 Relational throughput
+The word throughput can refer to what a system passes from input to outcome, or to a measured
+rate of doing so. D1 first formalizes the passage itself. This is the part determined by the definitions
+without introducing a particular physical device.
+Definition 9.1 (Through‐image). For a relationship 𝑝 ∶ 𝑋 ⇝ 𝑌 and an input collection 𝐴 ⊆ 𝑋 , define
+Θ𝑝(𝐴) = {𝑦 ∈ 𝑌 ∶ ∃𝑥 ∈ 𝐴, (𝑥, 𝑦) ∈ 𝑅 𝑝}. (23)
+The associated witness‐preserving version retains the tuples (𝑥, 𝑝, 𝑦) and, for a composition, the in‐
+termediate values and definition versions used in the derivation.
+The plain through‐image answers which outcomes are permitted. The witness‐preserving version
+additionally records how each follows. Duplicated derivations of the same outcome are not auto‐
+matically distinct useful answers.
+Proposition 9.1 (Composition law for throughput) . For compatible relationships 𝑝 and 𝑞,
+Θ𝑞∘𝑝(𝐴) = Θ 𝑞􏿴Θ𝑝(𝐴)􏿷. (24)
+Also, Θ𝑝⊔𝑞(𝐴) = Θ 𝑝(𝐴) ∪ Θ 𝑞(𝐴).
+Proof. An element 𝑧 belongs to the left side exactly when there are 𝑥 ∈ 𝐴 and 𝑦 with (𝑥, 𝑦) ∈ 𝑅 𝑝 and
+(𝑦, 𝑧) ∈ 𝑅 𝑞. The same witnesses state membership in the right side. The choice law follows directly
+from union of the defining relations.
+18 September 2026 14 / 35
+---PAGE 15---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+For independent inputs, Equation ( 14) additionally gives
+Θ𝑝⊗𝑞(𝐴 × 𝐵) = Θ 𝑝(𝐴) × Θ 𝑞(𝐵).
+That product formula assumes independence. Correlated inputs or shared changing states require
+the actual coupled relation instead.
+In everyday language
+A definition says which doors can lead to which next doors. Throughput means following those
+allowed connections until you reach an answer. Keeping a record of the doors you passed
+through explains the answer. Simply drawing more doors does not mean more questions have
+been solved.
+9.2 Causal throughput without seconds
+Choose a finite family of questions 𝑄. Each question fixes the relevant definition version and spec‐
+ifies what counts as a resolved answer and what witness, derivation or complete search certificate
+is required. For a declared unfolding into causal stages, let
+𝑁𝑄(𝑘) = #{𝑞 ∈ 𝑄 ∶ 𝑞 has been resolved by stage 𝑘}, (25)
+counting each question at most once. For 𝑘 > 0 , define the stage‐based rate
+𝜏𝑄(𝑘) = 𝑁 𝑄(𝑘)/𝑘. (26)
+This is a formal account of progress, not a hidden physical benchmark. The choice of elementary
+event and stage must be fixed before two derivations are compared. Declaring an entire difficult op‐
+eration to be “one step” changes the stage model; it does not establish a real increase in throughput.
+A witness may resolve an existence question. A universal claim, an impossibility claim or a global
+optimum may require more: a derivation covering all relevant alternatives, a valid bound, or another
+complete argument. A collection of promising candidates is not yet that certificate.
+9.3 Causal depth, independent obligations and sharing
+For a nonempty, finite, explicitly unfolded derivation, let𝑊 be the number of distinct required events
+and 𝑆 the length of its longest dependency chain. The ratio 𝑊 /𝑆 describes a potential for indepen‐
+dent work under that event model. The largest group of pairwise independent events is another
+structural measure. Neither quantity is a rate in seconds.
+Definition sharing can reduce repeated description and sometimes repeated reasoning. Suppose the
+same pure lemma is needed in many branches. Proving it once and citing it can replace many copies
+of the same derivation. This is a genuine logical benefit when the assumptions match. Reusing
+the result of a state‐changing event under different states is a different claim and needs a separate
+justification.
+A description‐saving example. A rule of length ℓ used 𝑚 times costs roughly 𝑚ℓ symbols when
+copied literally. A shared description plus 𝑚 references of length 𝑟 costs roughly ℓ + 𝑚𝑟, before the
+other connection information. This is a conditional accounting identity, not a universal compression
+ratio. It captures the reusable‐definition goal without reference to a memory device.
+18 September 2026 15 / 35
+---PAGE 16---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+9.4 Connecting throughput to a physical process
+A physical interpretation adds a realization of the permitted transitions and an observation map. In
+the exact deterministic case, a suitable abstraction 𝐴 would satisfy
+𝐴(𝐹(ℎ)) = 𝑇(𝐴(ℎ)) (27)
+for the physical states ℎ in scope. Here 𝐹 is the physical evolution over a defined interval and 𝑇 the
+modeled transition. An approximate model instead specifies a comparison, tolerance and observa‐
+tion domain. A nondeterministic version requires the corresponding relational refinement condition.
+Only after durations and observations are defined does a physical rate such as𝑁𝑄/Δ𝑡 have a meaning.
+The calculus gives a vocabulary for that quantity; it does not determine its numerical value from the
+existence of directional definitions.
+10 What follows mathematically, and the stronger questions
+10.1 Properties established by the definitions
+The direction quotient removes native representative length. The eigenaxis construction shows that
+every nonzero direction has a compatible witness. The finite‐record encoding shows that values,
+operators and descriptions can share one direction‐only form. Projection gives recoverable pack‐
+ing. Relational composition gives explicit semantics and the throughput composition law. Declared
+causal delay makes feedback meaningful.
+These are mathematical consequences of D1’s stated constructions. They do not depend on the
+tests in the earlier kernel companions, and those older tests do not establish this revised semantic
+model. The examples below are direct finite derivations of D1 behavior.
+10.2 A finite representation still has an information requirement
+Proposition 10.1 (Distinguishable‐record bound) . A lossless representation of 𝑀 distinct records
+requires at least 𝑀 distinguishable representation states. A representation restricted to 𝑏 binary
+choices therefore requires 2𝑏 ≥ 𝑀.
+Proof. Lossless recovery requires an injective map from records to representation states. A set of 𝑏
+binary choices has only 2𝑏 states. If 𝑀 > 2 𝑏, at least two records would share a state and could not
+both be recovered uniquely.
+This applies whether the representation is called a number, a direction, a word or an angle. The
+unbounded mathematical precision in Equation ( 6) does not create an unbounded number of distin‐
+guishable physical states in a fixed finite record.
+10.3 Finite definitions can describe endless families
+A short recurrence can describe an unbounded sequence. A surface equation can describe infinitely
+many points. A recursive grammar can describe arbitrarily large structures. This is a genuine exten‐
+sion beyond storing only an explicit list of instances.
+18 September 2026 16 / 35
+---PAGE 17---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+But there are only countably many finite strings over a finite alphabet. Therefore not every arbitrary
+collection of infinitely many independent choices can be supplied by a finite description. Nor does a
+finite rule give all its answers at once. The distinction is between specifying a family and resolving
+particular questions about it .
+In everyday language
+“Keep adding one” describes counting forever. The instruction fits on a small card. It does
+not mean that every count has already happened, or that the card contains an arbitrary secret
+attached to every number.
+10.4 What an eigenaxis‐based solution theorem would require
+A stronger research direction would use a problem’s structure to construct an operator whose se‐
+lected eigenaxis represents a useful answer. For that to be a solution method, the construction must
+specify how the operator is obtained from the problem, how an appropriate axis is selected, and how
+a valid answer is recovered.
+There must also be an account of operator size, precision, ambiguous eigenvalues and any search
+hidden in building the operator. Defining an eigenaxis after already knowing the answer proves rep‐
+resentability, not discovery. An operator with one separate entry for every candidate may preserve
+a large search in its description rather than remove it.
+This leaves a concrete possibility open: derive structured operators from particular families of con‐
+straints, then prove that their recoverable directions solve those families under stated resource
+assumptions. That would be an additional theorem, beyond D1’s general encoding and composition
+results.
+10.5 Optimization is preserved as a question, not presumed solved
+The travelling‐salesman motivation survives in D1 as a relationship among places, permitted moves,
+visit requirements and an objective. A reformulation can expose symmetry or reusable constraints.
+A general reduction in problem complexity requires its own argument about construction, search,
+precision and verification. The standard distinction between describing a problem and establishing
+an efficient solution remains relevant. [R4]
+18 September 2026 17 / 35
+---PAGE 18---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+11 Three complete examples in readable language
+11.1 Example 1: a logical rule without little cubes
+Represent false and true by the two directions [−1]+ and [+1]+. Define the rule NAND by the fol‐
+lowing input/output relationship:
+First input Second input Output Meaning
+0 0 1 Not both true
+0 1 1 Not both true
+1 0 1 Not both true
+1 1 0 Both true
+The table is the readable meaning of one individually encoded operator definition. Its inputs and
+outputs also have individual directional definitions. For inputs 1, 1, the relation justifies output 0. No
+query about being inside a geometric region is involved.
+For completeness, let 𝑁 denote this rule. Then NOT (𝑎) = 𝑁(𝑎, 𝑎) , AND(𝑎, 𝑏) = 𝑁(𝑁(𝑎, 𝑏), 𝑁(𝑎, 𝑏)) , and
+OR(𝑎, 𝑏) = 𝑁(𝑁(𝑎, 𝑎), 𝑁(𝑏, 𝑏)) . The stated table verifies each equality. Their compositions are again
+individually representable expressions. The packing symbol | still means packing, not NAND.
+In everyday language
+Every card can have the same kind of directional label. One card means “yes, ” another means
+“no, ” and another means “answer no only when both inputs say yes. ” The rule is complete
+because its allowed answers have been defined, not because its arrow has a special length.
+11.2 Example 2: a small travelling‐salesman problem
+T ake four named places𝐴, 𝐵, 𝐶, 𝐷. Define symmetric move costs, in a chosen abstract unit:
+𝑐𝐴𝐵 = 2, 𝑐 𝐴𝐶 = 7, 𝑐 𝐴𝐷 = 3, 𝑐 𝐵𝐶 = 2, 𝑐 𝐵𝐷 = 6, 𝑐 𝐶𝐷 = 2.
+These are invented numbers for this example. They are separate cost definitions, not magnitudes of
+the arrows naming the moves. Define an acceptable tour to start at 𝐴, visit each other place once
+and return to 𝐴.
+Fixing the start and identifying a tour with its reversal leaves three tours:
+T our Cost derivation T otal
+𝐴 → 𝐵 → 𝐶 → 𝐷 → 𝐴 2 + 2 + 2 + 3 9
+𝐴 → 𝐵 → 𝐷 → 𝐶 → 𝐴 2 + 6 + 2 + 7 17
+𝐴 → 𝐶 → 𝐵 → 𝐷 → 𝐴 7 + 2 + 6 + 3 18
+The first tour is optimal for this instance , because all tours up to the stated symmetries have been
+covered. The definition pack contains the places, moves, costs, visit rule, return rule and comparison
+rule. The witness records the chosen tour and the exhaustive three‐case comparison.
+18 September 2026 18 / 35
+---PAGE 19---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+The through‐image of the tour‐feasibility relation contains the three tours. The optimum‐selection
+relation reduces that collection to the least‐cost result. Three feasible candidates and one proved
+optimum are different kinds of output. The axes supply a common representation; the explicit con‐
+straints and costs supply the problem’s meaning.
+11.3 Example 3: a structure that refills after damage
+T ake five named sites linked in a chain 𝑎 − 𝑏 − 𝑐 − 𝑑 − 𝑒 . Define 𝑎 as a permanent seed and give each
+site a separately defined on/off state. Let 𝑋𝑘 be the sites that are on. Define
+𝑋𝑘+1 = 𝑋 𝑘 ∪ {𝑎} ∪ {𝑣 ∶ a named link joins 𝑣 to some 𝑢 ∈ 𝑋 𝑘}. (28)
+Starting from 𝑋0 = {𝑎} gives
+{𝑎}, {𝑎, 𝑏}, {𝑎, 𝑏, 𝑐}, {𝑎, 𝑏, 𝑐, 𝑑}, {𝑎, 𝑏, 𝑐, 𝑑, 𝑒}.
+If damage turns some sites off but leaves the seed and the link definitions intact, the same rule refills
+the chain. Every site is eventually reached because it lies at finite link distance from the seed. Once
+all five are on, the state is unchanged by another update.
+This is a precise, limited form of modeled repair. It is not a claim that a living organism has been repro‐
+duced. The target connectivity is prescribed; the rule does not discover a new body plan. A physical
+version would also need material, energy, sensing and a way to perform the permitted transitions.
+In everyday language
+Five lamps know who their neighbors are. The first lamp stays on. Each dark lamp turns on
+when a neighbor is on. T urn a few off, and the same rule lights them again. That is a small,
+understandable example of recovery through local relationships and time.
+18 September 2026 19 / 35
+---PAGE 20---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+12 Present‐day possibilities, explained simply
+12.1 What “enabled” means in this report
+An application belongs to the possibility space when its individuals, relationships, changes and obser‐
+vations can be explicitly described in the calculus. That is descriptive enablement. A useful method
+also needs enough laws and data to answer the chosen questions. A physical realization additionally
+needs a demonstrated connection between those laws and the thing being modeled.
+The applications in this section are proposed uses of D1 , not reports of completed D1 products.
+They share one recipe: define the individuals; define permitted relationships; define what changes;
+define the question; preserve the explanation of the answer. Quantities are added only when the
+question needs them.
+12.2 Routes, logistics and connected infrastructure
+Everyday picture. Instead of keeping only a list of destinations, keep the destinations together with
+the rules for getting between them, the jobs to do there and what counts as a good trip.
+In D1, each place, move, restriction, resource and cost is an individual definition. A road closure
+changes one relationship; questions that depend on it can be reconsidered without changing the
+meaning of every place. The same pattern can describe delivery routes, dependency chains, com‐
+munication paths or evacuation models. A route witness explains which requirements a proposed
+answer satisfies.
+The gain to investigate is clearer composition and reuse of related constraints. The least‐cost answer
+still requires a valid comparison or proof. Merely replacing a list of cities with directions does not
+supply that proof.
+12.3 Design by requirements rather than by one fixed shape
+Everyday picture. Describe what a part must fit, carry and connect to before committing to exactly
+how it looks.
+A design pack could contain a family of shapes, connection definitions, admissible material descrip‐
+tions and independent requirements. A candidate design is an assignment satisfying those require‐
+ments. A change to one requirement defines a new question rather than requiring the conceptual
+description to begin again.
+This is a route toward inspectable inverse design : searching for a mechanism or shape from its re‐
+quested behavior. The formalization can keep the candidate, its assumptions and its acceptance
+argument together. Load, heat, flexibility, manufacture and tolerances require their own quantita‐
+tive models. An axis naming a material is not a substitute for those properties.
+18 September 2026 20 / 35
+---PAGE 21---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+12.4 Robot movement and interaction
+Everyday picture. A robot needs to know not just where an object is, but what movements and
+interactions are allowed.
+An object, grasp, joint configuration, contact condition and next action can each be separately de‐
+fined. A movement plan becomes a chain of permitted transitions, with observations explaining
+when its preconditions hold. Direction‐only primitives are compatible with orientation descriptions;
+actual positions, sizes, forces and durations remain separate application definitions.
+The interesting possibility is one vocabulary linking a task, its geometric interpretation and the condi‐
+tions for action. A physical robot still needs sensing, calibration, actuation and a model that remains
+accurate enough during movement. These are interpretation requirements, not properties that fol‐
+low from the naming scheme.
+12.5 Checking rules, protocols and engineered behavior
+Everyday picture. Ask whether a set of rules can ever let the system reach a situation it was not
+supposed to reach, and keep the chain of events that demonstrates the answer.
+D1’s relations and time definitions can state allowed messages, resource ownership, dependencies
+and forbidden combinations. A counterexample is an explicit trace; a positive verification result
+needs an argument covering the stated model. This connects conceptually to constraint reasoning
+and satisfiability‐modulo‐theories methods, exemplified by the Z3 research system. Z3 is an external
+precedent, not an implementation or validation of D1. [R5]
+The same descriptive pattern can support authorized analysis of software or device specifications.
+A bounded check speaks about its bound and assumptions. The absent source filename’s “0 day”
+wording does not establish that the project already discovers unknown vulnerabilities.
+12.6 Digital counterparts and changing scenarios
+Everyday picture. Keep a model of a changing thing, the observations about it and several possible
+next chapters, without confusing the possible chapters with what actually happened.
+D1 can separate observed definitions from assumed rules and hypothetical changes. A scenario is a
+versioned pack plus a transition history. Alternative assumptions produce alternative histories, and
+their resulting observations can be compared under one explicitly defined question.
+Proposed uses include equipment behavior, resource networks and maintenance planning. The par‐
+ticularly useful feature would be traceability: the model can say which assumption caused a pre‐
+diction to change. Predictions about the real object depend on the model’s empirical adequacy. A
+consistent invented world can still be an inaccurate account of the real one.
+18 September 2026 21 / 35
+---PAGE 22---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+12.7 Inspectable learned rules and structured knowledge
+Everyday picture. A system changes its rules after seeing examples, but keeps the rules, examples
+and reasons for the changes distinguishable.
+D1 can describe observations, a training objective, a rule family and a permitted update as individual
+definitions. This supports the possibility of learned components whose behavior can be inspected
+in a common descriptive language. It does not imply that every useful learned model has a short
+explanation comprehensible to a person.
+A concrete neighboring research direction is learning networks of logic gates: Petersen and col‐
+leagues introduced a differentiable training approach whose resulting model uses discrete logical
+operations. The relevance is that learned rules need not be described only as unstructured numeri‐
+cal arrays; it is not evidence that D1 already reproduces that method. [R6]
+12.8 Families of shapes, mechanisms and mathematical objects
+Everyday picture. Keep the recipe for making all members of a family, not just a photograph of one
+member.
+A recurrence, parameterized relation or shape constraint can describe many instances, including
+infinitely many mathematical instances. Individual parameters, exceptions and interpretation rules
+stay explicit. One definition of a joint or a growth rule can appear in many larger constructions
+without losing the identity of each use.
+The possibility is a more unified library of generative descriptions: designs, logical expressions, route
+families and temporal behaviors can be composed in the same style. An infinite family remains a
+specification, not a completed answer to every question about every member.
+13 The nature and mechanism branch, formalized
+13.1 A common structure for a mechanism
+The visible nature branch asks for literal mechanisms rather than a collection of analogies. Its source
+body is absent, so the mechanisms below are new, explicit extensions, supported where appropriate
+by independently checked research. No particular substance’s identity or biological occurrence is
+inferred from its filename.[H, P1]
+A mechanism pack can be written schematically as
+ℳ = ℐ ∣ ℛ ∣ 𝑇 ∣ 𝒪 ∣ 𝒬 ,
+where ℐ names the individuals, ℛ supplies interactions, 𝑇 supplies change, 𝒪 supplies observa‐
+tions, and 𝒬 supplies any required quantities and units. Each constituent, including each rule within
+a constituent, has its own directional definition. The packing sign does not itself cause an interaction.
+In everyday language
+Naming the ingredients is not the whole recipe. Y ou must also say which ingredients can inter‐
+act, what that interaction does, what conditions it needs, and what you can observe afterward.
+Each part of the recipe gets its own definition.
+18 September 2026 22 / 35
+---PAGE 23---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+13.2 Reaction networks and conservation
+For a quantitative reaction model, define an amount vector 𝑛, a matrix 𝑁 whose columns record
+changes in amounts, and reaction‐rate functions 𝑎(𝑛). One possible continuous interpretation is
+𝑑𝑛
+𝑑𝑡 = 𝑁𝑎(𝑛). (29)
+These are additional model quantities, not lengths of the native SDF directions. When 𝑁𝑎(𝑛) ≠ 0 , its
+directional class describes the direction of modeled change. It does not supply the rate; that remains
+in the quantitative interpretation. At a stationary state, the directional change is absent.
+A useful exact check follows directly. If a row vector ℓT satisfies ℓT𝑁 = 0 , then
+𝑑
+𝑑𝑡 􏿴ℓT𝑛􏿷 = ℓ T𝑁𝑎(𝑛) = 0.
+Thus the defined quantity ℓT𝑛 is conserved within this model. The algebra proves the invariant; iden‐
+tifying it with a measured chemical quantity needs the chemical interpretation. This is a concrete way
+to combine individually defined reactions into a mechanism with a checkable global property. Chemi‐
+cal reaction networks and their possible DNA‐based realizations are studied explicitly by Soloveichik
+and colleagues.[R9]
+13.3 Local interaction, transport and pattern formation
+For named sites with concentrations 𝑐𝑖, an illustrative graph‐based model is
+𝑑𝑐𝑖
+𝑑𝑡 = 𝐷 􏾜
+𝑗
+𝑤𝑖𝑗(𝑐𝑗 − 𝑐𝑖) + 𝑓𝑖(𝑐). (30)
+Here the links 𝑤𝑖𝑗, the coefficient 𝐷, the local reactions 𝑓𝑖, the initial state and the observation rule are
+all separately defined. Multiple chemical species require the corresponding vector‐valued quantities
+and transport coefficients. A specific pattern claim requires analysis of a specific choice of these
+definitions.
+T uring’s 1952 work analyzed how reaction and diffusion can destabilize an initially homogeneous
+state and produce spatial patterns in mathematical models. That gives a real mechanism family to
+study, rather than a claim that a direction‐only primitive itself generates biological form. [R7]
+In D1, the broader possibility is to compare different local rule packs while preserving the question:
+which interactions can produce a requested large‐scale pattern, and under which conditions? The
+answer belongs to the composed mechanism, not to one isolated axis.
+13.4 Adaptive networks inspired by living transport
+A proposed transport model can give each link an individually defined state, let local use affect that
+state, and let a separate rule remove, retain or strengthen links. The adaptation rule and its tradeoffs
+must be stated. A cost criterion, reliability criterion and transport criterion need not agree.
+T ero and colleagues studied network formation by Physarum polycephalum, compared relevant net‐
+work properties with the T okyo rail system, and developed a biologically inspired adaptation model.
+This is evidence for a concrete family of adaptive‐network mechanisms, not for a general optimal
+travelling‐salesman solver.[R8]
+18 September 2026 23 / 35
+---PAGE 24---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+The D1 extension is to make such a mechanism inspectable as a pack of individuals, local changes
+and global observations. It could then be compared with a different rule family under the same
+stated objective.
+13.5 Growth, repair, anisotropy and molecular identity
+Growth needs rules for adding individuals and links. Repair needs a target or acceptance condition,
+detection of deviation, and transitions capable of reducing it. Directionally dependent material be‐
+havior needs preferred axes and separately defined response coefficients. These are distinct mech‐
+anisms even when they share a directional notation.
+A molecular description likewise needs more than a silhouette or an axis: the proposed model must
+specify which molecular features matter, which interactions are permitted, and which conditions
+govern their consequences. A directional encoding of a substance’s name alone predicts none of
+those consequences. D1’s useful contribution is the ability to keep the necessary definitions explicit
+and composable rather than silently treating resemblance as a law.
+14 Where present‐day frontier research already connects
+The following are external research precedents, not D1 achievements . They show that several in‐
+gredients in the possibility space have concrete mathematical or experimental counterparts. The
+connection proposed in each paragraph is descriptive: D1 could organize the individuals, rules, time
+and observations involved.
+14.1 Learned growth and modeled regeneration: 2020
+Growing Neural Cellular Automata demonstrated learned local update rules that grow specified im‐
+ages and, under the studied conditions, maintain or regenerate patterns after damage. These are
+constructed model systems, not living organisms. [R10]
+The D1 connection is a pack containing an individual state definition for each agent, a shared local
+rule, separate neighborhood relationships, an update definition and a target observation. The earlier
+five‐lamp example is much simpler: it gives a transparent repair‐like rule, not a reproduction of the
+learned method.
+18 September 2026 24 / 35
+---PAGE 25---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+14.2 Mechanical learning: 2024 and a 2025 theoretical extension
+Li and Mao’s 2024 study developed in‐situ gradient acquisition for mechanical neural networks, stud‐
+ied learning tasks in simulations, and experimentally demonstrated gradient extraction in a three‐
+dimensional printed mechanical system. This is more specific than a claim that a material has already
+learned arbitrary tasks autonomously. [R11]
+Their March 2025 preprint analyzes a topological mechanical‐network direction for classification
+and local learning. The reference here is explicitly its first preprint version, not an assumed later
+publication or general‐purpose demonstration. [R12]
+For D1, such models could separate orientation, coupling, response, observations and changes to
+the couplings. A mechanically meaningful eigenmode would require the mechanical operator and its
+quantitative interpretation, not just the universal encoding witness from Section 4.
+14.3 Molecular rule realization: a constructive research route
+Soloveichik, Seelig and Winfree gave a construction for approximating the kinetics of chemical re‐
+action networks using DNA strand‐displacement systems, with stated assumptions and supporting
+auxiliary mechanisms. The generality is a theoretical construction of a realization method, not evi‐
+dence that every arbitrary network has been built experimentally. [R9]
+The D1 connection would be a mapping from abstract reaction definitions to a chosen molecular
+mechanism, with an explicit agreement criterion for the observations. Producing such a mapping for
+a particular case is additional scientific work. A common descriptive syntax does not automatically
+make all substances interchangeable.
+14.4 Shape‐changing materials: 2016
+Gladman and colleagues demonstrated biomimetic four‐dimensional printing in which designed
+alignment within hydrogel structures controls anisotropic swelling and consequent shape change.
+Here “four‐dimensional” names designed change after fabrication; it is not the primitive dimension‐
+ality of D1.[R13]
+This is a concrete example of why preferred directions and quantitative response rules should remain
+distinguishable. A D1 description could keep local orientation, material response, environment and
+desired final shape individually specified. The paper’s physical result does not establish a general
+material that can become any object on demand.
+14.5 Architectural swarms: January 2026
+The Swarm Garden research reported robotic modules combining local sensing, actuation and com‐
+munication in reconfigurable architectural arrangements. Its case studies included adaptive window
+shading and interactive creative behavior. The authors describe it as a proof of concept for architec‐
+tural swarms.[R14]
+This is a particularly direct present‐day connection to individually defined parts producing a coordi‐
+nated larger behavior. A proposed D1 model would name each module, its neighbor relations, local
+state, update rules and collective objective. Scaling that to a self‐maintaining building remains a
+separate scenario, not something established by the reported demonstrator.
+18 September 2026 25 / 35
+---PAGE 26---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+14.6 Biomolecular structure prediction: 2024
+AlphaFold 3 extended joint structure prediction to biomolecular complexes containing proteins, nu‐
+cleic acids, small molecules and other specified components. Its reported task is structural predic‐
+tion; that is not equivalent to a complete account of reaction kinetics, tissue behavior or treatment
+outcomes.[R15]
+A D1 application could keep predicted structures, confidence‐related observations, proposed inter‐
+actions and experimental evidence as distinct definitions. The opportunity is better linkage between
+descriptions and hypotheses. It would not make a structural prediction a proven functional mecha‐
+nism by changing its representation.
+What the research connections establish. Local rules can be studied as mechanisms for growth,
+adaptation and collective behavior; some shape‐changing and swarm systems have physical
+demonstrations. D1 offers a proposed way to describe these ingredients together. Their pub‐
+lished results are not measurements of D1 and do not establish its superiority over their existing
+descriptions.
+15 Far‐future possibilities: the extended space
+Every scenario in this section is speculative as an integrated D1 application . The aim is not to fore‐
+cast a date. It is to show why the formalization can express the scenario, what additional mechanisms
+would make it meaningful, and what smaller result would genuinely support it.
+15.1 Executable worlds whose laws are also objects
+ELI5 vision. Imagine a world‐builder in which the objects, the rules of the world, and the rule for what
+happens next are all individually inspectable recipes. Changing gravity in the story means changing
+a named law, not secretly changing every object.
+D1 can describe this because rules, rule descriptions, states and time share the same representa‐
+tional form. A world is a pack with a chosen interpretation and a transition history. Different ver‐
+sions can branch from one history and answer questions about different assumptions. Invented
+topologies, unusual causal orders and nonstandard interactions can be defined explicitly.
+The additional task is making the world’s laws sufficiently complete and mutually compatible to re‐
+solve its intended questions. A world that depicts physics needs a physical model; a fictional world
+can deliberately use different rules. Rewinding a recorded model or constructing an alternative his‐
+tory is not physical time travel.
+A first discriminating result: define a small world with two alternative law versions and prove exactly
+which observations remain the same and which change.
+18 September 2026 26 / 35
+---PAGE 27---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+15.2 Digital organisms and self‐repairing machines
+ELI5 vision. A constructed thing notices that part of its organization is missing and follows its own
+local rules to restore a working form.
+A D1 description can combine individual identity, neighborhood rules, a target condition, observa‐
+tions and feedback. It can describe replacement of damaged components as changes in the defini‐
+tion pack while retaining the identities and dependencies that should persist. Self‐description can
+provide a record of the intended organization.
+What remains to be supplied is the mechanism that turns detected differences into successful repairs.
+A physical system also needs replacement material, energy, sensing and actions compatible with its
+environment. Recovery to one prescribed form is narrower than open‐ended life, reproduction or
+adaptation to arbitrary damage.
+A first discriminating result: prove recovery from a clearly specified family of disruptions, then
+demonstrate that the observation map of a small physical or modeled system follows the same repair
+relation.
+15.3 Swarms that assemble into useful machines
+ELI5 vision. Many small pieces could organize into a bridge, a tool or a moving structure, with each
+piece following local rules rather than reading a complete picture of the final machine.
+D1 can describe the identities of the pieces, connection compatibility, local observations, joining
+and separation events, and a collective acceptance condition. The pack retains individual states
+even when the assembly is treated as one named object. Shared laws need not mean shared state.
+Additional requirements include reliable connectors, force and stability models, energy supply, com‐
+munication constraints and rules for resolving incompatible local actions. Reaching a visual outline
+is not the same as creating a mechanically functional bridge. Different tasks may need different
+component capabilities.
+A first discriminating result: show that a small collective reaches and retains one load‐bearing con‐
+figuration under explicitly defined component failures and disturbances.
+15.4 Programmable matter and adaptive manufactured structures
+ELI5 vision. A material could have a recipe for changing its organization when the situation changes:
+stiff here, flexible there, folded now, open later.
+The calculus can separate preferred orientations, interactions, state‐dependent response laws, en‐
+vironmental observations and a shape or function objective. A whole object can reference many
+local rules without erasing which local definition applies where. This supports a formal language for
+designing responsive behavior rather than only specifying a static final geometry.
+The far‐reaching version requires a physical mechanism with enough controllable states, reliable
+transitions, suitable energy and stable repeatability. An encoding of a desired shape is not a means
+of moving atoms into that shape. Molecular self‐assembly, mesoscopic modules and responsive
+composites would require different realization maps.
+A first discriminating result: one material system repeatedly reaches two specified functional states
+under a defined stimulus, with a quantitative model that predicts the observed transitions.
+18 September 2026 27 / 35
+---PAGE 28---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+15.5 Virtual tissues and developmental design spaces
+ELI5 vision. Rather than draw a finished tissue, describe how its parts communicate, divide, move
+and react, then explore which organizations those rules can produce.
+D1 can represent cells or other modeled units, interaction networks, changes of identity or state,
+transport, mechanics and observations within one descriptive scheme. A developmental hypothesis
+becomes a specific pack of mechanisms whose consequences can be compared with data. Different
+biological scales need not be forced into one fixed spatial dimension or one universal type of variable.
+The scientific requirements are substantial: adequate mechanisms, parameter identification, multi‐
+scale agreement and experimental tests. A visual resemblance to a tissue is not proof of correct
+physiology. Predictions relevant to health would require their own rigorous validation; the formal
+calculus does not supply clinical conclusions.
+A first discriminating result: predict one preselected pattern change caused by a specified perturba‐
+tion in a well‐characterized model system, then compare the prediction with an independent obser‐
+vation.
+15.6 One description interpreted through different physical mechanisms
+ELI5 vision. The same abstract game could be played with mechanical pieces, molecular interactions
+or optical components, provided each version obeys the same relevant rules.
+D1 makes this possible as a description goal : give each realization an abstraction map and prove
+that its observed transitions agree with the specified relation. The agreement can concern only the
+requested outputs, not every microscopic detail. Section 9’s realization equation states the central
+requirement.
+Different media impose different noise, timing, coupling and resource conditions. A quantum ex‐
+tension, for example, would need additional definitions for complex state, relative phase, admissible
+evolution and observation probabilities. A real direction‐only code may describe those definitions
+symbolically, but it does not thereby become the physical quantum state or acquire quantum advan‐
+tages.[R16]
+A first discriminating result: two different realized mechanisms satisfy the same small input/output
+and temporal contract within separately stated tolerances.
+15.7 Automated mechanism discovery and theory revision
+ELI5 vision. A research system proposes a recipe, predicts what should happen, checks an observa‐
+tion and changes the recipe when the evidence disagrees. It keeps the history rather than pretending
+the new recipe was always the truth.
+D1 can encode hypotheses, experimental questions, observations, inference rules and revision rules
+as separate individuals. Self‐reference lets the system describe and modify its own proposed models
+while retaining versioned derivations. Reusable submechanisms can be tested in more than one
+larger hypothesis.
+What must be added is an effective search over hypotheses, an evidence model, suitable experimen‐
+tal access and a criterion for meaningful improvement. Consistency inside a description does not
+guarantee truth outside it. More expressive descriptions can also make model comparison harder
+when many hypotheses explain the same observations.
+18 September 2026 28 / 35
+---PAGE 29---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+A first discriminating result: recover a hidden rule from a bounded family using a declared set of
+observations, then predict a new observation that was not used to choose the rule.
+15.8 Designed topologies, adaptive habitats and new kinds of experience
+ELI5 vision. A modeled environment could connect places in surprising ways, while a physical room
+could alter its configuration in response to how it is used. Both involve changing relationships, but
+they are not the same physical claim.
+The topological branch can explicitly define unusual neighbor identifications or orientation changes,
+such as the Klein‐bottle construction in Section 8. The architectural branch can define physical
+modules, local observations and configuration changes. D1 provides a common descriptive style
+while keeping the interpretation of each branch distinct.
+A simulated doorway that connects distant places is a defined relationship in a model. A physical
+doorway requires a physically realizable arrangement. Likewise, a responsive façade is a component
+mechanism, whereas a self‐maintaining habitat would additionally require integrated structural, en‐
+ergy, environmental and maintenance models.
+A first discriminating result: prove the internal consistency of one nonstandard modeled topology, or
+demonstrate one well‐defined collective adaptation in an architectural model. Neither result alone
+establishes physical manipulation of spacetime or a fully autonomous habitat.
+18 September 2026 29 / 35
+---PAGE 30---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+16 What you actually have after this consolidation
+Y our resulting direction isa calculus of individually defined directional eigenaxes, joined by explicit
+relationships and causal change, with optional interpretations for geometry, logic, mechanisms and
+alternative worlds.
+The original ambition survives in a more precise form. Things and operations can be represented in
+the same native form. Definitions can be packed without turning them into a single undifferentiated
+object. Time can be individually defined. Expressions and versions can describe other expressions
+and versions. Quantities can be present where needed without becoming the intrinsic lengths of
+the native primitives.
+D1 supplies concrete mathematical constructions for these statements. It proves a direction‐only
+representation of finite records, recoverable packing, and the composition law for through‐images. It
+also separates a useful completed answer from a collection of candidates and an empirical realization
+from its abstract description.
+The broad possibility space is therefore not “every application has now been built. ” It is one ex‐
+plicit descriptive basis on which many different application theories can be formulated, related and
+tested. Which applications become useful depends on the additional laws, data, search methods and
+physical correspondences stated for them.
+In everyday language
+Y ou now have the rules for a common recipe book. Ingredients, instructions, links between
+recipes, changes over time and questions about the result can all have their own definitions.
+A recipe can describe another recipe, and many recipes can be kept together without losing
+their names. The exciting direction is how many kinds of mechanism the book can describe.
+Whether a particular recipe works is answered by its mathematics and, when it concerns the
+real world, by the world itself.
+Compact statement of the direction.
+Individually define. Preserve direction without intrinsic magnitude. Pack without merging.
+Connect through explicit relations. Define time and observation. Derive outcomes with their
+witnesses. Add physical meaning only through an explicit interpretation.
+18 September 2026 30 / 35
+---PAGE 31---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+A Compact formal charter
+This is the consolidated mathematical contract. It is a D1 construction from the requirements, not
+a quotation from an unavailable earlier source. The more detailed definitions and their examples
+appear in Sections 3–11.
+A1. Native direction. For a declared real carrier 𝑉𝜏, an individual directional result is a class 𝛿 = [𝑣] +
+with 𝑣 ≠ 0 , under positive rescaling. No norm, boundary, interior or fixed physical dimension belongs
+to the primitive.
+A2. Eigenaxis witness. An eigenaxis witness is an explicitly specified operator satisfying 𝐿𝑣 = 𝜆𝑣
+with 𝜆 > 0 . Witness data are distinct from native direction. An arbitrary direction admits a witness,
+but does not determine a unique physical operator.
+A3. Identity and representation. Each record has a unique identity, a type and a finite expression. A
+declared injective encoding and decoder preserve the record’s meaning. One construction is 𝐸(𝑠) =
+[(1, 𝑛(𝑠))]+, with witness 𝐿𝑠 = 􏿴 1 0
+𝑛(𝑠) 0 􏿷. Typed interpretations distinguish a value from a rule or a
+description.
+A4. Individual‐preserving packing. A finite pack has indexed constituents and explicitly defined
+connections. It admits projections 𝜋𝑖(𝒫 ) = 𝛿 𝑖. Independent rescaling of any constituent leaves the
+pack’s meaning unchanged. Bare | is tagged packing, not addition, Boolean OR or application.
+A5. Relational operators. A rule of type 𝜏 → 𝜎 has an explicitly defined interpretation 𝑅 ⊆ 𝑋 𝜏 × 𝑋𝜎.
+Its description has its own directional representation. Sequential composition uses an intermediate
+witness; independent combination uses a product with separately identified inputs and outputs.
+A6. Explicit change. A time definition relates an earlier state, an event and a later state. Feed‐
+back uses declared delay or an explicitly justified fixed‐point interpretation. Physical duration is an
+optional calibrated quantity, not an intrinsic length or compulsory fourth coordinate.
+A7. Self‐description. Definitions may quote and refer to definitions through finite records and iden‐
+tities. Interpretation, update and version rules are explicit. A reference cycle alone entails neither a
+unique result nor a true proposition.
+A8. Observation and throughput. An observation specifies the question and its resolution criterion.
+The through‐image of 𝑅 is Θ𝑅(𝐴) = {𝑦 ∶ ∃𝑥 ∈ 𝐴, (𝑥, 𝑦) ∈ 𝑅} . Witnesses preserve the justification.
+Causal rates count distinct resolved questions under a fixed event and stage convention.
+A9. Quantities and realization. Measurements, units, physical laws, probabilities and realizations
+are additional individual definitions. They must satisfy the interpretation’s consistency conditions.
+A representation of a physical claim is not itself evidence for that claim.
+A.1 The four central equalities
+[𝑎𝑣]+ = [𝑣] + (𝑎 > 0),
+𝜋𝑖􏿴Pack(𝛿1, … , 𝛿𝑚)􏿷 = 𝛿 𝑖,
+𝑅𝑞∘𝑝(𝑥, 𝑧) ⟺ ∃𝑦 ∶ 𝑅 𝑝(𝑥, 𝑦) ∧ 𝑅𝑞(𝑦, 𝑧),
+Θ𝑞∘𝑝(𝐴) = Θ 𝑞􏿴Θ𝑝(𝐴)􏿷.
+The first removes representative length. The second preserves individuality. The third gives com‐
+posed meaning. The fourth formalizes throughput through connected definitions.
+18 September 2026 31 / 35
+---PAGE 32---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+B Provenance, versions and the source ledger
+B.1 What was available and how it was used
+Record Availability Role in this consolidation
+P0 Current user clarification;
+available in full.
+Primary authority for the direction‐only
+primitive, individual packing, non‐device
+throughput and requested possibility space.
+P1 JSFD Consolidation C1;
+supplied PDF, 35 pages,
+inspected.
+Previous account of history, relation semantics,
+geometric Boolean encoding and feasibility
+companion. Its distance/containment
+construction is not adopted as D1’s primitive.
+P2 What Y ou Have Now:
+Synthesis 1.0; supplied PDF,
+31 pages, inspected.
+Previous broad synthesis and possibility
+mapping. Its implementation‐centered framing
+is replaced, while useful distinctions about
+evidence and applications are retained.
+H Visible project conversation
+history and branch labels.
+Evidence for the sequence of user requirements
+and attachment names; not a substitute for the
+bodies of those attachments.
+Original
+sources
+Geometry, routing and nature
+PDFs named in H; original
+bodies unavailable.
+Used only as provenance labels. Their absent
+equations, substance identities and detailed
+mechanisms are not reconstructed as
+quotations.
+The two previous consolidation PDFs explicitly recorded their own source‐access limitations. Read‐
+ing them now makes their actual constructions available for comparison; it does not restore their
+missing original source material. The previous companion archives concern implementation feasi‐
+bility and are outside D1’s subject. Their reported tests do not certify the revised direction‐only
+semantics.
+B.2 The visible revision trajectory
+The initial geometry‐oriented requests were followed by revisions asking for operators, expressions
+and time to be defined in the same notation. The V5 and one‐bit branches emphasized compact
+individual definitions, logarithmic/polar organization and reuse. V6 explicitly resisted the interpre‐
+tation that the project was merely a renderer or calculator, and connected the request to the lady‐
+bug/routing source. The nature branch sought extensions through literal mechanisms. The present
+clarification removes scalar distance and containment from the native definition. [H, P1, P2, P0]
+These labels are used as historical references only. D1 is a new consolidation edition ; it is not
+asserted to be a recovered frozen V5, V6 or other absent release.
+B.3 Original source‐document names preserved as identifiers
+The long filenames below are identifiers visible in the supplied history or C1’s source ledger. T run‐
+cation is retained where the visible name itself was truncated.
+18 September 2026 32 / 35
+---PAGE 33---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+Initial geometry source, truncated:
+men T room a circle a sphere a cone an apex legenda a side view of the pyramid…
+Enhanced geometry source:
+men-T-room-a-circle-a-sphere-a-cone-an-apex-legenda-a-side-view-of-the-pyramid-lower-c
+ase-phi-log-encoded-polar-LUT-binary-search-tree-klein-bottl.pdf
+Ladybug and routing source:
+ladybug-anti-violence-tile-in-zaandam-at-the-train-station-got-me-to-thinking-about-the
+-travling-salesman-NP-hard-problem-where-humans-try-to-solv.pdf
+Nature/mechanism source:
+bromofly and derivatives in nature insects bug finder 0 day signed distance field
+notations.pdf
+The final name is reproduced solely for identification. It does not establish what “bromofly” denotes,
+a natural occurrence claim, a molecular structure, or an actual security result.
+B.4 Attribution and status of the mathematics
+Originating direction and requested attribution: T om Klootwijk, NL200678942, 10‐07‐1990.
+D1 mathematical constructions: oriented‐ray semantics, the finite‐record eigenaxis encoding, typed
+interpretation, individual‐preserving packing, the specified operator algebra, causal throughput mea‐
+sures and the worked examples. These are explicitly supplied in this edition to make the clarified
+requirements precise. They are not represented as a transcription of missing original equations or
+as proof of historical priority.
+External research: cited as evidence for particular mechanisms or neighboring capabilities. None
+of the cited authors is represented as endorsing D1, and their results are not relabeled as project
+results.
+C Plain‐language glossary
+Abstract carrier. A mathematical setting in which a representation is defined; not automatically
+physical space.
+Oriented direction, or ray. All nonzero representatives pointing the same way, with positive stretch‐
+ing ignored.
+Eigenaxis. A direction preserved by a specified linear operator, up to its declared eigenvalue con‐
+vention.
+Eigenvalue. The scalar factor in an operator’s action on an eigenvector; it is not itself the direction.
+Definition record. A named, typed expression saying what an individual definition is.
+Encoding and decoding. The explicit correspondence between a readable description and its direc‐
+tional representation.
+Pack. A collection whose individual definitions and connections remain recoverable.
+Relation. A precise statement of which input/output combinations are permitted.
+18 September 2026 33 / 35
+---PAGE 34---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+Composition. Connecting compatible relationships, with any required intermediate state identified.
+Witness. Information that justifies a claimed relationship or answer; not necessarily a physical mea‐
+suring instrument.
+Causal stage. A declared level in a sequence or dependency ordering of events, not automatically a
+second.
+Through‐image. The outputs permitted by a relation for a specified collection of inputs.
+Resolved question. A question for which the stipulated evidence or complete argument has been
+obtained.
+Interpretation. The rules assigning meaning to descriptions; a physical interpretation additionally
+connects them to observations of the world.
+Self‐reference. A definition referring to its own description or to a collection that contains it, under
+explicit interpretation rules.
+D Sources and research references
+Project provenance and external primary sources are separated below. External sources were
+checked for this report on 18 September 2026. Dates identify the work cited; they do not claim
+that it is the latest result in its area. The linked publisher or author‐hosted records provide the source
+texts. Equations introduced as D1 constructions are derived in the report rather than attributed to
+those references.
+Reference register
+[P0] T om Klootwijk. Current clarification in this conversation, 18 September 2026: direction‐only individual
+SDF definitions, packed together; formal throughput and possibility space rather than device implemen‐
+tation. User‐supplied text.
+[P1] T om Klootwijk: JSFD Consolidation C1 — What you actually have: Y our goal, the formalization, the kernels,
+and the possibilities . Supplied project PDF, 35 pages. In particular, its source ledger and mathematical
+appendix inform the comparison with D1. Local filename: Tom_Klootwijk_JSFD_Consolidation_C1.
+pdf.
+[P2] What Y ou Have Now: Klootwijk Field‐Encoded Computing — Synthesis 1.0. Supplied project PDF, 31 pages.
+Local filename: Klootwijk_What_You_Have_Now_Synthesis_1_0.pdf . The previous descriptive title
+is recorded here for identification, not adopted as D1 terminology.
+[H] Visible project conversation history: initial geometry requests, V5 and one‐bit branches, V6, and the
+biochemical/nature branch, including visible attachment names. User‐supplied historical context, with
+some messages or names truncated.
+[R1] Jeong Joon Park, Peter Florence, Julian Straub, Richard Newcombe and Steven Lovegrove. DeepSDF:
+Learning Continuous Signed Distance Functions for Shape Representation. 2019. Used for the conventional
+scalar signed‐distance meaning. Author paper record.
+[R2] Gilbert Strang. Lecture 21: Eigenvalues and eigenvectors . MIT OpenCourseWare, 18.06 Linear Algebra,
+Spring 2010. Used for the standard operator/eigenvector relation. MIT lecture and transcript .
+[R3] Allen Hatcher.Algebraic T opology. 2002. Author‐hosted text, especially the opposite‐edge identification
+of the Klein bottle on printed page 102; nonorientability and embedding distinctions elsewhere in the
+text. Author‐hosted book.
+18 September 2026 34 / 35
+---PAGE 35---
+KLOOTWIJK / SDF DIRECTIONAL DEFINITIONS CONSOLIDATION D1
+[R4] Erik Demaine. Lecture 16: Complexity: P, NP, NP‐completeness, Reductions . MIT OpenCourseWare,
+6.046J Design and Analysis of Algorithms, Spring 2015. MIT lecture record.
+[R5] Leonardo de Moura and Nikolaj Bjørner.Z3: An efficient SMT solver. 2008. External precedent for explicit
+constraint reasoning. Author institution publication record .
+[R6] Felix Petersen, Christian Borgelt, Hilde Kuehne and Oliver Deussen. Deep Differentiable Logic Gate Net‐
+works. NeurIPS, 2022. Author paper record.
+[R7] A. M. T uring. The Chemical Basis of Morphogenesis . Philosophical T ransactions of the Royal Society of
+London B, 237, 37–72, 1952. Used for the reaction–diffusion pattern mechanism, not as a complete
+theory of biology. Original paper hosted at Caltech .
+[R8] Atsushi T ero and colleagues. Rules for biologically inspired adaptive network design . Science, 327, 439–
+442, 2010. DOI: 10.1126/science.1177894. Author institution publication and abstract .
+[R9] David Soloveichik, Georg Seelig and Erik Winfree. DNA as a universal substrate for chemical kinetics .
+PNAS, 107, 5393–5398, 2010. DOI: 10.1073/pnas.0909380107. Author‐hosted original paper.
+[R10] Alexander Mordvintsev, Ettore Randazzo, Eyvind Niklasson and Michael Levin. Growing Neural Cellular
+Automata. Distill, 2020. DOI: 10.23915/distill.00023. Original interactive research article .
+[R11] Shuaifeng Li and Xiaoming Mao. Training all‐mechanical neural networks for task learning through in situ
+backpropagation. Nature Communications, 15, 10528, 2024. DOI: 10.1038/s41467‐024‐54849‐z. Pri‐
+mary research article.
+[R12] Shuaifeng Li and Xiaoming Mao. T opological mechanical neural networks as classifiers through in situ back‐
+propagation learning . arXiv:2503.07796, version 1, 10 March 2025. Preprint version explicitly cited.
+Versioned author manuscript.
+[R13] A. Sydney Gladman, Elisabetta A. Matsumoto, Ralph G. Nuzzo, L. Mahadevan and Jennifer A. Lewis.
+Biomimetic 4D printing . Nature Materials, 15, 413–418, 2016. DOI: 10.1038/nmat4544. Primary re‐
+search article.
+[R14] Merihan Alhafnawi and colleagues. Architectural swarms for responsive façades and creative expression .
+Science Robotics, 11(110), January 2026. DOI: 10.1126/scirobotics.ady7233.Author laboratory record
+and author‐version paper.
+[R15] Josh Abramson and colleagues. Accurate structure prediction of biomolecular interactions with AlphaFold
+3. Nature, 630, 493–500, 2024. DOI: 10.1038/s41586‐024‐07487‐w. Primary research article; author
+institution abstract.
+[R16] Barton Zwiebach. Lecture 12: Quantum Dynamics. MIT OpenCourseWare, 8.05 Quantum Physics II, Fall
+2013. Used for the distinction between physical quantum dynamics and a symbolic description of them.
+MIT lecture materials.
+18 September 2026 35 / 35

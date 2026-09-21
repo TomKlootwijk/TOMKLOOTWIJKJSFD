@@ -1,0 +1,324 @@
+
+---PAGE 1---
+Tom Klootwijk / NL200678942  |  Specification: 19 September 2026
+TOM v0.7.1  /  1
+TOM / V0.7.1 - EXACT CONTINUATION PROFILE
+A new operational profile, preserving v0.7
+Authorial corpus: Tom Klootwijk. Identifier: NL200678942. Date as supplied: 10-07-1990. Release: TOM v0.7.1. This
+operational extension was specified on 19 September 2026 following the author's instruction to add executable
+behavior. The identifying details record authorship; they are not physical constants, encryption keys or simulation
+parameters.
+v0.7.1 retains the whole v0.7 definition and assigns one explicit continuation profile to previously open behavior.
+The chosen Thue-Morse jitter and exact golden-ratio recurrence are new model assignments. They are not claimed
+to follow from v0.7, to have been present in the original corpus, or to predict physical events.
+TOM := InverseOccam[Arch[C[J[T]]; E[C[J[T]]; InvLog[phi]]]] qualified_by forward_T_precedence
+The abbreviations are c := C[J[T]] and e := E[c; InvLog[phi]]. Semicolons distinguish ordered roles. Expansion
+changes spelling, not the definition. SDF continues to mean the native admission qualification: it does not assert a
+metric or a normalized signed-distance function.
+What this release makes definite
+A committed state supplies exact coefficients a and b. At the next admitted simulation tick, the profile computes a
+deterministic jitter sign and derives a new state. It then constructs the exact echo, retains both ordered roles,
+records the zero scalar reading without replacing the definition, and commits the complete step only if time,
+evidence and capacity checks pass.
+In plain language: the earlier rulebook said how to preserve the past and wait for a valid next step. This version
+also specifies one rule that calculates that next step. It is a repeatable mathematical process with an inspectable
+history; it is not a model of every phenomenon that might later be described using TOM.
+Governing source and status
+The unchanged parent is TOM_V0_7_Formalization.pdf (18 pages), SHA-256
+97582a16bd54d690b27105f9b09dc48d2b5716bbae2fff2a5e74190278640fbc. Its pages 3-9 define the binding and
+structural contracts; page 14 identifies open assignments. The original PDF and package are retained. This
+document is a specification, not a claim that acceptance tests or a performance benchmark have passed. Execution
+evidence belongs in a separately dated results report.
+
+---PAGE 2---
+Tom Klootwijk / NL200678942  |  Specification: 19 September 2026
+TOM v0.7.1  /  2
+TOM / V0.7.1 - EXACT CONTINUATION PROFILE
+The structural commitments remain in force
+Every admitted defining role, compound and admissibility rule remains SDF-qualified. T, J, lowercase phi, InvLog, C,
+E, Arch and InverseOccam retain their roles. The profile imposes no intrinsic coordinate grid, vector space,
+operator graph, quaternion arena or global Psi enclosure. Computer records and their operand addresses are a
+disclosed external representation.
+Commitment
+Requirement
+TC1 / no anticipation
+Use only supplied initial evidence available at or before the committed simulation time. Deriving a
+simulated future is not possessing an observation of a physical future.
+TC2 / completed prefix
+Never alter a committed record or its order. A correction is a later record or a separately declared
+new experiment.
+TC3 / no time reversal
+An inverse-log role or a negative coefficient does not reverse the temporal qualification.
+TC4 / guarded
+self-reference
+Own-name declaration is permitted. The result of continuation becomes available only after the
+next step is derived and admitted.
+TC5 / elapsed time
+Each admitted step advances by its declared positive delta. Nesting or a zero readout does not
+remove that elapsed duration.
+Only licensed equivalences
+InverseOccam[InverseOccam[x]] =def InverseOccam[x]
+The other licensed representational changes are c/e/TOM abbreviation expansion and A =def T only when
+explicitly declared. A single InverseOccam wrapper is not identity. Ordered Arch and E operands cannot be
+swapped, flattened or reassociated by appealing to a symmetric numeric reading. There is no implicit InvLog
+involution.
+Equality of selected readings does not imply equality of definitions. Normalization retains the original source and
+original terms. A finite representation may share equivalent storage, but it must not erase the defining distinction
+or its provenance.
+There is no fixed intrinsic nesting depth. The executable has declared storage and address bounds; failing to fit is a
+realization failure, not a new source law. Klein and Matryoshka retain their named roles. This release assigns
+neither a Klein topology nor a nested physical construction to those names.
+
+---PAGE 3---
+Tom Klootwijk / NL200678942  |  Specification: 19 September 2026
+TOM v0.7.1  /  3
+TOM / V0.7.1 - EXACT CONTINUATION PROFILE
+Exact numbers, jitter and the next state
+phi = (1 + sqrt(5))/2; phi^2 = phi + 1; kappa = -ln(phi) < 0
+C_n = a_n + b_n*phi, with a_n,b_n in the integers
+The default seed is (a_0,b_0)=(0,0), with n=0 and time=0. A caller may explicitly supply any representable signed
+integer pair and nonnegative step index. Such a seed defines the start of that experiment; it does not assert that
+an earlier history has been supplied. An arbitrary seed is not interchangeable with resuming an existing saved
+experiment.
+J_n = (-1)^popcount(n)
+J_0 = +1; J_(2n) = J_n; J_(2n+1) = -J_n
+This is the signed Thue-Morse sequence, selected as a deterministic jitter law. It is not random noise, a measured
+frequency, thermodynamic entropy or a security primitive.
+C_(n+1) = phi*C_n + J_n
+(a_(n+1), b_(n+1)) = (b_n + J_n, a_n + b_n)
+The coefficient update follows by substituting phi^2=phi+1. Computational states use signed integer limbs and
+exact symbols only: no floating values, approximate square roots, logarithms or divisions enter the transition. The
+irrationality of phi makes (a,b) a unique representation of a+b*phi.
+input n
+J_n
+before (a,b)
+after (a,b)
+0
+1
+(0, 0)
+(1, 0)
+1
+-1
+(1, 0)
+(-1, 1)
+2
+-1
+(-1, 1)
+(0, 0)
+3
+1
+(0, 0)
+(1, 0)
+4
+-1
+(1, 0)
+(-1, 1)
+5
+1
+(-1, 1)
+(2, 0)
+6
+1
+(2, 0)
+(1, 2)
+7
+-1
+(1, 2)
+(1, 3)
+8
+-1
+(1, 3)
+(2, 4)
+9
+1
+(2, 4)
+(5, 6)
+10
+1
+(5, 6)
+(7, 11)
+11
+-1
+(7, 11)
+(10, 18)
+These twelve values are mathematical examples derived from the stated recurrence. They are acceptance vectors,
+not evidence of a passed executable test. With delta=1, each row commits at time n+1. Every row retains its own
+history even when a later coefficient pair repeats an earlier pair.
+
+---PAGE 4---
+Tom Klootwijk / NL200678942  |  Specification: 19 September 2026
+TOM v0.7.1  /  4
+TOM / V0.7.1 - EXACT CONTINUATION PROFILE
+The whole expression has an operational reading
+Role
+Selected v0.7.1 meaning
+T
+The current committed index n, simulation time t, positive delta and supplied horizon H.
+J[T]
+Compute the exact sign J_n from the current n.
+C[J[T]]
+Use the committed coefficient pair and the evaluated jitter operand to derive (b+J_n, a+b).
+InvLog[phi]
+The exact named constant kappa=-ln(phi). Its representation is symbolic, not a rounded decimal.
+E[C; InvLog[phi]]
+Construct the exact real expression kappa*(a_next+b_next*phi) from its actual evaluated
+operands.
+Arch[C; E]
+Retain the ordered direct/echo pair and calculate the selected external scalar reading as exactly
+zero.
+InverseOccam[...]
+Preserve the defining expression, the original supplied source and the complete committed
+records.
+forward T qualification
+Admit and publish a step only after the transition and all temporal/capacity obligations succeed.
+E_(n+1) = kappa*(a_(n+1) + b_(n+1)*phi)
+arch(x,y) = |x| + |y| - |x-y|
+arch(C_(n+1), E_(n+1)) = 0
+The zero result is exact: kappa is negative and the arguments have opposite signs or are zero. The echo stores the
+derived integer coefficients together with the exact kappa tag. There is no loss of precision merely because a
+transcendental constant is kept as a defined symbol. This profile does not evaluate arbitrary expressions involving
+transcendental constants.
+Execution must dispatch through the actual admitted term records and operand references. It must reject a
+changed program that is no longer the full source expression under licensed equivalences. Running an unrelated
+recurrence beside a decorative copy of the expression does not satisfy this contract.
+SELF and Later_T
+The continuation driver uses SELF to refer to the actual committed coefficient state. Later_T is realized by the next
+admitted transition. Its result is the derived coefficient pair and preserved echo/Arch record; the caller never
+supplies a next-result coefficient pair as a substitute for computation. This profile admits only the complete TOM
+root, not arbitrary alternate programs or unrestricted recursion.
+
+---PAGE 5---
+Tom Klootwijk / NL200678942  |  Specification: 19 September 2026
+TOM v0.7.1  /  5
+TOM / V0.7.1 - EXACT CONTINUATION PROFILE
+A tick is an atomic, bounded transition
+A request supplies an initial or resumed state (n,t,a,b), delta>0, a simulation horizon H, the latest available
+initial-evidence time, and a nonnegative requested step count. The same delta applies throughout that run. The
+supplied evidence time must not exceed t. The initial t must not exceed H. The units of these tags are explicit
+experiment parameters; no physical clock is authenticated.
+Phase
+Exact behavior
+Validate
+Reject malformed encodings, unsupported program shape, negative zero, zero delta or an initial
+time beyond the horizon. Reject future initial evidence.
+Check next tick
+First require room for a complete record; then require n+1 and t+delta to fit their 64-bit fields;
+then require t+delta <= H. A failed check leaves the current head unchanged.
+Derive
+Evaluate J_n and the full program; compute exact candidate coefficients, echo and ordered Arch
+result in disposable scratch.
+Check storage
+Require all candidate coefficients and the entire next history record to fit the declared capacities.
+Never wrap, truncate, erase, silently resize or substitute a floating result.
+Commit
+Publish one complete record and update (n,t,a,b) together. Then proceed to the next requested
+step.
+Atomicity is per step. If a request commits three steps and the fourth fails, the first three remain committed. The
+failing step publishes no partial record and makes no change to the committed head. A request for more records
+than S can retain commits up to S successful steps and then reports history capacity, unless an earlier obligation
+stops it.
+Status bit
+Meaning
+1 / INVALID
+Invalid seed, encoding or temporal input.
+2 / PENDING_HORIZON
+The next positive tick lies beyond the supplied horizon.
+4 /
+COEFFICIENT_CAPACITY
+An exact candidate coefficient exceeds the selected limb capacity.
+8 / TIME_CAPACITY
+The next index or simulation time cannot fit its 64-bit field.
+16 / HISTORY_CAPACITY
+The next complete record cannot fit.
+32 / PROGRAM_ERROR
+The admitted-program execution contract fails.
+64 / FUTURE_EVIDENCE
+Initial evidence is tagged later than the initial committed time.
+Initial validation can combine INVALID and FUTURE_EVIDENCE. An admitted run stops at its first failed check, in
+the order above; program evaluation follows retained term order. A zero status means the requested steps
+completed. Counts describe the successful prefix. Benchmark repeats restart the same seed; they are not
+additional evolution. A new run may explicitly change delta or horizon without rewriting its prior head.
+
+---PAGE 6---
+Tom Klootwijk / NL200678942  |  Specification: 19 September 2026
+TOM v0.7.1  /  6
+TOM / V0.7.1 - EXACT CONTINUATION PROFILE
+Exact storage, observation and resume
+The executable codec is part of this external profile. Words are little-endian uint32. A coefficient has a sign (0
+positive/zero, 1 negative) and L little-endian base-2^32 magnitude limbs. Zero must have sign 0. Its magnitude is at
+most 2^(32L)-1. Index, time, delta, horizon and evidence tags are unsigned 64-bit values.
+The source is retained as exact UTF-8 bytes, with zero padding only to the next word boundary. Original
+eight-word native term records and the original root are retained. Normalization licenses are the v0.7 licenses, not
+a new rewrite system. The Python source compiler checks source-to-term binding; a C++ host that retains arbitrary
+source text does not thereby parse or authenticate that text.
+Quantity
+Size in uint32 words
+Seed case
+16 + 2L
+Committed record
+16 + 6L
+Disposable scratch per
+case
+N*(4 + 2L)
+Result case
+48 + 4L + S*(16 + 6L)
+N is the retained term count and S the next-run record capacity. Host size arithmetic must be checked before
+allocation. The file envelope has 16 words: magic, ABI version, case count, L, S, N, original root, flags, case words,
+result words, record words, UTF-8 byte count, archived prior-file words, then three reserved zeros. Input magic is
+0x314f4d54 and result magic is 0x31524d54. ABI version is 1. The only program flag is bit 0 for explicit A=T.
+After the envelope come the padded source bytes, original terms, the complete archived prior output (if any), and
+current cases. Fresh input files have no archive. A resumed output nests the entire previous output byte for byte,
+including its previous archives. Complete prior content is retained, not replaced by an unchecked hash or a count.
+Each committed record stores input n, before/after time, jitter sign, before/after coefficient signs and magnitudes,
+exact echo coefficients and the kappa tag, scalar zero readout and qualification flags. These are simulation
+observations of the defined process. They do not acquire a physical interpretation merely by being called
+observations.
+Before resume, the host re-evaluates every archived seed using its retained program and compares every saved
+result word. It also checks each segment starts from the preceding terminal coefficient pair, n and t, case by case.
+Limb capacity may grow without changing the integer value; it may not shrink. The new input must match the
+latest saved head. A zero-commit failure leaves that head equal to the original seed.
+Buffers are reserved before execution. Output paths may not alias inputs or prior/reference artifacts. Checked
+temporary writes and atomic file replacement preserve an existing destination on publication failure. Multiple files
+are not one atomic transaction. There is no power-loss durability, cryptographic authorship or adversarial
+tamper-authentication claim; consistently rewriting an unauthenticated experiment cannot in general be detected
+from its own contents.
+
+---PAGE 7---
+Tom Klootwijk / NL200678942  |  Specification: 19 September 2026
+TOM v0.7.1  /  7
+TOM / V0.7.1 - EXACT CONTINUATION PROFILE
+Consequences, acceptance and the boundary of
+this release
+Consequences of the selected laws
+Determinism: fixed seed, program, parameters and capacities give the same committed prefix and stop condition.
+Exact closure: multiplication by phi maps the integer pair (a,b) to (b,a+b), so adding J keeps the state in Z[phi].
+Strict progress: each successful transition adds one to n and a positive delta to time. Preservation: each commit
+appends a complete record; rejection leaves the prior head. Distinct histories remain distinct even when their final
+coefficient pairs or scalar zero readings agree.
+These are consequences of the specification, not a formal verification certificate for a particular binary. Exactness
+holds within the announced coefficient/address capacities; exhaustion is reported rather than approximated. The
+default recurrence may revisit a coefficient pair while its index, time and retained history continue forward.
+Required executable evidence
+Validation must compare all result words with an independently implemented integer reference, including the first
+twelve steps; test changed full-expression bindings, licensed aliases and idempotence; exercise large positive and
+negative seeds; and test coefficient, clock, horizon and history boundaries. Resume must agree with uninterrupted
+evolution where parameters agree. Corrupt saved states, traces and inconsistent source/program bindings must
+be rejected within the stated parser/trust scope. Output collision and failed-publication checks must preserve
+existing files.
+A performance report must name the workload, number of evolved steps, exact capacities, memory use, timing
+scope and verification method. Filling GPU memory is not proof of peak arithmetic utilization. A measured result
+must not be advertised as exhaustive exploration of every TOM expression or as a forecast of real events.
+Assigned here; still open beyond this profile
+Assigned here: deterministic jitter, an exact coefficient recurrence, a symbolic inverse-log echo, step/horizon
+actualization, a simulation observation record and a recoverable finite archive codec. The inverse-log and entropic
+names do not become measured physical mechanisms. No thermodynamic entropy, physical measurement
+protocol, general intrinsic pinion dynamics, Klein topology, autonomous discovery mechanism or arbitrary-SDF
+execution semantics are supplied.
+A later profile may define different dynamics while preserving the v0.7 commitments. Such an extension must
+state its added law, its interpretation and its own validation. v0.7.1 is fully specified for this particular operational
+profile; it does not claim that every possible application or physical meaning of the corpus has been implemented.
+Companion records
+TOM_V0_7_1_Formalization.json is the machine-readable declaration accompanying this document. The kernel
+project's docs/V071_ABI_DESIGN.md gives the complete binary field layout and implementation agreement. The
+original v0.7 PDF remains the authority for unchanged clauses; this release is the authority for the explicitly
+selected new operational assignments.

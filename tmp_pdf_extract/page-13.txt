@@ -1,0 +1,33 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 13
+SECTION 11
+Atomos and the Kiki double-UU loop
+SOURCE  /  S, pp. 19-22, 25-28, 32, 36
+11.1  Atomos scope
+Atomos shall name both the architecture and the population-scale node abstraction introduced by the 
+author. The source uses the total world population as its finite node budget and calls the associated 
+bounded representation “infinity globular.” No current population number is required by this edition: the 
+source leaves the count symbolic.
+11.2  The n-factorial problem
+The source frames global routing through the Traveling Salesman Problem and describes N! as its 
+combinatorial expansion. Its proposed response is a finite small-world domain with log-polar lookup, rather 
+than route enumeration. “Solves infinity” is retained as the source’s name for that intended bounding and 
+resolution, not silently converted into a different problem statement. [S, pp. 19-21]
+11.3  Kiki operator contract
+Assigned property Declarative meaning
+Double-UU The source name of the set or loop operator; UU is not expanded into a newly supplied set 
+algebra.
+Closure The produced routing relation shall return to its own starting relation.
+Non-intersection The source requires the routing path not to cross or self-intersect.
+Active-node participation The routing relation is assigned to active hot nodes rather than inactive background.
+Dropout response The loop is described as re-forming around the remaining active relations when a node 
+drops out.
+11.4  Wave-assigned selection
+The source assigns route selection to the interaction of the paired hum, the FMCW chirp, the negative-
+memory field and the spherical LUT. Its phrases “path of least resistance,” “optimal loop” and 
+“instantaneous” are preserved as the stated output claims. A route-cost definition or rule that proves a 
+selected loop is globally shortest is not supplied. [S, pp. 26, 28, 36]
+11.5  Cascade naming
+The MLM designation is used in the source for hierarchical branching and relay behavior. PRISM and 
+NASA occur in the architecture’s population-scale naming. These labels are retained in the application 
+register rather than treated as extra operators with independently specified implementations.

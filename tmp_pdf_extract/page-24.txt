@@ -1,0 +1,32 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 24
+APPENDIX A2
+Retained source expressions: host
+SOURCE  /  S, pp. 3-5, 6-10
+A2.1  Early four-component representation
+P_Klein(u,v) = (
+  (R + r cos u) cos v,
+  (R + r cos u) sin v,
+  r sin u cos(v/2),
+  r sin u sin(v/2)
+)
+u,v in [0, 2π)
+SDF_Klein(x) = ||x - P_Klein(u,v)||
+This records the displayed host expression and parameterization before the author’s temporal redirection. 
+The source’s printed distance expression does not assign a parameter-selection or minimization step. 
+[S, pp. 3-4]
+A2.2  Suspension tensor
+W_Kuiper = _C ρ(θ) ·∮
+           [∇f_A(x_θ) ⊗ ∇f_B(x_θ)] dθ
+C is the source’s closed belt curve; ρ(θ) is its density factor;  is its outer-product notation. The next ⊗
+source page displays an arrest relation using the time derivative of f_Klein multiplied by Tr(W_Kuiper), 
+followed by “  0.” [S,⇒  pp. 4-5]
+A2.3  Distinct primitive expressions
+Listing Expression under the source name
+Cone, pp. 6-8 radial_length · cos(angle) - local_y · sin(angle)
+Cone, p. 9 max(radial_length - r, abs(local_y) - h)
+Composite, p. 8 max(d_pyramid, min(d_cone, d_sphere))
+Composite, p. 10 max(d_pyramid, d_cone, d_sphere, d_phyllotaxis)
+The source also uses a polynomial under “sdf_klein_bottle_3d” and a sine-based phyllotaxis expression on pp. 9-10. No 
+normalization relating those numeric outputs to the final coordinate-free signed relation is given; this edition does not 
+silently substitute one.

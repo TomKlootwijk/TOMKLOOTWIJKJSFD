@@ -1,0 +1,32 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 4
+SECTION 02
+Core vocabulary
+SOURCE  /  S, pp. 1-12, 15-17, 19-26, 30-39
+The following terms retain their source-specific meanings. Short labels in the left column are edition 
+notation for referring to the same objects throughout the specification.
+Term Definition within the architecture
+SDF operator A formal boundary or relationship definition. The early source evaluates scalar geometric fields; 
+the later source uses intrinsic, coordinate-free operator relationships.
+Klein / K The non-orientable host operator and inversion relation carried with every packed operator.
+Double packing The simultaneous SDF and Klein definitions of an operator, evaluated according to the 
+applicable precedence chain.
+AB One binary word. Its source-defining states are 0: exterior, and 1: double-packed evaluation.
+Psi / Ψ The source’s bifurcation designation for the binary shift and its lower-phi temporal scaling.
+Lower-case phi / φ The approximately 0.618 relation assigned to compression, damping and convective turning.
+Diabolo / hourglass The paired-domain transfer relation with a neck or choke point; later treated without a required 
+coordinate geometry.
+W_Kuiper The suspension tensor weight linking A and B. This is distinct from the later timeline symbol W.
+LUT The kinematic, log-encoded polar or spherical look-up table that names permitted state 
+resolutions.
+W and Operator T W names the late-source one-dimensional wave timeline. T is the phase-scrubbing operator 
+acting on that timeline.
+Atomos The architecture name and the node designation used when the source expands its scope to the 
+total world population.
+Kiki double-UU The named set/routing operator assigned non-intersection and self-closing loop behavior.
+Hot node / hum blip A source-defined active signature in the double-sinusoidal 2 Hz evaluation layer.
+Negative memory Deviation or vacancy relative to a saturated baseline, rather than an accumulated inventory of 
+novel records.
+JIT geometry A coordinate or geometry output evaluated for the current request and dropped after use.
+Source labels such as “mid-Theta,” “Primo,” “infinity globular,” “Spintronic Vacuum Matrix” and “magnetic inference force 
+field” remain named terms of this document. Their assigned roles are set out in the corresponding sections.

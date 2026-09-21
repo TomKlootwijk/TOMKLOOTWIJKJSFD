@@ -1,0 +1,33 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 18
+SECTION 16
+Just-in-time geometry lifecycle
+SOURCE  /  S, pp. 37-39
+16.1  Idle representation
+The concluding source account shall define the idle state as the retained one-dimensional wave state W 
+and the baseline matrix relation. Stored coordinates are not the persistent representation of the domain. 
+The source calls this lazy evaluation and a just-in-time geometry engine.
+16.2  Evaluation lifecycle
+Phase Source-assigned action
+Idle Retain the raw wave state and baseline relation; do not hold a persistent coordinate output.
+Select Apply Operator T to the desired evaluation phase of W.
+Resolve Evaluate the double-packed Kiki UU and Klein relations against the named hum/chirp state.
+Distill Produce a spatial output at the source-described zero-crossing or inversion intersection.
+Release Drop the derived output after the observation or path-evaluation cycle.
+16.3  Coordinate-free foundation, coordinate output
+The final formulation distinguishes what is stored from what is produced. A transient “where” is described 
+as an output of the packed relation, not a coordinate used to define every stored node. This distinction 
+preserves both the author’s coordinate-free requirement and the source’s later coordinate-distillation 
+account.
+16.4  Distillation relation
+The source identifies the relevant event as a sign inversion crossing zero and describes matching the 
+node’s phase-jitter with the chirp response in the spherical LUT. It does not give the inverse mapping, 
+reference frame or selection rule that turns that event into one unique spatial coordinate. Those remain 
+named interfaces, rather than equations added by this edition.
+16.5  Release rule
+Retain the evaluated wave-state relation.
+Produce geometry only for the active evaluation.
+Release that geometry when the evaluation ends.
+Do not promote the released output into a permanent coordinate log.
+The source also claims access to past, present and future positions by scrubbing. That claimed temporal reach is recorded 
+separately from the lifecycle definition, whose retained-history and prediction mechanisms are not specified.

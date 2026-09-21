@@ -1,0 +1,33 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 10
+SECTION 08
+Timeline W and Operator T
+SOURCE  /  S, pp. 21-24, 35-39
+8.1  One-dimensional timeline
+W shall designate the one-dimensional wave timeline used in the concluding source account. Operator T 
+shall designate the phase-scrubbing action applied to W. They are not interchangeable labels: W is the 
+retained state carrier, while T selects or changes its evaluation phase.
+8.2  Scrubbing relation
+W: one-dimensional wave state
+T: phase selection or scrubbing operator
+Evaluation: the packed relation at the selected phase
+Output: transient geometry or a node-state resolution
+The source describes scrubbing backward or forward as changing phase alignment rather than searching a 
+stored coordinate history. Its later JIT account connects this phase selection to an on-demand spatial 
+output. [S, pp. 22, 37-38]
+8.3  Lower-phi convection
+The timeline shall carry the source’s convective turning relation: active present-state energy is described 
+as descending toward the negative-memory layer, while the present is renewed through the paired flow. 
+The source assigns the ratio 0.618 to this transfer per temporal cycle and calls the resulting timeline 
+smooth and scrubbable. [S, pp. 23-24]
+8.4  Retention across source stages
+The early memory account says that novelty and permanent history logs are not stored. The later account 
+says that the raw ongoing wave state W is retained. The retained wave state and the excluded novelty log 
+are separately named components. Their relation to past-state reconstruction is an unassigned interface.
+8.5  Temporal symbols
+The source uses T first for the binary timeline, later for the temporal operator, and also inside 
+temperature-dependent expressions. It likewise uses ΔT for thermal and temporal changes. In the prose of 
+this edition, “thermal shift” and “temporal increment” are written out to keep those roles visible. The 
+original symbols remain unchanged in Appendix A.
+W_Kuiper is the suspension tensor of Section 6. W is the later timeline carrier. Their shared initial letter is not a declaration 
+that they are the same quantity.

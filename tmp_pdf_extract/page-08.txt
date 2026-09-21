@@ -1,0 +1,35 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 8
+SECTION 06
+Finite graph and suspension weight
+SOURCE  /  S, pp. 2-5, 14-17
+6.1  Small-world domain
+The architecture shall use a finite set of nodes with local connections and a limited set of long-range 
+shortcuts. The opening “gridder” account rasterizes that set; the later coordinate-free account retains its 
+relationship budget while discarding a mandatory raster as the conceptual domain. [S, pp. 2, 14-15]
+6.2  Diabolo transfer
+A and B shall identify the two sides of the source’s constrained transfer relation. In the opening biological 
+mapping they are metabolic reserve and somatic growth. In later mappings they become finite and non-
+finite sides of the hourglass. The neck shall name the restricted passage through which the source 
+describes energy, phase or state-change transfer.
+FINITE SOURCE A
+↓ paired-domain transfer through the diabolo neck
+RECEIVING STATE B
+↓ graph occupancy and suspension weighting
+OPEN / CONSTRAINED / DEATHLOCKED RESOLUTION
+6.3  Kuiper suspension
+W_Kuiper shall name the source’s suspension tensor weight between the nested A and B operators. The 
+source constructs it from a belt-density factor and the outer product of the two field gradients along a 
+closed curve. It assigns the result a global tension or resistance role. [S, pp. 4-5]
+The Kuiper designation carries the source’s astronomical and structural mapping. Its named inputs are the 
+closed curve C, the density relation ρ and the coupled gradients of the A and B fields. The tensor’s original 
+expression is retained in Appendix A2; its unassigned calibration belongs to Section 20.
+6.4  Coordinate-free movement
+Movement shall be represented as a change in intrinsic node relations, weights and active edges. Nearness 
+is described in the source as structural difference. A long-range shortcut is a relationship transition rather 
+than a stored spatial trajectory. The source’s “gyroscopic stabilization wave” and angular-momentum 
+language belong to this diabolo interpretation. [S, pp. 15-16]
+6.5  Finite arrest
+When the declared capacity condition is reached, the permitted expansion or relation-update step shall be 
+zero. The node budget and the capacity predicate are part of the formal interface; a numerical occupancy 
+threshold is not assigned by the supplied text.

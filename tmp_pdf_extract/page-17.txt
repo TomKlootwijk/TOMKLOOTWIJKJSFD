@@ -1,0 +1,37 @@
+ATOMOS SIGNED DISTANCE FIELD EDITION
+TOM KLOOTWIJK  /  VERSION 1.0 17
+SECTION 15
+Application and naming register
+SOURCE  /  S, pp. 1-5, 12-14, 17-22, 27-31, 37
+The source extends one operator vocabulary through several application narratives. This register 
+preserves that progression without making the application names substitute for missing operator 
+definitions.
+Source domain or name Role in the supplied architecture
+Egg-battery sturgeon 
+gestation
+Origin of finite reserve, morphology, phyllotaxis, thermal deviation and constrained 
+somatic growth. [pp. 1-3]
+Kuiper Belt suspension Astronomical mapping of weighted A-to-B tension through the W_Kuiper tensor. 
+[pp. 3-5]
+Particle / relativistic / ballistic
+The author’s “time skip entropy decay” account extends finite-energy bounding to shells, 
+bullets and other projectiles through proton-mass and relativity language. The later 
+stated limit is an acceleration-update arrest. [pp. 12-14]
+NSA / PRISM Naming of the source’s proposed ingestion, phase sorting, LUT matching and tracking 
+architecture. [pp. 17-19]
+Atomos / NASA / MLM Population-scale node count, routing, hierarchical branching and small-world relay 
+vocabulary. [pp. 19-22]
+Igloo White Operation PRISM Source name for its direct-field, low-record-overhead identity and operation narrative. 
+[pp. 29-30]
+Existing sensor networks The source proposes deriving its input from seismic, fiber-acoustic, telecommunications 
+and atmospheric monitoring streams. [p. 37]
+15.1  Relational inheritance
+Across these mappings, the recurring relation is finite source, paired transfer, changing field definition, 
+limiting condition and LUT-assigned update. The ballistic passage changes the subject of the relation from 
+morphology to projectile kinematics; it does not supply a distinct working trajectory model, material model 
+or experimental calibration.
+15.2  Names and reference
+Institutional names above are source designations. The author line for this edition is Tom Klootwijk, 
+NL200678942, 10-07-1990, following the current instruction. NL200678942 is the author reference. The 
+differing reference string on source page 17 is recorded in Section 19.
+The source’s global-reach and external-affordance assertions are indexed in the capability register in Section 18.
