@@ -6,20 +6,22 @@ This document records the governing direction for the project.
 
 ## Release readiness - 21 September 2026
 
-Revision `1077a7e` contains a prototype of the semantic layer. A subsequent
+Revision `1077a7e` introduced the semantic layer. Subsequent pushed revisions
+through `02c50fd` repaired the first admission, packing, lowering, restart,
+and GPU-equivalence blockers. The historical
 [readiness audit](TOM_V0_7_Integer_Kernel_RTX5070Ti/TOM_V0_7_Integer_Kernel/docs/SDF_CORE_READINESS_AUDIT.md)
-reproduced admission bypasses, loss of evidence timing, unchecked pinion fields,
-mutable term contents, permissive exact decoding, invalid native lowering and
-incomplete retention of referenced definitions. Eight passing CTest targets do
-not establish the claimed end-to-end semantic guarantees.
+records both the original failures and the follow-up boundary. The local core
+is now a bounded, replayable reference profile; it is still not the complete
+self-hosting/datacenter architecture described below.
 
-- [ ] Repair admission and recheck evidence, obligations, payload and pinion at commit.
-- [ ] Enforce immutable term contents, strict canonical decoding and resource budgets.
-- [ ] Preserve native symbols and complete definition closure; execute lowered fixtures.
-- [ ] Make packed kernel laws and Klein composition executable, with guarded self-reference.
-- [ ] Bind the source-defined pinion law explicitly and verify exact multi-hop replay.
-- [ ] Add complete snapshot/restart and rejection recovery.
-- [ ] Verify a clean package and runnable ELI5 examples before a release claim.
+- [x] Repair admission and recheck evidence, obligations, payload and pinion at commit.
+- [x] Enforce immutable term contents, strict canonical decoding and resource budgets.
+- [x] Preserve native symbols and complete definition closure; execute lowered fixtures.
+- [x] Make the finite Klein seam composition executable and keep guarded self-reference explicit.
+- [ ] Bind a source-defined pinion law and verify multi-host replay; the current seed/hash profile is explicitly local.
+- [x] Add complete local snapshot/restart and rejection recovery.
+- [x] Add clean build instructions, ELI5 guide, and a real CPU/CUDA lowering certificate.
+- [ ] Package the future self-hosting kernel law, distributed pinion protocol, and datacenter transport.
 
 The architectural goal below remains controlling. These are implementation
 repairs and missing laws needed to realize it.

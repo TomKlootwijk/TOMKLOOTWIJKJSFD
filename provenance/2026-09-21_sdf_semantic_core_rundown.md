@@ -63,4 +63,25 @@ The semantic core is not a replacement for the validated kernel. It gives that k
 
 ## Evidence boundary
 
-The current semantic-core implementation is a reference scaffold. It does not yet prove complete Klein topology, distributed synchronization, universal physical embodiment, or lossless lowering of every possible SDF term into the existing fixed ABI. Those are explicit next obligations rather than implicit claims.
+The current semantic-core implementation is a bounded local reference profile.
+It now enforces immutable terms, strict canonical decoding, dependency and
+resource gates, kernel-bound evaluation/pinion admission, snapshot/restart,
+finite Klein seam composition, complete closure-aware lowering, and CPU/CUDA
+word equivalence for the supported `T/phi/J/C/E/ARCH` fixture. The recorded
+GPU evidence is in
+`TOM_V0_7_Integer_Kernel_RTX5070Ti/TOM_V0_7_Integer_Kernel/verification/sdf_backends/`.
+
+It still does not prove a self-hosting executable copy of the evaluator,
+complete physical Klein topology, a source-derived distributed pinion law,
+multi-host synchronization, universal physical embodiment, or lossless
+lowering of every possible SDF term into the existing fixed ABI. Those remain
+explicit next obligations rather than implicit claims.
+
+## Implementation follow-up recorded
+
+The hardening sequence was committed and pushed as `6aa8148`, `0b9ae8f`,
+`28037bb`, `7281d24`, `60bcdb4`, and `02c50fd`. The corresponding guides are
+`docs/SDF_CORE.md`, `docs/ELI5_SDF_CORE.md`, `docs/BUILD_SDF_CORE.md`, and
+`docs/SDF_CORE_GPU.md`. This records the design direction and the measured
+boundary without rewriting the original architecture response as if it had
+claimed guarantees that were not yet implemented.

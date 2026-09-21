@@ -1,11 +1,30 @@
 # SDF/Klein core readiness audit
 
 Date: 2026-09-21
-Audited revision: `1077a7e`
+Initial audited revision: `1077a7e`; follow-up repairs through `02c50fd`
 Scope: `python/tom/sdf_core.py`, `python/tom/sdf_lowering.py`, their tests,
 and the existing native backend contract. No implementation was changed by this audit.
 
-## Decision
+## Follow-up decision
+
+The initial blockers below were reproduced at `1077a7e`. They are now repaired
+in the pushed implementation: immutable term collections, strict canonical
+decoding, dependency and arity validation, quote availability propagation,
+kernel-bound evaluation contexts, exact seed-derived pinion admission, bounded
+resources, complete lowering closure, injective native declaration mapping,
+snapshot/restart, and executable finite Klein seam composition. Focused tests
+and all eight CTest targets pass. The lowered `T/phi/J/C/E/ARCH` fixture also
+matches every Python, CPU, and real RTX 5070 Ti CUDA output word; see
+`docs/SDF_CORE_GPU.md` and `verification/sdf_backends/`.
+
+The core is still a finite local reference profile rather than the full
+universal/dedicated architecture requested in the long-term todo. The remaining
+gaps are executable self-hosting kernel-law packing, source-defined pinion
+semantics and multi-host synchronization, a native ABI carrying the semantic
+sidecar, and datacenter transport/topology. Those are open scope, not silently
+filled with conventional distance or AI assumptions.
+
+## Historical decision
 
 The new layer is a prototype and is not ready to be presented as a completed,
 reusable universal SDF/Klein execution core. The earlier eight passing CTest

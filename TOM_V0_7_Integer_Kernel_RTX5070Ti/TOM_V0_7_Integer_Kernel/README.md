@@ -64,6 +64,8 @@ never silently flattened into a scalar or Boolean result. See
 The optional [CPU/GPU lowering check](docs/SDF_CORE_GPU.md) compares every
 native output word against the Python reference and records whether a real
 CUDA device executed the image.
+For a short explanation and a clean build path, see the [ELI5 guide](docs/ELI5_SDF_CORE.md)
+and [build/verification guide](docs/BUILD_SDF_CORE.md).
 
 ## Historical Boolean K1 implementation
 
