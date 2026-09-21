@@ -41,6 +41,11 @@ external representation and obligations inspectable.
 
 ## Clean SDF/Klein semantic core
 
+The new semantic layer is a prototype. The
+[readiness audit](docs/SDF_CORE_READINESS_AUDIT.md) records reproduced commit,
+serialization and lowering failures; the earlier passing tests do not prove
+complete semantic preservation. The description below states its intended scope.
+
 `python/tom/sdf_core.py` is the reference semantic layer for the universal
 substrate direction. It treats SDF as a definition-level operator relation,
 not as a mandatory Euclidean distance or coordinate grid. A term carries its

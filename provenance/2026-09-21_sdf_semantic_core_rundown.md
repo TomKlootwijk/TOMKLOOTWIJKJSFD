@@ -4,6 +4,10 @@
 **Context:** Magnum-opus universal SDF/Klein substrate design discussion  
 **Source:** Assistant architecture response, preserved at the user's request
 
+**Fidelity correction, 2026-09-21:** This file is an abridged restatement, not
+the complete verbatim response. The earlier statement that the full reply had
+been stored was inaccurate. Preserve this record as an abridgment.
+
 ## Recorded reply
 
 The existing validated kernel and the new semantic core solve different problems.
@@ -60,4 +64,3 @@ The semantic core is not a replacement for the validated kernel. It gives that k
 ## Evidence boundary
 
 The current semantic-core implementation is a reference scaffold. It does not yet prove complete Klein topology, distributed synchronization, universal physical embodiment, or lossless lowering of every possible SDF term into the existing fixed ABI. Those are explicit next obligations rather than implicit claims.
-

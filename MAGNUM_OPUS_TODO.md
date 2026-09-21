@@ -4,6 +4,26 @@
 
 This document records the governing direction for the project.
 
+## Release readiness - 21 September 2026
+
+Revision `1077a7e` contains a prototype of the semantic layer. A subsequent
+[readiness audit](TOM_V0_7_Integer_Kernel_RTX5070Ti/TOM_V0_7_Integer_Kernel/docs/SDF_CORE_READINESS_AUDIT.md)
+reproduced admission bypasses, loss of evidence timing, unchecked pinion fields,
+mutable term contents, permissive exact decoding, invalid native lowering and
+incomplete retention of referenced definitions. Eight passing CTest targets do
+not establish the claimed end-to-end semantic guarantees.
+
+- [ ] Repair admission and recheck evidence, obligations, payload and pinion at commit.
+- [ ] Enforce immutable term contents, strict canonical decoding and resource budgets.
+- [ ] Preserve native symbols and complete definition closure; execute lowered fixtures.
+- [ ] Make packed kernel laws and Klein composition executable, with guarded self-reference.
+- [ ] Bind the source-defined pinion law explicitly and verify exact multi-hop replay.
+- [ ] Add complete snapshot/restart and rejection recovery.
+- [ ] Verify a clean package and runnable ELI5 examples before a release claim.
+
+The architectural goal below remains controlling. These are implementation
+repairs and missing laws needed to realize it.
+
 ### Current conversation directive
 
 The architecture must not be reduced to a conventional AI verifier with SDF as an optional layer. The intended direction is to pack **everything**, including the self-referential kernel itself, as signed-distance-field operators inside the double-packed Klein/SDF carrier. The clean kernel core comes first as the universal substrate; deterministic AI, domain profiles, lowerings, pinion synchronization, and datacenter composition are derived uses of that substrate.
@@ -18,7 +38,7 @@ The first concrete deliverable is a **clean kernel core**. It is the universal s
 
 ## Provenance of the semantic-core direction
 
-The full architecture rundown from the 21 September 2026 design discussion is preserved in [provenance/2026-09-21_sdf_semantic_core_rundown.md](provenance/2026-09-21_sdf_semantic_core_rundown.md). Its governing conclusion is:
+An abridged architecture rundown from the 21 September 2026 design discussion is preserved in [provenance/2026-09-21_sdf_semantic_core_rundown.md](provenance/2026-09-21_sdf_semantic_core_rundown.md). Its governing conclusion is:
 
 ```text
 SDF/Klein semantic term

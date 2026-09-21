@@ -1,5 +1,11 @@
 # Clean SDF/Klein semantic core
 
+Current status: prototype with reproduced correctness blockers. See the
+[21 September readiness audit](SDF_CORE_READINESS_AUDIT.md). Descriptions below
+include intended contracts that the current implementation does not fully
+enforce, particularly evidence/commit binding, pinion validation, executable
+Klein closure and preservation through native lowering.
+
 ## Purpose
 
 The existing TOM/K1 runtime is the validated finite execution backend. The
@@ -75,4 +81,3 @@ forward atomic commits, capacity rejection, future-evidence rejection, and
 explicit unsupported-lowering rejection. Complete Klein closure laws,
 versioned native ABI support, multi-hop pinion replay, and datacenter
 publication remain next implementation layers.
-
