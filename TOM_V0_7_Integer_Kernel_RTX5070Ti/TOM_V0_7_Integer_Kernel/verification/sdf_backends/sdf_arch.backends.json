@@ -1,0 +1,136 @@
+{
+  "backends": {
+    "cpu": {
+      "all_words_equal": true,
+      "output_sha256": "25785bbfd256f5b89e223b659706d7439edbfaff3df34cab34f4bf87d84d40a1",
+      "runner": {
+        "admitted": 1,
+        "backend": "native_cpu",
+        "cases": 1,
+        "elapsed_ns": 700,
+        "gpu_executed": false,
+        "preservation_rewrites": 0,
+        "repeat": 1,
+        "resume_validated": false,
+        "source_TOM": 0,
+        "unique_dynamics_assigned": false
+      },
+      "status": "passed"
+    },
+    "cuda": {
+      "all_words_equal": true,
+      "output_sha256": "25785bbfd256f5b89e223b659706d7439edbfaff3df34cab34f4bf87d84d40a1",
+      "runner": {
+        "accepted_cases": 1,
+        "aggregation_elapsed_host_ns": 48100,
+        "aggregation_in_compute_timing": false,
+        "alias_rewrites": 0,
+        "all_cases_verified": true,
+        "block_threads": 128,
+        "case_words": 74,
+        "cases": 1,
+        "compute_launches": 1,
+        "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+        "elapsed_compute_host_ns": 918100,
+        "export_in_compute_timing": false,
+        "exported_bytes": 680,
+        "exported_cases": 1,
+        "free_after_bytes": 11559501824,
+        "free_before_bytes": 11559501824,
+        "full_word_verification": {
+          "checked_words": 0,
+          "elapsed_host_ns": 0,
+          "enabled": false,
+          "expected_words": 154,
+          "in_compute_timing": false,
+          "mismatched_words": 0,
+          "passed": false,
+          "reference": "",
+          "scope": "every word of every generated result compared with independently supplied template bytes; only six retained-history identity words are substituted; verifier does not evaluate native terms"
+        },
+        "generated": false,
+        "generation_semantics": "round-robin native templates; unique global case ID replaces first eight old and proposed history bytes",
+        "gpu_executed": true,
+        "input": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\sdf_backends\\sdf_arch.ton",
+        "inverse_occam_rewrites": 0,
+        "local_bytes_per_thread": 0,
+        "name": "TOM V0.7 bounded native structural executor",
+        "not_committed_cases": 0,
+        "optional_scalar_log_echo_zero_proofs": 0,
+        "output": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\sdf_backends\\sdf_arch.cuda.tor",
+        "registers_per_thread": 56,
+        "repeat": 1,
+        "repeat_semantics": "independent reevaluation of the same supplied proposals",
+        "requested_vram_percent": 0,
+        "resolved_requests": 0,
+        "result_digest": 10543417991103875131,
+        "result_words": 154,
+        "resume": "",
+        "resume_validated": false,
+        "scope": "Actual bound native terms, canonical rewrites, guarded requests and complete finite history; unspecified transformations remain explicit open laws.",
+        "shards": 1,
+        "sm_count": 46,
+        "source_tom_cases": 0,
+        "status_bit_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "template_cases": 0,
+        "theoretical_active_blocks_per_sm": 9,
+        "total_device_bytes": 12820480000,
+        "unresolved_requests": 0,
+        "verification_scope": "first and last up to four cases of every shard; generated inputs checked and complete results compared with shared CPU core",
+        "verified_cases": 1,
+        "warmup": 0,
+        "warmup_launches": 0,
+        "working_bytes": 912
+      },
+      "status": "passed"
+    }
+  },
+  "closure_digest": "sha256:1db4ba481ce155014b706f692894f1af77ec7aff9470dcf98a29e533ba5107f6",
+  "fixture": "C:\\TOMKLOOTWIJKJSFD\\TOM_V0_7_Integer_Kernel_RTX5070Ti\\TOM_V0_7_Integer_Kernel\\verification\\sdf_backends\\sdf_arch.ton",
+  "native_term": [
+    "ARCH",
+    [
+      "C",
+      [
+        "J",
+        [
+          "DECL",
+          1
+        ]
+      ]
+    ],
+    [
+      "E",
+      [
+        "C",
+        [
+          "J",
+          [
+            "DECL",
+            1
+          ]
+        ]
+      ],
+      [
+        "INVLOG",
+        [
+          "DECL",
+          2
+        ]
+      ]
+    ]
+  ],
+  "reference_output_sha256": "25785bbfd256f5b89e223b659706d7439edbfaff3df34cab34f4bf87d84d40a1",
+  "registry_digest": "sha256:1db4ba481ce155014b706f692894f1af77ec7aff9470dcf98a29e533ba5107f6",
+  "semantic_digest": "sha256:96b9c916c6c8c2be757fa76a88ffbea535cf1f80b869497a2950a0ca234ea1fa",
+  "semantic_id": "arch"
+}

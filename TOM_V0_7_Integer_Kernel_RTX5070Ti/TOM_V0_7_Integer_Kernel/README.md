@@ -61,6 +61,9 @@ carry. Unsupported operators and unresolved obligations are rejected; they are
 never silently flattened into a scalar or Boolean result. See
 [`docs/SDF_CORE.md`](docs/SDF_CORE.md) and the `tom_sdf_core`/
 `tom_sdf_lowering` tests.
+The optional [CPU/GPU lowering check](docs/SDF_CORE_GPU.md) compares every
+native output word against the Python reference and records whether a real
+CUDA device executed the image.
 
 ## Historical Boolean K1 implementation
 
