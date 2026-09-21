@@ -1,1 +1,1 @@
-{"backend":"native_cpu","gpu_executed":false,"cases":1,"resume_validated":false,"repeat":1,"admitted":1,"source_TOM":0,"preservation_rewrites":0,"elapsed_ns":1800,"unique_dynamics_assigned":false}
+{"backend":"native_cpu","gpu_executed":false,"cases":1,"resume_validated":false,"repeat":1,"admitted":1,"source_TOM":0,"preservation_rewrites":0,"elapsed_ns":2000,"unique_dynamics_assigned":false}

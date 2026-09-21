@@ -540,6 +540,8 @@ class Registry:
     def __init__(self, *, limits: CoreLimits | None = None) -> None:
         self._terms: dict[str, SDFTerm] = {}
         self.limits = limits or CoreLimits()
+        self._canonical_cache: bytes | None = None
+        self._digest_cache: str | None = None
 
     def register(self, term: SDFTerm) -> str:
         if not isinstance(term, SDFTerm):
@@ -551,6 +553,9 @@ class Registry:
         if existing is None and len(self._terms) >= self.limits.max_terms:
             raise SDFError("registry term count exceeds the configured resource limit")
         self._terms[term.definition_id] = term
+        if existing is None:
+            self._canonical_cache = None
+            self._digest_cache = None
         return term.definition_id
 
     def require(self, definition_id: str) -> SDFTerm:
@@ -561,11 +566,16 @@ class Registry:
             raise SDFError(f"unknown definition: {definition_id}") from exc
 
     def canonical_bytes(self) -> bytes:
-        return canonical_json([self._terms[key].canonical()
-                               for key in sorted(self._terms)])
+        if self._canonical_cache is None:
+            self._canonical_cache = canonical_json(
+                [self._terms[key].canonical() for key in sorted(self._terms)])
+        return self._canonical_cache
 
     def digest(self) -> str:
-        return "sha256:" + hashlib.sha256(self.canonical_bytes()).hexdigest()
+        if self._digest_cache is None:
+            self._digest_cache = "sha256:" + hashlib.sha256(
+                self.canonical_bytes()).hexdigest()
+        return self._digest_cache
 
     def pack(self) -> bytes:
         """Pack the complete ordered registry with its content identity."""

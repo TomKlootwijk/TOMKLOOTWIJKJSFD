@@ -126,6 +126,7 @@ def _symbol_table(terms: Mapping[str, SDFTerm]) -> dict[str, int]:
     """Build an injective native symbol table for one semantic closure."""
     result: dict[str, int] = {}
     owners: dict[int, str] = {}
+    next_external = 256
     declarations = sorted(
         definition_id for definition_id, term in terms.items()
         if term.operator in ("DECL", "DECLARATION", "SELF"))
@@ -134,9 +135,10 @@ def _symbol_table(terms: Mapping[str, SDFTerm]) -> dict[str, int]:
         if name is not None:
             symbol = native.SYMBOL_IDS[name]
         else:
-            symbol = 256 + len([v for v in result.values() if v >= 256])
+            symbol = next_external
             while symbol in owners:
                 symbol += 1
+            next_external = symbol + 1
         owner = owners.get(symbol)
         if owner is not None and owner != definition_id:
             raise LoweringError(
