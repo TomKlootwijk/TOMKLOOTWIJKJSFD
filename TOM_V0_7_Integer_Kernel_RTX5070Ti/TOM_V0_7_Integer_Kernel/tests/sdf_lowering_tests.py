@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "python"))
 
+from tom import native  # noqa: E402
 from tom.sdf_core import KleinPack, Registry, SDFTerm, Sign  # noqa: E402
 from tom.sdf_lowering import LoweringError, lower_term  # noqa: E402
 
@@ -37,7 +38,33 @@ class LoweringTests(unittest.TestCase):
         self.assertEqual(lowered.native_term.op.name, "ARCH")
         self.assertEqual(lowered.sidecar["semantic_term"]["definition_id"], "arch")
         self.assertIn("klein", lowered.sidecar["preserved_above_abi"])
+        self.assertEqual(len(lowered.sidecar["semantic_closure"]), 7)
+        self.assertEqual(lowered.native_term.args[0].args[0].args[0].aux, native.SYMBOL_IDS["T"])
+        self.assertEqual(lowered.native_term.args[1].args[1].args[0].aux, native.SYMBOL_IDS["phi"])
         self.assertEqual(lowered.manifest_bytes(), lower_term("arch", self.registry).manifest_bytes())
+
+    def test_supported_lowering_executes_in_validated_native_backend(self):
+        lowered = lower_term("arch", self.registry)
+        config = native.Config(32, 8, 0, 0)
+        case = native.NativeCase.from_term(lowered.native_term)
+        result = native.unpack_result(native.evaluate_words(case.pack(config), config), config)
+        self.assertEqual(result["status"], 0)
+
+    def test_lowering_rejects_malformed_declarations_and_cycles(self):
+        malformed = SDFTerm("malformed", "DECL", "declaration",
+                            operands=("missing",), klein=KleinPack("fixture", "root"))
+        self.registry.register(malformed)
+        with self.assertRaises(LoweringError):
+            lower_term("malformed", self.registry)
+
+        cycle_a = SDFTerm("cycle:a", "J", "field", operands=("cycle:b",),
+                          klein=KleinPack("fixture", "root"))
+        cycle_b = SDFTerm("cycle:b", "J", "field", operands=("cycle:a",),
+                          klein=KleinPack("fixture", "root"))
+        self.registry.register(cycle_a)
+        self.registry.register(cycle_b)
+        with self.assertRaises(LoweringError):
+            lower_term("cycle:a", self.registry)
 
     def test_unsupported_quote_is_rejected_instead_of_flattened(self):
         quote = SDFTerm("quote", "QUOTE", "quote",
@@ -57,4 +84,3 @@ class LoweringTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

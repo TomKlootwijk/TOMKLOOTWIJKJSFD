@@ -65,6 +65,16 @@ def _nonempty(value: str, label: str) -> str:
     return value
 
 
+def _tuple_of_strings(value: Any, label: str) -> tuple[str, ...]:
+    """Validate and freeze an ordered collection of non-empty strings."""
+    if not isinstance(value, (tuple, list)):
+        raise SDFError(f"{label} must be a tuple or list of strings")
+    frozen = tuple(value)
+    if not all(isinstance(item, str) and item for item in frozen):
+        raise SDFError(f"{label} entries must be non-empty strings")
+    return frozen
+
+
 def _u64(value: int, label: str) -> int:
     if isinstance(value, bool) or not isinstance(value, int) or not 0 <= value < 1 << 64:
         raise SDFError(f"{label} must be an unsigned 64-bit integer")
@@ -115,6 +125,8 @@ class KleinPack:
     def __post_init__(self) -> None:
         _nonempty(self.host, "Klein host")
         _nonempty(self.seam, "Klein seam")
+        if isinstance(self.orientation, bool) or not isinstance(self.orientation, int):
+            raise SDFError("Klein orientation must be an integer")
         if self.orientation not in (-1, 1):
             raise SDFError("Klein orientation must be -1 or 1")
         if not isinstance(self.inverted, bool):
@@ -157,8 +169,7 @@ class Pinion:
             _nonempty(self.parent, "pinion parent")
         _u64(self.hop, "pinion hop")
         _u64(self.tick, "pinion tick")
-        if isinstance(self.elapsed, bool) or not isinstance(self.elapsed, int) or self.elapsed < 0:
-            raise SDFError("pinion elapsed must be a non-negative integer")
+        _u64(self.elapsed, "pinion elapsed")
         _u64(self.phase, "pinion phase")
         _nonempty(self.payload, "pinion payload")
 
@@ -223,18 +234,18 @@ class SDFTerm:
         _nonempty(self.definition_id, "definition id")
         _nonempty(self.operator, "operator")
         _nonempty(self.role, "role")
-        if not all(isinstance(item, str) and item for item in self.operands):
-            raise SDFError("operands must be non-empty definition identifiers")
+        object.__setattr__(self, "operands",
+                           _tuple_of_strings(self.operands, "operands"))
         if not isinstance(self.sign, Sign):
             raise SDFError("sign must be a Sign value")
         _exact_value(self.value)
         _u64(self.available_tick, "available tick")
         if not isinstance(self.provenance, str):
             raise SDFError("provenance must be text")
-        if not all(isinstance(item, str) and item for item in self.history):
-            raise SDFError("history entries must be non-empty strings")
-        if not all(isinstance(item, str) and item for item in self.obligations):
-            raise SDFError("obligations must be non-empty strings")
+        object.__setattr__(self, "history",
+                           _tuple_of_strings(self.history, "history"))
+        object.__setattr__(self, "obligations",
+                           _tuple_of_strings(self.obligations, "obligations"))
 
     def canonical(self) -> dict[str, Any]:
         return {
@@ -296,6 +307,32 @@ def canonical_json(value: Any) -> bytes:
                       separators=(",", ":"), allow_nan=False).encode("utf-8")
 
 
+_CANONICAL_INT = re.compile(r"(?:0|-?[1-9][0-9]*)\Z")
+
+
+def _canonical_int_text(value: Any, label: str) -> int:
+    if not isinstance(value, str) or not _CANONICAL_INT.fullmatch(value):
+        raise SDFError(f"{label} must be a canonical decimal integer string")
+    try:
+        return int(value)
+    except (TypeError, ValueError, OverflowError) as exc:
+        raise SDFError(f"{label} is not a valid integer") from exc
+
+
+def _object_with_shape(value: Any, *, label: str,
+                       required: set[str], optional: set[str] = frozenset()) -> dict[str, Any]:
+    if not isinstance(value, dict):
+        raise SDFError(f"{label} must be an object")
+    allowed = required | optional
+    unknown = set(value) - allowed
+    missing = required - set(value)
+    if unknown:
+        raise SDFError(f"{label} contains unknown fields: {sorted(unknown)!r}")
+    if missing:
+        raise SDFError(f"{label} is missing fields: {sorted(missing)!r}")
+    return value
+
+
 def _decode_exact_value(value: Any) -> int | Fraction | Symbolic | None:
     if value is None:
         return None
@@ -303,46 +340,90 @@ def _decode_exact_value(value: Any) -> int | Fraction | Symbolic | None:
         raise SDFError("invalid canonical exact value")
     kind = value["kind"]
     if kind == "int":
-        return int(value["value"])
+        obj = _object_with_shape(value, label="canonical integer",
+                                 required={"kind", "value"})
+        return _canonical_int_text(obj["value"], "canonical integer value")
     if kind == "fraction":
-        return Fraction(int(value["numerator"]), int(value["denominator"]))
+        obj = _object_with_shape(value, label="canonical fraction",
+                                 required={"kind", "numerator", "denominator"})
+        numerator = _canonical_int_text(obj["numerator"], "fraction numerator")
+        denominator = _canonical_int_text(obj["denominator"], "fraction denominator")
+        if denominator <= 0:
+            raise SDFError("fraction denominator must be positive")
+        result = Fraction(numerator, denominator)
+        if (str(result.numerator), str(result.denominator)) != (obj["numerator"], obj["denominator"]):
+            raise SDFError("fraction is not in canonical reduced form")
+        return result
     if kind == "symbolic":
-        return Symbolic(value["expression"])
+        obj = _object_with_shape(value, label="canonical symbolic value",
+                                 required={"kind", "expression"})
+        return Symbolic(obj["expression"])
     raise SDFError(f"unknown exact value kind: {kind}")
 
 
 def _decode_klein(value: Any) -> KleinPack:
-    if not isinstance(value, dict):
-        raise SDFError("invalid canonical Klein pack")
-    return KleinPack(value["host"], value["seam"], value["orientation"],
-                     value["inverted"], value["closure"])
+    obj = _object_with_shape(value, label="canonical Klein pack",
+                             required={"host", "seam", "orientation", "inverted", "closure"})
+    return KleinPack(obj["host"], obj["seam"], obj["orientation"],
+                     obj["inverted"], obj["closure"])
 
 
 def _decode_pinion(value: Any) -> Pinion | None:
     if value is None:
         return None
-    if not isinstance(value, dict):
-        raise SDFError("invalid canonical pinion")
-    return Pinion(value["seed"], value["parent"], value["hop"],
-                  value["tick"], value["elapsed"], value["phase"],
-                  value["payload"])
+    obj = _object_with_shape(value, label="canonical pinion",
+                             required={"seed", "parent", "hop", "tick", "elapsed", "phase", "payload"})
+    return Pinion(obj["seed"], obj["parent"], obj["hop"], obj["tick"],
+                  obj["elapsed"], obj["phase"], obj["payload"])
 
 
 def term_from_canonical(value: Mapping[str, Any]) -> SDFTerm:
     """Reconstruct one term after strict canonical-shape validation."""
-    if not isinstance(value, Mapping):
-        raise SDFError("canonical term must be an object")
+    obj = _object_with_shape(
+        value, label="canonical term",
+        required={"definition_id", "operator", "role", "operands", "sign", "value",
+                  "klein", "pinion", "available_tick", "provenance", "history", "obligations"})
+    if not isinstance(obj["operands"], list):
+        raise SDFError("canonical term operands must be an array")
+    if not isinstance(obj["history"], list):
+        raise SDFError("canonical term history must be an array")
+    if not isinstance(obj["obligations"], list):
+        raise SDFError("canonical term obligations must be an array")
+    try:
+        sign = Sign(obj["sign"])
+    except (TypeError, ValueError) as exc:
+        raise SDFError("canonical term sign is invalid") from exc
     return SDFTerm(
-        definition_id=value["definition_id"], operator=value["operator"],
-        role=value["role"], operands=tuple(value.get("operands", ())),
-        sign=Sign(value["sign"]), value=_decode_exact_value(value.get("value")),
-        klein=_decode_klein(value["klein"]),
-        pinion=_decode_pinion(value.get("pinion")),
-        available_tick=value.get("available_tick", 0),
-        provenance=value.get("provenance", ""),
-        history=tuple(value.get("history", ())),
-        obligations=tuple(value.get("obligations", ())),
+        definition_id=obj["definition_id"], operator=obj["operator"], role=obj["role"],
+        operands=obj["operands"], sign=sign, value=_decode_exact_value(obj["value"]),
+        klein=_decode_klein(obj["klein"]), pinion=_decode_pinion(obj["pinion"]),
+        available_tick=obj["available_tick"], provenance=obj["provenance"],
+        history=obj["history"], obligations=obj["obligations"],
     )
+
+
+def _strict_json_loads(data: bytes, label: str) -> Any:
+    if not isinstance(data, (bytes, bytearray)):
+        raise SDFError(f"{label} must be bytes")
+
+    def reject_duplicates(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+        result: dict[str, Any] = {}
+        for key, item in pairs:
+            if key in result:
+                raise SDFError(f"{label} contains a duplicate field: {key!r}")
+            result[key] = item
+        return result
+
+    def reject_constant(value: str) -> Any:
+        raise SDFError(f"{label} contains non-finite JSON number: {value}")
+
+    try:
+        return json.loads(bytes(data).decode("utf-8"), object_pairs_hook=reject_duplicates,
+                          parse_constant=reject_constant)
+    except SDFError:
+        raise
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise SDFError(f"invalid {label} bytes") from exc
 
 
 def pack_term(term: SDFTerm) -> bytes:
@@ -353,14 +434,13 @@ def pack_term(term: SDFTerm) -> bytes:
 
 def unpack_term(data: bytes) -> SDFTerm:
     """Unpack and verify one canonical double-packed term."""
-    try:
-        payload = json.loads(data.decode("utf-8"))
-    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
-        raise SDFError("invalid canonical term bytes") from exc
-    if payload.get("format") != TERM_FORMAT:
+    payload = _strict_json_loads(data, "canonical term")
+    payload = _object_with_shape(payload, label="canonical term envelope",
+                                 required={"format", "term", "digest"})
+    if payload["format"] != TERM_FORMAT:
         raise SDFError("unsupported SDF/Klein term format")
-    term = term_from_canonical(payload.get("term"))
-    if payload.get("digest") != term.digest:
+    term = term_from_canonical(payload["term"])
+    if payload["digest"] != term.digest:
         raise SDFError("canonical term digest mismatch")
     return term
 
@@ -402,19 +482,18 @@ class Registry:
     @classmethod
     def unpack(cls, data: bytes) -> "Registry":
         """Unpack and verify a complete registry bundle."""
-        try:
-            payload = json.loads(data.decode("utf-8"))
-        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
-            raise SDFError("invalid canonical registry bytes") from exc
-        if payload.get("format") != BUNDLE_FORMAT:
+        payload = _strict_json_loads(data, "canonical registry")
+        payload = _object_with_shape(payload, label="canonical registry envelope",
+                                     required={"format", "terms", "digest"})
+        if payload["format"] != BUNDLE_FORMAT:
             raise SDFError("unsupported SDF/Klein registry format")
         registry = cls()
-        terms = payload.get("terms")
+        terms = payload["terms"]
         if not isinstance(terms, list):
             raise SDFError("registry terms must be an array")
         for item in terms:
             registry.register(term_from_canonical(item))
-        if payload.get("digest") != registry.digest():
+        if payload["digest"] != registry.digest():
             raise SDFError("canonical registry digest mismatch")
         return registry
 
@@ -424,13 +503,19 @@ class KernelState:
     tick: int = 0
     pinion_id: str | None = None
     history: tuple[str, ...] = ()
+    pinion: Pinion | None = None
 
     def __post_init__(self) -> None:
         _u64(self.tick, "kernel tick")
         if self.pinion_id is not None:
             _nonempty(self.pinion_id, "kernel pinion id")
-        if not all(isinstance(item, str) and item for item in self.history):
-            raise SDFError("kernel history entries must be non-empty strings")
+        object.__setattr__(self, "history",
+                           _tuple_of_strings(self.history, "kernel history"))
+        if self.pinion is not None:
+            if self.pinion.tick != self.tick or self.pinion.digest != self.pinion_id:
+                raise SDFError("kernel pinion does not match kernel state")
+        elif self.pinion_id is not None:
+            raise SDFError("kernel state requires the complete pinion, not only its digest")
 
 
 @dataclass(frozen=True)
@@ -438,6 +523,11 @@ class Evaluation:
     status: Status
     term: SDFTerm | None
     reason: str = ""
+    source_definition_id: str | None = None
+    evaluated_tick: int | None = None
+    evidence_available: int | None = None
+    registry_digest: str | None = None
+    kernel_seed: str | None = None
 
 
 @dataclass(frozen=True)
@@ -449,6 +539,11 @@ class Commit:
 
 class SDFKernel:
     """Reference evaluator and atomic commit boundary."""
+
+    _ARITIES = {
+        "DECL": 0, "DECLARATION": 0, "SELF": 0, "FIELD": 0,
+        "QUOTE": 1, "QUOTE_RESULT": 1, "KERNEL": 1,
+    }
 
     def __init__(self, registry: Registry, *, capacity: int = 1024,
                  seed: str = "TOM-SDF-SEED") -> None:
@@ -464,26 +559,65 @@ class SDFKernel:
         _u64(now, "evaluation tick")
         _u64(evidence_available, "evidence availability tick")
         term = self.registry.require(definition_id)
+
+        def result(status: Status, candidate: SDFTerm | None = term,
+                   reason: str = "") -> Evaluation:
+            return Evaluation(status, candidate, reason, definition_id, now,
+                              evidence_available, self.registry.digest(), self.seed)
+
+        def check_dependencies(candidate: SDFTerm, active: set[str]) -> Evaluation | None:
+            if candidate.definition_id in active:
+                return result(Status.INVALID, candidate,
+                              "cyclic evaluation requires an explicit delayed law")
+            active.add(candidate.definition_id)
+            try:
+                for ref in candidate.operands:
+                    try:
+                        dependency = self.registry.require(ref)
+                    except SDFError as exc:
+                        return result(Status.INVALID, candidate, str(exc))
+                    if dependency.available_tick > now:
+                        return result(Status.FUTURE_EVIDENCE, candidate,
+                                      f"dependency {ref} is unavailable at this tick")
+                    if dependency.obligations:
+                        return result(Status.OPEN_LAW, candidate,
+                                      f"dependency {ref} has unresolved application obligations")
+                    failure = check_dependencies(dependency, active)
+                    if failure is not None and failure.status != Status.DECLARED:
+                        return failure
+                return None
+            finally:
+                active.remove(candidate.definition_id)
+
         if term.available_tick > now or evidence_available > now:
-            return Evaluation(Status.FUTURE_EVIDENCE, term,
-                              "term or evidence is unavailable at this tick")
+            return result(Status.FUTURE_EVIDENCE, term,
+                          "term or evidence is unavailable at this tick")
+        expected_arity = self._ARITIES.get(term.operator)
+        if expected_arity is None:
+            return result(Status.OPEN_LAW, term,
+                          f"operator {term.operator!r} has no bound application law")
+        if len(term.operands) != expected_arity:
+            return result(Status.INVALID, term,
+                          f"operator {term.operator!r} requires {expected_arity} operands")
         if term.obligations:
-            return Evaluation(Status.OPEN_LAW, term,
-                              "term has unresolved application obligations")
+            return result(Status.OPEN_LAW, term,
+                          "term has unresolved application obligations")
+        dependency_failure = check_dependencies(term, set())
+        if dependency_failure is not None:
+            return dependency_failure
         if term.operator == "QUOTE":
-            if len(term.operands) != 1:
-                return Evaluation(Status.INVALID, term, "QUOTE requires one operand")
             target = self.registry.require(term.operands[0])
             quoted = SDFTerm(
                 definition_id=f"quote:{term.definition_id}", operator="QUOTE_RESULT",
                 role="quoted_definition", operands=(target.definition_id,),
                 sign=target.sign, value=target.value, klein=term.klein,
-                pinion=term.pinion, available_tick=term.available_tick,
+                pinion=term.pinion, available_tick=max(term.available_tick,
+                                                       target.available_tick),
                 provenance=f"{term.provenance}|quotes:{target.definition_id}",
                 history=term.history, obligations=target.obligations)
-            return Evaluation(Status.OPEN_LAW if quoted.obligations else Status.DECLARED,
-                              quoted, "quoted definition retained as a distinct term")
-        return Evaluation(Status.DECLARED, term)
+            return result(Status.OPEN_LAW if quoted.obligations else Status.DECLARED,
+                          quoted, "quoted definition retained as a distinct term")
+        return result(Status.DECLARED, term)
 
     def commit(self, evaluation: Evaluation, *, pinion: Pinion) -> Commit:
         """Atomically append one fully qualified term or leave state unchanged."""
@@ -493,20 +627,46 @@ class SDFKernel:
         if evaluation.status not in (Status.DECLARED, Status.COMMITTED):
             return Commit(evaluation.status, old, evaluation.reason)
         term = evaluation.term
-        if term.available_tick > pinion.tick:
-            return Commit(Status.FUTURE_EVIDENCE, old, "term availability is in the future")
-        if pinion.seed != self.seed:
-            return Commit(Status.INVALID, old, "pinion seed does not match kernel seed")
-        if pinion.parent != old.pinion_id:
-            return Commit(Status.TEMPORAL, old, "pinion parent does not match committed state")
-        if pinion.tick <= old.tick or pinion.elapsed != pinion.tick - old.tick:
-            return Commit(Status.TEMPORAL, old, "pinion does not advance by its declared elapsed time")
+        if (evaluation.source_definition_id is None or
+                evaluation.evaluated_tick is None or
+                evaluation.evidence_available is None or
+                evaluation.registry_digest is None or
+                evaluation.kernel_seed is None):
+            return Commit(Status.INVALID, old,
+                          "evaluation is not bound to a kernel evidence context")
+        if evaluation.kernel_seed != self.seed or evaluation.registry_digest != self.registry.digest():
+            return Commit(Status.INVALID, old,
+                          "evaluation was produced by a different kernel context")
+        if evaluation.evaluated_tick != pinion.tick:
+            return Commit(Status.TEMPORAL, old,
+                          "pinion tick does not match evaluation tick")
+        if evaluation.evidence_available > pinion.tick:
+            return Commit(Status.FUTURE_EVIDENCE, old,
+                          "evaluation evidence is in the future")
+        fresh = self.evaluate(evaluation.source_definition_id,
+                              now=pinion.tick,
+                              evidence_available=evaluation.evidence_available)
+        if fresh.status not in (Status.DECLARED, Status.COMMITTED):
+            return Commit(fresh.status, old, fresh.reason)
+        if fresh.term is None or fresh.term.digest != term.digest:
+            return Commit(Status.INVALID, old,
+                          "evaluation term does not match the current registry")
+        if old.pinion_id is not None and old.pinion is None:
+            return Commit(Status.TEMPORAL, old, "committed state lacks its predecessor pinion")
+        try:
+            expected_pinion = derive_pinion(self.seed, old.pinion, pinion.tick,
+                                            term.digest)
+        except SDFError as exc:
+            return Commit(Status.TEMPORAL, old, str(exc))
+        if pinion != expected_pinion:
+            return Commit(Status.TEMPORAL, old,
+                          "pinion is not the seed-derived next hop for this term")
         if term.history[:len(old.history)] != old.history:
             return Commit(Status.PREFIX_REWRITE, old, "candidate rewrites committed history")
         if len(old.history) + 1 > self.capacity:
             return Commit(Status.CAPACITY, old, "history capacity would be exceeded")
         new_state = KernelState(pinion.tick, pinion.digest,
-                                old.history + (term.digest,))
+                                old.history + (term.digest,), pinion)
         self.state = new_state
         return Commit(Status.COMMITTED, new_state)
 

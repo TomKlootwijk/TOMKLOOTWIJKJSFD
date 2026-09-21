@@ -21,8 +21,10 @@ from tom.sdf_core import (  # noqa: E402
     Symbolic,
     bind_readout,
     derive_pinion,
+    Evaluation,
     make_kernel_terms,
     pack_term,
+    term_from_canonical,
     unpack_term,
 )
 
@@ -45,6 +47,44 @@ class SDFCoreTests(unittest.TestCase):
         self.assertIn(b'"kind":"fraction"', value.canonical_bytes)
         with self.assertRaises(SDFError):
             self.term(value=0.5)
+
+    def test_terms_freeze_caller_owned_sequences(self):
+        operands = ["dep"]
+        history = ["h0"]
+        obligations = ["law"]
+        term = self.term("frozen", operands=operands, history=history,
+                         obligations=obligations)
+        digest = term.digest
+        operands.append("changed")
+        history.append("changed")
+        obligations.append("changed")
+        self.assertEqual(term.operands, ("dep",))
+        self.assertEqual(term.history, ("h0",))
+        self.assertEqual(term.obligations, ("law",))
+        self.assertEqual(term.digest, digest)
+
+    def test_canonical_decoder_rejects_coercion_and_unknown_shape(self):
+        canonical = self.term("strict", value=1).canonical()
+        for bad in (1.9, True, "01"):
+            candidate = dict(canonical)
+            candidate["value"] = {"kind": "int", "value": bad}
+            with self.assertRaises(SDFError):
+                term_from_canonical(candidate)
+        candidate = dict(canonical)
+        candidate["unexpected"] = 1
+        with self.assertRaises(SDFError):
+            term_from_canonical(candidate)
+        candidate = dict(canonical)
+        candidate["operands"] = "dep"
+        with self.assertRaises(SDFError):
+            term_from_canonical(candidate)
+
+    def test_unpack_rejects_duplicate_json_fields(self):
+        with self.assertRaises(SDFError):
+            unpack_term((
+                b'{"format":"TOM-SDF-KLEIN-TERM-1",'
+                b'"format":"TOM-SDF-KLEIN-TERM-1","term":{},"digest":"x"}'
+            ))
 
     def test_double_packed_term_round_trips_and_detects_tampering(self):
         term = self.term(value=Symbolic("kappa*(a+b*phi)"),
@@ -121,6 +161,42 @@ class SDFCoreTests(unittest.TestCase):
         kernel = SDFKernel(registry, seed="seed")
         result = kernel.evaluate(term.definition_id, now=2, evidence_available=2)
         self.assertEqual(result.status, Status.FUTURE_EVIDENCE)
+
+    def test_quote_cannot_admit_a_future_dependency(self):
+        registry = Registry()
+        target = self.term("target", value=42, available_tick=9)
+        quote = self.term("quote", operator="QUOTE", operands=(target.definition_id,))
+        registry.register(target)
+        registry.register(quote)
+        result = SDFKernel(registry).evaluate(quote.definition_id, now=1,
+                                               evidence_available=1)
+        self.assertEqual(result.status, Status.FUTURE_EVIDENCE)
+
+    def test_commit_requires_kernel_bound_evidence_and_exact_pinion(self):
+        registry = Registry()
+        term = self.term("commit-bound", available_tick=1)
+        registry.register(term)
+        kernel = SDFKernel(registry, seed="seed")
+        valid = derive_pinion("seed", None, 1, term.digest)
+        forged = kernel.commit(Evaluation(Status.DECLARED, term), pinion=valid)
+        self.assertEqual(forged.status, Status.INVALID)
+
+        evaluation = kernel.evaluate(term.definition_id, now=1, evidence_available=1)
+        wrong = type(valid)("seed", None, 99, 1, 1, 1, term.digest)
+        rejected = kernel.commit(evaluation, pinion=wrong)
+        self.assertEqual(rejected.status, Status.TEMPORAL)
+        committed = kernel.commit(evaluation, pinion=valid)
+        self.assertEqual(committed.status, Status.COMMITTED)
+
+    def test_commit_rejects_stale_evaluation_tick(self):
+        registry = Registry()
+        term = self.term("stale", available_tick=1)
+        registry.register(term)
+        kernel = SDFKernel(registry, seed="seed")
+        evaluation = kernel.evaluate(term.definition_id, now=1, evidence_available=1)
+        pinion = derive_pinion("seed", None, 2, term.digest)
+        rejected = kernel.commit(evaluation, pinion=pinion)
+        self.assertEqual(rejected.status, Status.TEMPORAL)
 
 
 if __name__ == "__main__":
