@@ -205,6 +205,12 @@ class SDFCoreTests(unittest.TestCase):
         committed = kernel.commit(evaluation, pinion=valid)
         self.assertEqual(committed.status, Status.COMMITTED)
 
+    def test_malformed_evaluation_boundary_returns_invalid(self):
+        kernel = SDFKernel(Registry(), seed="seed")
+        self.assertEqual(kernel.commit(object(), pinion=object()).status, Status.INVALID)
+        with self.assertRaises(SDFError):
+            kernel.evaluate([], now=0, evidence_available=0)
+
     def test_commit_rejects_stale_evaluation_tick(self):
         registry = Registry()
         term = self.term("stale", available_tick=1)

@@ -504,6 +504,8 @@ def _strict_json_loads(data: bytes, label: str) -> Any:
 
 def pack_term(term: SDFTerm, *, limits: CoreLimits | None = None) -> bytes:
     """Pack one double-packed term with a self-checking semantic digest."""
+    if not isinstance(term, SDFTerm):
+        raise SDFError("term must be an SDFTerm value")
     selected_limits = limits or CoreLimits()
     _check_term_limits(term, selected_limits)
     packed = canonical_json({"format": TERM_FORMAT, "term": term.canonical(),
@@ -552,6 +554,7 @@ class Registry:
         return term.definition_id
 
     def require(self, definition_id: str) -> SDFTerm:
+        _nonempty(definition_id, "definition id")
         try:
             return self._terms[definition_id]
         except KeyError as exc:
@@ -720,6 +723,7 @@ class SDFKernel:
 
     def evaluate(self, definition_id: str, *, now: int,
                  evidence_available: int) -> Evaluation:
+        _nonempty(definition_id, "definition id")
         _u64(now, "evaluation tick")
         _u64(evidence_available, "evidence availability tick")
         term = self.registry.require(definition_id)
@@ -805,8 +809,14 @@ class SDFKernel:
     def commit(self, evaluation: Evaluation, *, pinion: Pinion) -> Commit:
         """Atomically append one fully qualified term or leave state unchanged."""
         old = self.state
+        if not isinstance(evaluation, Evaluation):
+            return Commit(Status.INVALID, old, "evaluation must be an Evaluation value")
+        if not isinstance(pinion, Pinion):
+            return Commit(Status.INVALID, old, "pinion must be a Pinion value")
         if evaluation.term is None:
             return Commit(Status.INVALID, old, "cannot commit an empty evaluation")
+        if not isinstance(evaluation.term, SDFTerm):
+            return Commit(Status.INVALID, old, "evaluation term must be an SDFTerm value")
         if evaluation.status not in (Status.DECLARED, Status.COMMITTED):
             return Commit(evaluation.status, old, evaluation.reason)
         term = evaluation.term
