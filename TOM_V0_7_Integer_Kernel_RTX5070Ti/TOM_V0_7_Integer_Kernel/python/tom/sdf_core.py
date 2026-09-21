@@ -38,6 +38,7 @@ class SDFError(ValueError):
 
 TERM_FORMAT = "TOM-SDF-KLEIN-TERM-1"
 BUNDLE_FORMAT = "TOM-SDF-KLEIN-BUNDLE-1"
+SNAPSHOT_FORMAT = "TOM-SDF-KLEIN-SNAPSHOT-1"
 
 
 @dataclass(frozen=True)
@@ -603,6 +604,23 @@ class KernelState:
         elif self.pinion_id is not None:
             raise SDFError("kernel state requires the complete pinion, not only its digest")
 
+    def canonical(self) -> dict[str, Any]:
+        return {
+            "tick": self.tick,
+            "pinion_id": self.pinion_id,
+            "history": list(self.history),
+            "pinion": None if self.pinion is None else self.pinion.canonical(),
+        }
+
+
+def _state_from_canonical(value: Any) -> KernelState:
+    obj = _object_with_shape(value, label="canonical kernel state",
+                             required={"tick", "pinion_id", "history", "pinion"})
+    if not isinstance(obj["history"], list):
+        raise SDFError("canonical kernel history must be an array")
+    return KernelState(tick=obj["tick"], pinion_id=obj["pinion_id"],
+                       history=obj["history"], pinion=_decode_pinion(obj["pinion"]))
+
 
 @dataclass(frozen=True)
 class Evaluation:
@@ -641,6 +659,50 @@ class SDFKernel:
         self.seed = _nonempty(seed, "kernel seed")
         self.limits = limits or registry.limits
         self.state = KernelState()
+
+    def snapshot(self) -> bytes:
+        """Serialize a complete restart point, including the semantic registry."""
+        registry = json.loads(self.registry.pack().decode("utf-8"))
+        body = {
+            "format": SNAPSHOT_FORMAT,
+            "seed": self.seed,
+            "capacity": self.capacity,
+            "registry": registry,
+            "state": self.state.canonical(),
+        }
+        packed = canonical_json({**body, "digest": "sha256:" +
+                                hashlib.sha256(canonical_json(body)).hexdigest()})
+        if len(packed) > self.limits.max_bundle_bytes:
+            raise SDFError("kernel snapshot exceeds the configured byte limit")
+        return packed
+
+    @classmethod
+    def from_snapshot(cls, data: bytes, *, limits: CoreLimits | None = None) -> "SDFKernel":
+        """Restore a kernel only after validating every nested identity."""
+        selected_limits = limits or CoreLimits()
+        if not isinstance(data, (bytes, bytearray)):
+            raise SDFError("kernel snapshot bytes must be bytes")
+        if len(data) > selected_limits.max_bundle_bytes:
+            raise SDFError("kernel snapshot exceeds the configured byte limit")
+        payload = _strict_json_loads(data, "kernel snapshot")
+        payload = _object_with_shape(
+            payload, label="kernel snapshot envelope",
+            required={"format", "seed", "capacity", "registry", "state", "digest"})
+        if payload["format"] != SNAPSHOT_FORMAT:
+            raise SDFError("unsupported SDF/Klein snapshot format")
+        body = {key: payload[key] for key in
+                ("format", "seed", "capacity", "registry", "state")}
+        expected_digest = "sha256:" + hashlib.sha256(canonical_json(body)).hexdigest()
+        if payload["digest"] != expected_digest:
+            raise SDFError("kernel snapshot digest mismatch")
+        registry = Registry.unpack(canonical_json(payload["registry"]), limits=selected_limits)
+        kernel = cls(registry, capacity=payload["capacity"], seed=payload["seed"],
+                     limits=selected_limits)
+        state = _state_from_canonical(payload["state"])
+        if len(state.history) > kernel.capacity:
+            raise SDFError("kernel snapshot history exceeds kernel capacity")
+        kernel.state = state
+        return kernel
 
     def evaluate(self, definition_id: str, *, now: int,
                  evidence_available: int) -> Evaluation:

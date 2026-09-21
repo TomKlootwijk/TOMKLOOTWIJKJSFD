@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from fractions import Fraction
 from dataclasses import replace
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -258,6 +259,36 @@ class SDFCoreTests(unittest.TestCase):
                                pinion=derive_pinion("seed", None, 1, term.digest))
         self.assertEqual(result.status, Status.PREFIX_REWRITE)
         self.assertEqual(kernel.state.history, ())
+
+    def test_snapshot_restores_full_chain_and_continues(self):
+        registry = Registry()
+        first = self.term("first", available_tick=1)
+        second = self.term("second", available_tick=2, history=(first.digest,))
+        registry.register(first)
+        registry.register(second)
+        kernel = SDFKernel(registry, seed="seed", capacity=4)
+        first_eval = kernel.evaluate("first", now=1, evidence_available=1)
+        first_pinion = derive_pinion("seed", None, 1, first.digest)
+        self.assertEqual(kernel.commit(first_eval, pinion=first_pinion).status,
+                         Status.COMMITTED)
+        restored = SDFKernel.from_snapshot(kernel.snapshot())
+        self.assertEqual(restored.state, kernel.state)
+        self.assertEqual(restored.registry.digest(), kernel.registry.digest())
+        second_eval = restored.evaluate("second", now=2, evidence_available=2)
+        second_pinion = derive_pinion("seed", restored.state.pinion, 2, second.digest)
+        self.assertEqual(restored.commit(second_eval, pinion=second_pinion).status,
+                         Status.COMMITTED)
+        self.assertEqual(restored.state.history, (first.digest, second.digest))
+
+    def test_snapshot_digest_covers_nested_state(self):
+        registry = Registry()
+        term = self.term("snap", available_tick=1)
+        registry.register(term)
+        kernel = SDFKernel(registry, seed="seed")
+        payload = json.loads(kernel.snapshot().decode("utf-8"))
+        payload["state"]["tick"] = 99
+        with self.assertRaises(SDFError):
+            SDFKernel.from_snapshot(json.dumps(payload).encode("utf-8"))
 
 
 if __name__ == "__main__":
