@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from fractions import Fraction
+from dataclasses import replace
 import sys
 import unittest
 from pathlib import Path
@@ -214,6 +215,49 @@ class SDFCoreTests(unittest.TestCase):
         result = SDFKernel(registry, limits=limits).evaluate(
             deep.definition_id, now=0, evidence_available=0)
         self.assertEqual(result.status, Status.CAPACITY)
+
+    def test_unknown_and_malformed_laws_cannot_enter_through_quote(self):
+        for candidate, expected in (
+            (self.term("target", operator="NO_SUCH_LAW"), Status.OPEN_LAW),
+            (self.term("target", operator="DECL", operands=("missing",)), Status.INVALID),
+            (self.term("target", operator="KERNEL", operands=("leaf",)), Status.OPEN_LAW),
+        ):
+            with self.subTest(operator=candidate.operator):
+                registry = Registry()
+                registry.register(candidate)
+                registry.register(self.term("quote", operator="QUOTE", operands=("target",)))
+                result = SDFKernel(registry).evaluate("quote", now=1, evidence_available=1)
+                self.assertEqual(result.status, expected)
+
+    def test_forged_context_cannot_bypass_an_open_law(self):
+        registry = Registry()
+        term = self.term("open", obligations=("unassigned",))
+        registry.register(term)
+        kernel = SDFKernel(registry, seed="seed")
+        fake = replace(kernel.evaluate("open", now=1, evidence_available=1),
+                       status=Status.DECLARED)
+        before = kernel.state
+        result = kernel.commit(fake, pinion=derive_pinion("seed", None, 1, term.digest))
+        self.assertEqual(result.status, Status.OPEN_LAW)
+        self.assertEqual(kernel.state, before)
+
+    def test_zero_repeated_and_backward_pinion_ticks_are_rejected(self):
+        first = derive_pinion("seed", None, 2, "payload")
+        for parent, tick, elapsed in ((None, 0, None), (None, 2, 1),
+                                      (first, 2, None), (first, 1, None)):
+            with self.subTest(tick=tick, elapsed=elapsed):
+                with self.assertRaises(SDFError):
+                    derive_pinion("seed", parent, tick, "payload", elapsed=elapsed)
+
+    def test_uncommitted_history_suffix_cannot_disappear_on_commit(self):
+        registry = Registry()
+        term = self.term("extra", history=("never-committed",))
+        registry.register(term)
+        kernel = SDFKernel(registry, seed="seed")
+        result = kernel.commit(kernel.evaluate("extra", now=1, evidence_available=1),
+                               pinion=derive_pinion("seed", None, 1, term.digest))
+        self.assertEqual(result.status, Status.PREFIX_REWRITE)
+        self.assertEqual(kernel.state.history, ())
 
 
 if __name__ == "__main__":

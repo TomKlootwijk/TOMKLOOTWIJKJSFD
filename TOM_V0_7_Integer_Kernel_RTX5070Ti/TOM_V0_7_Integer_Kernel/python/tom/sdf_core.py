@@ -228,7 +228,8 @@ def derive_pinion(seed: str, parent: Pinion | None, tick: int,
         expected_elapsed = tick - parent.tick if tick >= parent.tick else -1
     if elapsed is None:
         elapsed = expected_elapsed
-    if elapsed < 0 or (parent is not None and elapsed != expected_elapsed):
+    _u64(elapsed, "pinion elapsed")
+    if expected_elapsed <= 0 or elapsed != expected_elapsed:
         raise SDFError("pinion elapsed does not match the committed predecessor")
     material = canonical_json({"seed": seed, "parent": parent_id,
                                "hop": hop, "tick": tick,
@@ -262,6 +263,10 @@ class SDFTerm:
                            _tuple_of_strings(self.operands, "operands"))
         if not isinstance(self.sign, Sign):
             raise SDFError("sign must be a Sign value")
+        if not isinstance(self.klein, KleinPack):
+            raise SDFError("klein must be a KleinPack value")
+        if self.pinion is not None and not isinstance(self.pinion, Pinion):
+            raise SDFError("pinion must be a Pinion value or None")
         _exact_value(self.value)
         _u64(self.available_tick, "available tick")
         if not isinstance(self.provenance, str):
@@ -648,57 +653,69 @@ class SDFKernel:
             return Evaluation(status, candidate, reason, definition_id, now,
                               evidence_available, self.registry.digest(), self.seed)
 
-        def check_dependencies(candidate: SDFTerm, active: set[str], depth: int) -> Evaluation | None:
-            if depth > self.limits.max_eval_depth:
-                return result(Status.CAPACITY, candidate,
-                              "dependency depth exceeds the configured resource limit")
-            if candidate.definition_id in active:
-                return result(Status.INVALID, candidate,
-                              "cyclic evaluation requires an explicit delayed law")
-            active.add(candidate.definition_id)
-            try:
-                for ref in candidate.operands:
-                    try:
-                        dependency = self.registry.require(ref)
-                    except SDFError as exc:
-                        return result(Status.INVALID, candidate, str(exc))
-                    if dependency.available_tick > now:
-                        return result(Status.FUTURE_EVIDENCE, candidate,
-                                      f"dependency {ref} is unavailable at this tick")
-                    if dependency.obligations:
-                        return result(Status.OPEN_LAW, candidate,
-                                      f"dependency {ref} has unresolved application obligations")
-                    failure = check_dependencies(dependency, active, depth + 1)
-                    if failure is not None and failure.status != Status.DECLARED:
-                        return failure
-                return None
-            finally:
-                active.remove(candidate.definition_id)
-
-        if term.available_tick > now or evidence_available > now:
+        if evidence_available > now:
             return result(Status.FUTURE_EVIDENCE, term,
-                          "term or evidence is unavailable at this tick")
-        expected_arity = self._ARITIES.get(term.operator)
-        if expected_arity is None:
-            return result(Status.OPEN_LAW, term,
-                          f"operator {term.operator!r} has no bound application law")
-        if len(term.operands) != expected_arity:
-            return result(Status.INVALID, term,
-                          f"operator {term.operator!r} requires {expected_arity} operands")
-        if term.obligations:
-            return result(Status.OPEN_LAW, term,
-                          "term has unresolved application obligations")
-        dependency_failure = check_dependencies(term, set(), 0)
-        if dependency_failure is not None:
-            return dependency_failure
+                          "evidence is unavailable at this tick")
+        # Postorder validation shares work across a DAG, bounds depth before
+        # descent, and never consumes the Python recursion stack.
+        active: set[str] = set()
+        heights: dict[str, int] = {}
+        latest_available = term.available_tick
+        stack = [(term, False, 0)]
+        while stack:
+            candidate, leaving, depth = stack.pop()
+            identifier = candidate.definition_id
+            if depth > self.limits.max_eval_depth:
+                return result(Status.CAPACITY, term,
+                              "dependency depth exceeds the configured resource limit")
+            if leaving:
+                heights[identifier] = max(
+                    (1 + heights[ref] for ref in candidate.operands), default=0)
+                active.remove(identifier)
+                continue
+            if identifier in active:
+                return result(Status.INVALID, term,
+                              "cyclic evaluation requires an explicit delayed law")
+            if identifier in heights:
+                if depth + heights[identifier] > self.limits.max_eval_depth:
+                    return result(Status.CAPACITY, term,
+                                  "dependency depth exceeds the configured resource limit")
+                continue
+            if len(active) + len(heights) >= self.limits.max_terms:
+                return result(Status.CAPACITY, term, "evaluation term capacity exceeded")
+            try:
+                _check_term_limits(candidate, self.limits)
+            except SDFError as exc:
+                return result(Status.CAPACITY, term, str(exc))
+            latest_available = max(latest_available, candidate.available_tick)
+            if candidate.available_tick > now:
+                return result(Status.FUTURE_EVIDENCE, term,
+                              f"dependency {identifier} is unavailable at this tick")
+            if candidate.obligations:
+                return result(Status.OPEN_LAW, term,
+                              f"term {identifier} has unresolved application obligations")
+            expected_arity = self._ARITIES.get(candidate.operator)
+            if expected_arity is None or candidate.operator == "KERNEL":
+                return result(Status.OPEN_LAW, term,
+                              f"operator {candidate.operator!r} has no bound application law")
+            if len(candidate.operands) != expected_arity:
+                return result(Status.INVALID, term,
+                              f"operator {candidate.operator!r} requires {expected_arity} operands")
+            active.add(identifier)
+            stack.append((candidate, True, depth))
+            for ref in reversed(candidate.operands):
+                try:
+                    dependency = self.registry.require(ref)
+                except SDFError as exc:
+                    return result(Status.INVALID, term, str(exc))
+                stack.append((dependency, False, depth + 1))
         if term.operator == "QUOTE":
             target = self.registry.require(term.operands[0])
             quoted = SDFTerm(
                 definition_id=f"quote:{term.definition_id}", operator="QUOTE_RESULT",
                 role="quoted_definition", operands=(target.definition_id,),
                 sign=target.sign, value=target.value, klein=term.klein,
-                pinion=term.pinion, available_tick=max(term.available_tick,
-                                                       target.available_tick),
+                pinion=term.pinion, available_tick=latest_available,
                 provenance=f"{term.provenance}|quotes:{target.definition_id}",
                 history=term.history, obligations=target.obligations)
             return result(Status.OPEN_LAW if quoted.obligations else Status.DECLARED,
@@ -747,8 +764,9 @@ class SDFKernel:
         if pinion != expected_pinion:
             return Commit(Status.TEMPORAL, old,
                           "pinion is not the seed-derived next hop for this term")
-        if term.history[:len(old.history)] != old.history:
-            return Commit(Status.PREFIX_REWRITE, old, "candidate rewrites committed history")
+        if term.history != old.history:
+            return Commit(Status.PREFIX_REWRITE, old,
+                          "candidate history must exactly identify its committed predecessor")
         if len(old.history) + 1 > self.capacity:
             return Commit(Status.CAPACITY, old, "history capacity would be exceeded")
         new_state = KernelState(pinion.tick, pinion.digest,
