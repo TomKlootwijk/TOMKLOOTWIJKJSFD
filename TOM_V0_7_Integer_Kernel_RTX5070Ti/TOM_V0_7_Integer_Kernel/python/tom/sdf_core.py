@@ -39,6 +39,7 @@ class SDFError(ValueError):
 TERM_FORMAT = "TOM-SDF-KLEIN-TERM-1"
 BUNDLE_FORMAT = "TOM-SDF-KLEIN-BUNDLE-1"
 SNAPSHOT_FORMAT = "TOM-SDF-KLEIN-SNAPSHOT-1"
+KLEIN_LAW = "TOM-SDF-KLEIN-COMPOSE-1"
 
 
 @dataclass(frozen=True)
@@ -164,11 +165,22 @@ class KleinPack:
                          not self.inverted, self.closure)
 
     def compatible_with(self, other: "KleinPack") -> bool:
-        """Apply the declared finite closure key; no topology is inferred."""
-        return (self.host == other.host and self.seam == other.seam and
-                self.closure == other.closure and
-                (self.orientation != other.orientation or
-                 self.inverted != other.inverted))
+        """Return whether the versioned finite seam law can compose both packs."""
+        return (isinstance(other, KleinPack) and self.host == other.host and
+                self.seam == other.seam and self.closure == other.closure)
+
+    def compose(self, other: "KleinPack") -> "KleinPack":
+        """Compose orientation and inversion at one explicit semantic seam.
+
+        This is the executable finite law selected for the reference profile.
+        It validates the shared seam and combines the two parity fields; it
+        does not infer a Euclidean embedding or a physical topology.
+        """
+        if not self.compatible_with(other):
+            raise SDFError(f"Klein packs cannot compose under {KLEIN_LAW}")
+        return KleinPack(self.host, self.seam,
+                         self.orientation * other.orientation,
+                         self.inverted != other.inverted, self.closure)
 
     def canonical(self) -> dict[str, Any]:
         return {"host": self.host, "seam": self.seam,
@@ -768,6 +780,10 @@ class SDFKernel:
             for ref in reversed(candidate.operands):
                 try:
                     dependency = self.registry.require(ref)
+                except SDFError as exc:
+                    return result(Status.INVALID, term, str(exc))
+                try:
+                    candidate.klein.compose(dependency.klein)
                 except SDFError as exc:
                     return result(Status.INVALID, term, str(exc))
                 stack.append((dependency, False, depth + 1))

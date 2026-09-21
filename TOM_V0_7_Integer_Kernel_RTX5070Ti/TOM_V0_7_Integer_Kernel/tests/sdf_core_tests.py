@@ -120,6 +120,20 @@ class SDFCoreTests(unittest.TestCase):
         self.assertTrue(inverse.inverted)
         self.assertTrue(pack.compatible_with(inverse))
         self.assertNotEqual(pack.canonical(), inverse.canonical())
+        composed = pack.compose(inverse)
+        self.assertEqual(composed.orientation, -1)
+        self.assertTrue(composed.inverted)
+        with self.assertRaises(SDFError):
+            pack.compose(KleinPack("other", "seam", 1, False, "declared"))
+
+    def test_evaluation_executes_the_finite_klein_seam_gate(self):
+        registry = Registry()
+        target = self.term("target", klein=KleinPack("target-host", "root"))
+        quote = self.term("quote", operator="QUOTE", operands=(target.definition_id,))
+        registry.register(target)
+        registry.register(quote)
+        result = SDFKernel(registry).evaluate("quote", now=1, evidence_available=1)
+        self.assertEqual(result.status, Status.INVALID)
 
     def test_self_reference_is_a_quoted_definition_not_a_python_cycle(self):
         registry, root = make_kernel_terms(seed="fixture-seed")
